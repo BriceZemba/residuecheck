@@ -1,0 +1,30 @@
+{
+ "trade_name": "ABAMEC",
+ "holder": "SPRAYKEM",
+ "supplier": "SINON CORPORATION",
+ "registration_no": "E01-4-001",
+ "valid_until": "06/04/2032",
+ "tox_table": "A",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Abamectine",
+   "content": "18 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "ABAMEC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-13"
+}

@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+.pytest_cache/
+*.sqlite
+spikes/results/*.raw.json
+data/raw/

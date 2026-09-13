@@ -1,0 +1,77 @@
+{
+ "trade_name": "ADMIRAL 10 EC",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "SUMITOMO",
+ "registration_no": "D05-7-001",
+ "valid_until": "28/12/2026",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyriproxyfène",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Aleurodes",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves",
+   "Période": "seuil de nuisibilité atteint",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "35 cc/hl",
+   "pest_stage": "stades mobiles",
+   "Période": "seuil de nuisibilité atteint",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "35 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves",
+   "Période": "seuil de nuisibilité atteint",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves",
+   "Période": "seuil de nuisibilité atteint",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cochenilles",
+   "dose": "35 cc/hl",
+   "pest_stage": "stades mobiles",
+   "Période": "seuil de nuisibilité atteint",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  }
+ ],
+ "query": "ADMIRAL 10 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-13"
+}

@@ -1,0 +1,41 @@
+{
+ "trade_name": "ACTELLIC 50 EC",
+ "holder": "SYNGENTA MAROC",
+ "supplier": "SYNGENTA CROP PROTECTION AG",
+ "registration_no": "A12-5-017",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyrimiphos-méthyl",
+   "content": "500 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Denrées stockées",
+   "pest_fr": "Insectes de stockage",
+   "dose": "20 cc/tonne",
+   "Période": "au stockage",
+   "max_applications": "1",
+   "mode": "Traitement des denrées stockées",
+   "dar_days": "NA"
+  },
+  {
+   "crop_fr": "Locaux de stockage",
+   "pest_fr": "Insectes de stockage",
+   "dose": "1 cc/m²",
+   "Période": "avant la mise en magasins des denrées stockées",
+   "max_applications": "1",
+   "mode": "Traitement du vide sanitaire",
+   "dar_days": "NA"
+  }
+ ],
+ "query": "ACTELLIC 50 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-13"
+}

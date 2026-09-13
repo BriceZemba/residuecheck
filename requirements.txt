@@ -1,0 +1,5 @@
+requests>=2.32
+beautifulsoup4>=4.12
+openai>=1.79
+pillow>=10.2
+pytest>=8.3

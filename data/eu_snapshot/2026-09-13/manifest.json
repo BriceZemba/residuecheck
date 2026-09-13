@@ -1,0 +1,26 @@
+{
+ "snapshot_date": "2026-09-13",
+ "created": "2026-09-13T19:57:21",
+ "sources": {
+  "active_substances": "https://api.datalake.sante.service.ec.europa.eu/sante/pesticides/active-substances-download?format=json&api-version=v3.0",
+  "mrls": "https://api.datalake.sante.service.ec.europa.eu/sante/pesticides/pesticide-residues-mrls-download?format=json&language_code=EN&api-version=v3.0",
+  "residue_names": "https://api.datalake.sante.service.ec.europa.eu/sante/pesticides/pesticide-residues?pesticide_residue_lg=EN|FR&format=json&api-version=v3.0"
+ },
+ "raw_sha256": {
+  "active_substances": "e25d6a26e9cb6ca22737443ceb45116b2a63fe12ce948add1a6d0db8631a94dc",
+  "mrls": "ec7de777386eaf9bf3fa7aa0ac88aa6b7f3e9e2d00f0d7c018bb8cb65e71371c"
+ },
+ "counts": {
+  "substance_rows_in_download": 4727,
+  "substances": 1483,
+  "mrl_rows_in_download": 522732,
+  "mrl_rows_selected_dedup": 36928,
+  "crops_selected": 32,
+  "residue_names": 684
+ },
+ "missing_crop_codes": [],
+ "substance_to_residue_join": {
+  "substances_with_linked_residue": 1483,
+  "joined_to_mrl_names": 719
+ }
+}

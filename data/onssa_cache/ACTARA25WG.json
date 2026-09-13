@@ -1,0 +1,173 @@
+{
+ "trade_name": "ACTARA 25 WG",
+ "holder": "SYNGENTA MAROC",
+ "supplier": "SYNGENTA CROP PROTECTION AG",
+ "registration_no": "D09-9-002",
+ "valid_until": "25/12/2028",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Thiamethoxam",
+   "content": "25%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20 g/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Chou",
+   "pest_fr": "Pucerons",
+   "dose": "20 g/hl",
+   "pest_stage": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Concombre",
+   "pest_fr": "Mouche blanche",
+   "dose": "20 g/hl",
+   "pest_stage": "",
+   "max_applications": "2",
+   "interval_days": "7-14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Mouche blanche",
+   "dose": "20 g/hl",
+   "pest_stage": "",
+   "max_applications": "2",
+   "interval_days": "7-14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pucerons",
+   "dose": "400 g/ha",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "traitement du sol (injection dans goutte à goutte)",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Pucerons",
+   "dose": "200 g/ha",
+   "pest_stage": "larves et adultes",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Laitue",
+   "pest_fr": "Pucerons",
+   "dose": "200 g/ha",
+   "pest_stage": "larves et adultes",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Mouche blanche",
+   "dose": "800 g/ha /injection (gàg)",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7-14 jrs",
+   "mode": "Traitement des sols",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "20 g/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7-14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Pucerons",
+   "dose": "200 g/ha",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Pucerons",
+   "dose": "250 g/ha",
+   "pest_stage": "larves et adultes",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Plantes aromatiques - excepté la menthe -",
+   "pest_fr": "Pucerons",
+   "dose": "200 g/ha",
+   "pest_stage": "larves et adultes",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "40 g/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7-14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "20 g/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7-14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pucerons",
+   "dose": "20 g/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7-14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "ACTARA 25 WG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-13"
+}
