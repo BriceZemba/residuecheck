@@ -11,6 +11,7 @@ Raw downloads go to data/raw/ (git-ignored). The committed snapshot in data/eu_s
   mrls.jsonl.gz          deduplicated MRL versions for the selected crops (all applicability states)
   residue_names.json.gz  residue id -> {EN, FR} names
   crops.json             selected EU product codes and names
+  products.json.gz       full product classification: code -> parent code, EN/FR names, synonyms
 
 Usage: python scripts/eu_snapshot.py [--date 2026-09-13] [--reuse-raw]
 """
@@ -18,6 +19,7 @@ import argparse
 import datetime
 import gzip
 import hashlib
+import io
 import json
 import pathlib
 import sys
@@ -61,6 +63,12 @@ def download(session, endpoint, params, dest, reuse):
             for chunk in r.iter_content(1 << 20):
                 f.write(chunk)
     return dest
+
+
+def gz_text(path):
+    """Gzip text writer with a fixed header timestamp, so rebuilding identical data gives identical bytes."""
+    # GzipFile opens (and closes) the file itself when given a path; a passed-in fileobj would be left open.
+    return io.TextIOWrapper(gzip.GzipFile(path, mode="wb", mtime=0), encoding="utf-8")
 
 
 def sha256(path):
@@ -139,18 +147,33 @@ def main():
         for rec in paged(s, "pesticide-residues", {"pesticide_residue_lg": lg}):
             names.setdefault(str(rec["pesticide_residue_id"]), {})[lg] = rec["pesticide_residue_name"]
 
+    # Product classification (Annex I of Reg. 396/2005) with parents, so a group registration can cover a crop.
+    products_by_id = {}
+    for lg in ("EN", "FR"):
+        for rec in paged(s, "pesticide-residues-products", {"language": lg}):
+            p = products_by_id.setdefault(rec["product_id"], {"code": rec["product_code"], "parent_id": rec["product_parent_id"],
+                                                               "type": rec["product_type_id"]})
+            p[lg] = rec["product_name"]
+            if lg == "EN":
+                p["synonyms"] = rec.get("product_synonym_names")
+    products = {p["code"]: {"parent": products_by_id.get(p["parent_id"], {}).get("code"), "type": p["type"],
+                            "EN": p.get("EN"), "FR": p.get("FR"), "synonyms": p.get("synonyms")}
+                for p in products_by_id.values()}
+
     missing_crops = sorted(crop_set - set(crops))
     linked = [x for x in substances if x["pesticide_residues_linked"]]
     joined = [x for x in linked if any(norm_residue(n) in residue_names_in_mrls for n in x["pesticide_residues_linked"])]
 
-    with gzip.open(out / "substances.json.gz", "wt", encoding="utf-8") as f:
+    with gz_text(out / "substances.json.gz") as f:
         json.dump(substances, f, ensure_ascii=False)
-    with gzip.open(out / "mrls.jsonl.gz", "wt", encoding="utf-8") as f:
+    with gz_text(out / "mrls.jsonl.gz") as f:
         for row in sorted(mrls, key=lambda r: (r["product_code"], r["pesticide_residue_id"])):
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
-    with gzip.open(out / "residue_names.json.gz", "wt", encoding="utf-8") as f:
+    with gz_text(out / "residue_names.json.gz") as f:
         json.dump(names, f, ensure_ascii=False)
     (out / "crops.json").write_text(json.dumps(crops, ensure_ascii=False, indent=1), encoding="utf-8")
+    with gz_text(out / "products.json.gz") as f:
+        json.dump(products, f, ensure_ascii=False)
 
     manifest = {
         "snapshot_date": a.date,
@@ -168,6 +191,7 @@ def main():
             "mrl_rows_selected_dedup": len(mrls),
             "crops_selected": len(crops),
             "residue_names": len(names),
+            "products": len(products),
         },
         "missing_crop_codes": missing_crops,
         "substance_to_residue_join": {"substances_with_linked_residue": len(linked), "joined_to_mrl_names": len(joined)},

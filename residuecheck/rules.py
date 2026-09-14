@@ -38,6 +38,7 @@ class Application:
     registered_for_crop: bool | None = None  # origin register: True, False, or None when unknown
     dar_days: int | None = None  # pre-harvest interval on the origin label for this crop
     source: str | None = None  # where substances / DAR come from (e.g. ONSSA index URL)
+    registration_note: str | None = None  # e.g. registered for a narrower crop name than the lot's crop
 
     def __post_init__(self):
         self.applied_on = _as_date(self.applied_on)
@@ -140,8 +141,13 @@ def _label_findings(app: Application, lot: Lot):
         return out
     if app.registered_for_crop is None:
         out.append(Finding("REGISTRATION_UNKNOWN", Level.CANNOT_VERIFY,
-                           f"Origin registration of '{app.product}' for this crop is not confirmed.", product=app.product))
+                           f"Origin registration of '{app.product}' for this crop is not confirmed."
+                           + (f" {app.registration_note}" if app.registration_note else ""), product=app.product,
+                           sources=[app.source] if app.source else []))
         return out
+    if app.registration_note:
+        out.append(Finding("REGISTRATION_NARROWER", Level.INFO, f"'{app.product}': {app.registration_note}",
+                           product=app.product, sources=[app.source] if app.source else []))
     if app.dar_days is None:
         out.append(Finding("PHI_UNKNOWN", Level.CANNOT_VERIFY,
                            f"No pre-harvest interval found for '{app.product}' on this crop.",

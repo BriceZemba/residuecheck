@@ -1,0 +1,56 @@
+{
+ "snapshot": "2026-09-13",
+ "seed": 20260913,
+ "heldout_share": 0.3,
+ "total": 120,
+ "dev": 83,
+ "heldout": 37,
+ "strata": {
+  "changed": {
+   "available": 450,
+   "target": 40,
+   "dev": 28,
+   "heldout": 12
+  },
+  "upcoming": {
+   "available": 67,
+   "target": 10,
+   "dev": 7,
+   "heldout": 3
+  },
+  "loq_stable": {
+   "available": 11518,
+   "target": 25,
+   "dev": 17,
+   "heldout": 8
+  },
+  "numeric_stable": {
+   "available": 1509,
+   "target": 30,
+   "dev": 21,
+   "heldout": 9
+  },
+  "no_mrl_required": {
+   "available": 5184,
+   "target": 5,
+   "dev": 3,
+   "heldout": 2
+  },
+  "unknown": {
+   "available": 10,
+   "target": 10,
+   "dev": 7,
+   "heldout": 3
+  }
+ },
+ "verdicts": {
+  "RED": 63,
+  "GREEN": 26,
+  "AMBER": 21,
+  "CANNOT_VERIFY": 10
+ },
+ "relevant_substance_cases": 64,
+ "distinct_substances": 74,
+ "distinct_crops": 32,
+ "verdict_source": "residuecheck.rules v0 on a label-compliant application (registered, DAR met), arrival on the question date"
+}

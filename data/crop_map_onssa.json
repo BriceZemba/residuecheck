@@ -1,0 +1,1148 @@
+{
+ "about": "Hand-written map from ONSSA index crop names (usage column) to EU product codes (Annex I, Reg. (EC) 396/2005). Written 2026-09-13 by Brice Zemba with Claude; every code is checked against the EU snapshot by tests/test_crop_map.py.",
+ "kinds": {
+  "exact": "Same crop as the EU code (a tree name maps to its fruit).",
+  "group": "ONSSA name covers an EU group; the codes are group codes and cover all their descendants.",
+  "narrower": "ONSSA name is a variety or subset of the EU code (e.g. Navel within Oranges). Counts as registered, with a note.",
+  "ambiguous": "ONSSA name could mean several EU codes. Never confirms a registration on its own.",
+  "nursery": "Nursery use (seedlings). Does not register field use on the harvested crop.",
+  "post_harvest": "Treatment of stored or harvested produce. Does not register field use.",
+  "non_crop": "Adjuvants, storage premises, ornamentals, lawns, bare soil, feed. No EU food code."
+ },
+ "map": {
+  "Abricotier": {
+   "kind": "exact",
+   "codes": [
+    "0140010"
+   ]
+  },
+  "Adjuvant pour acaricides": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Adjuvant pour fongicides": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Adjuvant pour herbicides": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Adjuvant pour insecticides": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Adjuvant pour régulateurs de croissance": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Agrumes": {
+   "kind": "group",
+   "codes": [
+    "0110000"
+   ]
+  },
+  "Agrumes: Clémentinier": {
+   "kind": "narrower",
+   "codes": [
+    "0110050"
+   ],
+   "note": "Clementines are listed under Mandarins"
+  },
+  "Agrumes: Fruits": {
+   "kind": "post_harvest",
+   "codes": [
+    "0110000"
+   ],
+   "note": "Citrus fruit after harvest (packhouse treatments)"
+  },
+  "Agrumes: Maroc late": {
+   "kind": "narrower",
+   "codes": [
+    "0110020"
+   ],
+   "note": "Orange variety"
+  },
+  "Agrumes: Navel": {
+   "kind": "narrower",
+   "codes": [
+    "0110020"
+   ],
+   "note": "Orange variety"
+  },
+  "Agrumes: Oranger": {
+   "kind": "exact",
+   "codes": [
+    "0110020"
+   ]
+  },
+  "Ail": {
+   "kind": "exact",
+   "codes": [
+    "0220010"
+   ]
+  },
+  "Aneth": {
+   "kind": "narrower",
+   "codes": [
+    "0256030"
+   ],
+   "note": "Dill leaves are listed under Celery leaves"
+  },
+  "Arachide": {
+   "kind": "exact",
+   "codes": [
+    "0401020"
+   ]
+  },
+  "Arbres et arbustes d'ornement": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Arbres forestiers": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Arbres fruitiers": {
+   "kind": "group",
+   "codes": [
+    "0110000",
+    "0120000",
+    "0130000",
+    "0140000",
+    "0160000"
+   ],
+   "note": "Fruit trees in general; berries and small fruits excluded"
+  },
+  "Arbres fruitiers à noyaux": {
+   "kind": "group",
+   "codes": [
+    "0140000"
+   ]
+  },
+  "Arbres fruitiers à pépins": {
+   "kind": "group",
+   "codes": [
+    "0130000"
+   ]
+  },
+  "Artichaut": {
+   "kind": "exact",
+   "codes": [
+    "0270050"
+   ]
+  },
+  "Asperge": {
+   "kind": "exact",
+   "codes": [
+    "0270010"
+   ]
+  },
+  "Aubergine": {
+   "kind": "exact",
+   "codes": [
+    "0231030"
+   ]
+  },
+  "Avocatier": {
+   "kind": "exact",
+   "codes": [
+    "0163010"
+   ]
+  },
+  "Avoine": {
+   "kind": "exact",
+   "codes": [
+    "0500050"
+   ]
+  },
+  "Bananier": {
+   "kind": "exact",
+   "codes": [
+    "0163020"
+   ]
+  },
+  "Basilic": {
+   "kind": "exact",
+   "codes": [
+    "0256080"
+   ]
+  },
+  "Betterave à sucre": {
+   "kind": "exact",
+   "codes": [
+    "0900010"
+   ]
+  },
+  "Betterave potagère": {
+   "kind": "exact",
+   "codes": [
+    "0213010"
+   ]
+  },
+  "Blé tendre": {
+   "kind": "narrower",
+   "codes": [
+    "0500090"
+   ],
+   "note": "Soft wheat within Wheat"
+  },
+  "Blés": {
+   "kind": "exact",
+   "codes": [
+    "0500090"
+   ]
+  },
+  "Brocoli": {
+   "kind": "exact",
+   "codes": [
+    "0241010"
+   ]
+  },
+  "Canne à sucre": {
+   "kind": "exact",
+   "codes": [
+    "0900020"
+   ]
+  },
+  "Caprier": {
+   "kind": "exact",
+   "codes": [
+    "0850020"
+   ]
+  },
+  "Carotte": {
+   "kind": "exact",
+   "codes": [
+    "0213020"
+   ]
+  },
+  "Caroubes concassées": {
+   "kind": "post_harvest",
+   "codes": [
+    "0650000"
+   ]
+  },
+  "Caroubes entières": {
+   "kind": "post_harvest",
+   "codes": [
+    "0650000"
+   ]
+  },
+  "Caroubier": {
+   "kind": "exact",
+   "codes": [
+    "0650000"
+   ]
+  },
+  "Céleri": {
+   "kind": "ambiguous",
+   "codes": [
+    "0270030",
+    "0213030"
+   ],
+   "note": "Stalk celery or celeriac"
+  },
+  "Céréales": {
+   "kind": "group",
+   "codes": [
+    "0500000"
+   ]
+  },
+  "Céréales d'automne": {
+   "kind": "group",
+   "codes": [
+    "0500010",
+    "0500050",
+    "0500070",
+    "0500090"
+   ],
+   "note": "Autumn-sown barley, oat, rye, wheat"
+  },
+  "Céréales stockées": {
+   "kind": "post_harvest",
+   "codes": [
+    "0500000"
+   ]
+  },
+  "Céréales: grains": {
+   "kind": "post_harvest",
+   "codes": [
+    "0500000"
+   ]
+  },
+  "Céréales: sons": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Bran (feed)"
+  },
+  "Chicorée": {
+   "kind": "ambiguous",
+   "codes": [
+    "0251030",
+    "0255000",
+    "0900030"
+   ],
+   "note": "Leaf chicory, witloof or chicory root"
+  },
+  "Chou": {
+   "kind": "group",
+   "codes": [
+    "0240000"
+   ]
+  },
+  "Chou de Bruxelles": {
+   "kind": "exact",
+   "codes": [
+    "0242010"
+   ]
+  },
+  "Chou fleur": {
+   "kind": "exact",
+   "codes": [
+    "0241020"
+   ]
+  },
+  "Chou frisé": {
+   "kind": "ambiguous",
+   "codes": [
+    "0242020",
+    "0243020"
+   ],
+   "note": "Savoy cabbage or curly kale"
+  },
+  "Ciboulette": {
+   "kind": "exact",
+   "codes": [
+    "0256020"
+   ]
+  },
+  "Cognassier": {
+   "kind": "exact",
+   "codes": [
+    "0130030"
+   ]
+  },
+  "Colza": {
+   "kind": "exact",
+   "codes": [
+    "0401060"
+   ]
+  },
+  "Concombre": {
+   "kind": "exact",
+   "codes": [
+    "0232010"
+   ]
+  },
+  "Concombre (pépinière)": {
+   "kind": "nursery",
+   "codes": [
+    "0232010"
+   ]
+  },
+  "Concombre (plein champ)": {
+   "kind": "exact",
+   "codes": [
+    "0232010"
+   ]
+  },
+  "Concombre (sous serre)": {
+   "kind": "exact",
+   "codes": [
+    "0232010"
+   ]
+  },
+  "Coriandre": {
+   "kind": "narrower",
+   "codes": [
+    "0256030"
+   ],
+   "note": "Coriander leaves are listed under Celery leaves"
+  },
+  "Cornichon": {
+   "kind": "exact",
+   "codes": [
+    "0232020"
+   ]
+  },
+  "Cotonnier": {
+   "kind": "exact",
+   "codes": [
+    "0401090"
+   ]
+  },
+  "Courge": {
+   "kind": "ambiguous",
+   "codes": [
+    "0233020",
+    "0232030"
+   ],
+   "note": "Winter squash/pumpkin or summer squash"
+  },
+  "Courgette": {
+   "kind": "exact",
+   "codes": [
+    "0232030"
+   ]
+  },
+  "Courgette (plein champ)": {
+   "kind": "exact",
+   "codes": [
+    "0232030"
+   ]
+  },
+  "Courgette (sous serre)": {
+   "kind": "exact",
+   "codes": [
+    "0232030"
+   ]
+  },
+  "Cucurbitacées": {
+   "kind": "group",
+   "codes": [
+    "0232000",
+    "0233000"
+   ]
+  },
+  "Cultures légumières": {
+   "kind": "group",
+   "codes": [
+    "0200000"
+   ]
+  },
+  "Cultures maraîchères": {
+   "kind": "group",
+   "codes": [
+    "0200000"
+   ]
+  },
+  "Cultures ornementales": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Dattes stockées": {
+   "kind": "post_harvest",
+   "codes": [
+    "0161010"
+   ]
+  },
+  "Denrées stockées": {
+   "kind": "post_harvest",
+   "codes": [],
+   "note": "Stored commodities in general"
+  },
+  "Échalote": {
+   "kind": "exact",
+   "codes": [
+    "0220030"
+   ]
+  },
+  "Épices sèches": {
+   "kind": "post_harvest",
+   "codes": [
+    "0800000"
+   ]
+  },
+  "Épinard": {
+   "kind": "exact",
+   "codes": [
+    "0252010"
+   ]
+  },
+  "Estragon": {
+   "kind": "exact",
+   "codes": [
+    "0256100"
+   ]
+  },
+  "Fenouil": {
+   "kind": "ambiguous",
+   "codes": [
+    "0270040",
+    "0810070"
+   ],
+   "note": "Florence fennel (vegetable) or fennel seed (spice)"
+  },
+  "Fève": {
+   "kind": "ambiguous",
+   "codes": [
+    "0260010",
+    "0260020",
+    "0300010"
+   ],
+   "note": "Broad beans fresh (with or without pods) or dry"
+  },
+  "Féverole": {
+   "kind": "narrower",
+   "codes": [
+    "0300010"
+   ],
+   "note": "Field beans, dry"
+  },
+  "Figue de barbarie": {
+   "kind": "exact",
+   "codes": [
+    "0162040"
+   ]
+  },
+  "Figues séchées": {
+   "kind": "post_harvest",
+   "codes": [
+    "0161020"
+   ]
+  },
+  "Figuier": {
+   "kind": "exact",
+   "codes": [
+    "0161020"
+   ]
+  },
+  "Figuier de barbarie": {
+   "kind": "exact",
+   "codes": [
+    "0162040"
+   ]
+  },
+  "Fleurs séchées": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Fourrages": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Feed"
+  },
+  "Fraisier": {
+   "kind": "exact",
+   "codes": [
+    "0152000"
+   ]
+  },
+  "Framboisier": {
+   "kind": "exact",
+   "codes": [
+    "0153030"
+   ]
+  },
+  "Gazon": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Gazon de graminées": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Grenadier": {
+   "kind": "exact",
+   "codes": [
+    "0163050"
+   ]
+  },
+  "Groseillier": {
+   "kind": "group",
+   "codes": [
+    "0154030",
+    "0154040"
+   ],
+   "note": "Currants and gooseberries"
+  },
+  "Haricot": {
+   "kind": "group",
+   "codes": [
+    "0260010",
+    "0260020",
+    "0300010"
+   ]
+  },
+  "Haricot vert": {
+   "kind": "narrower",
+   "codes": [
+    "0260010"
+   ],
+   "note": "Green beans within Beans (with pods)"
+  },
+  "Haricot vert (sous serre)": {
+   "kind": "narrower",
+   "codes": [
+    "0260010"
+   ],
+   "note": "Green beans within Beans (with pods)"
+  },
+  "Kaki": {
+   "kind": "exact",
+   "codes": [
+    "0161060"
+   ]
+  },
+  "Laitue": {
+   "kind": "exact",
+   "codes": [
+    "0251020"
+   ]
+  },
+  "Légumineuses: grains": {
+   "kind": "post_harvest",
+   "codes": [
+    "0300000"
+   ]
+  },
+  "Légumineuses: semences": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Seed treatment for sowing"
+  },
+  "Lentilles": {
+   "kind": "group",
+   "codes": [
+    "0260050",
+    "0300020"
+   ]
+  },
+  "Locaux de stockage": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Locaux de stockage vides": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Luzerne": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Feed"
+  },
+  "Mâche": {
+   "kind": "exact",
+   "codes": [
+    "0251010"
+   ]
+  },
+  "Maïs": {
+   "kind": "exact",
+   "codes": [
+    "0500030"
+   ]
+  },
+  "Maïs doux": {
+   "kind": "exact",
+   "codes": [
+    "0234000"
+   ]
+  },
+  "Manguier": {
+   "kind": "exact",
+   "codes": [
+    "0163030"
+   ]
+  },
+  "Marjolaine": {
+   "kind": "narrower",
+   "codes": [
+    "0256070"
+   ],
+   "note": "Marjoram is listed under Thyme"
+  },
+  "Melon": {
+   "kind": "exact",
+   "codes": [
+    "0233010"
+   ]
+  },
+  "Melon (pépinière)": {
+   "kind": "nursery",
+   "codes": [
+    "0233010"
+   ]
+  },
+  "Melon (plein champ)": {
+   "kind": "exact",
+   "codes": [
+    "0233010"
+   ]
+  },
+  "Melon (sous serre)": {
+   "kind": "exact",
+   "codes": [
+    "0233010"
+   ]
+  },
+  "Menthe": {
+   "kind": "narrower",
+   "codes": [
+    "0256080"
+   ],
+   "note": "Mint is listed under Basil and edible flowers"
+  },
+  "Mouillant pour herbicides": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Mûrier": {
+   "kind": "exact",
+   "codes": [
+    "0154060"
+   ]
+  },
+  "Mûrier (mûre de Ronce)": {
+   "kind": "exact",
+   "codes": [
+    "0153010"
+   ]
+  },
+  "Myrtillier": {
+   "kind": "exact",
+   "codes": [
+    "0154010"
+   ]
+  },
+  "Navet": {
+   "kind": "exact",
+   "codes": [
+    "0213110"
+   ]
+  },
+  "Nectarinier": {
+   "kind": "narrower",
+   "codes": [
+    "0140030"
+   ],
+   "note": "Nectarines are listed under Peaches"
+  },
+  "Néflier": {
+   "kind": "ambiguous",
+   "codes": [
+    "0130040",
+    "0130050"
+   ],
+   "note": "Medlar or loquat (néflier du Japon)"
+  },
+  "Oignon": {
+   "kind": "exact",
+   "codes": [
+    "0220020"
+   ]
+  },
+  "Oignon de printemps": {
+   "kind": "exact",
+   "codes": [
+    "0220040"
+   ]
+  },
+  "Oléagineux: grains": {
+   "kind": "post_harvest",
+   "codes": [
+    "0401000"
+   ]
+  },
+  "Oléagineux: semences": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Seed treatment for sowing"
+  },
+  "Olivier": {
+   "kind": "group",
+   "codes": [
+    "0161030",
+    "0402010"
+   ],
+   "note": "Table olives and olives for oil"
+  },
+  "Orge": {
+   "kind": "exact",
+   "codes": [
+    "0500010"
+   ]
+  },
+  "Palmier": {
+   "kind": "ambiguous",
+   "codes": [
+    "0161010"
+   ],
+   "note": "Date palm or ornamental palm"
+  },
+  "Palmier dattier": {
+   "kind": "exact",
+   "codes": [
+    "0161010"
+   ]
+  },
+  "Palmier d'ornement": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Parcours": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Rangeland"
+  },
+  "Pastèque": {
+   "kind": "exact",
+   "codes": [
+    "0233030"
+   ]
+  },
+  "Patate douce": {
+   "kind": "exact",
+   "codes": [
+    "0212020"
+   ]
+  },
+  "Pêche": {
+   "kind": "post_harvest",
+   "codes": [
+    "0140030"
+   ],
+   "note": "Fruit name; product listed is post-harvest (SCHOLAR MAX; checked 2026-09-13)"
+  },
+  "Pêcher": {
+   "kind": "exact",
+   "codes": [
+    "0140030"
+   ]
+  },
+  "Pellets d'origine végétale": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Feed"
+  },
+  "Persil": {
+   "kind": "exact",
+   "codes": [
+    "0256040"
+   ]
+  },
+  "Piment": {
+   "kind": "narrower",
+   "codes": [
+    "0231020"
+   ],
+   "note": "Chili peppers are listed under Sweet peppers/bell peppers"
+  },
+  "Pistachier": {
+   "kind": "exact",
+   "codes": [
+    "0120100"
+   ]
+  },
+  "Plantes à infusion": {
+   "kind": "group",
+   "codes": [
+    "0630000"
+   ]
+  },
+  "Plantes aromatiques": {
+   "kind": "group",
+   "codes": [
+    "0256000"
+   ]
+  },
+  "Plantes aromatiques - excepté la menthe -": {
+   "kind": "group",
+   "codes": [
+    "0256000"
+   ],
+   "except_codes": [
+    "0256080"
+   ],
+   "note": "Mint sits in the Basil code, so that whole code is excluded"
+  },
+  "Plantes aromatiques (Ciboulette, Estragon, Cerfeuil, Mélisse et Coriandre)": {
+   "kind": "group",
+   "codes": [
+    "0256020",
+    "0256100",
+    "0256010",
+    "0256030"
+   ],
+   "note": "Lemon balm (mélisse) not mapped"
+  },
+  "Plantes aromatiques: Aneth": {
+   "kind": "narrower",
+   "codes": [
+    "0256030"
+   ],
+   "note": "Dill leaves are listed under Celery leaves"
+  },
+  "Plantes aromatiques: Ciboulette": {
+   "kind": "exact",
+   "codes": [
+    "0256020"
+   ]
+  },
+  "Plantes aromatiques: Persil": {
+   "kind": "exact",
+   "codes": [
+    "0256040"
+   ]
+  },
+  "Plantes aromatiques: Romarin": {
+   "kind": "exact",
+   "codes": [
+    "0256060"
+   ]
+  },
+  "Plantes aromatiques:Coriandre": {
+   "kind": "narrower",
+   "codes": [
+    "0256030"
+   ],
+   "note": "Coriander leaves are listed under Celery leaves"
+  },
+  "Plantes florales": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Plantes ornementales": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Poirier": {
+   "kind": "exact",
+   "codes": [
+    "0130020"
+   ]
+  },
+  "Pois chiche": {
+   "kind": "narrower",
+   "codes": [
+    "0260030",
+    "0260040",
+    "0300030"
+   ],
+   "note": "Chickpeas are listed under Peas"
+  },
+  "Poivron": {
+   "kind": "exact",
+   "codes": [
+    "0231020"
+   ]
+  },
+  "Poivron (pépinière)": {
+   "kind": "nursery",
+   "codes": [
+    "0231020"
+   ]
+  },
+  "Poivron (sous serre)": {
+   "kind": "exact",
+   "codes": [
+    "0231020"
+   ]
+  },
+  "Pomme de terre": {
+   "kind": "exact",
+   "codes": [
+    "0211000"
+   ]
+  },
+  "Pommes": {
+   "kind": "post_harvest",
+   "codes": [
+    "0130010"
+   ],
+   "note": "Fruit name; products listed are post-harvest (FRUITFOG-I, SCHOLAR MAX, SMARTFRESH; checked 2026-09-13)"
+  },
+  "Pommier": {
+   "kind": "exact",
+   "codes": [
+    "0130010"
+   ]
+  },
+  "Potiron": {
+   "kind": "exact",
+   "codes": [
+    "0233020"
+   ]
+  },
+  "Prune": {
+   "kind": "post_harvest",
+   "codes": [
+    "0140040"
+   ],
+   "note": "Fruit name; treated like 'Prunes' (not checked)"
+  },
+  "Pruneaux": {
+   "kind": "post_harvest",
+   "codes": [
+    "0140040"
+   ],
+   "note": "Dried plums"
+  },
+  "Prunes": {
+   "kind": "post_harvest",
+   "codes": [
+    "0140040"
+   ],
+   "note": "Fruit name; product listed is post-harvest (SCHOLAR MAX; checked 2026-09-13)"
+  },
+  "Prunier": {
+   "kind": "exact",
+   "codes": [
+    "0140040"
+   ]
+  },
+  "Radis": {
+   "kind": "exact",
+   "codes": [
+    "0213080"
+   ]
+  },
+  "Riz": {
+   "kind": "exact",
+   "codes": [
+    "0500060"
+   ]
+  },
+  "Romarin": {
+   "kind": "exact",
+   "codes": [
+    "0256060"
+   ]
+  },
+  "Roquette": {
+   "kind": "exact",
+   "codes": [
+    "0251060"
+   ]
+  },
+  "Roses séchées": {
+   "kind": "post_harvest",
+   "codes": [
+    "0631030"
+   ]
+  },
+  "Rosier": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Ornamental rose"
+  },
+  "Scarole": {
+   "kind": "exact",
+   "codes": [
+    "0251030"
+   ]
+  },
+  "Scarole frisée": {
+   "kind": "narrower",
+   "codes": [
+    "0251030"
+   ],
+   "note": "Curly endive within Escaroles"
+  },
+  "Sols nus": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Surfaces des locaux de stockage": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Tabac stocké": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Tomate": {
+   "kind": "exact",
+   "codes": [
+    "0231010"
+   ]
+  },
+  "Tomate (pépinière)": {
+   "kind": "nursery",
+   "codes": [
+    "0231010"
+   ]
+  },
+  "Tomate (plein champ)": {
+   "kind": "exact",
+   "codes": [
+    "0231010"
+   ]
+  },
+  "Tomate (sous serre)": {
+   "kind": "exact",
+   "codes": [
+    "0231010"
+   ]
+  },
+  "Tournesol": {
+   "kind": "exact",
+   "codes": [
+    "0401050"
+   ]
+  },
+  "Tourteaux": {
+   "kind": "non_crop",
+   "codes": [],
+   "note": "Oilcake (feed)"
+  },
+  "Toutes cultures": {
+   "kind": "group",
+   "codes": [
+    "0100000",
+    "0200000",
+    "0300000",
+    "0400000",
+    "0500000",
+    "0600000",
+    "0700000",
+    "0800000",
+    "0900000"
+   ]
+  },
+  "Toutes cultures (excepté la menthe)": {
+   "kind": "group",
+   "codes": [
+    "0100000",
+    "0200000",
+    "0300000",
+    "0400000",
+    "0500000",
+    "0600000",
+    "0700000",
+    "0800000",
+    "0900000"
+   ],
+   "except_codes": [
+    "0256080"
+   ],
+   "note": "Mint sits in the Basil code, so that whole code is excluded"
+  },
+  "Triticale": {
+   "kind": "ambiguous",
+   "codes": [
+    "0500090",
+    "0500070"
+   ],
+   "note": "Wheat x rye hybrid; EU listing not confirmed"
+  },
+  "Usages harmonisés": {
+   "kind": "ambiguous",
+   "codes": [],
+   "note": "Meaning unclear in the index"
+  },
+  "Verveine": {
+   "kind": "narrower",
+   "codes": [
+    "0632000"
+   ],
+   "note": "Verbena as herbal infusion leaves"
+  },
+  "Vigne": {
+   "kind": "group",
+   "codes": [
+    "0151000"
+   ],
+   "note": "Table and wine grapes"
+  },
+  "Zones infestées": {
+   "kind": "non_crop",
+   "codes": []
+  },
+  "Zones non cultivées": {
+   "kind": "non_crop",
+   "codes": []
+  }
+ }
+}

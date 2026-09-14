@@ -19,7 +19,7 @@ from dataclasses import dataclass
 
 SNAPSHOT_ROOT = pathlib.Path(__file__).resolve().parents[1] / "data" / "eu_snapshot"
 _MARKERS = re.compile(r"\((?:f|r|a)\)", re.I)
-_PARENTHETICAL = re.compile(r"\s*\(.*$")
+_PARENTHETICAL = re.compile(r"\s+\(.*$")  # needs a space before "(", so "(Z)-9-tetradecen-1-ol" keeps its name
 _APPLICABILITY_RANK = {"No longer applicable": 0, "Not yet applicable": 0, "Applicable": 1}
 
 
@@ -84,6 +84,8 @@ class Snapshot:
         self.manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
         self.date = datetime.date.fromisoformat(self.manifest["snapshot_date"])
         self.crops = json.loads((folder / "crops.json").read_text(encoding="utf-8"))
+        with gzip.open(folder / "products.json.gz", "rt", encoding="utf-8") as f:
+            self.products = json.load(f)  # code -> {parent, type, EN, FR, synonyms}
         with gzip.open(folder / "substances.json.gz", "rt", encoding="utf-8") as f:
             self.substances = json.load(f)
         with gzip.open(folder / "residue_names.json.gz", "rt", encoding="utf-8") as f:
@@ -134,6 +136,14 @@ class Snapshot:
         existing = self._by_key.get(key, substance)
         # Keep None as a marker for keys that point to different substances: those never resolve.
         self._by_key[key] = substance if existing is not None and existing["substance_id"] == substance["substance_id"] else None
+
+    def lineage(self, code):
+        """The code and all its parent group codes, e.g. Oranges -> [0110020, 0110000, 0100000]."""
+        chain = []
+        while code and code not in chain:
+            chain.append(code)
+            code = (self.products.get(code) or {}).get("parent")
+        return chain
 
     # Substances
 
