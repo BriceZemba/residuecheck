@@ -1,0 +1,89 @@
+{
+ "trade_name": "LENTAGRAN 600",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "CERTIS BELCHIM N.V",
+ "registration_no": "H02-0-003",
+ "valid_until": "28/12/2032",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyridate",
+   "content": "600 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Colza",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "1,5 l/ha",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Désherbage",
+   "dar_days": 90
+  },
+  {
+   "crop_fr": "Maïs",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "1,5 l/ha",
+   "Stade Culture": "",
+   "Période": "stade plantule-2 vraies feuilles des adventices",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Maïs",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "1,5 l/ha",
+   "Stade Culture": "",
+   "Période": "stade plantule-2 vraies feuilles des adventices",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Maïs doux",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "1,5 l/ha",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Désherbage",
+   "dar_days": 56
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "1,5 l/ha",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Désherbage",
+   "dar_days": 49
+  },
+  {
+   "crop_fr": "Pois chiche",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "1,5 l/ha",
+   "Stade Culture": "stade plantule",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "76j"
+  }
+ ],
+ "query": "LENTAGRAN 600",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

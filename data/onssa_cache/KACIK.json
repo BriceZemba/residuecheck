@@ -1,0 +1,43 @@
+{
+ "trade_name": "KACIK",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "ASCENZA AGRO",
+ "registration_no": "F02-9-002",
+ "valid_until": "05/10/2026",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Cloquintocet-mexyl",
+   "content": "100 g/kg"
+  },
+  {
+   "name_fr": "Diflufenican",
+   "content": "400 g/kg"
+  },
+  {
+   "name_fr": "Florasulame",
+   "content": "20 g/kg"
+  },
+  {
+   "name_fr": "Iodosulfuron-méthyl-sodium",
+   "content": "50 g/kg"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Blés",
+   "pest_fr": "Adventices Dicotylédones et Graminées annuelles",
+   "dose": "200 g/ha",
+   "Période": "3 feuilles-début tallage",
+   "max_applications": "1",
+   "dar_days": "---"
+  }
+ ],
+ "query": "KACIK",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

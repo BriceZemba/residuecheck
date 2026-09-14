@@ -1,0 +1,36 @@
+{
+ "trade_name": "CYMIL",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "Finchimica S.p.A",
+ "registration_no": "H01-5-010",
+ "valid_until": "18/01/2034",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Cyprodinil",
+   "content": "375 g/kg"
+  },
+  {
+   "name_fr": "Fludioxonil",
+   "content": "250 g/kg"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pourriture grise",
+   "dose": "60 g/hl",
+   "max_applications": "3",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "CYMIL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

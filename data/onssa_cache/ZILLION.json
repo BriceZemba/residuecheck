@@ -1,0 +1,30 @@
+{
+ "trade_name": "ZILLION",
+ "holder": "BASF MAROC",
+ "supplier": "BASF Agricultural Solutions Deutschland GmbH",
+ "registration_no": "F04-9-012",
+ "valid_until": "02/11/2030",
+ "tox_table": "C",
+ "category": "Adjuvant pour Herbicides",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Acide oléique",
+   "content": "46,5 g/l"
+  },
+  {
+   "name_fr": "Ester de phosphate d’alcools gras",
+   "content": "209,3 g/l"
+  },
+  {
+   "name_fr": "Esters méthyliques d'acides gras",
+   "content": "348,8 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "ZILLION",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

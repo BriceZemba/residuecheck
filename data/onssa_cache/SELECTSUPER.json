@@ -1,0 +1,89 @@
+{
+ "trade_name": "SELECT SUPER",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "UPL LIMITED",
+ "registration_no": "E05-1-006",
+ "valid_until": "24/03/2031",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Cléthodime",
+   "content": "120 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Adventices Graminées annuelles (Folle avoine)",
+   "dose": "1 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "2 feuilles-début tallage des graminées",
+   "Période": "post-levée des adventices",
+   "max_applications": "",
+   "mode": "Désherbage",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Adventices Graminées annuelles (Phalaris)",
+   "dose": "1 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "2 feuilles-début tallage des graminées",
+   "Période": "post-levée des adventices",
+   "max_applications": "",
+   "mode": "Désherbage",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Adventices Graminées annuelles (Ray-grass)",
+   "dose": "1 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "2 feuilles-début tallage des graminées",
+   "Période": "post-levée des adventices",
+   "max_applications": "",
+   "mode": "Désherbage",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Adventices Graminées annuelles (Repousses des céréales)",
+   "dose": "1 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "2 feuilles-début tallage des graminées",
+   "Période": "post-levée des adventices",
+   "max_applications": "",
+   "mode": "Désherbage",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Colza",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "1 l/ha",
+   "Stade Culture": "2 feuilles-début tallage des graminées",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Fève",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "1 l/ha",
+   "Stade Culture": "2 feuilles-début tallage des graminées",
+   "pest_stage": "2 feuilles-début tallage des graminées",
+   "Période": "",
+   "max_applications": "",
+   "mode": "Désherbage",
+   "dar_days": 40
+  }
+ ],
+ "query": "SELECT SUPER",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

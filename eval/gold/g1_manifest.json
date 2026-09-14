@@ -44,12 +44,12 @@
   }
  },
  "verdicts": {
-  "RED": 63,
-  "GREEN": 26,
-  "AMBER": 21,
+  "RED": 64,
+  "GREEN": 20,
+  "AMBER": 26,
   "CANNOT_VERIFY": 10
  },
- "relevant_substance_cases": 64,
+ "relevant_substance_cases": 67,
  "distinct_substances": 74,
  "distinct_crops": 32,
  "verdict_source": "residuecheck.rules v0 on a label-compliant application (registered, DAR met), arrival on the question date"

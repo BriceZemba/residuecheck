@@ -1,0 +1,22 @@
+{
+ "trade_name": "ARGICAL PRO",
+ "holder": "COMPTOIR AGRICOLE DU SOUSS",
+ "supplier": "IMERYS REFRACTORY MINERALS CLERAC",
+ "registration_no": "F11-0-003",
+ "valid_until": "28/12/2026",
+ "tox_table": "N",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Kaolin",
+   "content": "99%"
+  }
+ ],
+ "usages": [],
+ "query": "ARGICAL PRO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

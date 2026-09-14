@@ -1,0 +1,59 @@
+{
+ "trade_name": "KING 250 EW",
+ "holder": "UNIVERS HORTICOLE",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "E12-9-023",
+ "valid_until": "24/03/2031",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Emulsion de type aqueux (EW)",
+ "substances": [
+  {
+   "name_fr": "Tébuconazole",
+   "content": "250 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Blés",
+   "pest_fr": "Septoriose",
+   "dose": "1 l/ha",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 40
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Rouille",
+   "dose": "40 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Cladosporiose",
+   "dose": "40 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Oïdium",
+   "dose": "0,4 l/ha",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  }
+ ],
+ "query": "KING 250 EW",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

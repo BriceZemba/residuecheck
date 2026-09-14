@@ -1,0 +1,22 @@
+{
+ "trade_name": "DICAMBA SUPER 480",
+ "holder": "PHYTO BEHT",
+ "supplier": "GHARDA CHEMICALS Ltd",
+ "registration_no": "F12-3-003",
+ "valid_until": "24/03/2031",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Dicamba -sel dimethylamine [DMA]",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "DICAMBA SUPER 480",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

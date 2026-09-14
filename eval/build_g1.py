@@ -22,6 +22,7 @@ Usage: python eval/build_g1.py
 """
 import csv
 import datetime
+import html
 import json
 import pathlib
 import random
@@ -50,7 +51,14 @@ def clean_product_name(name):
     return re.sub(r"^\(?[a-z]\)\s*", "", name or "").strip()
 
 
+RELEVANT_FILE = ROOT / "eval" / "gold" / "g1_relevant_substances.json"
+
+
 def relevant_substance_ids(eu):
+    """Substances seen in RASFF or ONSSA data. Frozen to a file on first build so later resolver changes
+    (which resolve more names) cannot silently change the gold set."""
+    if RELEVANT_FILE.exists():
+        return set(json.loads(RELEVANT_FILE.read_text(encoding="utf-8"))["substance_ids"])
     ids = set()
     with (ROOT / "data" / "rasff_pesticides_fv.csv").open(encoding="utf-8") as f:
         for row in csv.DictReader(f):
@@ -62,6 +70,9 @@ def relevant_substance_ids(eu):
             s = eu.substance(sub["name_fr"])
             if s:
                 ids.add(s["substance_id"])
+    RELEVANT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    RELEVANT_FILE.write_text(json.dumps({"frozen": "2026-09-14", "from": ["data/rasff_pesticides_fv.csv", "data/onssa_cache/*.json"],
+                                         "substance_ids": sorted(ids)}, indent=1) + "\n", encoding="utf-8", newline="\n")
     return ids
 
 
@@ -123,19 +134,25 @@ def pick(pool, n, relevant, rng, per_substance):
     return chosen
 
 
-def phrase(eu, case, rng):
+def phrase(eu, case, rng, residue_owners):
     sub, crop = case["substance"], eu.products[case["crop"]]
-    fr_residue = (eu.residue_names.get(str(case["residue_id"])) or {}).get("FR")
+    fr_residue = html.unescape((eu.residue_names.get(str(case["residue_id"])) or {}).get("FR") or "")
+    fr_short = re.split(r"[,([]", fr_residue)[0].strip()
     roll = rng.random()
-    if roll < 0.25 and fr_residue and re.sub(r"\s+\(.*$", "", fr_residue).strip():
-        substance_text = re.sub(r"\s+\(.*$", "", fr_residue).strip()
+    # A French residue name is only a fair question when that residue belongs to this one substance
+    # (e.g. the benalaxyl residue covers benalaxyl and benalaxyl-M, so its name cannot identify either).
+    if roll < 0.25 and fr_short and residue_owners.get(case["residue_id"]) == 1:
+        substance_text = fr_short
     elif roll < 0.5 and base_name(sub["substance_name"]):
         substance_text = base_name(sub["substance_name"])
     else:
         substance_text = re.sub(r"\s*\(aka .*\)$", "", sub["substance_name"]).strip()
-    # Synonym entries look like "Summer squashes/zucchini/pattypan squashes"; keep the first form.
+    # Synonym entries look like "Summer squashes/zucchini/pattypan squashes"; keep the first form. Entries can
+    # themselves contain commas ("Other hybrids of Citrus reticulata, not elsewhere mentioned"), so splitting on
+    # commas leaves fragments; real names start with a capital letter, fragments and "Other ..." entries are skipped.
     synonyms = sorted({s.split("/")[0].strip() for s in (crop.get("synonyms") or "").split(",")
-                       if s.strip() and not s.strip().lower().startswith("other")})
+                       if s.strip()[:1].isupper() and not s.strip().lower().startswith("other")
+                       and "elsewhere" not in s.lower()})
     roll = rng.random()
     if roll < 0.25 and synonyms:
         crop_text = rng.choice(synonyms)
@@ -170,12 +187,16 @@ def main():
     rng = random.Random(SEED)
     relevant = relevant_substance_ids(eu)
     pools = candidates(eu)
+    residue_owners = {}
+    for sub in eu.substances:
+        for rid in eu.residue_ids(sub):
+            residue_owners[rid] = residue_owners.get(rid, 0) + 1
     per_substance, cases = {}, []
     for stratum, n in TARGETS.items():
         if stratum == "unknown":
             continue
         for c in pick(pools[stratum], n, relevant, rng, per_substance):
-            substance_text, crop_text = phrase(eu, c, rng)
+            substance_text, crop_text = phrase(eu, c, rng, residue_owners)
             cases.append({"stratum": stratum, "question": {"substance": substance_text, "crop": crop_text,
                                                            "date": c["date"].isoformat(), "destination": "EU"},
                           "truth": truth(eu, c), "relevant_substance": c["substance"]["substance_id"] in relevant})

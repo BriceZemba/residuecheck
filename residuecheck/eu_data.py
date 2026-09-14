@@ -21,6 +21,10 @@ SNAPSHOT_ROOT = pathlib.Path(__file__).resolve().parents[1] / "data" / "eu_snaps
 _MARKERS = re.compile(r"\((?:f|r|a)\)", re.I)
 _PARENTHETICAL = re.compile(r"\s+\(.*$")  # needs a space before "(", so "(Z)-9-tetradecen-1-ol" keeps its name
 _APPLICABILITY_RANK = {"No longer applicable": 0, "Not yet applicable": 0, "Applicable": 1}
+# French pesticide names often add a final "e" to the English ISO name (accents are already stripped by norm_residue).
+_FR_ENDINGS = [(r"ide$", "id"), (r"ane$", "an"), (r"ene$", "en"), (r"ine$", "in"), (r"ole$", "ol"), (r"ate$", "at")]
+_ALIASES = json.loads((pathlib.Path(__file__).resolve().parents[1] / "data" / "substance_aliases.json")
+                      .read_text(encoding="utf-8"))["aliases"]
 
 
 def norm_residue(name):
@@ -148,10 +152,26 @@ class Snapshot:
     # Substances
 
     def substance(self, name=None, cas=None):
-        """Exact normalised match on EN name, linked residue, unambiguous base name, FR residue name, or CAS.
-        No fuzzy matching: unknown or ambiguous names return None."""
+        """Exact normalised match on EN name, linked residue, unambiguous base name, FR residue name, CAS,
+        a sourced alias, or a French -> English ending (boscalide -> boscalid, pyridabène -> pyridaben).
+        Every step is an exact match on a real EU name; no fuzzy matching. Unknown or ambiguous names return None."""
         if cas and cas in self._by_cas:
             return self._by_cas[cas]
+        hit = self._exact(name)
+        if hit:
+            return hit
+        alias = _ALIASES.get(norm_residue(name))
+        if alias:
+            return self._exact(alias["eu"])
+        key = norm_residue(name)
+        for pattern, repl in _FR_ENDINGS:
+            if re.search(pattern, key):
+                hit = self._exact(re.sub(pattern, repl, key))
+                if hit:
+                    return hit
+        return None
+
+    def _exact(self, name):
         for key in (norm_residue(name), base_name(name)):
             if self._by_key.get(key):
                 return self._by_key[key]

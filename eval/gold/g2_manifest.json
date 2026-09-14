@@ -1,0 +1,62 @@
+{
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "list_file": "onssa_products_2026-09-14.json",
+ "snapshot": "2026-09-13",
+ "seed": 20260914,
+ "heldout_share": 0.3,
+ "total": 60,
+ "dev": 42,
+ "heldout": 18,
+ "strata": {
+  "exact": {
+   "target": 40,
+   "dev": 28,
+   "heldout": 12
+  },
+  "variant": {
+   "target": 10,
+   "dev": 7,
+   "heldout": 3
+  },
+  "fake": {
+   "target": 10,
+   "dev": 7,
+   "heldout": 3
+  }
+ },
+ "products_fetched_this_run": 0,
+ "products_qualified": 50,
+ "exact_registration_status": {
+  "not_registered": 12,
+  "registered": 28
+ },
+ "substances_distinct": 44,
+ "substances_not_resolved_by_rules_v0": [
+  "(E,E) 8,10-dodécadien-1-ol",
+  "1-Dodecanol",
+  "1-Tetradecanol",
+  "Cuivre - oxychlorure de cuivre",
+  "Cuivre - sulfate de cuivre",
+  "Cuivre - sulfate tétracuivrique tricalcique",
+  "Fosétyl-Aluminium",
+  "Glyphosate -sel d'isopropylamine",
+  "Huile minérale paraffinique",
+  "Hydrolysat de protéines",
+  "Propamocarbe HCl",
+  "Pyrèthre"
+ ],
+ "variant_kinds": [
+  "c_k_swap",
+  "c_k_swap",
+  "formulation_dropped",
+  "formulation_dropped",
+  "letter_dropped",
+  "letter_dropped",
+  "letter_dropped",
+  "o_zero_swap",
+  "o_zero_swap",
+  "o_zero_swap"
+ ],
+ "variants_resolvable_by_exact_normalised_match": 0,
+ "distinct_crops": 26
+}

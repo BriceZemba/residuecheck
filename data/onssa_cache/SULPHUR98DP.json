@@ -1,0 +1,34 @@
+{
+ "trade_name": "SULPHUR 98 DP",
+ "holder": "COMPTOIR AGRICOLE DU SOUSS",
+ "supplier": "SML Limited",
+ "registration_no": "E04-6-015",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Poudre pour poudrage (DP)",
+ "substances": [
+  {
+   "name_fr": "Soufre",
+   "content": "98%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Oïdium",
+   "dose": "20 kg/ha",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "8",
+   "interval_days": "5",
+   "mode": "Parties aériennes",
+   "dar_days": 5
+  }
+ ],
+ "query": "SULPHUR 98 DP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

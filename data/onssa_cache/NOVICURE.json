@@ -1,0 +1,31 @@
+{
+ "trade_name": "NOVICURE",
+ "holder": "CALIMAROC",
+ "supplier": "UPL LIMITED",
+ "registration_no": "F12-5-014",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - sulfate de cuivre",
+   "content": "40"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "2,5 kg/ha",
+   "Période": "dès l'apparition de la maladie et conditions favorables",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  }
+ ],
+ "query": "NOVICURE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

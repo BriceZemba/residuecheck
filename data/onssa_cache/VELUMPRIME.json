@@ -1,0 +1,83 @@
+{
+ "trade_name": "VELUM PRIME",
+ "holder": "BAYER SA",
+ "supplier": "BAYER AG",
+ "registration_no": "F04-4-013",
+ "valid_until": "07/05/2029",
+ "tox_table": "C",
+ "category": "Nématicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Fluopyram",
+   "content": "400 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Bananier",
+   "pest_fr": "Nématodes",
+   "dose": "0,625l/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "15-30j",
+   "mode": "Traitement du sol (goutte à goutte)",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Nématodes",
+   "dose": "0,625 l/ha",
+   "Période": "à la transplantation",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Traitement du sol (goutte à goutte)",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Nématodes",
+   "dose": "0,625 l/ha",
+   "Période": "Pré ou post transplantation",
+   "max_applications": "2",
+   "interval_days": "15-30",
+   "mode": "Goutte à goutte",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Nématodes",
+   "dose": "0,63 l/ha",
+   "Période": "à la transplantation",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Traitement du sol",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Nématodes",
+   "dose": "0,625 l/ha",
+   "Période": "à la transplantation",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Pulvérisation en ligne",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Nématodes",
+   "dose": "1ere application 0,625 l/ha; 2eme application: 0,313 l/ha; 3eme application: 0,313 l/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "14",
+   "mode": "Traitement du sol",
+   "dar_days": 3
+  }
+ ],
+ "query": "VELUM PRIME",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

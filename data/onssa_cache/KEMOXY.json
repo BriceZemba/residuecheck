@@ -1,0 +1,93 @@
+{
+ "trade_name": "KEMOXY",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "ORSANI INC.",
+ "registration_no": "F12-3-020",
+ "valid_until": "20/01/2035",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Azoxystrobine",
+   "content": "250 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Blés",
+   "pest_fr": "Septoriose",
+   "dose": "0,8 l/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 42
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Mildiou",
+   "dose": "0,8 l/ha",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "2",
+   "interval_days": "5-7",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Oïdium",
+   "dose": "0,6 l/ha",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "2",
+   "interval_days": "5-7",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Oïdium",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "75 cc/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "0,8 l/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Oïdium",
+   "dose": "0,6 l/ha",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  }
+ ],
+ "query": "KEMOXY",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

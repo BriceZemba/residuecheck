@@ -1,0 +1,32 @@
+{
+ "trade_name": "BUGUIS NEW",
+ "holder": "SIPP",
+ "supplier": "PROPLAN PLANT PROTECTION COMPANY,S.L",
+ "registration_no": "H02-0-010",
+ "valid_until": "18/01/2034",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Clodinafop-propargyl",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Blés",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "0,6l /ha",
+   "Stade Culture": "début monotaison-début floraison",
+   "pest_stage": "2 à 3 feuilles des adventices",
+   "max_applications": "1",
+   "dar_days": "75 jours"
+  }
+ ],
+ "query": "BUGUIS NEW",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

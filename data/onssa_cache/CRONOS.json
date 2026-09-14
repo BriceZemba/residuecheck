@@ -1,0 +1,83 @@
+{
+ "trade_name": "CRONOS",
+ "holder": "CPCM",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "F01-9-012",
+ "valid_until": "05/05/2030",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Difénoconazole",
+   "content": "250 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Cercosporiose",
+   "dose": "0,5 l/ha",
+   "Période": "conditions favorables à l'apparition de la maladie ou dès l'apparition des premières taches",
+   "max_applications": "2",
+   "interval_days": "21",
+   "mode": "",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Rouille",
+   "dose": "50cc/hl",
+   "Période": "conditions favorables à l'apparition de la maladie ou dès l'apparition des premières taches",
+   "max_applications": "2",
+   "interval_days": "10-12",
+   "mode": "Foliaire",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "50 cc / hl",
+   "Période": "conditions favorables à l'apparition de la maladie ou dès l'apparition des premières taches",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Alternariose",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Tavelure",
+   "dose": "15 cc / hl",
+   "Période": "conditions favorables à l'apparition de la maladie ou dès l'apparition des premières taches",
+   "max_applications": "3",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Oïdium",
+   "dose": "50cc/hl",
+   "Période": "conditions favorables à l'apparition de la maladie ou dès l'apparition des premières taches",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "Foliaire",
+   "dar_days": 3
+  }
+ ],
+ "query": "CRONOS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

@@ -1,0 +1,59 @@
+{
+ "trade_name": "VANTEX 60 CS",
+ "holder": "PROMAGRI",
+ "supplier": "CHEMINOVA A/S",
+ "registration_no": "E11-7-060",
+ "valid_until": "23/06/2031",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension de capsules (CS)",
+ "substances": [
+  {
+   "name_fr": "Gamma-cyhalothrine",
+   "content": "60 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "125 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "250 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "75 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Cléone mendiant",
+   "dose": "125 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  }
+ ],
+ "query": "VANTEX 60 CS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

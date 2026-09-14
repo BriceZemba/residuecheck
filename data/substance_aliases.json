@@ -1,0 +1,6 @@
+{
+ "about": "French common names that differ from EU English names beyond accents and suffixes. Only add a name with a source.",
+ "aliases": {
+  "folpel": {"eu": "Folpet", "source": "French common name of folpet (ISO: folpet); e.g. ANSES e-phy lists 'folpel'"}
+ }
+}

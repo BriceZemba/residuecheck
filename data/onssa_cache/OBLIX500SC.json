@@ -1,0 +1,22 @@
+{
+ "trade_name": "OBLIX 500 SC",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "UPL LIMITED",
+ "registration_no": "F08-6-007",
+ "valid_until": "25/12/2028",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Ethofumesate",
+   "content": "500 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "OBLIX 500 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

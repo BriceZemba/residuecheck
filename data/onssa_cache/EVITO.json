@@ -1,0 +1,31 @@
+{
+ "trade_name": "EVITO",
+ "holder": "SIPP",
+ "supplier": "ARYSTA LIFESCIENCE SAS",
+ "registration_no": "F10-3-005",
+ "valid_until": "23/12/2029",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Fluoxastrobine",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "400 cc/ha",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  }
+ ],
+ "query": "EVITO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

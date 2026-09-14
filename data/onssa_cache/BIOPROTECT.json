@@ -1,0 +1,122 @@
+{
+ "trade_name": "BIOPROTECT",
+ "holder": "AGRO SPRAY TECHNIC",
+ "supplier": "SEIPASA",
+ "registration_no": "F11-9-006",
+ "valid_until": "30/12/2030",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyrèthre",
+   "content": "20 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Colza",
+   "pest_fr": "Pucerons",
+   "dose": "1 l/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,5 l/ha",
+   "max_applications": "03",
+   "interval_days": "07jrs",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Épinard",
+   "pest_fr": "Pucerons",
+   "dose": "0,7 l/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Thrips",
+   "dose": "1,5 l/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,2 l/ha",
+   "max_applications": "03",
+   "interval_days": "07 jrs",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Thrips",
+   "dose": "1 l/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Mûrier (mûre de Ronce)",
+   "pest_fr": "Thrips",
+   "dose": "1,5 l/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Thrips",
+   "dose": "1,5 l/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Plantes aromatiques: Persil",
+   "pest_fr": "Pucerons",
+   "dose": "1 l/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Pucerons",
+   "dose": "1,2 l/ha",
+   "max_applications": "03",
+   "interval_days": "07 jrs",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,5 l/ha",
+   "max_applications": "03",
+   "interval_days": "07 jrs",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  }
+ ],
+ "query": "BIOPROTECT",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

@@ -1,0 +1,86 @@
+{
+ "trade_name": "OVIPRON 78 EC",
+ "holder": "CPCM",
+ "supplier": "UPL LIMITED",
+ "registration_no": "F08-6-010",
+ "valid_until": "27/12/2027",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "78%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2 l/hl",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Arbres forestiers",
+   "pest_fr": "Adjuvant -insecticides",
+   "dose": "1 l/ha",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "2l/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "1 l/hl",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Traitement d'hiver",
+   "dose": "2 l/hl",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1 l/hl",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Traitement d'hiver",
+   "dose": "2,5 l/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "OVIPRON 78 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

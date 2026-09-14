@@ -1,0 +1,26 @@
+{
+ "trade_name": "STALLION",
+ "holder": "SIPP",
+ "supplier": "FMC CHEMICAL SPRL",
+ "registration_no": "F11-1-026",
+ "valid_until": "25/12/2028",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Suspension de capsules (CS)",
+ "substances": [
+  {
+   "name_fr": "Clomazone",
+   "content": "30 g/l"
+  },
+  {
+   "name_fr": "Pendiméthaline",
+   "content": "333 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "STALLION",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

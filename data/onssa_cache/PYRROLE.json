@@ -1,0 +1,22 @@
+{
+ "trade_name": "PYRROLE",
+ "holder": "APHYSEM S.A.R.L",
+ "supplier": "NANJING LIMIN CHEMICAL CO.,LTD.",
+ "registration_no": "H12-4-030",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Pyriméthanil",
+   "content": "400 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "PYRROLE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

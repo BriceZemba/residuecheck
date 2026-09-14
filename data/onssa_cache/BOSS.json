@@ -1,0 +1,45 @@
+{
+ "trade_name": "BOSS",
+ "holder": "SHARDA MAROC",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "F05-8-017",
+ "valid_until": "20/01/2035",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Boscalide",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Colza",
+   "pest_fr": "Sclerotiniose",
+   "dose": "0,5 kg/ha",
+   "Stade Culture": "Plein floraison: 50% des fleurs de la grappe principale sont ouvertes , les premiers pétales tombent",
+   "pest_stage": "préventif ou dès l'apparition des premières attaques",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pourriture grise",
+   "dose": "120 g/hl",
+   "Stade Culture": "",
+   "pest_stage": "préventif ou dès l'apparition des premières attaques",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "BOSS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

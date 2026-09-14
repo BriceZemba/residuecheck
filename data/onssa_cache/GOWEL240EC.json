@@ -1,0 +1,30 @@
+{
+ "trade_name": "GOWEL 240 EC",
+ "holder": "SPRAYKEM",
+ "supplier": "SINON CORPORATION",
+ "registration_no": "H04-2-027",
+ "valid_until": "20/05/2035",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Oxyfluorfène",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Oignon",
+   "pest_fr": "Adventices Dicotylédones et Graminées annuelles",
+   "dose": "1.5 l/ha",
+   "max_applications": "1",
+   "dar_days": "60 jours"
+  }
+ ],
+ "query": "GOWEL 240 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

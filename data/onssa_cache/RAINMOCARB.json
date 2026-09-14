@@ -1,0 +1,41 @@
+{
+ "trade_name": "RAINMOCARB",
+ "holder": "RAINBOW AGROSCIENCES",
+ "supplier": "SHANDONG WEIFANG RAINBOW CHEMICALS CO.,LTD",
+ "registration_no": "H11-2-018",
+ "valid_until": "01/07/2036",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Propamocarbe HCl",
+   "content": "722 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "300 cc/hl",
+   "Période": "conditions favorables à l'apparition de la maladie ou dès l'apparition des premières taches",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Fonte de semis",
+   "dose": "5 cc/m2",
+   "Période": "juste après semis et avant transplantation",
+   "max_applications": "1",
+   "mode": "Traitement du sol",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "RAINMOCARB",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

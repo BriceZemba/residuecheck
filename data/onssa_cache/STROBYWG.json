@@ -1,0 +1,144 @@
+{
+ "trade_name": "STROBY WG",
+ "holder": "BASF MAROC",
+ "supplier": "BASF Agricultural Solutions Deutschland GmbH",
+ "registration_no": "D03-9-001",
+ "valid_until": "01/04/2028",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Kresoxim-méthyl",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Cognassier",
+   "pest_fr": "Oïdium",
+   "dose": "20 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 35
+  },
+  {
+   "crop_fr": "Concombre",
+   "pest_fr": "Oïdium",
+   "dose": "30 g/hl",
+   "Stade Culture": "",
+   "Période": "BBCH 13-19",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Oïdium",
+   "dose": "30 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Oïdium",
+   "dose": "30 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Oïdium",
+   "dose": "30 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Oïdium",
+   "dose": "130 g/ha",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "20 g/hl",
+   "Stade Culture": "Après récolte et avant floraison",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Oïdium",
+   "dose": "20 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 35
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Tavelure",
+   "dose": "20 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 35
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Oïdium",
+   "dose": "50 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Oïdium",
+   "dose": "30 g/hl",
+   "Stade Culture": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "8",
+   "mode": "Parties aériennes",
+   "dar_days": 35
+  }
+ ],
+ "query": "STROBY WG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

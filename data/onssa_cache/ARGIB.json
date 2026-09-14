@@ -1,0 +1,37 @@
+{
+ "trade_name": "ARGIB",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "UPL LIMITED",
+ "registration_no": "F11-0-025",
+ "valid_until": "01/04/2036",
+ "tox_table": "N",
+ "category": "Régulateur de croissance",
+ "formulation": "Tablettes solubles dans l’eau (ST)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Action sur le grossissement des fruits",
+   "dose": "1 tb/hl",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Action sur le processus de la nouaison",
+   "dose": "1 tb/hl",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  }
+ ],
+ "query": "ARGIB",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

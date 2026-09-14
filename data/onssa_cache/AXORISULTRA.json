@@ -1,0 +1,45 @@
+{
+ "trade_name": "AXORIS ULTRA",
+ "holder": "PHYTO BEHT",
+ "supplier": "SYNGENTA CROP PROTECTION AG",
+ "registration_no": "F08-8-015",
+ "valid_until": "07/05/2029",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Clodinafop-propargyl",
+   "content": "80 g/l"
+  },
+  {
+   "name_fr": "Cloquintocet-méxyl (Safener)",
+   "content": "20 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Blés",
+   "pest_fr": "Adventices Graminées annuelles (Folle avoine, Phalaris, Ray-grass)",
+   "dose": "0,75 l/ha",
+   "pest_stage": "2 à 3 feuilles des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 75
+  },
+  {
+   "crop_fr": "Triticale",
+   "pest_fr": "Adventices Graminées annuelles (Folle avoine, Phalaris, Ray-grass)",
+   "dose": "0,75 l/ha",
+   "pest_stage": "2 à 3 feuilles des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 75
+  }
+ ],
+ "query": "AXORIS ULTRA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

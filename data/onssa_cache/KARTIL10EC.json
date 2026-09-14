@@ -1,0 +1,32 @@
+{
+ "trade_name": "KARTIL 10 EC",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "UPL LIMITED",
+ "registration_no": "E11-9-047",
+ "valid_until": "24/03/2031",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Cyperméthrine",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "30 cc/hl",
+   "pest_stage": "œufs, larves et adultes",
+   "Période": "dès les premiers signes d'infestation",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "KARTIL 10 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

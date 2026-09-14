@@ -1,0 +1,41 @@
+{
+ "trade_name": "KATANGA TRIPLE",
+ "holder": "ACI EQUIPMENTS",
+ "supplier": "QEMETICA AGRICULTURAL SOLUTIONS SPAIN SLU",
+ "registration_no": "F04-7-003",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Cymoxanil",
+   "content": "4%"
+  },
+  {
+   "name_fr": "Folpel",
+   "content": "25%"
+  },
+  {
+   "name_fr": "Fosétyl-Aluminium",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "3kg/ha",
+   "Période": "dès l'apparition de la maladie",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Foliaire",
+   "dar_days": 28
+  }
+ ],
+ "query": "KATANGA TRIPLE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

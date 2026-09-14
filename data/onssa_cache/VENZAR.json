@@ -1,0 +1,78 @@
+{
+ "trade_name": "VENZAR",
+ "holder": "AGRIMATCO",
+ "supplier": "FMC IP Technology LLC Vernier Branch",
+ "registration_no": "0215",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Lenacile",
+   "content": "80%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "0,4 kg/ha",
+   "Stade Culture": "post-levée de la culture",
+   "pest_stage": "post-levée des adventices",
+   "Période": "4 feuilles",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "NA"
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "0,8 kg/ha",
+   "Stade Culture": "pré-levée de la culture",
+   "pest_stage": "pré-levée des adventices",
+   "Période": "pré-levée",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "NA"
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "0,8 kg/ha",
+   "Stade Culture": "pré-levée de la culture",
+   "pest_stage": "post-levée des adventices",
+   "Période": "pré-levée",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "NA"
+  },
+  {
+   "crop_fr": "Épinard",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "1 kg/ha",
+   "Stade Culture": "pré-levée de la culture",
+   "pest_stage": "pré-levée des adventices",
+   "Période": "pré-levée",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "NA"
+  },
+  {
+   "crop_fr": "Épinard",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "1 kg/ha",
+   "Stade Culture": "pré-levée de la culture",
+   "pest_stage": "pré-levée des adventices",
+   "Période": "pré-levée",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "NA"
+  }
+ ],
+ "query": "VENZAR",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

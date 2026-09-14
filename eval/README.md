@@ -24,7 +24,34 @@ Each case is a question a compliance officer might ask, phrased with the names p
 | no_mrl_required | 5 | Substances exempt from limits (Annex IV). |
 | unknown | 10 | Invented substance names, checked absent from the EU data. The right answer is "cannot verify". |
 
-Verdict mix: 63 RED, 26 GREEN, 21 AMBER, 10 CANNOT_VERIFY. 74 distinct substances, 32 crops. 64 cases use substances that appear in real RASFF notifications or ONSSA products.
+Verdict mix: 64 RED, 20 GREEN, 26 AMBER, 10 CANNOT_VERIFY. 74 distinct substances, 32 crops. 67 cases use substances that appear in real RASFF notifications or ONSSA products (list frozen in `gold/g1_relevant_substances.json`).
+
+History (both before any model-based system was scored):
+
+1. 2026-09-14: regenerated because the relevance weighting depended on the substance resolver, which had improved. The relevance list is now frozen so resolver changes cannot move the gold set.
+2. 2026-09-14: regenerated after the first `rules-only` dev run exposed two builder defects: a French residue name with an HTML entity that also covered two substances (benalaxyl / benalaxyl-M), and a crop "synonym" that was a comma fragment ("not elsewhere mentioned"). French residue names are now unescaped, cut before brackets, and only used when the residue belongs to one substance; synonym fragments are skipped. `tests/test_eval_runner.py` scans every G1 and G2 question for these defects. Held-out cases were not opened; the scan is automated.
+
+`tests/test_g1.py` checks the builder reproduces the committed files byte for byte.
+
+## G2: trade-name resolution, Morocco (60 cases)
+
+Built by `python eval/build_g2.py` from the ONSSA index phytosanitaire (product list saved in `data/onssa_products_2026-09-14.json`, product pages cached in `data/onssa_cache/`). Seed 20260914. Files: `gold/g2_dev.jsonl` (42), `heldout/g2_heldout.jsonl` (18), `gold/g2_manifest.json`.
+
+Truth comes from ONSSA records only, independent of the EU snapshot and the rules engine: product name, active substances as ONSSA writes them, registration for the lot's crop (through `data/crop_map_onssa.json`), and the pre-harvest interval.
+
+| Stratum | Cases | What it tests |
+|---|---|---|
+| exact | 40 | Real products drawn at random; 28 on a crop they are registered for, 12 on a crop they are not |
+| variant | 10 | Real products written the way logs get written: letter swaps (C/K), digit/letter confusion (O/0, I/1), a dropped letter, a missing formulation code. None is resolvable by exact normalised matching |
+| fake | 10 | Invented names with no exact or close (difflib 0.7) match in the index. Two first candidates turned out to be near real products (OXYMAR 50 WP, NOVACRID) and were replaced |
+
+The EU name of each substance is deliberately not part of G2 truth: the deterministic resolver cannot resolve 12 of the 44 distinct substance names (copper salts, "Glyphosate -sel d'isopropylamine", pheromone alcohols, "Pyrèthre", mineral oil, protein hydrolysate), so storing its output would bake its errors into the set. Scoring the EU mapping needs a hand-checked alias set (planned).
+
+Limits: Morocco only; the crop registration truth depends on the hand-written crop map.
+
+## Runner
+
+`python eval/run.py --suite g1|g2 --config rules-only [--split dev|heldout]` writes `results/<suite>_<config>_<split>.json` (every answer and score) and `.md` (metrics and every failure). `python eval/run.py --summary` rebuilds `results/README.md`. Held-out runs are logged in `results/heldout_runs.log`. Model-based configs (`closed-book`, `tavily-only`, `full`) exit with "skipped" until the API keys are set.
 
 How the truth was checked: `tests/test_g1.py` re-derives every limit from the snapshot's raw version list (not the lookup function the builder used) and checks the builder reproduces the files byte for byte.
 

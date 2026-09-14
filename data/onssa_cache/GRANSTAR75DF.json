@@ -1,0 +1,34 @@
+{
+ "trade_name": "GRANSTAR 75 DF",
+ "holder": "AGRIMATCO",
+ "supplier": "FMC INTERNATIONAL SWIZERLAND SARL",
+ "registration_no": "B09-7-002",
+ "valid_until": "21/10/2033",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Granulé flowable (DF)",
+ "substances": [
+  {
+   "name_fr": "Tribénuron-méthyle",
+   "content": "75%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Céréales d'automne",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "12,5 g/ha",
+   "Stade Culture": "post-levée de la culture",
+   "pest_stage": "4 à 6 feuilles des adventices",
+   "Période": "3 feuilles au stade 2 nœuds de la culture",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  }
+ ],
+ "query": "GRANSTAR 75 DF",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

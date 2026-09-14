@@ -1,0 +1,43 @@
+{
+ "trade_name": "PMV-01",
+ "holder": "BIOBETTER MAROC",
+ "supplier": "DE CEUSTER MESTSTOFFEN NV",
+ "registration_no": "F08-4-001",
+ "valid_until": "10/07/2028",
+ "tox_table": "C",
+ "category": "Virucide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Virus de la mosaïque du pépino (souche CH2 - isolat 1906)",
+   "content": "100%(1,1x10Exp6 particules virales/µl)"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Tomate (sous serre)",
+   "pest_fr": "Virus de la mosaïque du pepino",
+   "dose": "4 l/ha",
+   "Stade Culture": "avant plantation",
+   "pest_stage": "préventif",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Tomate (sous serre)",
+   "pest_fr": "Virus de la mosaïque du pepino",
+   "dose": "4 l/ha",
+   "Stade Culture": "justes après transplantation",
+   "pest_stage": "préventif",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "PMV-01",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

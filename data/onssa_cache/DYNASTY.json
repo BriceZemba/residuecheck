@@ -1,0 +1,31 @@
+{
+ "trade_name": "DYNASTY",
+ "holder": "GDIRAGRI",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "H03-1-011",
+ "valid_until": "06/04/2032",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles et Graminées annuelles",
+   "dose": "2 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "dar_days": 28
+  }
+ ],
+ "query": "DYNASTY",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

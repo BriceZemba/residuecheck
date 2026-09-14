@@ -1,0 +1,73 @@
+{
+ "trade_name": "TAIKOK 25 EC",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "ORSANI INC.",
+ "registration_no": "F07-6-018",
+ "valid_until": "27/12/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Cyperméthrine",
+   "content": "25%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "150 cc/ha",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Cléone mendiant",
+   "dose": "250cc/ha",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Noctuelles",
+   "dose": "250 cc/ha",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Taupins",
+   "dose": "250 cc/ha",
+   "Période": "stade cotylédonaire et 15 jours après",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "20 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "TAIKOK 25 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}

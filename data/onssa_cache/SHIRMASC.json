@@ -1,0 +1,33 @@
+{
+ "trade_name": "SHIRMA SC",
+ "holder": "BETAREN MAROC S.A.R.L.",
+ "supplier": "Schelkovo Agrohim JSC",
+ "registration_no": "H06-3-002",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Fluazinam",
+   "content": "500 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "0,4 l/ha",
+   "Période": "conditions favorables à l'apparition de la maladie ou dès l'apparition des premières taches",
+   "max_applications": "3",
+   "interval_days": "7-10 j",
+   "mode": "Foliaire",
+   "dar_days": "7 j"
+  }
+ ],
+ "query": "SHIRMA SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-14"
+}
