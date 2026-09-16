@@ -1,0 +1,505 @@
+{
+ "suite": "g2b",
+ "config": "rules-only",
+ "split": "dev",
+ "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
+ "run_at": "2026-09-16T21:30:03",
+ "code_version": "7c2bf8c-dirty",
+ "seconds": 0.1259784698486328,
+ "cost_usd": 0,
+ "metrics": {
+  "pass": {
+   "n": 10,
+   "hits": 2,
+   "rate": 0.2
+  },
+  "product_identified": {
+   "n": 8,
+   "hits": 0,
+   "rate": 0.0
+  },
+  "substances_exact": {
+   "n": 0,
+   "hits": 0,
+   "rate": null
+  },
+  "wrong_product": 0,
+  "abstained_on_real": 8,
+  "fake_accepted": 0,
+  "by_stratum": {
+   "eg_exact": {
+    "n": 4,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "fake": {
+    "n": 2,
+    "hits": 2,
+    "rate": 1.0
+   },
+   "tr_exact": {
+    "n": 4,
+    "hits": 0,
+    "rate": 0.0
+   }
+  }
+ },
+ "cases": [
+  {
+   "id": "g2b-dev-001",
+   "split": "dev",
+   "stratum": "tr_exact",
+   "question": {
+    "trade_name": "AZOSTAR 320 SC",
+    "country": "TR"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "AZOSTAR 320 SC",
+    "substances_page": [
+     "Tebuconazole",
+     "Azoxystrobin"
+    ],
+    "eu_substances": [
+     "Tebuconazole",
+     "Azoxystrobin"
+    ],
+    "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/6267",
+    "register_id": 6267,
+    "retrieved": "2026-09-16",
+    "details": {
+     "heading": "AZOSTAR 320 SC (İMAL)",
+     "active_substance_text": "200 g/l Tebuconazole + 120 g/l Azoxystrobin",
+     "formulation": "SC (Akıcı Konsantre/Süspansiyon Konsantre)",
+     "licence_no": "10584",
+     "licence_group": "Fungisit",
+     "valid_until": "2036-04-01",
+     "holder": "AGROFARM KİMYA SAN.VE TİC. A.Ş."
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-002",
+   "split": "dev",
+   "stratum": "tr_exact",
+   "question": {
+    "trade_name": "BEST FORTE 80 WG",
+    "country": "TR"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "BEST FORTE 80 WG",
+    "substances_page": [
+     "Thiram"
+    ],
+    "eu_substances": [
+     "Thiram"
+    ],
+    "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/7176",
+    "register_id": 7176,
+    "retrieved": "2026-09-16",
+    "details": {
+     "heading": "BEST FORTE 80 WG (İMAL)",
+     "active_substance_text": "%80 Thiram",
+     "formulation": "WG (Suda Dağılabilen Granül)",
+     "licence_no": "11117",
+     "licence_group": "Fungisit",
+     "valid_until": "2028-05-02",
+     "holder": "AGROBEST GRUP TARIM İLAÇLARI TOHUMCULUK İMALAT İTHALAT İHRACAT SAN. VE TİC.A.Ş."
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-003",
+   "split": "dev",
+   "stratum": "tr_exact",
+   "question": {
+    "trade_name": "METIKOLOS",
+    "country": "TR"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "METIKOLOS",
+    "substances_page": [
+     "Fluazinam",
+     "Cymoxanil"
+    ],
+    "eu_substances": [
+     "Fluazinam",
+     "Cymoxanil"
+    ],
+    "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/10546",
+    "register_id": 10546,
+    "retrieved": "2026-09-16",
+    "details": {
+     "heading": "METIKOLOS (İTHAL)",
+     "active_substance_text": "300 g/l Fluazinam + 200 g/l Cymoxanil",
+     "formulation": "SC (Akıcı Konsantre/Süspansiyon Konsantre)",
+     "licence_no": "13363",
+     "licence_group": "Fungisit",
+     "valid_until": "2034-12-23",
+     "holder": "FMC TURKEY ENDÜSTRİ ÜRÜNLERİ SAN.LTD.ŞTİ."
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-004",
+   "split": "dev",
+   "stratum": "tr_exact",
+   "question": {
+    "trade_name": "ROYTAİ 150 ZEC",
+    "country": "TR"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "ROYTAİ 150 ZEC",
+    "substances_page": [
+     "Chlorantraniliprole",
+     "Lambda-cyhalothrin"
+    ],
+    "eu_substances": [
+     "Chlorantraniliprole",
+     "lambda-Cyhalothrin"
+    ],
+    "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/10845",
+    "register_id": 10845,
+    "retrieved": "2026-09-16",
+    "details": {
+     "heading": "ROYTAİ 150 ZEC (İMAL)",
+     "active_substance_text": "100 g/l Chlorantraniliprole + 50 g/l Lambda-cyhalothrin",
+     "formulation": "ZC (CS ve SC Formülasyonlarının Karışımı)",
+     "licence_no": "13653",
+     "licence_group": "İnsektisit",
+     "valid_until": "2035-07-10",
+     "holder": "ROYAL-FEN KİMYA TARIM İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ"
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-005",
+   "split": "dev",
+   "stratum": "eg_exact",
+   "question": {
+    "trade_name": "اييزو 30% WG",
+    "country": "EG"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "اييزو 30% WG",
+    "substances_page": [
+     "Indoxacarb"
+    ],
+    "eu_substances": [
+     "Indoxacarb"
+    ],
+    "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=4576",
+    "register_id": 4576,
+    "retrieved": "2026-09-16",
+    "details": {
+     "registration_no": "2646",
+     "concentration": "30",
+     "status": "مسجل",
+     "producer": "Nantong Shizhuang Chemical Co",
+     "use_class": "حشري",
+     "pre_harvest_intervals": [
+      "7 يوم",
+      "60 يوم",
+      "10 يوم",
+      "8 يوم",
+      "60 يوم"
+     ]
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-006",
+   "split": "dev",
+   "stratum": "eg_exact",
+   "question": {
+    "trade_name": "كانزابريس 30% SC",
+    "country": "EG"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "كانزابريس 30% SC",
+    "substances_page": [
+     "Picoxystrobin"
+    ],
+    "eu_substances": [
+     "Picoxystrobin"
+    ],
+    "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=30846",
+    "register_id": 30846,
+    "retrieved": "2026-09-16",
+    "details": {
+     "registration_no": "5253",
+     "concentration": "30",
+     "status": "مسجل",
+     "producer": "Shaanxi Hengtian Biological Agriculture Co.,",
+     "use_class": "فطري",
+     "pre_harvest_intervals": [
+      "35 يوم"
+     ]
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-007",
+   "split": "dev",
+   "stratum": "eg_exact",
+   "question": {
+    "trade_name": "ليكوبار 40% SE",
+    "country": "EG"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "ليكوبار 40% SE",
+    "substances_page": [
+     "Azoxystrobin",
+     "Propiconazole"
+    ],
+    "eu_substances": [
+     "Azoxystrobin",
+     "Propiconazole"
+    ],
+    "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=22918",
+    "register_id": 22918,
+    "retrieved": "2026-09-16",
+    "details": {
+     "registration_no": "4228",
+     "concentration": "16 + 24",
+     "status": "مسجل",
+     "producer": "Jiangxi Heyi Chemical Co., Ltd",
+     "use_class": "فطري",
+     "pre_harvest_intervals": [
+      "30 يوم"
+     ]
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-008",
+   "split": "dev",
+   "stratum": "eg_exact",
+   "question": {
+    "trade_name": "مستر جرين 1.8% EC",
+    "country": "EG"
+   },
+   "truth": {
+    "status": "found",
+    "trade_name": "مستر جرين 1.8% EC",
+    "substances_page": [
+     "Abamectin"
+    ],
+    "eu_substances": [
+     "Abamectin (aka avermectin)"
+    ],
+    "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=3284",
+    "register_id": 3284,
+    "retrieved": "2026-09-16",
+    "details": {
+     "registration_no": "2374",
+     "concentration": "1.8",
+     "status": "مسجل",
+     "producer": "Hebei Xintian Bochemical Engineering Co., Ltd",
+     "use_class": "حشري - أكاروسي",
+     "pre_harvest_intervals": [
+      "5 يوم"
+     ]
+    }
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "product_ok": false,
+    "wrong_product": false,
+    "abstained": true,
+    "pass": false
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-009",
+   "split": "dev",
+   "stratum": "fake",
+   "question": {
+    "trade_name": "VERONEX 35 SC",
+    "country": "TR"
+   },
+   "truth": {
+    "status": "not_found",
+    "note": "invented; domain-restricted Tavily search on bku.tarimorman.gov.tr found no page with this name (2026-09-16)"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "false_accept": false,
+    "pass": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2b-dev-010",
+   "split": "dev",
+   "stratum": "fake",
+   "question": {
+    "trade_name": "بلوفين 25% EC",
+    "country": "EG"
+   },
+   "truth": {
+    "status": "not_found",
+    "note": "invented; domain-restricted Tavily search on apc.gov.eg found no page with this name (2026-09-16)"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "trade_name": null,
+    "eu_substances": [],
+    "evidence_url": null,
+    "cost_usd": 0.0,
+    "trace": {
+     "reason": "no register data for this country without the resolver agent"
+    }
+   },
+   "score": {
+    "false_accept": false,
+    "pass": true
+   },
+   "latency_s": 0.0
+  }
+ ]
+}

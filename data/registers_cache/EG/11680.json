@@ -1,0 +1,19 @@
+{
+ "country": "EG",
+ "id": 11680,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=11680",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "ثيوفينات ميثيل خام 95% -الدلتا",
+  "substances": [
+   "Thiophanate-methyl"
+  ],
+  "registration_no": "2801",
+  "concentration": "95",
+  "status": "مسجل",
+  "producer": "Jiangsu Lanfeng Biochemical Co",
+  "use_class": "فطري",
+  "pre_harvest_intervals": []
+ }
+}

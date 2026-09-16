@@ -1,0 +1,19 @@
+{
+ "country": "EG",
+ "id": 30858,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=30858",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "سيبروداينيل 98% خام - ستاركيم",
+  "substances": [
+   "Cyprodinil"
+  ],
+  "registration_no": "5278",
+  "concentration": "98",
+  "status": "مسجل",
+  "producer": "Shaanxi Hengrun Linong Biotechnology Co., Ltd. – China",
+  "use_class": "فطري",
+  "pre_harvest_intervals": []
+ }
+}

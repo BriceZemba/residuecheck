@@ -1,0 +1,21 @@
+{
+ "country": "EG",
+ "id": 13135,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=13135",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "سيزر سيف 30% SC",
+  "substances": [
+   "Kresoxim-methyl"
+  ],
+  "registration_no": "3335",
+  "concentration": "30",
+  "status": "مسجل",
+  "producer": "Shaanxi Hengtian Biological Agriculture Co., Ltd",
+  "use_class": "فطري",
+  "pre_harvest_intervals": [
+   "7 يوم"
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "country": "TR",
+ "id": 6267,
+ "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/6267",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "AZOSTAR 320 SC",
+  "heading": "AZOSTAR 320 SC (İMAL)",
+  "active_substance_text": "200 g/l Tebuconazole + 120 g/l Azoxystrobin",
+  "substances": [
+   "Tebuconazole",
+   "Azoxystrobin"
+  ],
+  "formulation": "SC (Akıcı Konsantre/Süspansiyon Konsantre)",
+  "licence_no": "10584",
+  "licence_group": "Fungisit",
+  "valid_until": "2036-04-01",
+  "holder": "AGROFARM KİMYA SAN.VE TİC. A.Ş."
+ }
+}

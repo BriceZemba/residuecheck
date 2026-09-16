@@ -1,0 +1,22 @@
+{
+ "country": "EG",
+ "id": 22918,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=22918",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "ليكوبار 40% SE",
+  "substances": [
+   "Azoxystrobin",
+   "Propiconazole"
+  ],
+  "registration_no": "4228",
+  "concentration": "16 + 24",
+  "status": "مسجل",
+  "producer": "Jiangxi Heyi Chemical Co., Ltd",
+  "use_class": "فطري",
+  "pre_harvest_intervals": [
+   "30 يوم"
+  ]
+ }
+}

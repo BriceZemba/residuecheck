@@ -1,0 +1,21 @@
+{
+ "country": "EG",
+ "id": 3079,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=3079",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "فيوزهد 15% EC",
+  "substances": [
+   "Fluazifop-p-butyl"
+  ],
+  "registration_no": "2172",
+  "concentration": "15",
+  "status": "مسجل",
+  "producer": "YongnongBioSciences Co. Ltd",
+  "use_class": "حشائش",
+  "pre_harvest_intervals": [
+   "60 يوم"
+  ]
+ }
+}

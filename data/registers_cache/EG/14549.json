@@ -1,0 +1,21 @@
+{
+ "country": "EG",
+ "id": 14549,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=14549",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "بلان اكس 70% WG",
+  "substances": [
+   "Acetamiprid"
+  ],
+  "registration_no": "3838",
+  "concentration": "70",
+  "status": "مسجل",
+  "producer": "Hebei Veyong Bio-Chemical Co., Ltd",
+  "use_class": "حشري",
+  "pre_harvest_intervals": [
+   "3 يوم"
+  ]
+ }
+}

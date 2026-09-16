@@ -1,0 +1,21 @@
+{
+ "country": "EG",
+ "id": 27002,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=27002",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "ويد ستوب كى 44.1% SL",
+  "substances": [
+   "Glyphosate-potassium salt"
+  ],
+  "registration_no": "4409",
+  "concentration": "44.1",
+  "status": "مسجل",
+  "producer": "النخبة لصناعة الاسمدة الزراعية والادوية البيطرية (نيوفاك)",
+  "use_class": "حشائش",
+  "pre_harvest_intervals": [
+   "30 يوم"
+  ]
+ }
+}

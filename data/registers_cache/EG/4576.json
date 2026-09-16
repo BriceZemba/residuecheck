@@ -1,0 +1,25 @@
+{
+ "country": "EG",
+ "id": 4576,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=4576",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "اييزو 30% WG",
+  "substances": [
+   "Indoxacarb"
+  ],
+  "registration_no": "2646",
+  "concentration": "30",
+  "status": "مسجل",
+  "producer": "Nantong Shizhuang Chemical Co",
+  "use_class": "حشري",
+  "pre_harvest_intervals": [
+   "7 يوم",
+   "60 يوم",
+   "10 يوم",
+   "8 يوم",
+   "60 يوم"
+  ]
+ }
+}

@@ -113,3 +113,57 @@ def test_g2s_scoring_at_residue_level():
 def test_g2_right_first_suggestion_is_tracked_separately():
     s = score_g2(G2_CASE, {"status": "suggested", "trade_name": None, "suggestions": ["ACTARA 25 WG"]})
     assert s["first_suggestion_ok"] and s["abstained"] and not s["pass"]
+
+
+def test_g2b_and_g2s_sets():
+    import importlib.util
+
+    from residuecheck.eu_data import Snapshot
+
+    eu = Snapshot("2026-09-13")
+    g2b = load("g2b", "all")
+    assert len(g2b) == 15 and sum(c["split"] == "heldout" for c in g2b) == 5
+    for c in g2b:
+        t = c["truth"]
+        if t["status"] == "found":
+            assert t["url"].startswith(("https://bku.tarimorman.gov.tr/", "http://www.apc.gov.eg/"))
+            assert all(eu.substance(n)["substance_name"] == n for n in t["eu_substances"])
+            assert "خام" not in c["question"]["trade_name"]  # technical grade excluded
+    g2s = load("g2s", "all")
+    assert len(g2s) == 33 and sum(c["split"] == "heldout" for c in g2s) == 10
+    assert len({c["question"]["label_name"] for c in g2s}) == 33
+    spec = importlib.util.spec_from_file_location("build_g2s", ROOT / "eval" / "build_g2s.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    before = (ROOT / "eval" / "heldout" / "g2s_heldout.jsonl").read_bytes()
+    import tempfile, pathlib as _p
+    with tempfile.TemporaryDirectory() as tmp:
+        mod.OUT_DEV, mod.OUT_HELDOUT, mod.OUT_MANIFEST = (_p.Path(tmp) / n for n in ("d", "h", "m"))
+        mod.main()
+        assert (_p.Path(tmp) / "h").read_bytes() == before
+
+
+def test_g2b_scoring():
+    from run import score_g2b
+
+    case = {"truth": {"status": "found", "trade_name": "AZOSTAR 320 SC", "eu_substances": ["Tebuconazole", "Azoxystrobin"]}}
+    ok = score_g2b(case, {"status": "resolved", "trade_name": "Azostar 320 SC", "eu_substances": ["Azoxystrobin", "Tebuconazole"]})
+    assert ok["pass"]
+    wrong = score_g2b(case, {"status": "resolved", "trade_name": "AZOSTAR 250 SC", "eu_substances": ["Azoxystrobin"]})
+    assert wrong["wrong_product"] and not wrong["pass"]
+    asked = score_g2b(case, {"status": "suggested", "trade_name": "AZOSTAR 320 SC", "eu_substances": []})
+    assert asked["abstained"] and not asked["pass"]
+    fake = {"truth": {"status": "not_found"}}
+    assert score_g2b(fake, {"status": "cannot_verify"})["pass"]
+    assert not score_g2b(fake, {"status": "resolved", "trade_name": "X"})["pass"]
+
+
+def test_g2s_no_eu_substance_requires_refusal():
+    from residuecheck.eu_data import Snapshot
+    from run import score_g2s
+
+    eu = Snapshot("2026-09-13")
+    case = {"truth": {"eu_substance": None, "expected": "no_eu_substance"}}
+    assert score_g2s(case, {"status": "cannot_verify", "eu_substance": None}, eu)["pass"]
+    invented = score_g2s(case, {"status": "resolved", "eu_substance": "Cloquintocet"}, eu)
+    assert not invented["pass"] and invented["wrong"]

@@ -1,0 +1,31 @@
+{
+ "about": "Second batch of G2s substance-name labels (2026-09-16). Pool: every substance name in the ONSSA cache, the Türkiye/Egypt register cache and the RASFF export that the deterministic resolver (commit 7c2bf8c) cannot map, minus the 12 seed names. Labelled by hand against the EU snapshot 2026-09-13 (names checked to exist). eval/build_g2s.py assigns 10 of these to the held-out split with a fixed seed. Rule: the deterministic resolver (aliases, endings) must not be extended using names from this batch.",
+ "excluded": {
+  "pesticide residues": "RASFF data artifact, not a substance",
+  "Cloquintocet-mexyl": "duplicate of 'Cloquintocet-méxyl (Safener)'",
+  "Esters méthyliques d'acides gras": "ambiguous: adjuvant methyl esters, or the EU-registered 'Fatty acids C8-C10 methyl esters'; truth not decidable from the label name"
+ },
+ "cases": [
+  {"label_name": "Clodinafop-propargyl", "source": "ONSSA", "eu_substance": "Clodinafop", "note": "propargyl ester"},
+  {"label_name": "Cloquintocet-méxyl (Safener)", "source": "ONSSA", "eu_substance": null, "expected": "no_eu_substance", "note": "herbicide safener, not an EU active substance; the right answer is to refuse"},
+  {"label_name": "Emamectin benzoate", "source": "APC", "eu_substance": "Emamectin", "note": "benzoate salt"},
+  {"label_name": "2-chloroethanol", "source": "RASFF", "eu_substance": "Ethylene oxide", "accept_same_residue": true, "note": "metabolite included in the ethylene oxide residue definition"},
+  {"label_name": "Acide oléique", "source": "ONSSA", "eu_substance": "Oleic acid  (CAS 112-80-1)", "note": "EU name contains a double space"},
+  {"label_name": "Cléthodime", "source": "ONSSA", "eu_substance": "Clethodim"},
+  {"label_name": "Dicamba -sel dimethylamine [DMA]", "source": "ONSSA", "eu_substance": "Dicamba", "note": "dimethylamine salt"},
+  {"label_name": "Ester de phosphate d’alcools gras", "source": "ONSSA", "eu_substance": null, "expected": "no_eu_substance", "note": "adjuvant component, not an EU active substance"},
+  {"label_name": "Florasulame", "source": "ONSSA", "eu_substance": "Florasulam"},
+  {"label_name": "Fluazifop-p-butyl", "source": "APC", "eu_substance": "Fluazifop-P", "note": "butyl ester"},
+  {"label_name": "Fosetyl-Al", "source": "BKU", "eu_substance": "Fosetyl", "note": "aluminium salt"},
+  {"label_name": "Glyphosate Ammonium Tuzu", "source": "BKU", "eu_substance": "Glyphosate", "note": "Turkish 'tuzu' = salt"},
+  {"label_name": "Glyphosate-potassium salt", "source": "APC", "eu_substance": "Glyphosate"},
+  {"label_name": "Iodosulfuron-méthyl-sodium", "source": "ONSSA", "eu_substance": "Iodosulfuron"},
+  {"label_name": "Kaolin", "source": "ONSSA", "eu_substance": "Aluminium silicate (aka kaolin)"},
+  {"label_name": "Metalaxyl M", "source": "APC", "eu_substance": "Metalaxyl-M"},
+  {"label_name": "Métamitrone", "source": "ONSSA", "eu_substance": "Metamitron"},
+  {"label_name": "Pyrimiphos-méthyl", "source": "ONSSA", "eu_substance": "Pirimiphos-methyl", "note": "misspelling printed in the ONSSA index"},
+  {"label_name": "benomil/carbendazim", "source": "RASFF", "eu_substance": "Carbendazim", "accept_same_residue": true, "note": "combined residue 'carbendazim and benomyl'"},
+  {"label_name": "chlorpyriphos-ethyl", "source": "RASFF", "eu_substance": "Chlorpyrifos", "note": "chlorpyrifos-ethyl is chlorpyrifos"},
+  {"label_name": "dithiocarbamates", "source": "RASFF", "eu_substance": "Mancozeb", "accept_same_residue": true, "note": "group residue (CS2); any dithiocarbamate sharing that residue definition is right"}
+ ]
+}

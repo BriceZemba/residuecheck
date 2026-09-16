@@ -3,26 +3,36 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-16T21:14:26",
- "code_version": "849fd11-dirty",
- "seconds": 0.12195611000061035,
+ "run_at": "2026-09-16T21:29:56",
+ "code_version": "7c2bf8c-dirty",
+ "seconds": 0.13824939727783203,
  "cost_usd": 0,
  "metrics": {
   "pass": {
-   "n": 12,
-   "hits": 0,
-   "rate": 0.0
+   "n": 23,
+   "hits": 1,
+   "rate": 0.043
   },
   "confident_wrong": 0,
-  "abstained": 12,
+  "abstained": 23,
   "by_stratum": {
    "family": {
     "n": 1,
     "hits": 0,
     "rate": 0.0
    },
+   "group_residue": {
+    "n": 2,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "no_eu_substance": {
+    "n": 1,
+    "hits": 1,
+    "rate": 1.0
+   },
    "single": {
-    "n": 11,
+    "n": 19,
     "hits": 0,
     "rate": 0.0
    }
@@ -45,7 +55,8 @@
      "sclp",
      "straight chain lepidopteran",
      "straight-chain lepidopteran"
-    ]
+    ],
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -78,7 +89,8 @@
      "straight chain lepidopteran",
      "straight-chain lepidopteran",
      "dodecan-1-ol"
-    ]
+    ],
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -111,7 +123,8 @@
      "straight chain lepidopteran",
      "straight-chain lepidopteran",
      "tetradecan-1-ol"
-    ]
+    ],
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -141,7 +154,8 @@
     "note": "residue: copper compounds",
     "evidence_keywords": [
      "copper oxychloride"
-    ]
+    ],
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -161,7 +175,7 @@
   {
    "id": "g2s-dev-005",
    "split": "dev",
-   "stratum": "single",
+   "stratum": "group_residue",
    "question": {
     "label_name": "Cuivre - sulfate de cuivre"
    },
@@ -173,7 +187,8 @@
      "copper sulphate",
      "copper sulfate"
     ],
-    "accept_same_residue": true
+    "accept_same_residue": true,
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -193,7 +208,7 @@
   {
    "id": "g2s-dev-006",
    "split": "dev",
-   "stratum": "single",
+   "stratum": "group_residue",
    "question": {
     "label_name": "Cuivre - sulfate tétracuivrique tricalcique"
    },
@@ -207,7 +222,8 @@
      "tetracopper tricalcium",
      "tetracupric"
     ],
-    "accept_same_residue": true
+    "accept_same_residue": true,
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -240,7 +256,8 @@
      "fosetyl-aluminium",
      "fosetyl aluminium"
     ],
-    "echo_risk": true
+    "echo_risk": true,
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -273,7 +290,8 @@
      "glyphosate-isopropylammonium",
      "isopropylamine salt"
     ],
-    "echo_risk": true
+    "echo_risk": true,
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -288,7 +306,7 @@
     "wrong": false,
     "abstained": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g2s-dev-009",
@@ -309,7 +327,8 @@
      "72623-86-0",
      "64742-46-7"
     ],
-    "family": "Paraffin oil/(CAS"
+    "family": "Paraffin oil/(CAS",
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -341,7 +360,8 @@
      "hydrolysed protein",
      "hydrolyzed protein",
      "protein hydrolysate"
-    ]
+    ],
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -374,7 +394,8 @@
      "propamocarb-hydrochloride",
      "propamocarb hcl"
     ],
-    "echo_risk": true
+    "echo_risk": true,
+    "batch": "seed"
    },
    "answer": {
     "status": "cannot_verify",
@@ -405,7 +426,324 @@
     "evidence_keywords": [
      "pyrethrins",
      "pyrethrum"
-    ]
+    ],
+    "batch": "seed"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-013",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Clodinafop-propargyl"
+   },
+   "truth": {
+    "label_name": "Clodinafop-propargyl",
+    "source": "ONSSA",
+    "eu_substance": "Clodinafop",
+    "note": "propargyl ester",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-014",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Emamectin benzoate"
+   },
+   "truth": {
+    "label_name": "Emamectin benzoate",
+    "source": "APC",
+    "eu_substance": "Emamectin",
+    "note": "benzoate salt",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-015",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Acide oléique"
+   },
+   "truth": {
+    "label_name": "Acide oléique",
+    "source": "ONSSA",
+    "eu_substance": "Oleic acid  (CAS 112-80-1)",
+    "note": "EU name contains a double space",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.001
+  },
+  {
+   "id": "g2s-dev-016",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Cléthodime"
+   },
+   "truth": {
+    "label_name": "Cléthodime",
+    "source": "ONSSA",
+    "eu_substance": "Clethodim",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-017",
+   "split": "dev",
+   "stratum": "no_eu_substance",
+   "question": {
+    "label_name": "Ester de phosphate d’alcools gras"
+   },
+   "truth": {
+    "label_name": "Ester de phosphate d’alcools gras",
+    "source": "ONSSA",
+    "eu_substance": null,
+    "expected": "no_eu_substance",
+    "note": "adjuvant component, not an EU active substance",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": true,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-018",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Florasulame"
+   },
+   "truth": {
+    "label_name": "Florasulame",
+    "source": "ONSSA",
+    "eu_substance": "Florasulam",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-019",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Fluazifop-p-butyl"
+   },
+   "truth": {
+    "label_name": "Fluazifop-p-butyl",
+    "source": "APC",
+    "eu_substance": "Fluazifop-P",
+    "note": "butyl ester",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-020",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Glyphosate-potassium salt"
+   },
+   "truth": {
+    "label_name": "Glyphosate-potassium salt",
+    "source": "APC",
+    "eu_substance": "Glyphosate",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-021",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Iodosulfuron-méthyl-sodium"
+   },
+   "truth": {
+    "label_name": "Iodosulfuron-méthyl-sodium",
+    "source": "ONSSA",
+    "eu_substance": "Iodosulfuron",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-022",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Pyrimiphos-méthyl"
+   },
+   "truth": {
+    "label_name": "Pyrimiphos-méthyl",
+    "source": "ONSSA",
+    "eu_substance": "Pirimiphos-methyl",
+    "note": "misspelling printed in the ONSSA index",
+    "batch": "batch2"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-023",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "chlorpyriphos-ethyl"
+   },
+   "truth": {
+    "label_name": "chlorpyriphos-ethyl",
+    "source": "RASFF",
+    "eu_substance": "Chlorpyrifos",
+    "note": "chlorpyrifos-ethyl is chlorpyrifos",
+    "batch": "batch2"
    },
    "answer": {
     "status": "cannot_verify",

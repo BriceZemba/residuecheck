@@ -1,0 +1,22 @@
+{
+ "country": "EG",
+ "id": 26997,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=26997",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "ميتاستور 39.1% SE",
+  "substances": [
+   "Azoxystrobin",
+   "Metalaxyl M"
+  ],
+  "registration_no": "4415",
+  "concentration": "28.2 +10.9",
+  "status": "مسجل",
+  "producer": "مصانع الأدوية البيطرية الزراعية (فابكو)",
+  "use_class": "فطري",
+  "pre_harvest_intervals": [
+   "45 يوم"
+  ]
+ }
+}

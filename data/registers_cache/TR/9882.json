@@ -1,0 +1,22 @@
+{
+ "country": "TR",
+ "id": 9882,
+ "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/9882",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "SEMELE SE",
+  "heading": "SEMELE SE (İMAL)",
+  "active_substance_text": "375 g/l S-Metolachlor + 125 g/l Terbuthylazine + 37,5 g/l Mesotrione",
+  "substances": [
+   "S-Metolachlor",
+   "Terbuthylazine",
+   "Mesotrione"
+  ],
+  "formulation": "SE (Suspo-Emülsiyon)",
+  "licence_no": "12701",
+  "licence_group": "Herbisit",
+  "valid_until": "2033-03-15",
+  "holder": "HEKTAŞ TİCARET TÜRK A.Ş."
+ }
+}

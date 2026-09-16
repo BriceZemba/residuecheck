@@ -1,0 +1,21 @@
+{
+ "country": "TR",
+ "id": 10855,
+ "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/10855",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "MARİTUS",
+  "heading": "MARİTUS (İMAL)",
+  "active_substance_text": "%66,7 Fosetyl-Al + %4,44 Fluopicolide",
+  "substances": [
+   "Fosetyl-Al",
+   "Fluopicolide"
+  ],
+  "formulation": "WG (Suda Dağılabilen Granül)",
+  "licence_no": "13664",
+  "licence_group": "Fungisit",
+  "valid_until": "2035-07-11",
+  "holder": "AGROBEST GRUP TARIM İLAÇLARI TOHUMCULUK İMALAT İTHALAT İHRACAT SAN. VE TİC.A.Ş."
+ }
+}

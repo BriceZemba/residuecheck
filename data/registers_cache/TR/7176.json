@@ -1,0 +1,20 @@
+{
+ "country": "TR",
+ "id": 7176,
+ "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/7176",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "BEST FORTE 80 WG",
+  "heading": "BEST FORTE 80 WG (İMAL)",
+  "active_substance_text": "%80 Thiram",
+  "substances": [
+   "Thiram"
+  ],
+  "formulation": "WG (Suda Dağılabilen Granül)",
+  "licence_no": "11117",
+  "licence_group": "Fungisit",
+  "valid_until": "2028-05-02",
+  "holder": "AGROBEST GRUP TARIM İLAÇLARI TOHUMCULUK İMALAT İTHALAT İHRACAT SAN. VE TİC.A.Ş."
+ }
+}

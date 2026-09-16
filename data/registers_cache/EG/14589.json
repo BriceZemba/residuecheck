@@ -1,0 +1,21 @@
+{
+ "country": "EG",
+ "id": 14589,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=14589",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "مافا كليم 5.7% WG",
+  "substances": [
+   "Emamectin benzoate"
+  ],
+  "registration_no": "3902",
+  "concentration": "5.7",
+  "status": "مسجل",
+  "producer": "Hebei Xintian Biotechnology Co,. Ltd",
+  "use_class": "حشري",
+  "pre_harvest_intervals": [
+   "10 يوم"
+  ]
+ }
+}

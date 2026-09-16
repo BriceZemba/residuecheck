@@ -1,0 +1,19 @@
+{
+ "country": "EG",
+ "id": 30708,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=30708",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "امامكتين بنزوات  خام 95% - نادى",
+  "substances": [
+   "Emamectin benzoate"
+  ],
+  "registration_no": "5056",
+  "concentration": "95",
+  "status": "مسجل",
+  "producer": "Shandong Jingbo Agrochemicals Technology Co. Ltd",
+  "use_class": "حشري",
+  "pre_harvest_intervals": []
+ }
+}

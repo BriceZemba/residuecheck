@@ -1,0 +1,20 @@
+{
+ "country": "TR",
+ "id": 9389,
+ "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/9389",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "KINPLAN",
+  "heading": "KINPLAN (İTHAL)",
+  "active_substance_text": "%20 Acetamiprid",
+  "substances": [
+   "Acetamiprid"
+  ],
+  "formulation": "SP (Suda Çözünen Toz)",
+  "licence_no": "12223",
+  "licence_group": "İnsektisit",
+  "valid_until": "2032-01-28",
+  "holder": "KİNETİK ÇEVRESAĞLIĞI AMBALAJ TARIM MÜHENDİSLİK VE DANIŞMANLIK SAN. VE TİC.LTD.ŞTİ."
+ }
+}

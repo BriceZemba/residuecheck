@@ -1,0 +1,19 @@
+{
+ "country": "EG",
+ "id": 30789,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=30789",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "سيموكسانيل 97% خام - نادى",
+  "substances": [
+   "Cymoxanil"
+  ],
+  "registration_no": "5221",
+  "concentration": "97",
+  "status": "مسجل",
+  "producer": "Liaoning Shenglian Biotechnology Co., Ltd",
+  "use_class": "فطري",
+  "pre_harvest_intervals": []
+ }
+}

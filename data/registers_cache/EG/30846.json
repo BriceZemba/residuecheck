@@ -1,0 +1,21 @@
+{
+ "country": "EG",
+ "id": 30846,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=30846",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "كانزابريس 30% SC",
+  "substances": [
+   "Picoxystrobin"
+  ],
+  "registration_no": "5253",
+  "concentration": "30",
+  "status": "مسجل",
+  "producer": "Shaanxi Hengtian Biological Agriculture Co.,",
+  "use_class": "فطري",
+  "pre_harvest_intervals": [
+   "35 يوم"
+  ]
+ }
+}

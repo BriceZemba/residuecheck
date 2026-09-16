@@ -1,0 +1,29 @@
+{
+ "seed": 20260916,
+ "build_date": "2026-09-16",
+ "snapshot": "2026-09-13",
+ "total": 15,
+ "dev": 10,
+ "heldout": 5,
+ "strata": {
+  "tr_exact": {
+   "target": 6,
+   "found": 6,
+   "pages_fetched": 15
+  },
+  "eg_exact": {
+   "target": 6,
+   "found": 6,
+   "pages_fetched": 124
+  }
+ },
+ "fakes_absence_checked": {
+  "VERONEX 35 SC": true,
+  "بلوفين 25% EC": true,
+  "زيرولان 50% WP": true
+ },
+ "sources": {
+  "TR": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/{id}",
+  "EG": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id={id}"
+ }
+}

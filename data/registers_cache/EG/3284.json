@@ -1,0 +1,21 @@
+{
+ "country": "EG",
+ "id": 3284,
+ "url": "http://www.apc.gov.eg/ar/PesticideDetails.aspx?id=3284",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "مستر جرين 1.8% EC",
+  "substances": [
+   "Abamectin"
+  ],
+  "registration_no": "2374",
+  "concentration": "1.8",
+  "status": "مسجل",
+  "producer": "Hebei Xintian Bochemical Engineering Co., Ltd",
+  "use_class": "حشري - أكاروسي",
+  "pre_harvest_intervals": [
+   "5 يوم"
+  ]
+ }
+}

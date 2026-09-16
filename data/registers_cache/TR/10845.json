@@ -1,0 +1,21 @@
+{
+ "country": "TR",
+ "id": 10845,
+ "url": "https://bku.tarimorman.gov.tr/BKURuhsat/Details/10845",
+ "http_status": 200,
+ "retrieved": "2026-09-16",
+ "product": {
+  "trade_name": "ROYTAİ 150 ZEC",
+  "heading": "ROYTAİ 150 ZEC (İMAL)",
+  "active_substance_text": "100 g/l Chlorantraniliprole + 50 g/l Lambda-cyhalothrin",
+  "substances": [
+   "Chlorantraniliprole",
+   "Lambda-cyhalothrin"
+  ],
+  "formulation": "ZC (CS ve SC Formülasyonlarının Karışımı)",
+  "licence_no": "13653",
+  "licence_group": "İnsektisit",
+  "valid_until": "2035-07-10",
+  "holder": "ROYAL-FEN KİMYA TARIM İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ"
+ }
+}

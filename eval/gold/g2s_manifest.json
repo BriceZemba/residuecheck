@@ -1,0 +1,28 @@
+{
+ "seed": 20260917,
+ "total": 33,
+ "dev": 23,
+ "heldout": 10,
+ "strata": {
+  "single": {
+   "dev": 19,
+   "heldout": 6
+  },
+  "group_residue": {
+   "dev": 2,
+   "heldout": 3
+  },
+  "family": {
+   "dev": 1,
+   "heldout": 0
+  },
+  "no_eu_substance": {
+   "dev": 1,
+   "heldout": 1
+  }
+ },
+ "sources": {
+  "seed": "eval/gold/g2s_seed.json",
+  "batch2": "eval/labels/g2s_batch2.json"
+ }
+}

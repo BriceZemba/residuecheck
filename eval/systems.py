@@ -9,6 +9,7 @@ no-verifier   full with the verifier switched off                               
 
 G1 answer:  {eu_substance, crop_code, mrl_mg_per_kg, at_loq, no_mrl_required, verdict, cost_usd, trace}
 G2 answer:  {status, trade_name, suggestions, substances_fr, crop_code, registered_for_crop, registration_status, dar_days, cost_usd, trace}
+G2b answer: {status, trade_name, eu_substances, evidence_url, cost_usd, trace}
 G2s answer: {status, eu_substance, residue_ids, candidates, cost_usd, trace}
 """
 import datetime
@@ -89,6 +90,11 @@ class RulesOnly:
                 "registration_status": reg.status if reg else None, "dar_days": reg.dar_days if reg else None,
                 "cost_usd": 0.0, "trace": {"note": reg.note if reg else "crop not resolved"}}
 
+    def answer_g2b(self, q):
+        # No Turkish or Egyptian register data without web search: the honest answer is "cannot verify".
+        return {"status": "cannot_verify", "trade_name": None, "eu_substances": [], "evidence_url": None,
+                "cost_usd": 0.0, "trace": {"reason": "no register data for this country without the resolver agent"}}
+
     def answer_g2s(self, q):
         rec = self.eu.substance(q["label_name"])
         return {"status": "exact" if rec else "cannot_verify", "eu_substance": rec["substance_name"] if rec else None,
@@ -134,6 +140,12 @@ class Full(RulesOnly):
                    "status": "suggested" if res.status == "suggested" else "not_found", "suggestions": res.candidates}
         out.update({"cost_usd": res.cost_usd, "trace": {"resolver": res.status, "reason": res.reason, "steps": res.trace}})
         return out
+
+    def answer_g2b(self, q):
+        res = self.resolver.product(q["trade_name"], country=q["country"])
+        return {"status": res.status, "trade_name": res.value, "eu_substances": res.substances,
+                "evidence_url": res.evidence[0]["url"] if res.evidence else None, "cost_usd": res.cost_usd,
+                "trace": {"reason": res.reason, "steps": res.trace}}
 
     def answer_g2s(self, q):
         res = self.resolver.substance(q["label_name"])

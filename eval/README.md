@@ -49,17 +49,33 @@ The EU name of each substance is deliberately not part of G2 truth: the determin
 
 Limits: Morocco only; the crop registration truth depends on the hand-written crop map.
 
-## G2s: substance-name resolution (seed, 12 dev cases)
+## G2b: trade-name resolution, Türkiye and Egypt (15 cases)
 
-`gold/g2s_seed.json`: the 12 active-substance names from real ONSSA labels in G2 that the deterministic resolver cannot map (copper salts, a glyphosate salt, pheromone alcohols, paraffin oil, protein hydrolysate, pyrethrum...). Labelled by hand against EU database names on 2026-09-16. Scored at residue level: an answer is right if it names the EU substance, or (where marked) another substance with the same residue definition; paraffin oil counts as right only as "needs confirmation" with the paraffin-oil candidates, because the label's CAS number decides which one. Dev only so far; held-out cases to be added.
+Built by `python eval/build_g2b.py`. Truth is fetched directly from the official register product pages (BKÜ `bku.tarimorman.gov.tr/BKURuhsat/Details/{id}`, APC `www.apc.gov.eg/ar/PesticideDetails.aspx?id={id}`), never through Tavily, and cached in `data/registers_cache/`. Seed 20260916. Files: `gold/g2b_dev.jsonl` (10), `heldout/g2b_heldout.jsonl` (5).
+
+| Stratum | Cases | What it tests |
+|---|---|---|
+| tr_exact | 6 | Currently licensed Turkish products (validity date after 2026-09-16), name as on the register |
+| eg_exact | 6 | Registered Egyptian products ("مسجل"), Arabic trade name as on the register |
+| fake | 3 | Invented names (1 Latin, 2 Arabic); a domain-restricted Tavily search found no page with them |
+
+Kept only products whose every active substance maps to an EU database name, so the substance part of the answer can be scored; technical-grade imports (Arabic "خام", TEKNİK) are excluded because growers do not spray them. Egyptian product IDs are sparse: 124 pages fetched for 6 usable products. Scored as: the product is confirmed (`resolved`, not merely suggested), the name matches, and the EU substances match exactly. Without the resolver agent the only possible answer is "cannot verify" (baseline 2/10 on dev, the fakes).
+
+## G2s: substance-name resolution (33 cases)
+
+Built by `python eval/build_g2s.py` from `gold/g2s_seed.json` (12 names, all dev) and `labels/g2s_batch2.json` (21 names; 10 held out with seed 20260917). Files: `gold/g2s_dev.jsonl` (23), `heldout/g2s_heldout.jsonl` (10).
+
+The pool is every substance name in the ONSSA cache, the Türkiye/Egypt register cache and the RASFF export that the deterministic resolver cannot map. Each name was labelled by hand against EU database names (checked to exist). Strata: `single` (one EU name), `group_residue` (any substance with the same residue definition is right, e.g. copper forms, dithiocarbamates, carbendazim/benomyl, 2-chloroethanol under ethylene oxide), `family` (paraffin oil: right only as "needs confirmation" because the CAS number decides), `no_eu_substance` (a safener and an adjuvant: the right answer is to refuse).
+
+Rule, recorded because the held-out names were seen while labelling: the deterministic resolver's aliases and ending rules must not be extended using names from `labels/g2s_batch2.json`. Baseline without a model: 1/23 on dev (the refusal case).
 
 ## Runner
 
-`python eval/run.py --suite g1|g2|g2s --config <config> [--split dev|heldout]` writes `results/<suite>_<config>_<split>.json` (every answer and score) and `.md` (metrics and every failure). `python eval/run.py --summary` rebuilds `results/README.md`. Held-out runs are logged in `results/heldout_runs.log`.
+`python eval/run.py --suite g1|g2|g2b|g2s --config <config> [--split dev|heldout]` writes `results/<suite>_<config>_<split>.json` (every answer and score) and `.md` (metrics and every failure). `python eval/run.py --summary` rebuilds `results/README.md`. Held-out runs are logged in `results/heldout_runs.log`.
 
 | Config | What | Runs now |
 |---|---|---|
-| `rules-only` | exact names only, rules engine | yes |
+| `rules-only` | exact names only, rules engine; "cannot verify" for Türkiye/Egypt | yes |
 | `rules-fuzzy` | + fuzzy ONSSA suggestions with a clear margin (deterministic resolver) | yes |
 | `full` | resolver agent (Nemotron on Token Factory + Tavily) with verifier | skipped until `NEBIUS_API_KEY` works |
 | `no-tavily` | `full` without web search | skipped until `NEBIUS_API_KEY` works |
