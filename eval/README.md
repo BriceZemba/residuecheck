@@ -49,15 +49,20 @@ The EU name of each substance is deliberately not part of G2 truth: the determin
 
 Limits: Morocco only; the crop registration truth depends on the hand-written crop map.
 
+## G2s: substance-name resolution (seed, 12 dev cases)
+
+`gold/g2s_seed.json`: the 12 active-substance names from real ONSSA labels in G2 that the deterministic resolver cannot map (copper salts, a glyphosate salt, pheromone alcohols, paraffin oil, protein hydrolysate, pyrethrum...). Labelled by hand against EU database names on 2026-09-16. Scored at residue level: an answer is right if it names the EU substance, or (where marked) another substance with the same residue definition; paraffin oil counts as right only as "needs confirmation" with the paraffin-oil candidates, because the label's CAS number decides which one. Dev only so far; held-out cases to be added.
+
 ## Runner
 
-`python eval/run.py --suite g1|g2 --config rules-only [--split dev|heldout]` writes `results/<suite>_<config>_<split>.json` (every answer and score) and `.md` (metrics and every failure). `python eval/run.py --summary` rebuilds `results/README.md`. Held-out runs are logged in `results/heldout_runs.log`. Model-based configs (`closed-book`, `tavily-only`, `full`) exit with "skipped" until the API keys are set.
+`python eval/run.py --suite g1|g2|g2s --config <config> [--split dev|heldout]` writes `results/<suite>_<config>_<split>.json` (every answer and score) and `.md` (metrics and every failure). `python eval/run.py --summary` rebuilds `results/README.md`. Held-out runs are logged in `results/heldout_runs.log`.
 
-How the truth was checked: `tests/test_g1.py` re-derives every limit from the snapshot's raw version list (not the lookup function the builder used) and checks the builder reproduces the files byte for byte.
+| Config | What | Runs now |
+|---|---|---|
+| `rules-only` | exact names only, rules engine | yes |
+| `rules-fuzzy` | + fuzzy ONSSA suggestions with a clear margin (deterministic resolver) | yes |
+| `full` | resolver agent (Nemotron on Token Factory + Tavily) with verifier | skipped until `NEBIUS_API_KEY` works |
+| `no-tavily` | `full` without web search | skipped until `NEBIUS_API_KEY` works |
+| `closed-book`, `no-verifier` | planned | not built |
 
-Limits of this set, stated plainly:
-
-- The truth `verdict` comes from ResidueCheck's own rules (v0) applied to a label-compliant spray. For the full pipeline, which reads the same snapshot, G1 therefore tests name resolution and integration, not independent regulatory knowledge. It is an independent test for the `closed-book` and `tavily-only` configurations, which must find the numbers themselves.
-- The `upcoming` stratum comes from only 3 substances (1,4-dimethylnaphthalene 4 cases, metribuzin 3, triclopyr 3), because few dated future changes exist for the 32 crops.
-- Some crop synonyms are obscure (e.g. "Angled luffas" for Courgettes). They are kept as hard cases.
-- Only single-residue substances are included; multi-residue substances (e.g. copper compounds) are not in G1.
+G2 reports `right_first_suggestion` separately: asking the user with the correct first suggestion is safe, but it is not counted as resolving.

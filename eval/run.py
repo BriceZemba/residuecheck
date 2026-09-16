@@ -3,6 +3,7 @@
 Usage:
   python eval/run.py --suite g1 --config rules-only              # dev split (default)
   python eval/run.py --suite g2 --config rules-only --split heldout
+  python eval/run.py --suite g2s --config rules-fuzzy            # substance names (seed: dev only)
   python eval/run.py --summary                                   # rebuild eval/results/README.md from all runs
 
 Writes eval/results/<suite>_<config>_<split>.json (every answer and score) and .md (metrics, failures).
@@ -27,7 +28,16 @@ FILES = {("g1", "dev"): "gold/g1_dev.jsonl", ("g1", "heldout"): "heldout/g1_held
          ("g2", "dev"): "gold/g2_dev.jsonl", ("g2", "heldout"): "heldout/g2_heldout.jsonl"}
 
 
+G2S_SEED = ROOT / "eval" / "gold" / "g2s_seed.json"
+
+
 def load(suite, split):
+    if suite == "g2s":
+        if split == "heldout":
+            raise SystemExit("G2s has no held-out cases yet (the 12-case seed is dev only)")
+        seed = json.loads(G2S_SEED.read_text(encoding="utf-8"))["cases"]
+        return [{"id": f"g2s-dev-{i + 1:03d}", "split": "dev", "stratum": "family" if c.get("family") else "single",
+                 "question": {"label_name": c["label_name"]}, "truth": c} for i, c in enumerate(seed)]
     splits = ["dev", "heldout"] if split == "all" else [split]
     rows = []
     for s in splits:
@@ -65,12 +75,37 @@ def score_g2(case, a):
     s = {"product_ok": found and norm(a.get("trade_name")) == norm(t["onssa_trade_name"]),
          "wrong_product": found and norm(a.get("trade_name")) != norm(t["onssa_trade_name"]),
          "abstained": not found}
+    if not found:
+        # Asking the user with the right first suggestion is safe and useful, but not the same as resolving.
+        s["first_suggestion_ok"] = bool(a.get("suggestions")) and norm(a["suggestions"][0]) == norm(t["onssa_trade_name"])
     if s["product_ok"]:
         s["substances_ok"] = sorted(norm(x) for x in a.get("substances_fr", [])) == sorted(norm(x["name_fr"]) for x in t["substances"])
         s["registration_ok"] = a.get("registered_for_crop") == t["registered_for_crop"]
         s["dar_ok"] = a.get("dar_days") == t["dar_days"]
     s["pass"] = s["product_ok"] and s.get("substances_ok", False) and s.get("registration_ok", False) and s.get("dar_ok", False)
     return s
+
+
+def score_g2s(case, a, eu):
+    t = case["truth"]
+    if t.get("family"):
+        ok = (a["status"] == "needs_confirmation" and bool(a.get("candidates"))
+              and all(c.startswith(t["family"]) for c in a["candidates"]))
+        ok = ok or (bool(a.get("eu_substance")) and a["eu_substance"].startswith(t["family"]))
+    else:
+        rec = eu.substance(t["eu_substance"])
+        truth_residues = set(eu.residue_ids(rec)) if rec else set()
+        same_name = a.get("eu_substance") == t["eu_substance"]
+        same_residue = bool(truth_residues & set(a.get("residue_ids") or [])) and t.get("accept_same_residue", False)
+        ok = bool(a.get("eu_substance")) and (same_name or same_residue)
+    confident = a["status"] in ("exact", "resolved")
+    return {"pass": ok, "wrong": confident and not ok, "abstained": not a.get("eu_substance") and a["status"] != "needs_confirmation"}
+
+
+def metrics_g2s(rows):
+    return {"pass": rate(rows, "pass"), "confident_wrong": sum(r["score"]["wrong"] for r in rows),
+            "abstained": sum(r["score"]["abstained"] for r in rows),
+            "by_stratum": {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in sorted({r["stratum"] for r in rows})}}
 
 
 def rate(rows, key, where=lambda r: True):
@@ -96,7 +131,8 @@ def metrics_g2(rows):
          "wrong_product": sum(r["score"].get("wrong_product", False) for r in rows),
          "abstained_on_real": sum(r["score"].get("abstained", False) for r in rows),
          "substances_exact": rate(rows, "substances_ok"), "registration_accuracy": rate(rows, "registration_ok"),
-         "dar_accuracy": rate(rows, "dar_ok"), "fake_accepted": sum(r["score"].get("false_accept", False) for r in rows)}
+         "dar_accuracy": rate(rows, "dar_ok"), "fake_accepted": sum(r["score"].get("false_accept", False) for r in rows),
+         "right_first_suggestion": rate(rows, "first_suggestion_ok")}
     m["by_stratum"] = {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in sorted({r["stratum"] for r in rows})}
     return m
 
@@ -136,10 +172,13 @@ def write_report(run):
         lines.append("None.")
     for c in failures:
         q, t, a = c["question"], c["truth"], c["answer"]
-        bad_flags = ("false_green", "missed_red", "wrong_product", "false_accept", "over_abstain", "abstained")
+        bad_flags = ("false_green", "missed_red", "wrong_product", "false_accept", "over_abstain", "abstained", "wrong")
         failed = ", ".join([k for k, v in c["score"].items() if k.endswith("_ok") and v is False] +
                            [k for k, v in c["score"].items() if k in bad_flags and v])
-        if run["suite"] == "g1":
+        if run["suite"] == "g2s":
+            lines.append(f"- `{c['id']}` {q['label_name']!r}: expected {t['eu_substance']}, got {a['status']} {a.get('eu_substance')}; "
+                         f"{(a.get('trace') or {}).get('reason', '')}")
+        elif run["suite"] == "g1":
             lines.append(f"- `{c['id']}` [{c['stratum']}] {q['substance']!r} on {q['crop']!r} ({q['date']}): expected "
                          f"{t['verdict']} {t.get('mrl_mg_per_kg')}{'*' if t.get('at_loq') else ''} ({t.get('eu_substance')}), got "
                          f"{a['verdict']} {a.get('mrl_mg_per_kg')}{'*' if a.get('at_loq') else ''} ({a.get('eu_substance')}); failed: {failed}")
@@ -156,13 +195,14 @@ def summary():
     runs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(RESULTS.glob("*.json"))]
     lines = ["# Eval results", "", "Generated by `python eval/run.py --summary`. Headline numbers come from held-out runs only.", ""]
     for suite, keys in (("g1", ["pass", "verdict_accuracy", "mrl_accuracy", "substance_resolved", "false_green", "over_abstain"]),
-                        ("g2", ["pass", "product_identified", "wrong_product", "abstained_on_real", "registration_accuracy", "dar_accuracy", "fake_accepted"])):
+                        ("g2", ["pass", "product_identified", "wrong_product", "abstained_on_real", "right_first_suggestion", "registration_accuracy", "dar_accuracy", "fake_accepted"]),
+                        ("g2s", ["pass", "confident_wrong", "abstained"])):
         rows = [r for r in runs if r["suite"] == suite]
         if not rows:
             continue
         lines += [f"## {suite.upper()}", "", "| Config | Split | Code | " + " | ".join(keys) + " |", "|---" * (len(keys) + 3) + "|"]
         for r in rows:
-            vals = [fmt_rate(r["metrics"][k]) if isinstance(r["metrics"][k], dict) else str(r["metrics"][k]) for k in keys]
+            vals = [fmt_rate(r["metrics"][k]) if isinstance(r["metrics"].get(k), dict) else str(r["metrics"].get(k, "n/a")) for k in keys]
             lines.append(f"| {r['config']} | {r['split']} | {r['code_version']} | " + " | ".join(vals) + " |")
         lines.append("")
     (RESULTS / "README.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
@@ -171,7 +211,7 @@ def summary():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--suite", choices=["g1", "g2"])
+    ap.add_argument("--suite", choices=["g1", "g2", "g2s"])
     ap.add_argument("--config", choices=sorted(SYSTEMS))
     ap.add_argument("--split", choices=["dev", "heldout", "all"], default="dev")
     ap.add_argument("--summary", action="store_true")
@@ -190,7 +230,13 @@ def main():
         with (RESULTS / "heldout_runs.log").open("a", encoding="utf-8", newline="\n") as log:
             log.write(f"{datetime.datetime.now().isoformat(timespec='seconds')}\t{a.suite}\t{a.config}\t{a.split}\t{git_version()}\n")
 
-    answer, scorer, metrics = (system.answer_g1, score_g1, metrics_g1) if a.suite == "g1" else (system.answer_g2, score_g2, metrics_g2)
+    if a.suite == "g1":
+        answer, scorer, metrics = system.answer_g1, score_g1, metrics_g1
+    elif a.suite == "g2":
+        answer, scorer, metrics = system.answer_g2, score_g2, metrics_g2
+    else:
+        answer, metrics = system.answer_g2s, metrics_g2s
+        scorer = lambda case, ans: score_g2s(case, ans, system.eu)  # noqa: E731
     t0, cases = time.time(), []
     for case in load(a.suite, a.split):
         t = time.time()

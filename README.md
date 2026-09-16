@@ -2,7 +2,7 @@
 
 Pre-harvest pesticide compliance check for fresh-produce exporters: reads a spray log and tells you which lots meet EU residue rules, with the regulation linked.
 
-Built for the Nebius x NVIDIA Global AI Hackathon (Best Apps and Agents). Work in progress: the current preview runs on fixed rules only; the Nemotron agents are not connected yet.
+Built for the Nebius x NVIDIA Global AI Hackathon (Best Apps and Agents). Work in progress: the web preview runs on fixed rules only. The resolver agent is built and tested with a scripted model; it runs on Nemotron once Token Factory access works (set `NEBIUS_API_KEY` and `TAVILY_API_KEY` in `.env`).
 
 ## Run it
 
@@ -34,6 +34,8 @@ cd web && npm run lint && npm run build                 # frontend checks
 | `residuecheck/rules.py` | Deterministic verdict rules (RED / CANNOT VERIFY / AMBER / GREEN) |
 | `residuecheck/eu_data.py` | Frozen EU Pesticides Database snapshot: substances, limits over time |
 | `residuecheck/onssa.py`, `crops.py` | Moroccan ONSSA register reader and crop mapping |
+| `residuecheck/resolver.py` | Resolver: exact and fuzzy matching, Nemotron agent with tools, deterministic verifier |
+| `residuecheck/llm.py`, `search.py` | Token Factory client (Nemotron) and Tavily clients (API, CLI fallback, test fake) |
 | `residuecheck/api.py` | FastAPI app (serves `web/dist` when built) |
 | `web/` | React interface |
 | `eval/` | Gold sets, runner, results (see `eval/README.md`) |

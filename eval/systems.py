@@ -1,25 +1,25 @@
 """Systems under evaluation. Each answers G1 and G2 questions with a plain dict.
 
-rules-only    deterministic baseline: EU snapshot + ONSSA cache + crop map + rules engine, no model, no web
-closed-book   Nemotron answers from memory (needs NEBIUS_API_KEY)                       -- not built yet
-tavily-only   Nemotron with Tavily search, no EU snapshot or ONSSA access (needs both keys) -- not built yet
-full          Nemotron agent with all tools, rules engine as verifier (needs both keys)  -- not built yet
+rules-only    deterministic baseline: EU snapshot + ONSSA cache + crop map + rules engine, exact names only
+rules-fuzzy   rules-only + fuzzy ONSSA name suggestions (deterministic resolver, no model)
+full          resolver agent (Nemotron on Token Factory + Tavily) with the verifier, then the rules engine
+no-tavily     full without web search (isolates Tavily's contribution)
+closed-book   Nemotron answers from memory, no tools                                   -- not built yet
+no-verifier   full with the verifier switched off                                      -- not built yet
 
-G1 answer: {eu_substance, crop_code, mrl_mg_per_kg, at_loq, no_mrl_required, verdict, cost_usd, trace}
-G2 answer: {status, trade_name, substances_fr, crop_code, registered_for_crop, registration_status, dar_days, cost_usd, trace}
+G1 answer:  {eu_substance, crop_code, mrl_mg_per_kg, at_loq, no_mrl_required, verdict, cost_usd, trace}
+G2 answer:  {status, trade_name, suggestions, substances_fr, crop_code, registered_for_crop, registration_status, dar_days, cost_usd, trace}
+G2s answer: {status, eu_substance, residue_ids, candidates, cost_usd, trace}
 """
 import datetime
-import os
 import re
 
 from residuecheck.crops import load_map, registration
 from residuecheck.eu_data import Snapshot, norm_residue
 from residuecheck.onssa import DATA, Onssa, norm
+from residuecheck.resolver import Resolver
 from residuecheck.rules import Application, Level, Lot, evaluate
-
-
-class MissingKey(RuntimeError):
-    pass
+from residuecheck.search import MissingKey, default_search
 
 
 def _clean(name):
@@ -80,41 +80,94 @@ class RulesOnly:
         crop = self.crop_code(q["crop"])
         rec = self.onssa.lookup(q["trade_name"], offline=True)
         if rec.get("status") not in ("found",) and not rec.get("from_cache"):
-            return {"status": "not_found", "trade_name": None, "substances_fr": [], "crop_code": crop,
+            return {"status": "not_found", "trade_name": None, "suggestions": rec.get("suggestions", []), "substances_fr": [], "crop_code": crop,
                     "registered_for_crop": None, "registration_status": None, "dar_days": None, "cost_usd": 0.0,
                     "trace": {"lookup_status": rec.get("status"), "suggestions": rec.get("suggestions", [])}}
         reg = registration(rec, crop, self.eu, self.crop_map) if crop else None
-        return {"status": "found", "trade_name": rec["trade_name"], "substances_fr": [s["name_fr"] for s in rec["substances"]],
+        return {"status": "found", "trade_name": rec["trade_name"], "suggestions": [], "substances_fr": [s["name_fr"] for s in rec["substances"]],
                 "crop_code": crop, "registered_for_crop": reg.registered_for_crop if reg else None,
                 "registration_status": reg.status if reg else None, "dar_days": reg.dar_days if reg else None,
                 "cost_usd": 0.0, "trace": {"note": reg.note if reg else "crop not resolved"}}
 
+    def answer_g2s(self, q):
+        rec = self.eu.substance(q["label_name"])
+        return {"status": "exact" if rec else "cannot_verify", "eu_substance": rec["substance_name"] if rec else None,
+                "residue_ids": self.eu.residue_ids(rec) if rec else [], "candidates": [], "cost_usd": 0.0, "trace": {}}
 
-class _NeedsModel:
-    keys = ("NEBIUS_API_KEY",)
+
+class RulesFuzzy(RulesOnly):
+    name = "rules-fuzzy"
+    description = "rules-only plus fuzzy ONSSA name suggestions with a clear margin; no model, no web"
 
     def __init__(self, snapshot="2026-09-13"):
-        missing = [k for k in self.keys if not os.environ.get(k)]
-        if missing:
-            raise MissingKey(f"{self.name} needs {', '.join(missing)}")
-        raise NotImplementedError(f"{self.name} is not built yet (planned once the keys work)")
+        super().__init__(snapshot)
+        self.resolver = Resolver(self.eu, self.onssa)
+
+    def answer_g2(self, q):
+        res = self.resolver.product(q["trade_name"])
+        if res.status == "exact":
+            return super().answer_g2({**q, "trade_name": res.value})
+        base = super().answer_g2(q)
+        return {**base, "status": "suggested" if res.status == "suggested" else "not_found",
+                "suggestions": res.candidates, "trace": {"resolver": res.status, "reason": res.reason}}
 
 
-class ClosedBook(_NeedsModel):
+class Full(RulesOnly):
+    name = "full"
+    description = "Resolver agent (Nemotron on Token Factory + Tavily) with deterministic verifier, then rules engine"
+    use_search = True
+
+    def __init__(self, snapshot="2026-09-13"):
+        super().__init__(snapshot)
+        from residuecheck.llm import TokenFactory
+
+        self.model = TokenFactory()  # raises MissingKey until Token Factory billing works
+        self.search = default_search() if self.use_search else None
+        self.resolver = Resolver(self.eu, self.onssa, model=self.model, search=self.search)
+
+    def answer_g2(self, q):
+        res = self.resolver.product(q["trade_name"])
+        if res.confirmed:
+            out = super().answer_g2({**q, "trade_name": res.value})
+        else:
+            out = {**super().answer_g2({**q, "trade_name": "__unresolved__"}),
+                   "status": "suggested" if res.status == "suggested" else "not_found", "suggestions": res.candidates}
+        out.update({"cost_usd": res.cost_usd, "trace": {"resolver": res.status, "reason": res.reason, "steps": res.trace}})
+        return out
+
+    def answer_g2s(self, q):
+        res = self.resolver.substance(q["label_name"])
+        return {"status": res.status, "eu_substance": res.value, "residue_ids": res.residue_ids, "candidates": res.candidates,
+                "cost_usd": res.cost_usd, "trace": {"reason": res.reason, "steps": res.trace}}
+
+    def answer_g1(self, q):
+        if self.eu.substance(q["substance"]) is None:
+            res = self.resolver.substance(q["substance"])
+            if res.confirmed:
+                ans = super().answer_g1({**q, "substance": res.value})
+                return {**ans, "cost_usd": res.cost_usd, "trace": {**ans["trace"], "resolver": res.reason}}
+        return super().answer_g1(q)
+
+
+class NoTavily(Full):
+    name = "no-tavily"
+    description = "full without web search: isolates what Tavily contributes"
+    use_search = False
+
+
+class _NotBuilt:
+    def __init__(self, snapshot="2026-09-13"):
+        raise NotImplementedError(f"{self.name} is not built yet")
+
+
+class ClosedBook(_NotBuilt):
     name = "closed-book"
     description = "Nemotron 3 Super answers from memory, no tools"
 
 
-class TavilyOnly(_NeedsModel):
-    name = "tavily-only"
-    description = "Nemotron with Tavily search and extract; no EU snapshot or ONSSA access"
-    keys = ("NEBIUS_API_KEY", "TAVILY_API_KEY")
+class NoVerifier(_NotBuilt):
+    name = "no-verifier"
+    description = "full with the verifier switched off"
 
 
-class Full(_NeedsModel):
-    name = "full"
-    description = "Nemotron agent with EU snapshot, ONSSA, Tavily; rules engine verifies"
-    keys = ("NEBIUS_API_KEY", "TAVILY_API_KEY")
-
-
-SYSTEMS = {s.name: s for s in (RulesOnly, ClosedBook, TavilyOnly, Full)}
+SYSTEMS = {s.name: s for s in (RulesOnly, RulesFuzzy, Full, NoTavily, ClosedBook, NoVerifier)}

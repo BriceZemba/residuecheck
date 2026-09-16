@@ -89,3 +89,27 @@ def test_g2_sizes_and_fake_names_unknown():
             assert c["question"]["trade_name"].upper().replace(" ", "") not in names
         if c["stratum"] == "variant":
             assert c["truth"]["resolvable_by_exact_normalised_match"] is False
+
+
+def test_g2s_scoring_at_residue_level():
+    from residuecheck.eu_data import Snapshot
+    from run import score_g2s
+
+    eu = Snapshot("2026-09-13")
+    copper = {"truth": {"eu_substance": "Bordeaux mixture", "accept_same_residue": True}}
+    oxy = eu.substance("Copper oxychloride")
+    assert score_g2s(copper, {"status": "resolved", "eu_substance": "Copper oxychloride",
+                              "residue_ids": eu.residue_ids(oxy)}, eu)["pass"]  # same copper residue
+    strict = {"truth": {"eu_substance": "Pyrethrins"}}
+    wrong = score_g2s(strict, {"status": "resolved", "eu_substance": "Deltamethrin", "residue_ids": [1]}, eu)
+    assert not wrong["pass"] and wrong["wrong"]
+    family = {"truth": {"eu_substance": "Paraffin oil", "family": "Paraffin oil/(CAS"}}
+    assert score_g2s(family, {"status": "needs_confirmation", "eu_substance": "Paraffin oil",
+                              "candidates": ["Paraffin oil/(CAS 8042-47-5)"]}, eu)["pass"]
+    abstain = score_g2s(strict, {"status": "cannot_verify", "eu_substance": None}, eu)
+    assert abstain["abstained"] and not abstain["wrong"]
+
+
+def test_g2_right_first_suggestion_is_tracked_separately():
+    s = score_g2(G2_CASE, {"status": "suggested", "trade_name": None, "suggestions": ["ACTARA 25 WG"]})
+    assert s["first_suggestion_ok"] and s["abstained"] and not s["pass"]

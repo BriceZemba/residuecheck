@@ -1,0 +1,426 @@
+{
+ "suite": "g2s",
+ "config": "rules-only",
+ "split": "dev",
+ "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
+ "run_at": "2026-09-16T21:14:26",
+ "code_version": "849fd11-dirty",
+ "seconds": 0.12195611000061035,
+ "cost_usd": 0,
+ "metrics": {
+  "pass": {
+   "n": 12,
+   "hits": 0,
+   "rate": 0.0
+  },
+  "confident_wrong": 0,
+  "abstained": 12,
+  "by_stratum": {
+   "family": {
+    "n": 1,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "single": {
+    "n": 11,
+    "hits": 0,
+    "rate": 0.0
+   }
+  }
+ },
+ "cases": [
+  {
+   "id": "g2s-dev-001",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "(E,E) 8,10-dodécadien-1-ol"
+   },
+   "truth": {
+    "label_name": "(E,E) 8,10-dodécadien-1-ol",
+    "eu_substance": "(E,E)-8,10-Dodecadien-1-ol (SCLP Alcohols)",
+    "note": "codlemone, straight-chain lepidopteran pheromone",
+    "evidence_keywords": [
+     "codlemone",
+     "sclp",
+     "straight chain lepidopteran",
+     "straight-chain lepidopteran"
+    ]
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-002",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "1-Dodecanol"
+   },
+   "truth": {
+    "label_name": "1-Dodecanol",
+    "eu_substance": "Dodecan-1-ol (SCLP Alcohols)",
+    "note": "pheromone component; EU lists it under SCLP alcohols",
+    "evidence_keywords": [
+     "sclp",
+     "straight chain lepidopteran",
+     "straight-chain lepidopteran",
+     "dodecan-1-ol"
+    ]
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-003",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "1-Tetradecanol"
+   },
+   "truth": {
+    "label_name": "1-Tetradecanol",
+    "eu_substance": "Tetradecan-1-ol (SCLP Alcohols)",
+    "note": "pheromone component; EU lists it under SCLP alcohols",
+    "evidence_keywords": [
+     "sclp",
+     "straight chain lepidopteran",
+     "straight-chain lepidopteran",
+     "tetradecan-1-ol"
+    ]
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-004",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Cuivre - oxychlorure de cuivre"
+   },
+   "truth": {
+    "label_name": "Cuivre - oxychlorure de cuivre",
+    "eu_substance": "Copper oxychloride",
+    "note": "residue: copper compounds",
+    "evidence_keywords": [
+     "copper oxychloride"
+    ]
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-005",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Cuivre - sulfate de cuivre"
+   },
+   "truth": {
+    "label_name": "Cuivre - sulfate de cuivre",
+    "eu_substance": "Copper compounds",
+    "note": "copper sulphate is not listed on its own; all copper forms share the copper residue definition",
+    "evidence_keywords": [
+     "copper sulphate",
+     "copper sulfate"
+    ],
+    "accept_same_residue": true
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-006",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Cuivre - sulfate tétracuivrique tricalcique"
+   },
+   "truth": {
+    "label_name": "Cuivre - sulfate tétracuivrique tricalcique",
+    "eu_substance": "Bordeaux mixture",
+    "note": "tetracopper tricalcium sulphate is the chemical description of Bordeaux mixture; residue: copper compounds",
+    "evidence_keywords": [
+     "bordeaux mixture",
+     "bouillie bordelaise",
+     "tetracopper tricalcium",
+     "tetracupric"
+    ],
+    "accept_same_residue": true
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-007",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Fosétyl-Aluminium"
+   },
+   "truth": {
+    "label_name": "Fosétyl-Aluminium",
+    "eu_substance": "Fosetyl",
+    "note": "fosetyl-aluminium is the salt; EU substance name is Fosetyl",
+    "evidence_keywords": [
+     "fosetyl-al",
+     "fosetyl-aluminium",
+     "fosetyl aluminium"
+    ],
+    "echo_risk": true
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-008",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Glyphosate -sel d'isopropylamine"
+   },
+   "truth": {
+    "label_name": "Glyphosate -sel d'isopropylamine",
+    "eu_substance": "Glyphosate",
+    "note": "salt form of glyphosate",
+    "evidence_keywords": [
+     "glyphosate isopropylamine",
+     "glyphosate-isopropylammonium",
+     "isopropylamine salt"
+    ],
+    "echo_risk": true
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.001
+  },
+  {
+   "id": "g2s-dev-009",
+   "split": "dev",
+   "stratum": "family",
+   "question": {
+    "label_name": "Huile minérale paraffinique"
+   },
+   "truth": {
+    "label_name": "Huile minérale paraffinique",
+    "eu_substance": "Paraffin oil",
+    "note": "several paraffin oils exist in the EU database, distinguished by CAS number; the label's CAS is needed to pick one",
+    "evidence_keywords": [
+     "paraffin oil",
+     "paraffinic oil",
+     "8042-47-5",
+     "97862-82-3",
+     "72623-86-0",
+     "64742-46-7"
+    ],
+    "family": "Paraffin oil/(CAS"
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-010",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Hydrolysat de protéines"
+   },
+   "truth": {
+    "label_name": "Hydrolysat de protéines",
+    "eu_substance": "Hydrolysed proteins",
+    "note": "food attractant (bait)",
+    "evidence_keywords": [
+     "hydrolysed protein",
+     "hydrolyzed protein",
+     "protein hydrolysate"
+    ]
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-011",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Propamocarbe HCl"
+   },
+   "truth": {
+    "label_name": "Propamocarbe HCl",
+    "eu_substance": "Propamocarb",
+    "note": "hydrochloride salt of propamocarb",
+    "evidence_keywords": [
+     "propamocarb hydrochloride",
+     "propamocarb-hydrochloride",
+     "propamocarb hcl"
+    ],
+    "echo_risk": true
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  },
+  {
+   "id": "g2s-dev-012",
+   "split": "dev",
+   "stratum": "single",
+   "question": {
+    "label_name": "Pyrèthre"
+   },
+   "truth": {
+    "label_name": "Pyrèthre",
+    "eu_substance": "Pyrethrins",
+    "note": "natural pyrethrum extract",
+    "evidence_keywords": [
+     "pyrethrins",
+     "pyrethrum"
+    ]
+   },
+   "answer": {
+    "status": "cannot_verify",
+    "eu_substance": null,
+    "residue_ids": [],
+    "candidates": [],
+    "cost_usd": 0.0,
+    "trace": {}
+   },
+   "score": {
+    "pass": false,
+    "wrong": false,
+    "abstained": true
+   },
+   "latency_s": 0.0
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "about": "Seed of G2s (substance-name resolution): the 12 active-substance names from real ONSSA labels in G2 that the deterministic resolver could not map on 2026-09-14. Labelled by hand against EU Pesticides Database names in the 2026-09-13 snapshot. These 12 are dev cases (already inspected); the full G2s set will add held-out cases. Correctness is judged at residue level: an answer is right if it maps to the same EU residue definition(s).",
+ "split": "dev",
+ "labelled": "2026-09-16",
+ "cases": [
+  {"label_name": "(E,E) 8,10-dodécadien-1-ol", "eu_substance": "(E,E)-8,10-Dodecadien-1-ol (SCLP Alcohols)", "note": "codlemone, straight-chain lepidopteran pheromone", "evidence_keywords": ["codlemone", "sclp", "straight chain lepidopteran", "straight-chain lepidopteran"]},
+  {"label_name": "1-Dodecanol", "eu_substance": "Dodecan-1-ol (SCLP Alcohols)", "note": "pheromone component; EU lists it under SCLP alcohols", "evidence_keywords": ["sclp", "straight chain lepidopteran", "straight-chain lepidopteran", "dodecan-1-ol"]},
+  {"label_name": "1-Tetradecanol", "eu_substance": "Tetradecan-1-ol (SCLP Alcohols)", "note": "pheromone component; EU lists it under SCLP alcohols", "evidence_keywords": ["sclp", "straight chain lepidopteran", "straight-chain lepidopteran", "tetradecan-1-ol"]},
+  {"label_name": "Cuivre - oxychlorure de cuivre", "eu_substance": "Copper oxychloride", "note": "residue: copper compounds", "evidence_keywords": ["copper oxychloride"]},
+  {"label_name": "Cuivre - sulfate de cuivre", "eu_substance": "Copper compounds", "note": "copper sulphate is not listed on its own; all copper forms share the copper residue definition", "evidence_keywords": ["copper sulphate", "copper sulfate"], "accept_same_residue": true},
+  {"label_name": "Cuivre - sulfate tétracuivrique tricalcique", "eu_substance": "Bordeaux mixture", "note": "tetracopper tricalcium sulphate is the chemical description of Bordeaux mixture; residue: copper compounds", "evidence_keywords": ["bordeaux mixture", "bouillie bordelaise", "tetracopper tricalcium", "tetracupric"], "accept_same_residue": true},
+  {"label_name": "Fosétyl-Aluminium", "eu_substance": "Fosetyl", "note": "fosetyl-aluminium is the salt; EU substance name is Fosetyl", "evidence_keywords": ["fosetyl-al", "fosetyl-aluminium", "fosetyl aluminium"], "echo_risk": true},
+  {"label_name": "Glyphosate -sel d'isopropylamine", "eu_substance": "Glyphosate", "note": "salt form of glyphosate", "evidence_keywords": ["glyphosate isopropylamine", "glyphosate-isopropylammonium", "isopropylamine salt"], "echo_risk": true},
+  {"label_name": "Huile minérale paraffinique", "eu_substance": "Paraffin oil", "note": "several paraffin oils exist in the EU database, distinguished by CAS number; the label's CAS is needed to pick one", "evidence_keywords": ["paraffin oil", "paraffinic oil", "8042-47-5", "97862-82-3", "72623-86-0", "64742-46-7"], "family": "Paraffin oil/(CAS"},
+  {"label_name": "Hydrolysat de protéines", "eu_substance": "Hydrolysed proteins", "note": "food attractant (bait)", "evidence_keywords": ["hydrolysed protein", "hydrolyzed protein", "protein hydrolysate"]},
+  {"label_name": "Propamocarbe HCl", "eu_substance": "Propamocarb", "note": "hydrochloride salt of propamocarb", "evidence_keywords": ["propamocarb hydrochloride", "propamocarb-hydrochloride", "propamocarb hcl"], "echo_risk": true},
+  {"label_name": "Pyrèthre", "eu_substance": "Pyrethrins", "note": "natural pyrethrum extract", "evidence_keywords": ["pyrethrins", "pyrethrum"]}
+ ]
+}

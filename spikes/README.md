@@ -5,7 +5,7 @@ Time-boxed checks that decide the architecture. Each script writes its raw findi
 | Spike | Script | Status | Run on |
 |---|---|---|---|
 | S1 Token Factory models, prices, tool calling, vision | `s1_models.py` | ready, waiting for API key | |
-| S2 Tavily on Moroccan trade names | not written | waiting for API key | |
+| S2 Tavily on misspelled products and hard substance names | `s2_tavily.py` | **pass, with an honest negative** | 2026-09-16 |
 | S3 ONSSA index phytosanitaire | `s3_onssa.py` | **pass** | 2026-09-13 |
 | S4 RASFF pesticide notifications | `s4_rasff.py` | **pass** | 2026-09-13 |
 | S5 Hosting on Nebius | not written | todo | |
@@ -56,3 +56,13 @@ Tavily CLI 0.1.8 (OAuth login) was used for discovery; direct HTTP requests for 
 - G2b truth: sample product IDs directly from both registers (not through Tavily, to avoid a circular gold set), fetch pages directly, record trade name, substances and URL. Questions use the trade name as written on the page (Latin for Türkiye, Arabic for Egypt) plus a few transliterations and fakes.
 - Egypt has crop-level pre-harvest intervals, so registration and DAR checks for Egypt are possible later; not in scope for v2.
 - Claim to avoid: "only Tavily can reach these registers". True claim: "the registers have no usable name search API; Tavily finds the product page, the verifier confirms it".
+
+## S2 decision (2026-09-16)
+
+Tavily CLI (OAuth), basic depth, top 5, 38 searches in 137 s. Full table: `results/s2-tavily.md`.
+
+- **Misspelled Moroccan products (7 G2 dev variants):** the correct name appeared in a top-5 result for 5/7 (CR0NOS and SOUPYTO missed). Several hits are large index pages (marocagriculture.com, the ONSSA home page) that list every product, so they show the name exists, not which one was meant.
+- **Honest negative:** plain fuzzy matching against the ONSSA list already puts the correct product first for **7/7** with a clear margin (ratios 0.78-0.96, runner-up at least 0.11 lower), and the fake names get no close match (best 0.52-0.67). A language model adds nothing for single typos on Moroccan names. Fuzzy matching becomes a deterministic step of the resolver; a correction is always shown as "did you mean", never applied silently.
+- **Hard substance names (12, `eval/gold/g2s_seed.json`):** Tavily returned a top-5 result containing an evidence word for 12/12 (11/11 excluding Fosétyl, where the query already contained it). This is a lenient measure: for "sulfate tétracuivrique tricalcique" the matching snippet (NPIC copper sulphate fact sheet) mentions Bordeaux mixture only as copper sulphate mixed with lime, which is indirect evidence; for "Pyrèthre" the hit is a pyrethrins fact sheet; for the dodecadienol the first hit is the EU Pesticides Database page itself. The model still has to read the results and name the EU substance.
+- **Verifier design consequence:** the extracted page text for the NPIC result did not contain "Bordeaux" while the search snippet did. The verifier must check the exact text the model was shown during the run (snippet or extract), not re-fetch the page later.
+- **Where the model is needed, then:** substance names on labels, Arabic and Turkish trade names (G2b), and messier real inputs (handwriting, abbreviations, brand without formulation). G2 variants alone would not show model value; claims must come from G2s and G2b.
