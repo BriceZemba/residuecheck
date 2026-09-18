@@ -3,9 +3,9 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-16T22:33:51",
- "code_version": "7d51520-dirty",
- "seconds": 0.20688533782958984,
+ "run_at": "2026-09-18T18:14:26",
+ "code_version": "aac4672-dirty",
+ "seconds": 0.1466655731201172,
  "cost_usd": 0,
  "metrics": {
   "pass": {
@@ -148,7 +148,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-002",
@@ -216,7 +216,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-003",
@@ -426,7 +426,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-005",
@@ -1402,7 +1402,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-019",
@@ -1495,7 +1495,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-020",
@@ -1929,7 +1929,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-026",
@@ -2675,7 +2675,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-036",
@@ -2873,7 +2873,7 @@
     "pass": true,
     "silent_green": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-039",
@@ -3511,7 +3511,7 @@
     "pass": true,
     "silent_green": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-047",
@@ -4227,7 +4227,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-057",
@@ -4363,7 +4363,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-059",
@@ -5293,7 +5293,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-072",
@@ -5612,7 +5612,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-075",
@@ -5726,7 +5726,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.01
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-076",
@@ -6369,7 +6369,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-084",
@@ -7029,7 +7029,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-093",
@@ -7127,7 +7127,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-094",
@@ -7425,7 +7425,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-098",
@@ -7695,7 +7695,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-101",
@@ -7939,7 +7939,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-104",
@@ -8097,7 +8097,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-106",
@@ -8825,7 +8825,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-116",
@@ -9168,7 +9168,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-121",
@@ -9716,7 +9716,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-128",
@@ -9966,7 +9966,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-131",
@@ -10308,7 +10308,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-136",
@@ -10717,7 +10717,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-141",
@@ -10878,7 +10878,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-143",
@@ -13009,7 +13009,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-169",
@@ -13279,7 +13279,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-171",
@@ -13715,7 +13715,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-176",
@@ -13849,7 +13849,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-177",
@@ -14466,7 +14466,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-185",
@@ -14829,7 +14829,7 @@
     "pass": true,
     "silent_green": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-190",
@@ -15404,7 +15404,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-198",
@@ -15777,7 +15777,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-203",
@@ -16419,7 +16419,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-212",
@@ -16671,7 +16671,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-215",
@@ -17507,7 +17507,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-226",
@@ -17575,7 +17575,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-227",
@@ -18471,7 +18471,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-237",
@@ -18610,7 +18610,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-239",
@@ -18922,7 +18922,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-243",
@@ -19181,7 +19181,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-246",
@@ -19386,7 +19386,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-249",
@@ -19523,7 +19523,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-251",
@@ -19892,7 +19892,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-256",
@@ -20026,7 +20026,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-257",
@@ -20638,7 +20638,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-265",
@@ -20980,7 +20980,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-269",
@@ -21482,7 +21482,7 @@
     "pass": true,
     "silent_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-276",
@@ -21775,7 +21775,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-280",
@@ -22095,7 +22095,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-284",
@@ -22797,7 +22797,7 @@
     "pass": true,
     "silent_green": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-293",
@@ -22865,7 +22865,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-294",
@@ -23592,7 +23592,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-304",
@@ -24441,7 +24441,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-315",
@@ -25241,7 +25241,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-326",
@@ -25311,7 +25311,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-327",
@@ -25471,7 +25471,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.003
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-329",
@@ -25651,7 +25651,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-331",
@@ -25787,7 +25787,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-333",
@@ -26249,7 +26249,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-339",
@@ -26505,7 +26505,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-342",
@@ -26983,7 +26983,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-349",
@@ -27394,7 +27394,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-355",
@@ -27943,7 +27943,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-361",
@@ -28011,7 +28011,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-362",
@@ -28571,7 +28571,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-368",
@@ -29221,7 +29221,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-377",
@@ -29443,7 +29443,7 @@
     "pass": true,
     "silent_green": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-380",
@@ -29928,7 +29928,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g4-dev-385",
@@ -30236,7 +30236,7 @@
     "pass": true,
     "false_green": false
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g4-dev-388",
@@ -30958,7 +30958,7 @@
     "pass": true,
     "silent_green": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.0
   }
  ]
 }

@@ -3,9 +3,9 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-16T22:32:14",
- "code_version": "7d51520-dirty",
- "seconds": 0.16734600067138672,
+ "run_at": "2026-09-18T18:14:20",
+ "code_version": "aac4672-dirty",
+ "seconds": 0.18196630477905273,
  "cost_usd": 0,
  "metrics": {
   "pass": {
@@ -133,7 +133,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g1-dev-002",
@@ -193,7 +193,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g1-dev-003",
@@ -979,7 +979,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g1-dev-016",
@@ -1101,7 +1101,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g1-dev-018",
@@ -1883,7 +1883,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g1-dev-031",
@@ -1945,7 +1945,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g1-dev-032",
@@ -2731,7 +2731,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g1-dev-045",
@@ -2911,7 +2911,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g1-dev-048",
@@ -3267,7 +3267,7 @@
     "over_abstain": false,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g1-dev-054",
@@ -4645,7 +4645,7 @@
     "abstain_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g1-dev-078",
@@ -4687,7 +4687,7 @@
     "abstain_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.0
   },
   {
    "id": "g1-dev-079",

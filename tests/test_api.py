@@ -90,3 +90,10 @@ def test_past_spray_with_only_interval_problem_gets_harvest_date_not_options():
 def test_green_product_has_no_alternatives():
     body = check("2026-09-17", [{"product": "CORAGEN", "applied_on": "2026-08-15"}])
     assert body["verdict"] == "GREEN" and body["applications"][0]["alternatives"] is None
+
+
+def test_unreadable_csv_line_blocks_a_green_verdict():
+    body = client.post("/api/check/csv", json={"crop_code": "0231010", "harvest_on": "2026-11-30", "today": "2026-11-10",
+                                               "csv_text": "produit;date\nACETA;2026-11-01\nALKADOR;31/11/2026"}).json()
+    assert body["verdict"] == "CANNOT_VERIFY" and len(body["csv_errors"]) == 1
+    assert any(f["code"] == "LOG_LINE_UNREADABLE" for f in body["findings"])

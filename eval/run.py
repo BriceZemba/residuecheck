@@ -7,6 +7,7 @@ Usage:
   python eval/run.py --suite g2b --config full                   # Türkiye / Egypt trade names
   python eval/run.py --suite g3 --config full                    # spray-log photos (needs a vision model)
   python eval/run.py --suite g4 --config rules-only              # back-test on real RASFF notifications
+  python eval/run.py --suite g5 --config rules-only              # end to end through the API, with guards
   python eval/run.py --summary                                   # rebuild eval/results/README.md from all runs
 
 Writes eval/results/<suite>_<config>_<split>.json (every answer and score) and .md (metrics, failures).
@@ -30,7 +31,7 @@ from residuecheck.onssa import norm  # noqa: E402
 from systems import SYSTEMS, MissingKey  # noqa: E402
 
 RESULTS = ROOT / "eval" / "results"
-SUITES = ("g1", "g2", "g2b", "g2s", "g3", "g4", "g6")
+SUITES = ("g1", "g2", "g2b", "g2s", "g3", "g4", "g5", "g6")
 FILES = {(s, "dev"): f"gold/{s}_dev.jsonl" for s in SUITES} | {(s, "heldout"): f"heldout/{s}_heldout.jsonl" for s in SUITES}
 
 
@@ -140,6 +141,87 @@ def metrics_g6(rows):
             "shown_unsafe": sum(r["score"]["shown_unsafe"] for r in rows),
             "unsafe_proposal_rate": {"n": proposed, "hits": unsafe, "rate": round(unsafe / proposed, 3) if proposed else None},
             "rejected_by_verifier": sum(r["score"]["rejected"] for r in rows),
+            "by_stratum": {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in sorted({r["stratum"] for r in rows})}}
+
+
+CITED_LEVELS = ("RED", "AMBER")
+
+
+def _rules_check(request):
+    """Re-check a lot with the fixed rules only, whatever engine the system under test used."""
+    from residuecheck import api
+    from residuecheck.engine import RULES_NOTE, Engine
+
+    previous = api.engine()
+    api.set_engine(Engine("rules", note=RULES_NOTE))
+    try:
+        return api.check(api.CheckRequest(**request))
+    finally:
+        api.set_engine(previous)
+
+
+def score_g5(case, a):
+    t, q = case["truth"], case["question"]
+    apps = {x["input"]: x for x in a["applications"]}
+    codes = {f["code"] for f in a["findings"]}
+    s = {"verdict_ok": a["verdict"] == t["verdict"],
+         "safe_ok": a["verdict"] in [t["verdict"], *t["acceptable"]],
+         "false_green": a["verdict"] == "GREEN" and t["verdict"] != "GREEN",
+         "harvest_date_ok": a.get("earliest_safe_harvest") == t["earliest_safe_harvest"],
+         "codes_ok": set(t["required_codes"]) <= codes, "errors": []}
+    if not s["codes_ok"]:
+        s["errors"].append(f"missing codes {sorted(set(t['required_codes']) - codes)}")
+    # Products: status as labelled; an unknown name is never silently replaced.
+    s["products_ok"] = True
+    for tp in t["products"]:
+        got = apps.get(tp["input"])
+        ok = got is not None and got["status"] == tp["status"]
+        if ok and tp.get("first_suggestion"):
+            ok = bool(got["suggestions"]) and got["suggestions"][0] == tp["first_suggestion"]
+        if ok and tp["status"] == "not_found":
+            ok = got["trade_name"] is None
+        if not ok:
+            s["products_ok"] = False
+            s["errors"].append(f"product {tp['input']}: {got and got['status']} {got and got['suggestions'][:2]}")
+    # Framing: options only where a product blocks, "planned" vs "applied" as labelled, never empty when shown.
+    s["framing_ok"] = True
+    for name, context in t["alternatives"].items():
+        alt = (apps.get(name) or {}).get("alternatives")
+        ok = alt is None if context is None else (alt is not None and alt["context"] == context and bool(alt["options"]))
+        if not ok:
+            s["framing_ok"] = False
+            s["errors"].append(f"alternatives for {name}: expected {context}, got {alt and alt['context']}")
+    # Citation gate: every blocking or warning finding points to its source.
+    uncited = [f["code"] for f in a["findings"] if f["level"] in CITED_LEVELS and not f["sources"]]
+    s["citation_ok"] = not uncited
+    if uncited:
+        s["errors"].append(f"uncited findings {uncited}")
+    # Every option shown must pass the rules on its own, sprayed on its proposed date.
+    s["options_checked"], s["options_bad"] = 0, []
+    for x in a["applications"]:
+        for o in ((x.get("alternatives") or {}).get("options") or []):
+            s["options_checked"] += 1
+            recheck = _rules_check({"crop_code": q["crop_code"], "harvest_on": q["harvest_on"], "today": q["today"],
+                                    "applications": [{"product": o["product"], "applied_on": o["spray_on"]}]})
+            if recheck["verdict"] != "GREEN":
+                s["options_bad"].append(f"{o['product']} -> {recheck['verdict']}")
+    s["options_ok"] = not s["options_bad"]
+    if "csv_errors" in t:
+        s["csv_ok"] = len(a.get("csv_errors") or []) == t["csv_errors"]
+    s["pass"] = all(s[k] for k in ("verdict_ok", "harvest_date_ok", "codes_ok", "products_ok", "framing_ok",
+                                   "citation_ok", "options_ok")) and s.get("csv_ok", True)
+    return s
+
+
+def metrics_g5(rows):
+    checked = sum(r["score"]["options_checked"] for r in rows)
+    bad = sum(len(r["score"]["options_bad"]) for r in rows)
+    return {"pass": rate(rows, "pass"), "verdict_accuracy": rate(rows, "verdict_ok"), "safe_verdict": rate(rows, "safe_ok"),
+            "false_green": sum(r["score"]["false_green"] for r in rows),
+            "harvest_date_ok": rate(rows, "harvest_date_ok"), "codes_ok": rate(rows, "codes_ok"),
+            "products_ok": rate(rows, "products_ok"), "framing_ok": rate(rows, "framing_ok"),
+            "citation_ok": rate(rows, "citation_ok"),
+            "options_pass_rules": {"n": checked, "hits": checked - bad, "rate": round((checked - bad) / checked, 3) if checked else None},
             "by_stratum": {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in sorted({r["stratum"] for r in rows})}}
 
 
@@ -394,7 +476,10 @@ def write_report(run):
         bad_flags = ("false_green", "missed_red", "wrong_product", "false_accept", "over_abstain", "abstained", "wrong")
         failed = ", ".join([k for k, v in c["score"].items() if k.endswith("_ok") and v is False] +
                            [k for k, v in c["score"].items() if k in bad_flags and v])
-        if run["suite"] == "g3":
+        if run["suite"] == "g5":
+            lines.append(f"- `{c['id']}` {c['title']}: expected {t['verdict']}, got {a['verdict']}; "
+                         + "; ".join(c["score"]["errors"] + [f"option {o}" for o in c["score"]["options_bad"]]))
+        elif run["suite"] == "g3":
             lines.append(f"- `{c['id']}` [{c['stratum']}] {q['image']} ({', '.join(t.get('defects') or []) or 'no defects'}): "
                          f"{c['score']['rows_found']}/{c['score']['rows_expected']} rows, extra {c['score']['extra_rows']}, "
                          f"crossed used {c['score']['crossed_used']}; " + "; ".join(c["score"]["field_errors"][:6]))
@@ -435,6 +520,7 @@ def summary():
                         ("g2b", ["pass", "product_identified", "substances_exact", "wrong_product", "abstained_on_real", "fake_accepted"]),
                         ("g2s", ["pass", "confident_wrong", "abstained"]),
                         ("g3", ["pass", "row_recall", "field_accuracy", "unreadable_left_empty", "guessed_unreadable", "extra_rows", "crossed_used", "product_resolved"]),
+                        ("g5", ["pass", "verdict_accuracy", "safe_verdict", "false_green", "products_ok", "framing_ok", "citation_ok", "options_pass_rules"]),
                         ("g4", ["pass", "blocked_all", "warned_all", "blocked_preventable", "unauthorised_red", "unauthorised_not_green", "false_green", "substance_misses", "silent_green_dose_dependent"]),
                         ("g6", ["pass", "coverage", "shown_unsafe", "unsafe_proposal_rate", "rejected_by_verifier"])):
         rows = [r for r in runs if r["suite"] == suite]
@@ -478,6 +564,8 @@ def main():
         answer, scorer, metrics = system.answer_g2b, score_g2b, metrics_g2b
     elif a.suite == "g3":
         answer, scorer, metrics = system.answer_g3, score_g3, metrics_g3
+    elif a.suite == "g5":
+        answer, scorer, metrics = system.answer_g5, score_g5, metrics_g5
     elif a.suite == "g4":
         answer, scorer, metrics = system.answer_g4, score_g4, metrics_g4
     elif a.suite == "g6":

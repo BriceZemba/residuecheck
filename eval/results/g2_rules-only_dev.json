@@ -3,9 +3,9 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-16T22:32:18",
- "code_version": "7d51520-dirty",
- "seconds": 0.2892932891845703,
+ "run_at": "2026-09-18T18:14:23",
+ "code_version": "aac4672-dirty",
+ "seconds": 0.7577288150787354,
  "cost_usd": 0,
  "metrics": {
   "pass": {
@@ -117,7 +117,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.026
   },
   {
    "id": "g2-dev-002",
@@ -174,7 +174,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.018
   },
   {
    "id": "g2-dev-003",
@@ -238,7 +238,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.017
   },
   {
    "id": "g2-dev-004",
@@ -297,7 +297,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.017
   },
   {
    "id": "g2-dev-005",
@@ -354,7 +354,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-006",
@@ -413,7 +413,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.016
   },
   {
    "id": "g2-dev-007",
@@ -472,7 +472,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.02
   },
   {
    "id": "g2-dev-008",
@@ -657,7 +657,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.004
+   "latency_s": 0.016
   },
   {
    "id": "g2-dev-011",
@@ -721,7 +721,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.026
   },
   {
    "id": "g2-dev-012",
@@ -778,7 +778,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.018
   },
   {
    "id": "g2-dev-013",
@@ -837,7 +837,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.019
   },
   {
    "id": "g2-dev-014",
@@ -896,7 +896,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.017
   },
   {
    "id": "g2-dev-015",
@@ -953,7 +953,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.016
   },
   {
    "id": "g2-dev-016",
@@ -1012,7 +1012,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.017
   },
   {
    "id": "g2-dev-017",
@@ -1192,7 +1192,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.028
   },
   {
    "id": "g2-dev-020",
@@ -1251,7 +1251,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-021",
@@ -1308,7 +1308,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.018
   },
   {
    "id": "g2-dev-022",
@@ -1372,7 +1372,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.003
+   "latency_s": 0.02
   },
   {
    "id": "g2-dev-023",
@@ -1431,7 +1431,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.02
   },
   {
    "id": "g2-dev-024",
@@ -1490,7 +1490,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.019
   },
   {
    "id": "g2-dev-025",
@@ -1547,7 +1547,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.034
   },
   {
    "id": "g2-dev-026",
@@ -1604,7 +1604,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.018
   },
   {
    "id": "g2-dev-027",
@@ -1661,7 +1661,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.004
   },
   {
    "id": "g2-dev-028",
@@ -1720,7 +1720,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.018
   },
   {
    "id": "g2-dev-029",
@@ -1783,7 +1783,7 @@
     "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.003
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-030",
@@ -1846,7 +1846,7 @@
     "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.007
+   "latency_s": 0.004
   },
   {
    "id": "g2-dev-031",
@@ -1917,7 +1917,7 @@
     "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.007
+   "latency_s": 0.004
   },
   {
    "id": "g2-dev-032",
@@ -1980,7 +1980,7 @@
     "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.007
+   "latency_s": 0.023
   },
   {
    "id": "g2-dev-033",
@@ -2043,7 +2043,7 @@
     "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.005
+   "latency_s": 0.003
   },
   {
    "id": "g2-dev-034",
@@ -2106,7 +2106,7 @@
     "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.007
+   "latency_s": 0.003
   },
   {
    "id": "g2-dev-035",
@@ -2169,7 +2169,7 @@
     "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.007
+   "latency_s": 0.003
   },
   {
    "id": "g2-dev-036",
@@ -2204,7 +2204,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.007
+   "latency_s": 0.003
   },
   {
    "id": "g2-dev-037",
@@ -2239,7 +2239,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.004
+   "latency_s": 0.007
   },
   {
    "id": "g2-dev-038",
@@ -2274,7 +2274,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.004
+   "latency_s": 0.009
   },
   {
    "id": "g2-dev-039",
@@ -2309,7 +2309,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.004
+   "latency_s": 0.028
   },
   {
    "id": "g2-dev-040",
@@ -2344,7 +2344,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.005
+   "latency_s": 0.036
   },
   {
    "id": "g2-dev-041",
@@ -2379,7 +2379,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.003
+   "latency_s": 0.014
   },
   {
    "id": "g2-dev-042",
@@ -2414,7 +2414,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.012
+   "latency_s": 0.005
   }
  ]
 }

@@ -241,3 +241,54 @@ def test_g4_scoring():
     unknown = {"stratum": "unknown_history", "truth": {"substances": [sub("C", "history_not_in_snapshot")], "unauthorised": []}}
     assert score_g4(unknown, {"verdict": "CANNOT_VERIFY", "levels": {"C": "CANNOT_VERIFY"}})["pass"]
     assert not score_g4(unknown, {"verdict": "GREEN", "levels": {"C": "GREEN"}})["pass"]
+
+
+def test_g5_set_is_consistent():
+    cases = load("g5", "all")
+    assert len(cases) == 8 and sum(c["split"] == "heldout" for c in cases) == 2
+    for c in cases:
+        t = c["truth"]
+        assert "GREEN" not in t["acceptable"] or t["verdict"] == "GREEN"  # a GREEN is never "acceptable" for a non-GREEN lot
+        assert c["why"] and t["products"]
+
+
+def test_g5_guards_catch_false_green_silent_fix_and_bad_framing():
+    import copy
+
+    from run import score_g5
+
+    case = {"question": {"kind": "rows", "crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-11-01"},
+            "truth": {"verdict": "CANNOT_VERIFY", "acceptable": ["RED"], "earliest_safe_harvest": None,
+                      "required_codes": ["PRODUCT_UNRESOLVED"],
+                      "products": [{"input": "AKTARA 25 WG", "status": "not_found", "first_suggestion": "ACTARA 25 WG"}],
+                      "alternatives": {}}}
+    good = {"verdict": "CANNOT_VERIFY", "earliest_safe_harvest": None,
+            "findings": [{"code": "PRODUCT_UNRESOLVED", "level": "CANNOT_VERIFY", "sources": []}],
+            "applications": [{"input": "AKTARA 25 WG", "status": "not_found", "trade_name": None,
+                              "suggestions": ["ACTARA 25 WG"], "alternatives": None}]}
+    assert score_g5(case, good)["pass"]
+    green = copy.deepcopy(good)
+    green["verdict"] = "GREEN"
+    s = score_g5(case, green)
+    assert s["false_green"] and not s["safe_ok"] and not s["pass"]
+    fixed = copy.deepcopy(good)
+    fixed["applications"][0].update(status="found", trade_name="ACTARA 25 WG")  # silently corrected
+    assert not score_g5(case, fixed)["products_ok"]
+    uncited = copy.deepcopy(good)
+    uncited["findings"].append({"code": "MRL_AT_LOQ", "level": "RED", "sources": []})
+    assert not score_g5(case, uncited)["citation_ok"]
+
+
+def test_g5_options_are_rechecked_by_the_rules():
+    from run import score_g5
+
+    case = {"question": {"kind": "rows", "crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-09-17"},
+            "truth": {"verdict": "RED", "acceptable": [], "earliest_safe_harvest": None, "required_codes": [],
+                      "products": [], "alternatives": {"ACTARA 25 WG": "planned"}}}
+    answer = {"verdict": "RED", "earliest_safe_harvest": None, "findings": [],
+              "applications": [{"input": "ACTARA 25 WG", "status": "found", "trade_name": "ACTARA 25 WG", "suggestions": [],
+                                "alternatives": {"context": "planned", "options": [
+                                    {"product": "CORAGEN", "spray_on": "2026-10-01"},
+                                    {"product": "ACRAMITE 480 SC", "spray_on": "2026-10-01"}]}}]}
+    s = score_g5(case, answer)
+    assert s["options_checked"] == 2 and s["options_bad"] == ["ACRAMITE 480 SC -> RED"] and not s["pass"]

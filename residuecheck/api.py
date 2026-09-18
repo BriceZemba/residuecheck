@@ -27,7 +27,7 @@ from residuecheck.eu_data import Snapshot
 from residuecheck.onssa import DATA, Onssa
 from residuecheck.replay import ReplayMiss
 from residuecheck.resolver import Resolver
-from residuecheck.rules import Application, Level, Lot, evaluate
+from residuecheck.rules import Application, Finding, Level, Lot, evaluate
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 WEB_DIST = ROOT / "web" / "dist"
@@ -227,7 +227,7 @@ def resolve(product):
     return "not_found", None, res.candidates or suggestions, how
 
 
-def run_check(crop_code, harvest_on, arrival_on, rows, today=None):
+def run_check(crop_code, harvest_on, arrival_on, rows, today=None, unreadable=()):
     snapshot = eu()
     if crop_code not in snapshot.crops:
         raise HTTPException(422, f"unsupported crop code {crop_code}")
@@ -255,6 +255,12 @@ def run_check(crop_code, harvest_on, arrival_on, rows, today=None):
 
     lot = Lot(crop_code, harvest_on, apps, arrival_on=arrival_on)
     result = evaluate(lot, snapshot)
+    if unreadable:
+        # A spray line that could not be read is a spray we know nothing about: the lot cannot be confirmed.
+        result.findings.append(Finding("LOG_LINE_UNREADABLE", Level.CANNOT_VERIFY,
+                                       f"{len(unreadable)} line(s) of the spray log could not be read ({'; '.join(unreadable)}). "
+                                       "Fix them so every spray is checked; until then the lot cannot be confirmed."))
+        result.verdict = max(result.verdict, Level.CANNOT_VERIFY)
     today = today or datetime.date.today()
     for item in resolutions:
         item["alternatives"] = safer_options(item, result.findings, crop_code, harvest_on, today)
@@ -352,7 +358,7 @@ def check_csv(req: CsvCheckRequest):
         raise HTTPException(422, {"message": "no usable rows", "errors": errors})
     if len(rows) > MAX_APPLICATIONS:
         raise HTTPException(422, f"at most {MAX_APPLICATIONS} rows")
-    result = run_check(req.crop_code, req.harvest_on, req.arrival_on, rows, req.today)
+    result = run_check(req.crop_code, req.harvest_on, req.arrival_on, rows, req.today, unreadable=errors)
     result["csv_errors"] = errors
     return result
 

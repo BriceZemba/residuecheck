@@ -3,9 +3,9 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-16T22:32:28",
- "code_version": "7d51520-dirty",
- "seconds": 1.9313561916351318,
+ "run_at": "2026-09-18T18:14:31",
+ "code_version": "aac4672-dirty",
+ "seconds": 2.0382375717163086,
  "cost_usd": 0,
  "metrics": {
   "pass": {
@@ -112,7 +112,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.277
+   "latency_s": 0.239
   },
   {
    "id": "g6-dev-002",
@@ -217,7 +217,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.131
+   "latency_s": 0.125
   },
   {
    "id": "g6-dev-003",
@@ -262,7 +262,7 @@
     "proposed_unsafe": 0,
     "rejected": 0
    },
-   "latency_s": 0.135
+   "latency_s": 0.107
   },
   {
    "id": "g6-dev-004",
@@ -317,7 +317,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.122
+   "latency_s": 0.112
   },
   {
    "id": "g6-dev-005",
@@ -447,7 +447,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.119
+   "latency_s": 0.124
   },
   {
    "id": "g6-dev-007",
@@ -491,7 +491,7 @@
     "proposed_unsafe": 0,
     "rejected": 0
    },
-   "latency_s": 0.113
+   "latency_s": 0.108
   },
   {
    "id": "g6-dev-008",
@@ -578,7 +578,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.12
+   "latency_s": 0.112
   },
   {
    "id": "g6-dev-009",
@@ -622,7 +622,7 @@
     "proposed_unsafe": 0,
     "rejected": 0
    },
-   "latency_s": 0.105
+   "latency_s": 0.114
   },
   {
    "id": "g6-dev-010",
@@ -716,7 +716,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.121
+   "latency_s": 0.11
   },
   {
    "id": "g6-dev-011",
@@ -810,7 +810,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.18
+   "latency_s": 0.168
   },
   {
    "id": "g6-dev-012",
@@ -904,7 +904,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.133
+   "latency_s": 0.334
   },
   {
    "id": "g6-dev-013",
@@ -979,7 +979,7 @@
     "rejected": 0,
     "coverage_ok": true
    },
-   "latency_s": 0.132
+   "latency_s": 0.139
   }
  ]
 }

@@ -1,0 +1,1199 @@
+{
+ "suite": "g5",
+ "config": "rules-only",
+ "split": "dev",
+ "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
+ "run_at": "2026-09-18T18:12:21",
+ "code_version": "aac4672-dirty",
+ "seconds": 3.5163586139678955,
+ "cost_usd": 0,
+ "metrics": {
+  "pass": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "verdict_accuracy": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "safe_verdict": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "false_green": 0,
+  "harvest_date_ok": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "codes_ok": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "products_ok": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "framing_ok": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "citation_ok": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "options_pass_rules": {
+   "n": 6,
+   "hits": 6,
+   "rate": 1.0
+  },
+  "by_stratum": {
+   "CANNOT_VERIFY": {
+    "n": 2,
+    "hits": 2,
+    "rate": 1.0
+   },
+   "GREEN": {
+    "n": 1,
+    "hits": 1,
+    "rate": 1.0
+   },
+   "RED": {
+    "n": 3,
+    "hits": 3,
+    "rate": 1.0
+   }
+  }
+ },
+ "cases": [
+  {
+   "id": "g5-01",
+   "split": "dev",
+   "stratum": "GREEN",
+   "title": "Clean citrus lot",
+   "question": {
+    "kind": "rows",
+    "crop_code": "0110020",
+    "harvest_on": "2026-12-15",
+    "today": "2026-11-01",
+    "applications": [
+     {
+      "product": "CORAGEN",
+      "applied_on": "2026-10-20"
+     },
+     {
+      "product": "ADMIRAL 10 EC",
+      "applied_on": "2026-10-01"
+     }
+    ]
+   },
+   "truth": {
+    "verdict": "GREEN",
+    "acceptable": [],
+    "earliest_safe_harvest": null,
+    "required_codes": [],
+    "products": [
+     {
+      "input": "CORAGEN",
+      "status": "found"
+     },
+     {
+      "input": "ADMIRAL 10 EC",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "CORAGEN": null,
+     "ADMIRAL 10 EC": null
+    }
+   },
+   "why": "CORAGEN (chlorantraniliprole) registered on Agrumes, DAR 7: 20 Oct + 7 = 27 Oct < harvest 15 Dec. EU limit oranges 0.7 mg/kg (Reg. 2024/1355), approved. ADMIRAL 10 EC (pyriproxyfen) registered on Agrumes, DAR 30: 1 Oct + 30 = 31 Oct < 15 Dec. EU limit 0.7 mg/kg (Reg. 2023/1753), approved.",
+   "answer": {
+    "verdict": "GREEN",
+    "headline": "No rule-based red flags for the EU.",
+    "earliest_safe_harvest": null,
+    "crop": {
+     "code": "0110020",
+     "name": "Oranges"
+    },
+    "harvest_on": "2026-12-15",
+    "arrival_on": "2026-12-25",
+    "today": "2026-11-01",
+    "applications": [
+     {
+      "input": "CORAGEN",
+      "applied_on": "2026-10-20",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "CORAGEN",
+      "substances": [
+       {
+        "name": "Chlorantraniliprole",
+        "content": "200 g/l",
+        "eu_name": "Chlorantraniliprole"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 7,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "E12-9-001",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-16",
+      "alternatives": null
+     },
+     {
+      "input": "ADMIRAL 10 EC",
+      "applied_on": "2026-10-01",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "ADMIRAL 10 EC",
+      "substances": [
+       {
+        "name": "Pyriproxyfène",
+        "content": "100 g/l",
+        "eu_name": "Pyriproxyfen"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 30,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "D05-7-001",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-13",
+      "alternatives": null
+     }
+    ],
+    "findings": [
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Chlorantraniliprole on Oranges: 0.7 mg/kg (Reg. (EU) 2024/1355, since 2024-06-11).",
+      "product": "CORAGEN",
+      "substance": "Chlorantraniliprole",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2024/1355/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=771"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Pyriproxyfen on Oranges: 0.7 mg/kg (Reg. (EU) 2023/1753, since 2024-04-02).",
+      "product": "ADMIRAL 10 EC",
+      "substance": "Pyriproxyfen",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/1753/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=368"
+      ]
+     }
+    ],
+    "counts": {
+     "INFO": 3,
+     "GREEN": 0,
+     "AMBER": 0,
+     "CANNOT_VERIFY": 0,
+     "RED": 0
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-12-25 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": true,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 0,
+    "options_bad": [],
+    "options_ok": true,
+    "pass": true
+   },
+   "latency_s": 2.899
+  },
+  {
+   "id": "g5-02",
+   "split": "dev",
+   "stratum": "RED",
+   "title": "Applied spray whose limit is at the detection level",
+   "question": {
+    "kind": "rows",
+    "crop_code": "0110020",
+    "harvest_on": "2026-12-15",
+    "today": "2026-11-20",
+    "applications": [
+     {
+      "product": "ACTARA 25 WG",
+      "applied_on": "2026-10-15"
+     }
+    ]
+   },
+   "truth": {
+    "verdict": "RED",
+    "acceptable": [],
+    "earliest_safe_harvest": null,
+    "required_codes": [
+     "MRL_AT_LOQ"
+    ],
+    "products": [
+     {
+      "input": "ACTARA 25 WG",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "ACTARA 25 WG": "applied"
+    }
+   },
+   "why": "ACTARA 25 WG (thiamethoxam 25%) registered on Agrumes, DAR 28, interval respected. Thiamethoxam not approved in the EU; limit on oranges 0.01* mg/kg since 7 Mar 2026 (Reg. 2023/334): any detectable residue fails. Already sprayed, so options are for the next spray, not a replacement.",
+   "answer": {
+    "verdict": "RED",
+    "headline": "Do not ship this lot to the EU as planned.",
+    "earliest_safe_harvest": null,
+    "crop": {
+     "code": "0110020",
+     "name": "Oranges"
+    },
+    "harvest_on": "2026-12-15",
+    "arrival_on": "2026-12-25",
+    "today": "2026-11-20",
+    "applications": [
+     {
+      "input": "ACTARA 25 WG",
+      "applied_on": "2026-10-15",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "ACTARA 25 WG",
+      "substances": [
+       {
+        "name": "Thiamethoxam",
+        "content": "25%",
+        "eu_name": "Thiamethoxam"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 28,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "D09-9-002",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-13",
+      "alternatives": {
+       "method": "rules",
+       "replayed": false,
+       "fallback_note": null,
+       "rejected": [],
+       "context": "applied",
+       "note": "This spray is already done and cannot be undone; a residue test before shipping is advisable. For the next spray against the same pest before this harvest:",
+       "not_before": "2026-11-20",
+       "status": "deterministic",
+       "reason": "9 of 322 registered products pass the rules for this lot",
+       "options": [
+        {
+         "product": "NEEMIX 4,5",
+         "substances": [
+          "Azadirachtine"
+         ],
+         "pests": [
+          "Mineuse des feuilles"
+         ],
+         "dar_days": 3,
+         "spray_on": "2026-11-20",
+         "latest_spray": "2026-12-12",
+         "why": "registered against Mineuse des feuilles; 3 days before harvest",
+         "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+        },
+        {
+         "product": "CORAGEN",
+         "substances": [
+          "Chlorantraniliprole"
+         ],
+         "pests": [
+          "Mineuse"
+         ],
+         "dar_days": 7,
+         "spray_on": "2026-11-20",
+         "latest_spray": "2026-12-08",
+         "why": "registered against Mineuse; 7 days before harvest",
+         "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+        },
+        {
+         "product": "EXIREL TM",
+         "substances": [
+          "Cyantraniliprole"
+         ],
+         "pests": [
+          "Cératite",
+          "Mineuse des feuilles",
+          "Thrips"
+         ],
+         "dar_days": 7,
+         "spray_on": "2026-11-20",
+         "latest_spray": "2026-12-08",
+         "why": "registered against Cératite, Mineuse des feuilles, Thrips; 7 days before harvest",
+         "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+        }
+       ]
+      }
+     }
+    ],
+    "findings": [
+     {
+      "level": "RED",
+      "code": "MRL_AT_LOQ",
+      "message": "EU limit for Thiamethoxam on Oranges is 0.01 mg/kg (limit of quantification) since 2026-03-07 (Reg. (EU) 2023/334); Thiamethoxam is not approved in the EU. Any detectable residue breaches it.",
+      "product": "ACTARA 25 WG",
+      "substance": "Thiamethoxam",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/334/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=388"
+      ]
+     },
+     {
+      "level": "AMBER",
+      "code": "MRL_RECENTLY_LOWERED",
+      "message": "EU limit for Thiamethoxam on Oranges dropped from 0.15 mg/kg to 0.01 mg/kg (limit of quantification) on 2026-03-07 (Reg. (EU) 2023/334). Older advice may be out of date.",
+      "product": "ACTARA 25 WG",
+      "substance": "Thiamethoxam",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/334/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=388"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     }
+    ],
+    "counts": {
+     "INFO": 1,
+     "GREEN": 0,
+     "AMBER": 1,
+     "CANNOT_VERIFY": 0,
+     "RED": 1
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-12-25 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": true,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 3,
+    "options_bad": [],
+    "options_ok": true,
+    "pass": true
+   },
+   "latency_s": 0.282
+  },
+  {
+   "id": "g5-03",
+   "split": "dev",
+   "stratum": "RED",
+   "title": "Harvest planned before the waiting time ends",
+   "question": {
+    "kind": "rows",
+    "crop_code": "0110020",
+    "harvest_on": "2026-11-20",
+    "today": "2026-11-15",
+    "applications": [
+     {
+      "product": "ADMIRAL 10 EC",
+      "applied_on": "2026-11-01"
+     }
+    ]
+   },
+   "truth": {
+    "verdict": "RED",
+    "acceptable": [],
+    "earliest_safe_harvest": "2026-12-01",
+    "required_codes": [
+     "PHI_NOT_MET"
+    ],
+    "products": [
+     {
+      "input": "ADMIRAL 10 EC",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "ADMIRAL 10 EC": null
+    }
+   },
+   "why": "ADMIRAL 10 EC DAR 30 on Agrumes: 1 Nov + 30 = 1 Dec, after the planned harvest of 20 Nov. The spray is done, so the fix is a later harvest (1 Dec), not another product. Pyriproxyfen limit itself is fine (0.7 mg/kg).",
+   "answer": {
+    "verdict": "RED",
+    "headline": "Do not ship this lot to the EU as planned.",
+    "earliest_safe_harvest": "2026-12-01",
+    "crop": {
+     "code": "0110020",
+     "name": "Oranges"
+    },
+    "harvest_on": "2026-11-20",
+    "arrival_on": "2026-11-30",
+    "today": "2026-11-15",
+    "applications": [
+     {
+      "input": "ADMIRAL 10 EC",
+      "applied_on": "2026-11-01",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "ADMIRAL 10 EC",
+      "substances": [
+       {
+        "name": "Pyriproxyfène",
+        "content": "100 g/l",
+        "eu_name": "Pyriproxyfen"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 30,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "D05-7-001",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-13",
+      "alternatives": null
+     }
+    ],
+    "findings": [
+     {
+      "level": "RED",
+      "code": "PHI_NOT_MET",
+      "message": "'ADMIRAL 10 EC' needs 30 days before harvest; the plan leaves 19. Earliest harvest: 2026-12-01.",
+      "product": "ADMIRAL 10 EC",
+      "substance": null,
+      "sources": [
+       "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Pyriproxyfen on Oranges: 0.7 mg/kg (Reg. (EU) 2023/1753, since 2024-04-02).",
+      "product": "ADMIRAL 10 EC",
+      "substance": "Pyriproxyfen",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/1753/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=368"
+      ]
+     }
+    ],
+    "counts": {
+     "INFO": 2,
+     "GREEN": 0,
+     "AMBER": 0,
+     "CANNOT_VERIFY": 0,
+     "RED": 1
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-11-30 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": true,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 0,
+    "options_bad": [],
+    "options_ok": true,
+    "pass": true
+   },
+   "latency_s": 0.001
+  },
+  {
+   "id": "g5-04",
+   "split": "dev",
+   "stratum": "CANNOT_VERIFY",
+   "title": "Misspelled product name",
+   "question": {
+    "kind": "rows",
+    "crop_code": "0110020",
+    "harvest_on": "2026-12-15",
+    "today": "2026-11-01",
+    "applications": [
+     {
+      "product": "AKTARA 25 WG",
+      "applied_on": "2026-10-10"
+     },
+     {
+      "product": "CORAGEN",
+      "applied_on": "2026-10-20"
+     }
+    ]
+   },
+   "truth": {
+    "verdict": "CANNOT_VERIFY",
+    "acceptable": [
+     "RED"
+    ],
+    "earliest_safe_harvest": null,
+    "required_codes": [
+     "PRODUCT_UNRESOLVED"
+    ],
+    "products": [
+     {
+      "input": "AKTARA 25 WG",
+      "status": "not_found",
+      "first_suggestion": "ACTARA 25 WG"
+     },
+     {
+      "input": "CORAGEN",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "CORAGEN": null
+    }
+   },
+   "why": "'AKTARA 25 WG' is not in the ONSSA register; the grower most likely means ACTARA 25 WG. Until they confirm, the lot cannot be verified; it must not be GREEN and the name must not be silently corrected. RED is also acceptable (a system that confirms ACTARA from evidence would find the thiamethoxam problem).",
+   "answer": {
+    "verdict": "CANNOT_VERIFY",
+    "headline": "This lot cannot be confirmed safe to ship yet.",
+    "earliest_safe_harvest": null,
+    "crop": {
+     "code": "0110020",
+     "name": "Oranges"
+    },
+    "harvest_on": "2026-12-15",
+    "arrival_on": "2026-12-25",
+    "today": "2026-11-01",
+    "applications": [
+     {
+      "input": "AKTARA 25 WG",
+      "applied_on": "2026-10-10",
+      "status": "not_found",
+      "suggestions": [
+       "ACTARA 25 WG"
+      ],
+      "trade_name": null,
+      "substances": [],
+      "registration": null,
+      "dar_days": null,
+      "source": null,
+      "resolution": {
+       "method": "rules",
+       "status": "suggested",
+       "reason": "closest ONSSA name (similarity 0.90, next 0.67); confirm before use"
+      },
+      "alternatives": null
+     },
+     {
+      "input": "CORAGEN",
+      "applied_on": "2026-10-20",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "CORAGEN",
+      "substances": [
+       {
+        "name": "Chlorantraniliprole",
+        "content": "200 g/l",
+        "eu_name": "Chlorantraniliprole"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 7,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "E12-9-001",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-16",
+      "alternatives": null
+     }
+    ],
+    "findings": [
+     {
+      "level": "CANNOT_VERIFY",
+      "code": "PRODUCT_UNRESOLVED",
+      "message": "Active substances of 'AKTARA 25 WG' could not be confirmed from an official source.",
+      "product": "AKTARA 25 WG",
+      "substance": null,
+      "sources": []
+     },
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Chlorantraniliprole on Oranges: 0.7 mg/kg (Reg. (EU) 2024/1355, since 2024-06-11).",
+      "product": "CORAGEN",
+      "substance": "Chlorantraniliprole",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2024/1355/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=771"
+      ]
+     }
+    ],
+    "counts": {
+     "INFO": 2,
+     "GREEN": 0,
+     "AMBER": 0,
+     "CANNOT_VERIFY": 1,
+     "RED": 0
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-12-25 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": true,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 0,
+    "options_bad": [],
+    "options_ok": true,
+    "pass": true
+   },
+   "latency_s": 0.043
+  },
+  {
+   "id": "g5-06",
+   "split": "dev",
+   "stratum": "RED",
+   "title": "Planned spray that would block the harvest",
+   "question": {
+    "kind": "rows",
+    "crop_code": "0110020",
+    "harvest_on": "2026-12-15",
+    "today": "2026-09-17",
+    "applications": [
+     {
+      "product": "ACTARA 25 WG",
+      "applied_on": "2026-10-01"
+     }
+    ]
+   },
+   "truth": {
+    "verdict": "RED",
+    "acceptable": [],
+    "earliest_safe_harvest": null,
+    "required_codes": [
+     "MRL_AT_LOQ"
+    ],
+    "products": [
+     {
+      "input": "ACTARA 25 WG",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "ACTARA 25 WG": "planned"
+    }
+   },
+   "why": "Same thiamethoxam problem as g5-02, but the spray is planned for 1 Oct (after today, 17 Sep): the right answer is to replace it with a registered product against the same pest (leaf miner) that passes the EU rules.",
+   "answer": {
+    "verdict": "RED",
+    "headline": "Do not ship this lot to the EU as planned.",
+    "earliest_safe_harvest": null,
+    "crop": {
+     "code": "0110020",
+     "name": "Oranges"
+    },
+    "harvest_on": "2026-12-15",
+    "arrival_on": "2026-12-25",
+    "today": "2026-09-17",
+    "applications": [
+     {
+      "input": "ACTARA 25 WG",
+      "applied_on": "2026-10-01",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "ACTARA 25 WG",
+      "substances": [
+       {
+        "name": "Thiamethoxam",
+        "content": "25%",
+        "eu_name": "Thiamethoxam"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 28,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "D09-9-002",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-13",
+      "alternatives": {
+       "method": "rules",
+       "replayed": false,
+       "fallback_note": null,
+       "rejected": [],
+       "context": "planned",
+       "note": "Replace this planned spray with one of these.",
+       "not_before": "2026-10-01",
+       "status": "deterministic",
+       "reason": "38 of 322 registered products pass the rules for this lot",
+       "options": [
+        {
+         "product": "NEEMIX 4,5",
+         "substances": [
+          "Azadirachtine"
+         ],
+         "pests": [
+          "Mineuse des feuilles"
+         ],
+         "dar_days": 3,
+         "spray_on": "2026-10-01",
+         "latest_spray": "2026-12-12",
+         "why": "registered against Mineuse des feuilles; 3 days before harvest",
+         "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+        },
+        {
+         "product": "CORAGEN",
+         "substances": [
+          "Chlorantraniliprole"
+         ],
+         "pests": [
+          "Mineuse"
+         ],
+         "dar_days": 7,
+         "spray_on": "2026-10-01",
+         "latest_spray": "2026-12-08",
+         "why": "registered against Mineuse; 7 days before harvest",
+         "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+        },
+        {
+         "product": "EXIREL TM",
+         "substances": [
+          "Cyantraniliprole"
+         ],
+         "pests": [
+          "Cératite",
+          "Mineuse des feuilles",
+          "Thrips"
+         ],
+         "dar_days": 7,
+         "spray_on": "2026-10-01",
+         "latest_spray": "2026-12-08",
+         "why": "registered against Cératite, Mineuse des feuilles, Thrips; 7 days before harvest",
+         "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+        }
+       ]
+      }
+     }
+    ],
+    "findings": [
+     {
+      "level": "RED",
+      "code": "MRL_AT_LOQ",
+      "message": "EU limit for Thiamethoxam on Oranges is 0.01 mg/kg (limit of quantification) since 2026-03-07 (Reg. (EU) 2023/334); Thiamethoxam is not approved in the EU. Any detectable residue breaches it.",
+      "product": "ACTARA 25 WG",
+      "substance": "Thiamethoxam",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/334/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=388"
+      ]
+     },
+     {
+      "level": "AMBER",
+      "code": "MRL_RECENTLY_LOWERED",
+      "message": "EU limit for Thiamethoxam on Oranges dropped from 0.15 mg/kg to 0.01 mg/kg (limit of quantification) on 2026-03-07 (Reg. (EU) 2023/334). Older advice may be out of date.",
+      "product": "ACTARA 25 WG",
+      "substance": "Thiamethoxam",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/334/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=388"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     }
+    ],
+    "counts": {
+     "INFO": 1,
+     "GREEN": 0,
+     "AMBER": 1,
+     "CANNOT_VERIFY": 0,
+     "RED": 1
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-12-25 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": true,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 3,
+    "options_bad": [],
+    "options_ok": true,
+    "pass": true
+   },
+   "latency_s": 0.139
+  },
+  {
+   "id": "g5-08",
+   "split": "dev",
+   "stratum": "CANNOT_VERIFY",
+   "title": "Spray log pasted from a spreadsheet, one bad line",
+   "question": {
+    "kind": "csv",
+    "crop_code": "0231010",
+    "harvest_on": "2026-11-30",
+    "today": "2026-11-10",
+    "csv_text": "produit;date\nAGRIMEC GOLD;25/11/2026\nACETA;2026-11-01\nALKADOR;31/11/2026"
+   },
+   "truth": {
+    "verdict": "CANNOT_VERIFY",
+    "acceptable": [],
+    "earliest_safe_harvest": null,
+    "required_codes": [
+     "LOG_LINE_UNREADABLE"
+    ],
+    "csv_errors": 1,
+    "products": [
+     {
+      "input": "AGRIMEC GOLD",
+      "status": "found"
+     },
+     {
+      "input": "ACETA",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "AGRIMEC GOLD": null,
+     "ACETA": null
+    }
+   },
+   "why": "'31/11/2026' is not a date, so that line must be reported, not guessed. AGRIMEC GOLD (abamectin) on Tomate DAR 1: planned 25 Nov + 1 < 30 Nov; limit 0.015 mg/kg, approved. ACETA (acetamiprid) on Tomate DAR 3: 1 Nov + 3 < 30 Nov; limit 0.06 mg/kg, approved. The two readable lines are fine, but the unreadable line is a spray that happened (ALKADOR, imidacloprid) on an unknown date: the lot cannot be confirmed until the date is fixed. GREEN would hide a spray.",
+   "answer": {
+    "verdict": "CANNOT_VERIFY",
+    "headline": "This lot cannot be confirmed safe to ship yet.",
+    "earliest_safe_harvest": null,
+    "crop": {
+     "code": "0231010",
+     "name": "Tomatoes"
+    },
+    "harvest_on": "2026-11-30",
+    "arrival_on": "2026-12-10",
+    "today": "2026-11-10",
+    "applications": [
+     {
+      "input": "AGRIMEC GOLD",
+      "applied_on": "2026-11-25",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "AGRIMEC GOLD",
+      "substances": [
+       {
+        "name": "Abamectine",
+        "content": "84 g/l",
+        "eu_name": "Abamectin (aka avermectin)"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 1,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "F06-0-002",
+      "registration_note": null,
+      "matched_usages": [
+       "Tomate"
+      ],
+      "retrieved": "2026-09-16",
+      "alternatives": null
+     },
+     {
+      "input": "ACETA",
+      "applied_on": "2026-11-01",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "ACETA",
+      "substances": [
+       {
+        "name": "Acétamipride",
+        "content": "20%",
+        "eu_name": "Acetamiprid"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 3,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "F03-5-007",
+      "registration_note": null,
+      "matched_usages": [
+       "Tomate"
+      ],
+      "retrieved": "2026-09-16",
+      "alternatives": null
+     }
+    ],
+    "findings": [
+     {
+      "level": "CANNOT_VERIFY",
+      "code": "LOG_LINE_UNREADABLE",
+      "message": "1 line(s) of the spray log could not be read (line 4: unreadable date '31/11/2026'). Fix them so every spray is checked; until then the lot cannot be confirmed.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     },
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Abamectin (aka avermectin) on Tomatoes: 0.015 mg/kg (Reg. (EU) 2023/198, since 2023-08-20).",
+      "product": "AGRIMEC GOLD",
+      "substance": "Abamectin (aka avermectin)",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/198/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=8"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Acetamiprid on Tomatoes: 0.06 mg/kg (Regulation (EU) 2026/876, since 2026-05-12).",
+      "product": "ACETA",
+      "substance": "Acetamiprid",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2026/876/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=10"
+      ]
+     }
+    ],
+    "counts": {
+     "INFO": 3,
+     "GREEN": 0,
+     "AMBER": 0,
+     "CANNOT_VERIFY": 1,
+     "RED": 0
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-12-10 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "csv_errors": [
+     "line 4: unreadable date '31/11/2026'"
+    ],
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": true,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 0,
+    "options_bad": [],
+    "options_ok": true,
+    "csv_ok": true,
+    "pass": true
+   },
+   "latency_s": 0.001
+  }
+ ]
+}

@@ -13,6 +13,7 @@ G2b answer: {status, trade_name, eu_substances, evidence_url, cost_usd, trace}
 G2s answer: {status, eu_substance, residue_ids, candidates, cost_usd, trace}
 G3 answer:  {rows: [{date, product, dose, target, crossed_out, unreadable}], resolved: [ONSSA name or None per row],
              problems, cost_usd, trace}
+G5 answer:  the /api/check response (verdict, applications, findings, alternatives, csv_errors) plus cost_usd
 G4 answer:  {verdict, levels: {eu_substance: level}, codes: {eu_substance: [codes]}, cost_usd, trace}
 G6 answer:  {status, shown: [{product, spray_on}], proposed: [{product, spray_on}], rejected, cost_usd, trace}
 
@@ -25,6 +26,7 @@ import re
 
 from residuecheck.alternatives import Alternatives
 from residuecheck.crops import load_map, registration
+from residuecheck.engine import RULES_NOTE, Engine
 from residuecheck.eu_data import Snapshot, norm_residue
 from residuecheck.logparse import LogParser, vision_model
 from residuecheck.onssa import DATA, Onssa, norm
@@ -117,6 +119,19 @@ class RulesOnly:
     def answer_g3(self, q):
         raise NotImplementedError(f"{self.name} has no vision model; G3 runs with full / no-tavily once one is chosen (S1)")
 
+    def g5_engine(self):
+        return Engine("rules", note=RULES_NOTE)
+
+    def answer_g5(self, q):
+        """The whole product path: the same API call the web app makes, with this system's engine."""
+        from residuecheck import api
+
+        api.set_engine(self.g5_engine())
+        fields = {k: v for k, v in q.items() if k != "kind"}
+        body = api.check_csv(api.CsvCheckRequest(**fields)) if q["kind"] == "csv" else api.check(api.CheckRequest(**fields))
+        cost = sum((a.get("resolution") or {}).get("cost_usd") or 0 for a in body["applications"])
+        return {**body, "cost_usd": cost}
+
     def answer_g4(self, q):
         # The notification date stands in for EU arrival; spray and harvest are placed well before it so only the
         # limit matters (registered, zero-day interval), as in G1.
@@ -195,6 +210,9 @@ class Full(RulesOnly):
     def answer_g6(self, q):
         return self._plan_answer(Alternatives(self.eu, self.crop_map, model=self.model), q)
 
+    def g5_engine(self):
+        return Engine("live", self.model, self.search, daily_usd=1e9, note=self.description)
+
     def answer_g3(self, q):
         out = LogParser(vision_model()).parse(ROOT / q["image"], q.get("crop_hint"))
         resolved, cost, steps = [], out["cost_usd"], []
@@ -240,7 +258,7 @@ class ClosedBook(RulesOnly):
     def answer_g1(self, q):
         raise NotImplementedError("closed-book is only built for G6 so far")
 
-    answer_g2 = answer_g2b = answer_g2s = answer_g3 = answer_g4 = answer_g1
+    answer_g2 = answer_g2b = answer_g2s = answer_g3 = answer_g4 = answer_g5 = answer_g1
 
 
 class NoVerifier(Full):
@@ -253,7 +271,7 @@ class NoVerifier(Full):
     def answer_g1(self, q):
         raise NotImplementedError("no-verifier is only built for G6 so far")
 
-    answer_g2 = answer_g2b = answer_g2s = answer_g3 = answer_g4 = answer_g1
+    answer_g2 = answer_g2b = answer_g2s = answer_g3 = answer_g4 = answer_g5 = answer_g1
 
 
 SYSTEMS = {s.name: s for s in (RulesOnly, RulesFuzzy, Full, NoTavily, ClosedBook, NoVerifier)}

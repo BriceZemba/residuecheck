@@ -91,6 +91,18 @@ Held-out, `rules-only`: 139/139 preventable lots blocked, 0 false greens, 68/68 
 
 The back-test found two rule gaps, both fixed before the one held-out run. They were found from dev rule failures and from a listing of substances without a limit that read the truth fields of all 564 cases, held-out included (no system answers on held-out were looked at): substances the EU database links only to the Art. 18(1)(b) default limit (tetramethrin, matrine, diafenthiuron) came back "cannot verify" instead of RED (new finding `MRL_DEFAULT`), and cadusafos was not joined to its residue because the substance is named "Cadusafos (aka ebufos)" (the residue join now also uses the name without its parenthetical; 757 substances linked, was 754). Phenthoate stays "cannot verify": it is listed in Annex III with no value for these crops, and the rules do not guess. G1 was protected from the join change: its candidate pool and residue ids are frozen in `gold/g1_pool_substances.json`, and the rebuilt files are byte-identical.
 
+## G5: end to end through the API (8 hand-labelled lots)
+
+Written by hand in `labels/g5_scenarios.json`: each lot (invented spray records) has the verdict a careful agronomist would give, the verdicts that are also safe, the earliest safe harvest, the codes that must appear, how each product must resolve, and where safer options must appear (planned or applied). Each case states its reasoning and the label and EU facts it relies on. `python eval/build_g5.py` computes no truth: it re-checks the 12 cited label facts (crop, pre-harvest interval) against the ONSSA cache and splits 6 dev / 2 held-out (g5-05, g5-07, seed 20260918).
+
+Cases: clean citrus lot; applied spray with a limit at quantification (thiamethoxam); harvest before the waiting time ends; misspelled name; product not registered for the crop (tomatoes); planned spray to replace; import tolerance plus a label spelling the rules cannot map ("Lambda cyhalothrine"); spreadsheet paste with an unreadable line.
+
+Scoring goes through `/api/check` exactly as the web app does, with the system's engine. Besides the verdict, the guards: no GREEN unless the truth is GREEN, unknown names never silently corrected, every RED or AMBER finding cites a source, safer options shown only where labelled and with the right planned/applied framing, and every option shown passes the fixed rules when sprayed alone on its proposed date (re-checked with the rules engine, whatever engine answered).
+
+History: the first dev run found a real gap. A pasted log with one unreadable line came back GREEN, hiding a spray. The API now adds `LOG_LINE_UNREADABLE` (cannot verify) for any unreadable line. The label for that case was set before the run.
+
+Results, `rules-only`: dev 6/6 after the fix. Held-out (one run): 1/2 exact, 2/2 safe, 0 false greens, citations and framing 2/2. The miss is g5-07: the rules cannot map "Lambda cyhalothrine" to Lambda-cyhalothrin, so they say "cannot verify" where the right answer is AMBER. That is the resolver agent's job; no alias was added after seeing the held-out case.
+
 ## G6: safe alternatives (19 citrus lots)
 
 Built by `python eval/build_g6.py` from the ONSSA citrus crop index (`data/onssa_crops_index.json`, built with `scripts/onssa_crop_index.py`) and the EU snapshot. Each case: a Moroccan product registered for oranges or mandarins that is RED under EU rules (limit at the limit of quantification), a harvest date and an earliest spray date. The truth is the set of products the verifier accepts: registered for the crop, against the same pest, no shared active substance, pre-harvest interval fits, GREEN under the rules. Seed 20260918. Files: `gold/g6_dev.jsonl` (13), `heldout/g6_heldout.jsonl` (6).

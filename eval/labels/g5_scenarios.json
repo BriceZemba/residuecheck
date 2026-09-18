@@ -1,0 +1,76 @@
+{
+ "about": "G5 end-to-end scenarios, hand-labelled 2026-09-18. Spray records are invented; every fact the truth relies on was read from the ONSSA cache (label crops, DAR) and the EU snapshot of 2026-09-13 (limit on the arrival date = harvest + 10 days), and is written in 'why'. 'verdict' is the answer a careful agronomist would give with full information; 'acceptable' lists other verdicts that are safe (never GREEN when the truth is not GREEN). eval/build_g5.py re-checks the cited label facts against the cache and fails if they changed.",
+ "scenarios": [
+  {"id": "g5-01", "title": "Clean citrus lot",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-11-01", "applications": [
+     {"product": "CORAGEN", "applied_on": "2026-10-20"}, {"product": "ADMIRAL 10 EC", "applied_on": "2026-10-01"}]},
+   "truth": {"verdict": "GREEN", "acceptable": [], "earliest_safe_harvest": null, "required_codes": [],
+     "products": [{"input": "CORAGEN", "status": "found"}, {"input": "ADMIRAL 10 EC", "status": "found"}],
+     "alternatives": {"CORAGEN": null, "ADMIRAL 10 EC": null}},
+   "facts": [["CORAGEN", "Agrumes", 7], ["ADMIRAL 10 EC", "Agrumes", 30]],
+   "why": "CORAGEN (chlorantraniliprole) registered on Agrumes, DAR 7: 20 Oct + 7 = 27 Oct < harvest 15 Dec. EU limit oranges 0.7 mg/kg (Reg. 2024/1355), approved. ADMIRAL 10 EC (pyriproxyfen) registered on Agrumes, DAR 30: 1 Oct + 30 = 31 Oct < 15 Dec. EU limit 0.7 mg/kg (Reg. 2023/1753), approved."},
+
+  {"id": "g5-02", "title": "Applied spray whose limit is at the detection level",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-11-20", "applications": [
+     {"product": "ACTARA 25 WG", "applied_on": "2026-10-15"}]},
+   "truth": {"verdict": "RED", "acceptable": [], "earliest_safe_harvest": null, "required_codes": ["MRL_AT_LOQ"],
+     "products": [{"input": "ACTARA 25 WG", "status": "found"}],
+     "alternatives": {"ACTARA 25 WG": "applied"}},
+   "facts": [["ACTARA 25 WG", "Agrumes", 28]],
+   "why": "ACTARA 25 WG (thiamethoxam 25%) registered on Agrumes, DAR 28, interval respected. Thiamethoxam not approved in the EU; limit on oranges 0.01* mg/kg since 7 Mar 2026 (Reg. 2023/334): any detectable residue fails. Already sprayed, so options are for the next spray, not a replacement."},
+
+  {"id": "g5-03", "title": "Harvest planned before the waiting time ends",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-11-20", "today": "2026-11-15", "applications": [
+     {"product": "ADMIRAL 10 EC", "applied_on": "2026-11-01"}]},
+   "truth": {"verdict": "RED", "acceptable": [], "earliest_safe_harvest": "2026-12-01", "required_codes": ["PHI_NOT_MET"],
+     "products": [{"input": "ADMIRAL 10 EC", "status": "found"}],
+     "alternatives": {"ADMIRAL 10 EC": null}},
+   "facts": [["ADMIRAL 10 EC", "Agrumes", 30]],
+   "why": "ADMIRAL 10 EC DAR 30 on Agrumes: 1 Nov + 30 = 1 Dec, after the planned harvest of 20 Nov. The spray is done, so the fix is a later harvest (1 Dec), not another product. Pyriproxyfen limit itself is fine (0.7 mg/kg)."},
+
+  {"id": "g5-04", "title": "Misspelled product name",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-11-01", "applications": [
+     {"product": "AKTARA 25 WG", "applied_on": "2026-10-10"}, {"product": "CORAGEN", "applied_on": "2026-10-20"}]},
+   "truth": {"verdict": "CANNOT_VERIFY", "acceptable": ["RED"], "earliest_safe_harvest": null, "required_codes": ["PRODUCT_UNRESOLVED"],
+     "products": [{"input": "AKTARA 25 WG", "status": "not_found", "first_suggestion": "ACTARA 25 WG"}, {"input": "CORAGEN", "status": "found"}],
+     "alternatives": {"CORAGEN": null}},
+   "facts": [["CORAGEN", "Agrumes", 7]],
+   "why": "'AKTARA 25 WG' is not in the ONSSA register; the grower most likely means ACTARA 25 WG. Until they confirm, the lot cannot be verified; it must not be GREEN and the name must not be silently corrected. RED is also acceptable (a system that confirms ACTARA from evidence would find the thiamethoxam problem)."},
+
+  {"id": "g5-05", "title": "Product not registered for the crop",
+   "request": {"crop_code": "0231010", "harvest_on": "2026-11-30", "today": "2026-11-10", "applications": [
+     {"product": "ALAKAZAM 500 WG", "applied_on": "2026-10-15"}, {"product": "DECIS EXPERT", "applied_on": "2026-11-01"}]},
+   "truth": {"verdict": "RED", "acceptable": [], "earliest_safe_harvest": null, "required_codes": ["NOT_REGISTERED_FOR_CROP"],
+     "products": [{"input": "ALAKAZAM 500 WG", "status": "found"}, {"input": "DECIS EXPERT", "status": "found"}],
+     "alternatives": {"DECIS EXPERT": null}},
+   "facts": [["ALAKAZAM 500 WG", "Agrumes", 60], ["DECIS EXPERT", "Tomate", 3]],
+   "why": "ALAKAZAM 500 WG (flonicamid) is registered in Morocco for Agrumes only, not tomatoes: using it on tomatoes is off-label, whatever the EU limit (0.5 mg/kg). DECIS EXPERT (deltamethrin) registered on Tomate, DAR 3, limit 0.1 mg/kg: fine."},
+
+  {"id": "g5-06", "title": "Planned spray that would block the harvest",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-09-17", "applications": [
+     {"product": "ACTARA 25 WG", "applied_on": "2026-10-01"}]},
+   "truth": {"verdict": "RED", "acceptable": [], "earliest_safe_harvest": null, "required_codes": ["MRL_AT_LOQ"],
+     "products": [{"input": "ACTARA 25 WG", "status": "found"}],
+     "alternatives": {"ACTARA 25 WG": "planned"}},
+   "facts": [["ACTARA 25 WG", "Agrumes", 28]],
+   "why": "Same thiamethoxam problem as g5-02, but the spray is planned for 1 Oct (after today, 17 Sep): the right answer is to replace it with a registered product against the same pest (leaf miner) that passes the EU rules."},
+
+  {"id": "g5-07", "title": "Import tolerance and a label name written differently",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-11-01", "applications": [
+     {"product": "MOVENTO 150 OD", "applied_on": "2026-10-15"}, {"product": "KARATE 5 EC", "applied_on": "2026-10-20"}]},
+   "truth": {"verdict": "AMBER", "acceptable": ["CANNOT_VERIFY"], "earliest_safe_harvest": null, "required_codes": ["NOT_APPROVED_IMPORT_TOLERANCE"],
+     "products": [{"input": "MOVENTO 150 OD", "status": "found"}, {"input": "KARATE 5 EC", "status": "found"}],
+     "alternatives": {"MOVENTO 150 OD": null, "KARATE 5 EC": null}},
+   "facts": [["MOVENTO 150 OD", "Agrumes", 21], ["KARATE 5 EC", "Agrumes", 7]],
+   "why": "MOVENTO 150 OD (spirotetramat) registered on Agrumes, DAR 21 respected; spirotetramat is not approved in the EU but has an import tolerance of 0.5 mg/kg on oranges: shippable with a warning (AMBER). KARATE 5 EC label says 'Lambda cyhalothrine' = EU 'Lambda-cyhalothrin', approved, 0.2 mg/kg on oranges, DAR 7 respected: fine. Ideal verdict AMBER; CANNOT_VERIFY is acceptable for a system that cannot map the label spelling."},
+
+  {"id": "g5-08", "title": "Spray log pasted from a spreadsheet, one bad line",
+   "csv": {"crop_code": "0231010", "harvest_on": "2026-11-30", "today": "2026-11-10",
+     "csv_text": "produit;date\nAGRIMEC GOLD;25/11/2026\nACETA;2026-11-01\nALKADOR;31/11/2026"},
+   "truth": {"verdict": "CANNOT_VERIFY", "acceptable": [], "earliest_safe_harvest": null, "required_codes": ["LOG_LINE_UNREADABLE"], "csv_errors": 1,
+     "products": [{"input": "AGRIMEC GOLD", "status": "found"}, {"input": "ACETA", "status": "found"}],
+     "alternatives": {"AGRIMEC GOLD": null, "ACETA": null}},
+   "facts": [["AGRIMEC GOLD", "Tomate", 1], ["ACETA", "Tomate", 3]],
+   "why": "'31/11/2026' is not a date, so that line must be reported, not guessed. AGRIMEC GOLD (abamectin) on Tomate DAR 1: planned 25 Nov + 1 < 30 Nov; limit 0.015 mg/kg, approved. ACETA (acetamiprid) on Tomate DAR 3: 1 Nov + 3 < 30 Nov; limit 0.06 mg/kg, approved. The two readable lines are fine, but the unreadable line is a spray that happened (ALKADOR, imidacloprid) on an unknown date: the lot cannot be confirmed until the date is fixed. GREEN would hide a spray."}
+ ]
+}

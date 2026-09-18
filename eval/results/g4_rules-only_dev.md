@@ -2,7 +2,7 @@
 
 EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web
 
-Run 2026-09-16T22:33:51, code 7d51520-dirty, 395 cases, 0.2 s, cost $0.0000.
+Run 2026-09-18T18:14:26, code aac4672-dirty, 395 cases, 0.1 s, cost $0.0000.
 
 | Metric | Value |
 |---|---|

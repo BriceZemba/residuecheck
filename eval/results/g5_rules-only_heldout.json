@@ -1,0 +1,467 @@
+{
+ "suite": "g5",
+ "config": "rules-only",
+ "split": "heldout",
+ "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
+ "run_at": "2026-09-18T18:12:39",
+ "code_version": "aac4672-dirty",
+ "seconds": 2.6582388877868652,
+ "cost_usd": 0,
+ "metrics": {
+  "pass": {
+   "n": 2,
+   "hits": 1,
+   "rate": 0.5
+  },
+  "verdict_accuracy": {
+   "n": 2,
+   "hits": 1,
+   "rate": 0.5
+  },
+  "safe_verdict": {
+   "n": 2,
+   "hits": 2,
+   "rate": 1.0
+  },
+  "false_green": 0,
+  "harvest_date_ok": {
+   "n": 2,
+   "hits": 2,
+   "rate": 1.0
+  },
+  "codes_ok": {
+   "n": 2,
+   "hits": 2,
+   "rate": 1.0
+  },
+  "products_ok": {
+   "n": 2,
+   "hits": 2,
+   "rate": 1.0
+  },
+  "framing_ok": {
+   "n": 2,
+   "hits": 2,
+   "rate": 1.0
+  },
+  "citation_ok": {
+   "n": 2,
+   "hits": 2,
+   "rate": 1.0
+  },
+  "options_pass_rules": {
+   "n": 0,
+   "hits": 0,
+   "rate": null
+  },
+  "by_stratum": {
+   "AMBER": {
+    "n": 1,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "RED": {
+    "n": 1,
+    "hits": 1,
+    "rate": 1.0
+   }
+  }
+ },
+ "cases": [
+  {
+   "id": "g5-05",
+   "split": "heldout",
+   "stratum": "RED",
+   "title": "Product not registered for the crop",
+   "question": {
+    "kind": "rows",
+    "crop_code": "0231010",
+    "harvest_on": "2026-11-30",
+    "today": "2026-11-10",
+    "applications": [
+     {
+      "product": "ALAKAZAM 500 WG",
+      "applied_on": "2026-10-15"
+     },
+     {
+      "product": "DECIS EXPERT",
+      "applied_on": "2026-11-01"
+     }
+    ]
+   },
+   "truth": {
+    "verdict": "RED",
+    "acceptable": [],
+    "earliest_safe_harvest": null,
+    "required_codes": [
+     "NOT_REGISTERED_FOR_CROP"
+    ],
+    "products": [
+     {
+      "input": "ALAKAZAM 500 WG",
+      "status": "found"
+     },
+     {
+      "input": "DECIS EXPERT",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "DECIS EXPERT": null
+    }
+   },
+   "why": "ALAKAZAM 500 WG (flonicamid) is registered in Morocco for Agrumes only, not tomatoes: using it on tomatoes is off-label, whatever the EU limit (0.5 mg/kg). DECIS EXPERT (deltamethrin) registered on Tomate, DAR 3, limit 0.1 mg/kg: fine.",
+   "answer": {
+    "verdict": "RED",
+    "headline": "Do not ship this lot to the EU as planned.",
+    "earliest_safe_harvest": null,
+    "crop": {
+     "code": "0231010",
+     "name": "Tomatoes"
+    },
+    "harvest_on": "2026-11-30",
+    "arrival_on": "2026-12-10",
+    "today": "2026-11-10",
+    "applications": [
+     {
+      "input": "ALAKAZAM 500 WG",
+      "applied_on": "2026-10-15",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "ALAKAZAM 500 WG",
+      "substances": [
+       {
+        "name": "Flonicamid",
+        "content": "500 g/kg",
+        "eu_name": "Flonicamid (IKI-220)"
+       }
+      ],
+      "registration": "not_registered",
+      "dar_days": null,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "H10-3-002",
+      "registration_note": null,
+      "matched_usages": [],
+      "retrieved": "2026-09-16",
+      "alternatives": {
+       "method": "rules",
+       "replayed": false,
+       "fallback_note": null,
+       "rejected": [],
+       "context": "applied",
+       "note": "This spray is already done and cannot be undone; a residue test before shipping is advisable. For the next spray against the same pest before this harvest:",
+       "not_before": "2026-11-10",
+       "status": "no_candidates",
+       "reason": "no registered products indexed for this crop",
+       "options": []
+      }
+     },
+     {
+      "input": "DECIS EXPERT",
+      "applied_on": "2026-11-01",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "DECIS EXPERT",
+      "substances": [
+       {
+        "name": "Deltaméthrine",
+        "content": "100 g/l",
+        "eu_name": "Deltamethrin"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 3,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "E01-3-001",
+      "registration_note": null,
+      "matched_usages": [
+       "Tomate"
+      ],
+      "retrieved": "2026-09-16",
+      "alternatives": null
+     }
+    ],
+    "findings": [
+     {
+      "level": "RED",
+      "code": "NOT_REGISTERED_FOR_CROP",
+      "message": "'ALAKAZAM 500 WG' is not registered for this crop in the origin country.",
+      "product": "ALAKAZAM 500 WG",
+      "substance": null,
+      "sources": [
+       "https://eservice.onssa.gov.ma/IndPesticide.aspx"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Flonicamid (IKI-220) on Tomatoes: 0.5 mg/kg (Commission Regulation (EU) 2024/2612 , since 2024-10-28).",
+      "product": "ALAKAZAM 500 WG",
+      "substance": "Flonicamid (IKI-220)",
+      "sources": [
+       "data.europa.eu/eli/reg/2024/2612/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=778"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "EU_LIMIT_CHECKED",
+      "message": "EU limit for Deltamethrin on Tomatoes: 0.1 mg/kg (Regulation (EU) 2026/876, since 2026-05-12).",
+      "product": "DECIS EXPERT",
+      "substance": "Deltamethrin",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2026/876/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=69"
+      ]
+     }
+    ],
+    "counts": {
+     "INFO": 3,
+     "GREEN": 0,
+     "AMBER": 0,
+     "CANNOT_VERIFY": 0,
+     "RED": 1
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-12-10 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": true,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 0,
+    "options_bad": [],
+    "options_ok": true,
+    "pass": true
+   },
+   "latency_s": 2.553
+  },
+  {
+   "id": "g5-07",
+   "split": "heldout",
+   "stratum": "AMBER",
+   "title": "Import tolerance and a label name written differently",
+   "question": {
+    "kind": "rows",
+    "crop_code": "0110020",
+    "harvest_on": "2026-12-15",
+    "today": "2026-11-01",
+    "applications": [
+     {
+      "product": "MOVENTO 150 OD",
+      "applied_on": "2026-10-15"
+     },
+     {
+      "product": "KARATE 5 EC",
+      "applied_on": "2026-10-20"
+     }
+    ]
+   },
+   "truth": {
+    "verdict": "AMBER",
+    "acceptable": [
+     "CANNOT_VERIFY"
+    ],
+    "earliest_safe_harvest": null,
+    "required_codes": [
+     "NOT_APPROVED_IMPORT_TOLERANCE"
+    ],
+    "products": [
+     {
+      "input": "MOVENTO 150 OD",
+      "status": "found"
+     },
+     {
+      "input": "KARATE 5 EC",
+      "status": "found"
+     }
+    ],
+    "alternatives": {
+     "MOVENTO 150 OD": null,
+     "KARATE 5 EC": null
+    }
+   },
+   "why": "MOVENTO 150 OD (spirotetramat) registered on Agrumes, DAR 21 respected; spirotetramat is not approved in the EU but has an import tolerance of 0.5 mg/kg on oranges: shippable with a warning (AMBER). KARATE 5 EC label says 'Lambda cyhalothrine' = EU 'Lambda-cyhalothrin', approved, 0.2 mg/kg on oranges, DAR 7 respected: fine. Ideal verdict AMBER; CANNOT_VERIFY is acceptable for a system that cannot map the label spelling.",
+   "answer": {
+    "verdict": "CANNOT_VERIFY",
+    "headline": "This lot cannot be confirmed safe to ship yet.",
+    "earliest_safe_harvest": null,
+    "crop": {
+     "code": "0110020",
+     "name": "Oranges"
+    },
+    "harvest_on": "2026-12-15",
+    "arrival_on": "2026-12-25",
+    "today": "2026-11-01",
+    "applications": [
+     {
+      "input": "MOVENTO 150 OD",
+      "applied_on": "2026-10-15",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "MOVENTO 150 OD",
+      "substances": [
+       {
+        "name": "Spirotetramat",
+        "content": "150 g/l",
+        "eu_name": "Spirotetramat"
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 21,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "H07-2-002",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-16",
+      "alternatives": null
+     },
+     {
+      "input": "KARATE 5 EC",
+      "applied_on": "2026-10-20",
+      "status": "found",
+      "suggestions": [],
+      "trade_name": "KARATE 5 EC",
+      "substances": [
+       {
+        "name": "Lambda cyhalothrine",
+        "content": "50 g/l",
+        "eu_name": null
+       }
+      ],
+      "registration": "registered",
+      "dar_days": 7,
+      "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+      "resolution": {
+       "method": "exact",
+       "status": "exact",
+       "reason": "exact name in the ONSSA index"
+      },
+      "registration_no": "B02-9-003",
+      "registration_note": null,
+      "matched_usages": [
+       "Agrumes"
+      ],
+      "retrieved": "2026-09-16",
+      "alternatives": null
+     }
+    ],
+    "findings": [
+     {
+      "level": "CANNOT_VERIFY",
+      "code": "SUBSTANCE_UNRESOLVED",
+      "message": "'Lambda cyhalothrine' (in 'KARATE 5 EC') does not match an EU active substance name.",
+      "product": "KARATE 5 EC",
+      "substance": "Lambda cyhalothrine",
+      "sources": []
+     },
+     {
+      "level": "AMBER",
+      "code": "NOT_APPROVED_IMPORT_TOLERANCE",
+      "message": "Spirotetramat is not approved in the EU, but imports may carry up to 0.5 mg/kg on Oranges (Reg. (EU) 2023/1049). Buyers may apply stricter rules.",
+      "product": "MOVENTO 150 OD",
+      "substance": "Spirotetramat",
+      "sources": [
+       "http://data.europa.eu/eli/reg/2023/1049/oj",
+       "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/mrls/details?lg_code=EN&pest_res_id_list=2750"
+      ]
+     },
+     {
+      "level": "INFO",
+      "code": "SNAPSHOT_OLDER_THAN_ARRIVAL",
+      "message": "The EU snapshot (2026-09-13) is more than 30 days before arrival; changes published since then are not covered by these rules.",
+      "product": null,
+      "substance": null,
+      "sources": []
+     }
+    ],
+    "counts": {
+     "INFO": 1,
+     "GREEN": 0,
+     "AMBER": 1,
+     "CANNOT_VERIFY": 1,
+     "RED": 0
+    },
+    "assumptions": [
+     "Destination: EU. Limits from EU Pesticides Database snapshot of 2026-09-13.",
+     "Limits checked on arrival date 2026-12-25 (harvest + 10 days transit, assumed).",
+     "Rules check legal limits and label intervals; they do not predict measured residue levels."
+    ],
+    "engine": {
+     "name": "rules-only",
+     "mode": "rules",
+     "model": null,
+     "note": "No language model: products are matched by exact name (close names are suggested), verdicts and safer options come from fixed rules.",
+     "search": null
+    },
+    "data": {
+     "eu_snapshot": "2026-09-13",
+     "onssa_index_updated": "11/09/2026 12:24:00"
+    },
+    "cost_usd": 0
+   },
+   "score": {
+    "verdict_ok": false,
+    "safe_ok": true,
+    "false_green": false,
+    "harvest_date_ok": true,
+    "codes_ok": true,
+    "errors": [],
+    "products_ok": true,
+    "framing_ok": true,
+    "citation_ok": true,
+    "options_checked": 0,
+    "options_bad": [],
+    "options_ok": true,
+    "pass": false
+   },
+   "latency_s": 0.001
+  }
+ ]
+}
