@@ -1,8 +1,10 @@
 """API tests on real cached data (EU snapshot 2026-09-13, ONSSA cache). Spray records are seeded."""
 from fastapi.testclient import TestClient
 
-from residuecheck.api import app, parse_csv
+from residuecheck.api import app, parse_csv, set_engine
+from residuecheck.engine import RULES_NOTE, Engine
 
+set_engine(Engine("rules", note=RULES_NOTE))  # these tests pin the no-model path, whatever recordings exist
 client = TestClient(app)
 ORANGES = "0110020"
 
@@ -54,3 +56,37 @@ def test_csv_check_and_parser():
     body = client.post("/api/check/csv", json={"crop_code": ORANGES, "harvest_on": "2026-10-01",
                                                "csv_text": "product,date\nACTARA 25 WG,2026-08-15"}).json()
     assert body["verdict"] == "RED" and body["csv_errors"] == []
+
+
+def check(today, applications, harvest="2026-10-01"):
+    return client.post("/api/check", json={"crop_code": ORANGES, "harvest_on": harvest, "today": today,
+                                           "applications": applications}).json()
+
+
+def test_applied_red_spray_gets_next_spray_options_not_a_replacement():
+    body = check("2026-09-17", [{"product": "ACTARA 25 WG", "applied_on": "2026-08-15"}])
+    alt = body["applications"][0]["alternatives"]
+    assert alt["context"] == "applied" and "cannot be undone" in alt["note"]
+    assert alt["not_before"] == "2026-09-17"
+    for o in alt["options"]:
+        assert o["latest_spray"] >= "2026-09-17"
+        assert "Thiamethoxam" not in o["substances"]
+        assert any("ineuse" in p for p in o["pests"])  # same pest as ACTARA on citrus (leaf miner)
+
+
+def test_planned_spray_gets_replacement_options():
+    body = check("2026-08-01", [{"product": "ACTARA 25 WG", "applied_on": "2026-08-15"}])
+    alt = body["applications"][0]["alternatives"]
+    assert alt["context"] == "planned" and alt["not_before"] == "2026-08-15" and alt["options"]
+    assert body["today"] == "2026-08-01"  # the reference date comes back, for the spray calendar
+
+
+def test_past_spray_with_only_interval_problem_gets_harvest_date_not_options():
+    body = check("2026-09-17", [{"product": "ADMIRAL 10 EC", "applied_on": "2026-09-10"}])
+    assert body["earliest_safe_harvest"] == "2026-10-10"
+    assert body["applications"][0]["alternatives"] is None
+
+
+def test_green_product_has_no_alternatives():
+    body = check("2026-09-17", [{"product": "CORAGEN", "applied_on": "2026-08-15"}])
+    assert body["verdict"] == "GREEN" and body["applications"][0]["alternatives"] is None

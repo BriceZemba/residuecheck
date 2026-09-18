@@ -1,0 +1,17 @@
+# Keep the image to what the app needs at runtime.
+**/__pycache__
+**/*.pyc
+.env
+.git
+.pytest_cache
+.venv
+build
+data/raw
+data/rasff_pesticides_fv.csv
+eval
+examples
+spikes
+tests
+scripts
+web/node_modules
+web/dist

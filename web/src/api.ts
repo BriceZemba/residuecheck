@@ -6,9 +6,39 @@ export interface Crop {
   name_fr: string | null
 }
 
+export interface EngineInfo {
+  name: string
+  mode: 'live' | 'replay' | 'rules'
+  model: string | null
+  note: string
+  search?: string | null
+  recordings?: { session: string; recorded_at: string; model: string | null; scenarios: string[] }[]
+}
+
+export interface Resolution {
+  method: 'exact' | 'rules' | 'agent'
+  status: string
+  reason: string
+  note?: string
+  replayed?: boolean
+  evidence?: { url: string; excerpt: string }[]
+  rejected?: string[]
+  tools_used?: string[]
+  model_calls?: number
+  cost_usd?: number
+}
+
+export interface Scenario {
+  id: string
+  title: string
+  blurb: string
+  recorded: boolean
+  request: { crop_code: string; harvest_on: string; today: string; applications: SprayRow[] }
+}
+
 export interface Health {
   status: string
-  engine: { name: string; model: string | null; note: string }
+  engine: EngineInfo
   eu_snapshot: string
   onssa_index_updated: string | null
   onssa_products: number
@@ -24,6 +54,30 @@ export interface Finding {
   sources: string[]
 }
 
+export interface SaferOption {
+  product: string
+  substances: string[]
+  pests: string[]
+  dar_days: number | null
+  spray_on: string | null
+  latest_spray: string | null
+  why: string
+  source: string | null
+}
+
+export interface Alternatives {
+  method: 'agent' | 'rules'
+  replayed: boolean
+  fallback_note: string | null
+  rejected: { product: string | null; why: string | null }[]
+  context: 'planned' | 'applied'
+  note: string
+  not_before: string
+  status: string
+  reason: string
+  options: SaferOption[]
+}
+
 export interface ResolvedApplication {
   input: string
   applied_on: string
@@ -37,6 +91,8 @@ export interface ResolvedApplication {
   matched_usages?: string[]
   dar_days: number | null
   source: string | null
+  alternatives?: Alternatives | null
+  resolution: Resolution
 }
 
 export interface CheckResult {
@@ -46,11 +102,12 @@ export interface CheckResult {
   crop: { code: string; name: string }
   harvest_on: string
   arrival_on: string
+  today: string
   applications: ResolvedApplication[]
   findings: Finding[]
   counts: Record<Level, number>
   assumptions: string[]
-  engine: Health['engine']
+  engine: EngineInfo
   data: { eu_snapshot: string; onssa_index_updated: string | null }
   csv_errors?: string[]
 }
@@ -84,7 +141,8 @@ export const api = {
   health: () => request<Health>('/api/health'),
   crops: () => request<Crop[]>('/api/crops'),
   products: (q: string) => request<{ products: string[] }>(`/api/products?q=${encodeURIComponent(q)}&limit=12`),
-  check: (body: { crop_code: string; harvest_on: string; applications: SprayRow[] }) =>
+  scenarios: () => request<Scenario[]>('/api/scenarios'),
+  check: (body: { crop_code: string; harvest_on: string; today?: string; applications: SprayRow[] }) =>
     request<CheckResult>('/api/check', { method: 'POST', body: JSON.stringify(body) }),
   checkCsv: (body: { crop_code: string; harvest_on: string; csv_text: string }) =>
     request<CheckResult>('/api/check/csv', { method: 'POST', body: JSON.stringify(body) }),

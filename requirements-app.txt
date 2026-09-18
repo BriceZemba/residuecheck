@@ -1,0 +1,7 @@
+# Runtime dependencies of the web app only (the hosted demo). requirements.txt adds eval and test tools.
+fastapi>=0.115
+uvicorn>=0.30
+openai>=1.79
+tavily-python>=0.8
+requests>=2.32
+beautifulsoup4>=4.12
