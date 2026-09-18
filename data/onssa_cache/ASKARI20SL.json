@@ -1,0 +1,37 @@
+{
+ "trade_name": "ASKARI 20 SL",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "ORSANI INC.",
+ "registration_no": "F01-7-002",
+ "valid_until": "27/02/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Imidaclopride",
+   "content": "200 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "ASKARI 20 SL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

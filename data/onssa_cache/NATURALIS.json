@@ -1,0 +1,104 @@
+{
+ "trade_name": "NATURALIS",
+ "holder": "AGRO SPRAY TECHNIC",
+ "supplier": "CBC EUROPE S.r.l.",
+ "registration_no": "H05-2-011",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Substance huileuse (OD)",
+ "substances": [
+  {
+   "name_fr": "Beauveria bassiana souche ATCC 74040",
+   "content": "0.185 g/kg"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "2 l/ha",
+   "max_applications": "3-5",
+   "interval_days": "5-7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Ciboulette",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,2 l/ha",
+   "max_applications": "5",
+   "interval_days": "5",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "1 L /ha",
+   "max_applications": "5",
+   "interval_days": "5",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,2 l/ha",
+   "max_applications": "5",
+   "interval_days": "5",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Marjolaine",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,2 l/ha",
+   "max_applications": "5",
+   "interval_days": "5",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,2 l/ha",
+   "max_applications": "5",
+   "interval_days": "5",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Mûrier (mûre de Ronce)",
+   "pest_fr": "Thrips",
+   "dose": "1,5 l/ha",
+   "max_applications": "15",
+   "interval_days": "5",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Acariens",
+   "dose": "0,5 l/ha",
+   "max_applications": "15",
+   "interval_days": "5",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1,5 l/ha",
+   "max_applications": "3-5",
+   "interval_days": "5-7",
+   "mode": "",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "NATURALIS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

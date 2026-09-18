@@ -1,0 +1,63 @@
+{
+ "trade_name": "AQUAFIN",
+ "holder": "AMAROC",
+ "supplier": "CHEMINOVA A/S",
+ "registration_no": "F11-3-008",
+ "valid_until": "25/09/2029",
+ "tox_table": "A",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Emulsion de type aqueux (EW)",
+ "substances": [
+  {
+   "name_fr": "Malathion",
+   "content": "440 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "200 cc/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Mouche de l'olive",
+   "dose": "200 cc/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Cératite",
+   "dose": "200 cc/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Pucerons",
+   "dose": "200 cc/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Carpocapse",
+   "dose": "125 cc/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  }
+ ],
+ "query": "AQUAFIN",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

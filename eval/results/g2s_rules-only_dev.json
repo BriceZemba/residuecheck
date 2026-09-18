@@ -3,9 +3,9 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-16T21:29:56",
- "code_version": "7c2bf8c-dirty",
- "seconds": 0.13824939727783203,
+ "run_at": "2026-09-16T22:32:24",
+ "code_version": "7d51520-dirty",
+ "seconds": 0.12595629692077637,
  "cost_usd": 0,
  "metrics": {
   "pass": {
@@ -500,7 +500,7 @@
     "wrong": false,
     "abstained": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g2s-dev-015",
@@ -529,7 +529,7 @@
     "wrong": false,
     "abstained": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.0
   },
   {
    "id": "g2s-dev-016",

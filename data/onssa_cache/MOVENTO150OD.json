@@ -1,0 +1,31 @@
+{
+ "trade_name": "MOVENTO 150 OD",
+ "holder": "BAYER SA",
+ "supplier": "BAYER CROPSCIENCE AG",
+ "registration_no": "H07-2-002",
+ "valid_until": "21/10/2026",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Substance huileuse (OD)",
+ "substances": [
+  {
+   "name_fr": "Spirotetramat",
+   "content": "150 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "1.2 L/ha",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": 21
+  }
+ ],
+ "query": "MOVENTO 150 OD",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

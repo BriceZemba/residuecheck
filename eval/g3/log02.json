@@ -1,0 +1,96 @@
+{
+ "image": "eval/g3/log02.jpg",
+ "synthetic": true,
+ "font": "segoepr.ttf",
+ "defects": [
+  "tilt"
+ ],
+ "crop": "Agrumes",
+ "crop_code": "0110020",
+ "rows": [
+  {
+   "n": 1,
+   "date": "2026-09-03",
+   "date_as_written": "03/09/26",
+   "product_as_written": "Bright Sc",
+   "product": "BRIGHT SC",
+   "dose": "30 cc/hl",
+   "target": "Mineuse",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 2,
+   "date": "2026-09-16",
+   "date_as_written": "16/09/26",
+   "product_as_written": "ACTRA 25 WG",
+   "product": "ACTARA 25 WG",
+   "dose": "20 g/hl",
+   "target": "Mineuse des feuilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 3,
+   "date": "2026-09-26",
+   "date_as_written": "26/09/26",
+   "product_as_written": "PROXY 100 EC",
+   "product": "PROXY 100 EC",
+   "dose": "35 cc/hl",
+   "target": "Cochenilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 4,
+   "date": "2026-10-10",
+   "date_as_written": "10/10/26",
+   "product_as_written": "COSMAN 50",
+   "product": "COSMAN 50",
+   "dose": "500 g/hl",
+   "target": "Gommose à phytophthora",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 5,
+   "date": "2026-10-21",
+   "date_as_written": "21/10/26",
+   "product_as_written": "Overflow",
+   "product": "OVERFLOW",
+   "dose": "500 g/hl",
+   "target": "Gommose à phytophthora",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 6,
+   "date": "2026-11-05",
+   "date_as_written": "05/11/26",
+   "product_as_written": "PARADISO 240 SC",
+   "product": "PARADISO 240 SC",
+   "dose": "100 cc/hl",
+   "target": "Acariens",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 7,
+   "date": "2026-11-18",
+   "date_as_written": "18/11/26",
+   "product_as_written": "NATURALIS",
+   "product": "NATURALIS",
+   "dose": "2 l/ha",
+   "target": "Cératite",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  }
+ ]
+}

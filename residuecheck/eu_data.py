@@ -18,13 +18,17 @@ import unicodedata
 from dataclasses import dataclass
 
 SNAPSHOT_ROOT = pathlib.Path(__file__).resolve().parents[1] / "data" / "eu_snapshot"
-_MARKERS = re.compile(r"\((?:f|r|a)\)", re.I)
+_MARKERS = re.compile(r"\((?:f|r|a|\+|\+\+)\)", re.I)  # footnote markers: (F) (R) (A) (+) (++)
 _PARENTHETICAL = re.compile(r"\s+\(.*$")  # needs a space before "(", so "(Z)-9-tetradecen-1-ol" keeps its name
 _APPLICABILITY_RANK = {"No longer applicable": 0, "Not yet applicable": 0, "Applicable": 1}
 # French pesticide names often add a final "e" to the English ISO name (accents are already stripped by norm_residue).
 _FR_ENDINGS = [(r"ide$", "id"), (r"ane$", "an"), (r"ene$", "en"), (r"ine$", "in"), (r"ole$", "ol"), (r"ate$", "at")]
 _ALIASES = json.loads((pathlib.Path(__file__).resolve().parents[1] / "data" / "substance_aliases.json")
                       .read_text(encoding="utf-8"))["aliases"]
+
+
+DEFAULT_MRL_TEXT = "Art 18(1)(b)"
+DEFAULT_MRL_VALUE = 0.01
 
 
 def norm_residue(name):
@@ -40,8 +44,11 @@ def base_name(name):
 
 
 def parse_date(value):
+    """Accepts a date, an ISO string (YYYY-MM-DD) or the EU database format (DD/MM/YYYY)."""
     if isinstance(value, datetime.date):
         return value
+    if re.match(r"\d{4}-\d{2}-\d{2}$", value):
+        return datetime.date.fromisoformat(value)
     return datetime.datetime.strptime(value, "%d/%m/%Y").date()
 
 
@@ -109,6 +116,11 @@ class Snapshot:
                 target = self._versions if m.applies_from else self._planned
                 target.setdefault((m.residue_id, m.crop_code), []).append(m)
                 self._residue_ids_by_name.setdefault(norm_residue(m.residue_name), set()).add(m.residue_id)
+        self._known_residue_ids = {rid for rid, _ in self._versions} | {rid for rid, _ in self._planned}
+        self._successors = {}
+        for rid, v in self.residue_names.items():
+            if v.get("replaces"):
+                self._successors.setdefault(v["replaces"], set()).add(int(rid))
         for versions in self._versions.values():
             versions.sort(key=lambda m: (m.applies_from, _APPLICABILITY_RANK.get(m.applicability, 0)))
 
@@ -184,10 +196,32 @@ class Snapshot:
         return None
 
     def residue_ids(self, substance):
-        ids = set()
-        for residue in substance["pesticide_residues_linked"] or [substance["substance_name"]]:
+        """Residue definitions whose limits apply to a substance, limited to those with rows in the snapshot.
+
+        Three joins, combined: the residue ids the EU database links to the substance, every later version of
+        those ids (the EU redefines residues, e.g. fosetyl-Al 317 -> phosphonic acid 3430), and exact name matches
+        of the linked residue names and of the substance name itself, with and without its parenthetical
+        ('Cadusafos (aka ebufos)' -> residue 'Cadusafos').
+        """
+        ids = set(substance.get("pesticide_residue_ids") or [])
+        frontier = set(ids)
+        while frontier:  # follow redefinitions forward
+            nxt = set()
+            for rid in frontier:
+                nxt |= self._successors.get(rid, set())
+            frontier = nxt - ids
+            ids |= nxt
+        for residue in list(substance["pesticide_residues_linked"]) + [substance["substance_name"]]:
             ids |= self._residue_ids_by_name.get(norm_residue(residue), set())
-        return sorted(ids)
+        ids |= self._residue_ids_by_name.get(base_name(substance["substance_name"]), set())
+        return sorted(i for i in ids if i in self._known_residue_ids)
+
+    @staticmethod
+    def default_limit_only(substance):
+        """True when the EU database links the substance to the default limit of Reg. 396/2005 Art. 18(1)(b)
+        (0.01 mg/kg) rather than to a residue definition of its own."""
+        linked = substance.get("pesticide_residues_linked") or []
+        return bool(linked) and all(DEFAULT_MRL_TEXT in r for r in linked)
 
     # MRLs
 

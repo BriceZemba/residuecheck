@@ -1,0 +1,87 @@
+{
+ "trade_name": "FOLEM",
+ "holder": "CPCM",
+ "supplier": "Albaugh TKI d,o.o.,",
+ "registration_no": "H06-0-001",
+ "valid_until": "16/10/2035",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Diflufenican",
+   "content": "30g/l"
+  },
+  {
+   "name_fr": "Glyphosate",
+   "content": "270g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "4 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "4 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "4 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "2",
+   "interval_days": "120",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "4 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "2",
+   "interval_days": "120",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "4 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "4 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  }
+ ],
+ "query": "FOLEM",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

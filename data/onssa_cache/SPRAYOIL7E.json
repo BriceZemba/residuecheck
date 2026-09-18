@@ -1,0 +1,50 @@
+{
+ "trade_name": "SPRAY OIL 7 E",
+ "holder": "AGRIMATCO",
+ "supplier": "PETRONAS LUBRICANTS BELGIUM NV",
+ "registration_no": "B10-8-001",
+ "valid_until": "23/05/2034",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "99%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Formes hivernantes des ravageurs",
+   "dose": "2 l/hl",
+   "pest_stage": "formes hivernantes des ennemis",
+   "Période": "Traitement d’hiver",
+   "mode": "Traitement d'hiver",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Formes hivernantes des ravageurs",
+   "dose": "2 l/hl",
+   "pest_stage": "formes hivernantes des ennemis",
+   "Période": "Traitement d’hiver",
+   "mode": "Traitement d'hiver",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Formes hivernantes des ravageurs",
+   "dose": "2 l/hl",
+   "pest_stage": "stades hivernants",
+   "Période": "Traitement d’hiver",
+   "mode": "Traitement d'hiver",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "SPRAY OIL 7 E",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

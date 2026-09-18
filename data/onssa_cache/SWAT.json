@@ -1,0 +1,86 @@
+{
+ "trade_name": "SWAT",
+ "holder": "SOPROCHIBA",
+ "supplier": "SAFA TARIM AS",
+ "registration_no": "H10-3-006",
+ "valid_until": "23/06/2031",
+ "tox_table": "C",
+ "category": "Acridicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Bifenazate",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "20 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "20 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "SWAT",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

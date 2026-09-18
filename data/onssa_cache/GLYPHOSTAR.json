@@ -1,0 +1,39 @@
+{
+ "trade_name": "GLYPHO STAR",
+ "holder": "PHYTO BEHT",
+ "supplier": "BARCLAY CHEMICALS MANUFACTURING LTD",
+ "registration_no": "H12-5-027",
+ "valid_until": "13/02/2036",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "3 l/ha & 6 l/ha",
+   "Période": "dès les premiers signes d'infestation",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées",
+   "dose": "3 l/ha & 6 l/ha",
+   "Période": "dès les premiers signes d'infestation",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  }
+ ],
+ "query": "GLYPHO STAR",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

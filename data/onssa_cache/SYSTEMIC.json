@@ -1,0 +1,59 @@
+{
+ "trade_name": "SYSTEMIC",
+ "holder": "SPRAYKEM",
+ "supplier": "SINON CORPORATION",
+ "registration_no": "F03-1-066",
+ "valid_until": "23/06/2031",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "3 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones vivaces",
+   "dose": "6 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "3 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées vivaces",
+   "dose": "6 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Désherbage",
+   "dar_days": null
+  }
+ ],
+ "query": "SYSTEMIC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

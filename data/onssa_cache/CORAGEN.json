@@ -1,0 +1,158 @@
+{
+ "trade_name": "CORAGEN",
+ "holder": "AGRIMATCO",
+ "supplier": "FMC IP Technology LLC Vernier Branch",
+ "registration_no": "E12-9-001",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Chlorantraniliprole",
+   "content": "200 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse",
+   "dose": "15 cc/hl",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Avocatier",
+   "pest_fr": "Noctuelles",
+   "dose": "50 cc/ha",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "",
+   "dar_days": 10
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Noctuelles",
+   "dose": "100 cc/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Chou",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "15 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Noctuelles",
+   "dose": "15 cc/hl",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "15 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Laitue",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "15 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Luzerne",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "175 cc/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Maïs",
+   "pest_fr": "Sésamie",
+   "dose": "175 cc/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Maïs doux",
+   "pest_fr": "Noctuelles",
+   "dose": "125 cc/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Noctuelles",
+   "dose": "175 cc/ha",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "Parties aériennes",
+   "dar_days": 10
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "15 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Carpocapse",
+   "dose": "15 cc/hl",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse (Tuta absoluta)",
+   "dose": "15 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "15 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "CORAGEN",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

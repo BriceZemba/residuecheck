@@ -1,0 +1,47 @@
+{
+ "trade_name": "ZENITH",
+ "holder": "SIPCAM INAGRA MAROC",
+ "supplier": "SIPCAM INAGRA SA",
+ "registration_no": "H03-2-001",
+ "valid_until": "20/05/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Azadirachtine",
+   "content": "26 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse",
+   "dose": "70cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 cc/hl",
+   "max_applications": "",
+   "interval_days": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "70 ml/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "dar_days": 3
+  }
+ ],
+ "query": "ZENITH",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

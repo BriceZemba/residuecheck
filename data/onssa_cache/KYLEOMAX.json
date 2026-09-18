@@ -1,0 +1,26 @@
+{
+ "trade_name": "KYLEO MAX",
+ "holder": "AMAROC",
+ "supplier": "NUFARM SAS",
+ "registration_no": "H03-5-008",
+ "valid_until": "01/07/2036",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "2,4-D",
+   "content": "160 g/l"
+  },
+  {
+   "name_fr": "Glyphosate",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "KYLEO MAX",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,55 @@
+{
+ "trade_name": "DAITA",
+ "holder": "FERTILINK",
+ "supplier": "PARIJAT INDUSTRIE (INDIA) PVT. LTD",
+ "registration_no": "F08-8-005",
+ "valid_until": "25/03/2031",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyriproxyfène",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "35 cc/hl",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "35 cc/hl",
+   "max_applications": "2",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "25 cc/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "25 cc/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "DAITA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

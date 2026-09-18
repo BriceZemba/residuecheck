@@ -1,0 +1,73 @@
+{
+ "trade_name": "AGIB",
+ "holder": "PROMAGRI",
+ "supplier": "UPL LIMITED",
+ "registration_no": "H12-1-012",
+ "valid_until": "21/01/2032",
+ "tox_table": "N",
+ "category": "Régulateur de croissance",
+ "formulation": "Tablette (TB)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Action sur le processus de la nouaison",
+   "dose": "1-2 cp/hl",
+   "Stade Culture": "pleine floraison",
+   "Période": "formation des fruits",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes: Oranger",
+   "pest_fr": "Amélioration de la conservation des fruits sur arbre",
+   "dose": "1-2 cp/hl",
+   "Stade Culture": "changement de coloration des fruits",
+   "Période": "changement de la coloration des fruits",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes: Oranger",
+   "pest_fr": "Régulation de la maturité des fruits (changement de coloration)",
+   "dose": "1-2 cp/hl",
+   "Stade Culture": "changement de coloration des fruits",
+   "Période": "changement de la coloration des fruits",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Artichaut",
+   "pest_fr": "Action sur la formation des capitules",
+   "dose": "2,5 cp/hl",
+   "Stade Culture": "début de formation des fruits",
+   "Période": "8 feuilles jusqu'aux dernières feuilles",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Stimulation de la croissance",
+   "dose": "1-2 cp/hl",
+   "Stade Culture": "stade floraison",
+   "Période": "stade floraison",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  }
+ ],
+ "query": "AGIB",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

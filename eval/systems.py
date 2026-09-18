@@ -4,23 +4,36 @@ rules-only    deterministic baseline: EU snapshot + ONSSA cache + crop map + rul
 rules-fuzzy   rules-only + fuzzy ONSSA name suggestions (deterministic resolver, no model)
 full          resolver agent (Nemotron on Token Factory + Tavily) with the verifier, then the rules engine
 no-tavily     full without web search (isolates Tavily's contribution)
-closed-book   Nemotron answers from memory, no tools                                   -- not built yet
-no-verifier   full with the verifier switched off                                      -- not built yet
+closed-book   Nemotron answers from memory, no tools (G6 only so far)
+no-verifier   full with the verifier switched off (G6 only so far)
 
 G1 answer:  {eu_substance, crop_code, mrl_mg_per_kg, at_loq, no_mrl_required, verdict, cost_usd, trace}
 G2 answer:  {status, trade_name, suggestions, substances_fr, crop_code, registered_for_crop, registration_status, dar_days, cost_usd, trace}
 G2b answer: {status, trade_name, eu_substances, evidence_url, cost_usd, trace}
 G2s answer: {status, eu_substance, residue_ids, candidates, cost_usd, trace}
+G3 answer:  {rows: [{date, product, dose, target, crossed_out, unreadable}], resolved: [ONSSA name or None per row],
+             problems, cost_usd, trace}
+G4 answer:  {verdict, levels: {eu_substance: level}, codes: {eu_substance: [codes]}, cost_usd, trace}
+G6 answer:  {status, shown: [{product, spray_on}], proposed: [{product, spray_on}], rejected, cost_usd, trace}
+
+G4 gives resolved substances, so every configuration that reaches the rules engine answers it the same way; it is
+run with rules-only. Model-only configurations (closed-book, no-verifier) do not answer it.
 """
 import datetime
+import pathlib
 import re
 
+from residuecheck.alternatives import Alternatives
 from residuecheck.crops import load_map, registration
 from residuecheck.eu_data import Snapshot, norm_residue
+from residuecheck.logparse import LogParser, vision_model
 from residuecheck.onssa import DATA, Onssa, norm
 from residuecheck.resolver import Resolver
 from residuecheck.rules import Application, Level, Lot, evaluate
 from residuecheck.search import MissingKey, default_search
+
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
 def _clean(name):
@@ -101,6 +114,33 @@ class RulesOnly:
                 "residue_ids": self.eu.residue_ids(rec) if rec else [], "candidates": [], "cost_usd": 0.0, "trace": {}}
 
 
+    def answer_g3(self, q):
+        raise NotImplementedError(f"{self.name} has no vision model; G3 runs with full / no-tavily once one is chosen (S1)")
+
+    def answer_g4(self, q):
+        # The notification date stands in for EU arrival; spray and harvest are placed well before it so only the
+        # limit matters (registered, zero-day interval), as in G1.
+        day = datetime.date.fromisoformat(q["notified_on"])
+        apps = [Application(s, day - datetime.timedelta(40), [s], True, 0) for s in q["substances"]]
+        result = evaluate(Lot(q["crop_code"], day - datetime.timedelta(10), apps, arrival_on=day), self.eu)
+        levels, codes = {}, {}
+        for s in q["substances"]:
+            mine = [f for f in result.findings if f.product == s and f.level > Level.INFO]
+            levels[s] = max((f.level for f in mine), default=Level.GREEN).name
+            codes[s] = sorted({f.code for f in mine})
+        return {"verdict": result.verdict.name, "levels": levels, "codes": codes, "cost_usd": 0.0, "trace": {}}
+
+    def _plan_answer(self, alt, q):
+        plan = alt.plan(q["failing_product"], q["crop_code"], q["harvest_on"], q["not_before"])
+        return {"status": plan.status,
+                "shown": [{"product": o.product, "spray_on": o.spray_on.isoformat() if o.spray_on else None} for o in plan.options],
+                "proposed": plan.proposed, "rejected": len(plan.rejected), "cost_usd": plan.cost_usd,
+                "trace": {"reason": plan.reason, "rejected": plan.rejected, "steps": plan.trace}}
+
+    def answer_g6(self, q):
+        return self._plan_answer(Alternatives(self.eu, self.crop_map), q)
+
+
 class RulesFuzzy(RulesOnly):
     name = "rules-fuzzy"
     description = "rules-only plus fuzzy ONSSA name suggestions with a clear margin; no model, no web"
@@ -152,6 +192,23 @@ class Full(RulesOnly):
         return {"status": res.status, "eu_substance": res.value, "residue_ids": res.residue_ids, "candidates": res.candidates,
                 "cost_usd": res.cost_usd, "trace": {"reason": res.reason, "steps": res.trace}}
 
+    def answer_g6(self, q):
+        return self._plan_answer(Alternatives(self.eu, self.crop_map, model=self.model), q)
+
+    def answer_g3(self, q):
+        out = LogParser(vision_model()).parse(ROOT / q["image"], q.get("crop_hint"))
+        resolved, cost, steps = [], out["cost_usd"], []
+        for r in out["rows"]:
+            if not r["product"]:
+                resolved.append(None)
+                continue
+            res = self.resolver.product(r["product"])
+            resolved.append(res.value if res.confirmed else None)
+            cost += res.cost_usd
+            steps.append({"product": r["product"], "status": res.status, "reason": res.reason})
+        return {"rows": out["rows"], "resolved": resolved, "problems": out["problems"], "cost_usd": cost,
+                "trace": {"vision_model": out["model"], "resolver": steps}}
+
     def answer_g1(self, q):
         if self.eu.substance(q["substance"]) is None:
             res = self.resolver.substance(q["substance"])
@@ -167,19 +224,36 @@ class NoTavily(Full):
     use_search = False
 
 
-class _NotBuilt:
-    def __init__(self, snapshot="2026-09-13"):
-        raise NotImplementedError(f"{self.name} is not built yet")
-
-
-class ClosedBook(_NotBuilt):
+class ClosedBook(RulesOnly):
     name = "closed-book"
-    description = "Nemotron 3 Super answers from memory, no tools"
+    description = "Nemotron 3 Super answers from memory, no tools; its answers still pass through the verifier"
+
+    def __init__(self, snapshot="2026-09-13"):
+        super().__init__(snapshot)
+        from residuecheck.llm import TokenFactory
+
+        self.model = TokenFactory()
+
+    def answer_g6(self, q):
+        return self._plan_answer(Alternatives(self.eu, self.crop_map, model=self.model, use_tools=False), q)
+
+    def answer_g1(self, q):
+        raise NotImplementedError("closed-book is only built for G6 so far")
+
+    answer_g2 = answer_g2b = answer_g2s = answer_g3 = answer_g4 = answer_g1
 
 
-class NoVerifier(_NotBuilt):
+class NoVerifier(Full):
     name = "no-verifier"
-    description = "full with the verifier switched off"
+    description = "full with the verifier switched off (G6 only so far)"
+
+    def answer_g6(self, q):
+        return self._plan_answer(Alternatives(self.eu, self.crop_map, model=self.model, verify=False), q)
+
+    def answer_g1(self, q):
+        raise NotImplementedError("no-verifier is only built for G6 so far")
+
+    answer_g2 = answer_g2b = answer_g2s = answer_g3 = answer_g4 = answer_g1
 
 
 SYSTEMS = {s.name: s for s in (RulesOnly, RulesFuzzy, Full, NoTavily, ClosedBook, NoVerifier)}

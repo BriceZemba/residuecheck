@@ -1,0 +1,77 @@
+{
+ "trade_name": "LAURIL EXTRA",
+ "holder": "BASF MAROC",
+ "supplier": "CHEMINOVA DEUTSCHLAND GMBH & Co. KG, FMC AGRICULTURAL SOLUTIONS",
+ "registration_no": "D09-6-002",
+ "valid_until": "29/03/2027",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Latex (PA)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - oxychlorure de cuivre",
+   "content": "2%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Désinfection des plaies de taille (chancre, crevasse et fissures)",
+   "dose": "badigeonnage uniforme",
+   "Stade Culture": "juste après la taille",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes (badigeonnage)",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Arbres et arbustes d'ornement",
+   "pest_fr": "Désinfection des plaies de taille (chancre, crevasse et fissures)",
+   "dose": "badigeonnage uniforme",
+   "Stade Culture": "juste après la taille",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes (badigeonnage par pinceau)",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Arbres forestiers",
+   "pest_fr": "Désinfection des plaies de taille (chancre, crevasse et fissures)",
+   "dose": "badigeonnage uniforme",
+   "Stade Culture": "juste après la taille",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes (badigeonnage par pinceau)",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Désinfection des plaies de taille (chancre, crevasse et fissures)",
+   "dose": "badigeonnage uniforme",
+   "Stade Culture": "juste après la taille",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes (badigeonnage par pinceau)",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Désinfection des plaies de taille (chancre, crevasse et fissures)",
+   "dose": "badigeonnage uniforme",
+   "Stade Culture": "juste après la taille",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes (badigeonnage)",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Désinfection des plaies de taille (chancre, crevasse et fissures)",
+   "dose": "badigeonnage uniforme",
+   "Stade Culture": "conditions favorables",
+   "Période": "après la taille",
+   "mode": "Parties aériennes (badigeonnage par pinceau)",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "LAURIL EXTRA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

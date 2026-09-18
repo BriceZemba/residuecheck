@@ -1,0 +1,185 @@
+{
+ "trade_name": "WARRIOR 10 CS AVEC TECHNOLOGIE ZÉON",
+ "holder": "SYNGENTA MAROC",
+ "supplier": "SYNGENTA CROP PROTECTION AG",
+ "registration_no": "E02-7-019",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension de capsules (CS)",
+ "substances": [
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Abricotier",
+   "pest_fr": "Cératite",
+   "dose": "20 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "20 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Chicorée",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "75 cc/ha",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Cognassier",
+   "pest_fr": "Carpocapse",
+   "dose": "15 cc/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "150 cc/ha",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Noctuelles",
+   "dose": "125 cc/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Noctuelles",
+   "dose": "75 cc/ha",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Altise",
+   "dose": "10 cc/hl",
+   "max_applications": "2",
+   "interval_days": "12",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Charançons",
+   "dose": "10 cc/hl",
+   "max_applications": "2",
+   "interval_days": "12",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Noctuelles",
+   "dose": "10 cc/hl",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Cératite",
+   "dose": "20 cc/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Psylle",
+   "dose": "10 cc/hl",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Cératite",
+   "dose": "20 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Plantes aromatiques - excepté la menthe -",
+   "pest_fr": "Noctuelles",
+   "dose": "10 cc/hl",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Carpocapse",
+   "dose": "15 cc/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Carpocapse",
+   "dose": "15 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Radis",
+   "pest_fr": "Noctuelles",
+   "dose": "75cc/ha",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "125 cc/ha",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "WARRIOR 10 CS AVEC TECHNOLOGIE ZÉON",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

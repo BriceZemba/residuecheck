@@ -1,0 +1,22 @@
+{
+ "trade_name": "ALTA GLY",
+ "holder": "APHYSEM S.A.R.L",
+ "supplier": "SHANDONG BINNONG TECHNLOGY CO., LTD",
+ "registration_no": "H05-3-004",
+ "valid_until": "17/10/2035",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "450 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "ALTA GLY",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

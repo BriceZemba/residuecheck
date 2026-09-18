@@ -1,0 +1,71 @@
+{
+ "seed": 20260916,
+ "source": "data/rasff_pesticides_fv.csv",
+ "notifications": 717,
+ "total": 564,
+ "dev": 395,
+ "heldout": 169,
+ "skipped_notifications": {
+  "crop not in the 32": 123,
+  "no checkable substance": 2,
+  "processed product": 28
+ },
+ "skipped_substance_rows": {
+  "substance not named": 2
+ },
+ "strata": {
+  "preventable": 481,
+  "dose_dependent": 57,
+  "unknown_history": 26
+ },
+ "substance_rows": 780,
+ "limit_status": {
+  "above_loq": 99,
+  "at_loq": 625,
+  "history_not_in_snapshot": 47,
+  "no_limit_for_crop": 2,
+  "not_listed": 7
+ },
+ "rasff_unauthorised": 215,
+ "unauthorised_but_limit_above_loq": [
+  "Abamectin (aka avermectin)",
+  "Carbendazim",
+  "Glufosinate",
+  "Spirotetramat"
+ ],
+ "crops": {
+  "Sweet peppers/bell peppers": 145,
+  "Oranges": 87,
+  "Beans (with pods)": 80,
+  "Lemons": 39,
+  "(b) strawberries": 39,
+  "Granate apples/pomegranates": 36,
+  "Tomatoes": 34,
+  "Table grapes": 21,
+  "Mangoes": 21,
+  "Mandarins": 14,
+  "Grapefruits": 9,
+  "Okra/lady's fingers": 9,
+  "Peaches": 6,
+  "Cucumbers": 5,
+  "(a) potatoes": 4,
+  "Peas (with pods)": 3,
+  "Apricots": 3,
+  "Courgettes": 2,
+  "Aubergines/eggplants": 2,
+  "Melons": 1,
+  "Onions": 1,
+  "Cherries (sweet)": 1,
+  "Apples": 1,
+  "Lettuces": 1
+ },
+ "origins": {
+  "Türkiye": 247,
+  "Egypt": 189,
+  "Kenya": 92,
+  "India": 21,
+  "Morocco": 15
+ },
+ "labels": "eval/labels/g4_labels.json",
+ "snapshot": "2026-09-13"
+}

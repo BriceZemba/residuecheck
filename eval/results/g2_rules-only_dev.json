@@ -3,9 +3,9 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-14T20:04:35",
- "code_version": "2516f7f-dirty",
- "seconds": 0.17506909370422363,
+ "run_at": "2026-09-16T22:32:18",
+ "code_version": "7d51520-dirty",
+ "seconds": 0.2892932891845703,
  "cost_usd": 0,
  "metrics": {
   "pass": {
@@ -36,6 +36,11 @@
    "rate": 1.0
   },
   "fake_accepted": 0,
+  "right_first_suggestion": {
+   "n": 7,
+   "hits": 7,
+   "rate": 1.0
+  },
   "by_stratum": {
    "exact": {
     "n": 28,
@@ -90,6 +95,7 @@
    "answer": {
     "status": "found",
     "trade_name": "BIOPROTECT",
+    "suggestions": [],
     "substances_fr": [
      "Pyrèthre"
     ],
@@ -111,7 +117,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-002",
@@ -146,6 +152,7 @@
    "answer": {
     "status": "found",
     "trade_name": "CAPUP",
+    "suggestions": [],
     "substances_fr": [
      "Captane"
     ],
@@ -167,7 +174,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-003",
@@ -208,6 +215,7 @@
    "answer": {
     "status": "found",
     "trade_name": "CYMIL",
+    "suggestions": [],
     "substances_fr": [
      "Cyprodinil",
      "Fludioxonil"
@@ -230,7 +238,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-004",
@@ -267,6 +275,7 @@
    "answer": {
     "status": "found",
     "trade_name": "CYPER STAR 25 EC",
+    "suggestions": [],
     "substances_fr": [
      "Cyperméthrine"
     ],
@@ -323,6 +332,7 @@
    "answer": {
     "status": "found",
     "trade_name": "DYNASTY",
+    "suggestions": [],
     "substances_fr": [
      "Glyphosate"
     ],
@@ -344,7 +354,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.004
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-006",
@@ -381,6 +391,7 @@
    "answer": {
     "status": "found",
     "trade_name": "EVITO",
+    "suggestions": [],
     "substances_fr": [
      "Fluoxastrobine"
     ],
@@ -402,7 +413,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-007",
@@ -439,6 +450,7 @@
    "answer": {
     "status": "found",
     "trade_name": "FLIXTROBY 50 WG",
+    "suggestions": [],
     "substances_fr": [
      "Trifloxystrobine"
     ],
@@ -497,6 +509,7 @@
    "answer": {
     "status": "found",
     "trade_name": "GAZELLE 20SG",
+    "suggestions": [],
     "substances_fr": [
      "Acétamipride"
     ],
@@ -518,7 +531,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.0
   },
   {
    "id": "g2-dev-009",
@@ -555,6 +568,7 @@
    "answer": {
     "status": "found",
     "trade_name": "IMIVOR",
+    "suggestions": [],
     "substances_fr": [
      "Imidaclopride"
     ],
@@ -576,7 +590,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-010",
@@ -619,6 +633,7 @@
    "answer": {
     "status": "found",
     "trade_name": "ISOMATE-C",
+    "suggestions": [],
     "substances_fr": [
      "(E,E) 8,10-dodécadien-1-ol",
      "1-Dodecanol",
@@ -642,7 +657,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.004
   },
   {
    "id": "g2-dev-011",
@@ -683,6 +698,7 @@
    "answer": {
     "status": "found",
     "trade_name": "KARAMAT 33SC",
+    "suggestions": [],
     "substances_fr": [
      "Azoxystrobine",
      "Difénoconazole"
@@ -705,7 +721,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-012",
@@ -740,6 +756,7 @@
    "answer": {
     "status": "found",
     "trade_name": "KARTIL 10 EC",
+    "suggestions": [],
     "substances_fr": [
      "Cyperméthrine"
     ],
@@ -798,6 +815,7 @@
    "answer": {
     "status": "found",
     "trade_name": "KEMOXY",
+    "suggestions": [],
     "substances_fr": [
      "Azoxystrobine"
     ],
@@ -819,7 +837,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-014",
@@ -856,6 +874,7 @@
    "answer": {
     "status": "found",
     "trade_name": "KING 250 EW",
+    "suggestions": [],
     "substances_fr": [
      "Tébuconazole"
     ],
@@ -912,6 +931,7 @@
    "answer": {
     "status": "found",
     "trade_name": "LENTAGRAN 600",
+    "suggestions": [],
     "substances_fr": [
      "Pyridate"
     ],
@@ -933,7 +953,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-016",
@@ -970,6 +990,7 @@
    "answer": {
     "status": "found",
     "trade_name": "MOXIMATE",
+    "suggestions": [],
     "substances_fr": [
      "Cymoxanil"
     ],
@@ -1028,6 +1049,7 @@
    "answer": {
     "status": "found",
     "trade_name": "NEXTER 10 SC",
+    "suggestions": [],
     "substances_fr": [
      "Pyridabène"
     ],
@@ -1049,7 +1071,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-018",
@@ -1084,6 +1106,7 @@
    "answer": {
     "status": "found",
     "trade_name": "OVIPRON 78 EC",
+    "suggestions": [],
     "substances_fr": [
      "Huile minérale paraffinique"
     ],
@@ -1146,6 +1169,7 @@
    "answer": {
     "status": "found",
     "trade_name": "PERGADO C",
+    "suggestions": [],
     "substances_fr": [
      "Cuivre - oxychlorure de cuivre",
      "Mandipropamide"
@@ -1168,7 +1192,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.001
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-020",
@@ -1205,6 +1229,7 @@
    "answer": {
     "status": "found",
     "trade_name": "PICK UP",
+    "suggestions": [],
     "substances_fr": [
      "Hydrolysat de protéines"
     ],
@@ -1226,7 +1251,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.002
   },
   {
    "id": "g2-dev-021",
@@ -1261,6 +1286,7 @@
    "answer": {
     "status": "found",
     "trade_name": "PMV-01",
+    "suggestions": [],
     "substances_fr": [
      "Virus de la mosaïque du pépino (souche CH2 - isolat 1906)"
     ],
@@ -1323,6 +1349,7 @@
    "answer": {
     "status": "found",
     "trade_name": "POWER PRO",
+    "suggestions": [],
     "substances_fr": [
      "Boscalide",
      "Pyraclostrobine"
@@ -1345,7 +1372,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.003
   },
   {
    "id": "g2-dev-023",
@@ -1382,6 +1409,7 @@
    "answer": {
     "status": "found",
     "trade_name": "RAINMOCARB",
+    "suggestions": [],
     "substances_fr": [
      "Propamocarbe HCl"
     ],
@@ -1440,6 +1468,7 @@
    "answer": {
     "status": "found",
     "trade_name": "SHARK 48 SC",
+    "suggestions": [],
     "substances_fr": [
      "Bifenazate"
     ],
@@ -1461,7 +1490,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-025",
@@ -1496,6 +1525,7 @@
    "answer": {
     "status": "found",
     "trade_name": "SULPHUR 98 DP",
+    "suggestions": [],
     "substances_fr": [
      "Soufre"
     ],
@@ -1552,6 +1582,7 @@
    "answer": {
     "status": "found",
     "trade_name": "TAIKOK 25 EC",
+    "suggestions": [],
     "substances_fr": [
      "Cyperméthrine"
     ],
@@ -1608,6 +1639,7 @@
    "answer": {
     "status": "found",
     "trade_name": "VANTEX 60 CS",
+    "suggestions": [],
     "substances_fr": [
      "Gamma-cyhalothrine"
     ],
@@ -1629,7 +1661,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-028",
@@ -1666,6 +1698,7 @@
    "answer": {
     "status": "found",
     "trade_name": "ZINAMCO",
+    "suggestions": [],
     "substances_fr": [
      "Fluazinam"
     ],
@@ -1687,7 +1720,7 @@
     "dar_ok": true,
     "pass": true
    },
-   "latency_s": 0.0
+   "latency_s": 0.001
   },
   {
    "id": "g2-dev-029",
@@ -1727,6 +1760,9 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [
+     "BARCLAY BARBARIAN SUPER 360"
+    ],
     "substances_fr": [],
     "crop_code": "0110050",
     "registered_for_crop": null,
@@ -1744,9 +1780,10 @@
     "product_ok": false,
     "wrong_product": false,
     "abstained": true,
+    "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.002
+   "latency_s": 0.003
   },
   {
    "id": "g2-dev-030",
@@ -1786,6 +1823,9 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [
+     "CRONOS"
+    ],
     "substances_fr": [],
     "crop_code": "0211000",
     "registered_for_crop": null,
@@ -1803,9 +1843,10 @@
     "product_ok": false,
     "wrong_product": false,
     "abstained": true,
+    "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.002
+   "latency_s": 0.007
   },
   {
    "id": "g2-dev-031",
@@ -1853,6 +1894,9 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [
+     "KATANGA TRIPLE"
+    ],
     "substances_fr": [],
     "crop_code": "0151010",
     "registered_for_crop": null,
@@ -1870,9 +1914,10 @@
     "product_ok": false,
     "wrong_product": false,
     "abstained": true,
+    "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.002
+   "latency_s": 0.007
   },
   {
    "id": "g2-dev-032",
@@ -1912,6 +1957,9 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [
+     "CUIVREVAL 20 WG"
+    ],
     "substances_fr": [],
     "crop_code": "0211000",
     "registered_for_crop": null,
@@ -1929,9 +1977,10 @@
     "product_ok": false,
     "wrong_product": false,
     "abstained": true,
+    "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.004
+   "latency_s": 0.007
   },
   {
    "id": "g2-dev-033",
@@ -1971,6 +2020,9 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [
+     "SOUPHYTO"
+    ],
     "substances_fr": [],
     "crop_code": "0151010",
     "registered_for_crop": null,
@@ -1988,9 +2040,10 @@
     "product_ok": false,
     "wrong_product": false,
     "abstained": true,
+    "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.002
+   "latency_s": 0.005
   },
   {
    "id": "g2-dev-034",
@@ -2030,6 +2083,9 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [
+     "VELUM PRIME"
+    ],
     "substances_fr": [],
     "crop_code": "0233010",
     "registered_for_crop": null,
@@ -2047,9 +2103,10 @@
     "product_ok": false,
     "wrong_product": false,
     "abstained": true,
+    "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.006
+   "latency_s": 0.007
   },
   {
    "id": "g2-dev-035",
@@ -2089,6 +2146,9 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [
+     "ZOXYBIN 25 SC"
+    ],
     "substances_fr": [],
     "crop_code": "0231010",
     "registered_for_crop": null,
@@ -2106,9 +2166,10 @@
     "product_ok": false,
     "wrong_product": false,
     "abstained": true,
+    "first_suggestion_ok": true,
     "pass": false
    },
-   "latency_s": 0.005
+   "latency_s": 0.007
   },
   {
    "id": "g2-dev-036",
@@ -2127,6 +2188,7 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [],
     "substances_fr": [],
     "crop_code": "0220020",
     "registered_for_crop": null,
@@ -2142,7 +2204,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.004
+   "latency_s": 0.007
   },
   {
    "id": "g2-dev-037",
@@ -2161,6 +2223,7 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [],
     "substances_fr": [],
     "crop_code": "0163050",
     "registered_for_crop": null,
@@ -2176,7 +2239,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.004
   },
   {
    "id": "g2-dev-038",
@@ -2195,6 +2258,7 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [],
     "substances_fr": [],
     "crop_code": "0130010",
     "registered_for_crop": null,
@@ -2210,7 +2274,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.005
+   "latency_s": 0.004
   },
   {
    "id": "g2-dev-039",
@@ -2229,6 +2293,7 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [],
     "substances_fr": [],
     "crop_code": "0260030",
     "registered_for_crop": null,
@@ -2244,7 +2309,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.003
+   "latency_s": 0.004
   },
   {
    "id": "g2-dev-040",
@@ -2263,6 +2328,7 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [],
     "substances_fr": [],
     "crop_code": "0110030",
     "registered_for_crop": null,
@@ -2278,7 +2344,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.003
+   "latency_s": 0.005
   },
   {
    "id": "g2-dev-041",
@@ -2297,6 +2363,7 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [],
     "substances_fr": [],
     "crop_code": "0130010",
     "registered_for_crop": null,
@@ -2312,7 +2379,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.002
+   "latency_s": 0.003
   },
   {
    "id": "g2-dev-042",
@@ -2331,6 +2398,7 @@
    "answer": {
     "status": "not_found",
     "trade_name": null,
+    "suggestions": [],
     "substances_fr": [],
     "crop_code": "0110020",
     "registered_for_crop": null,
@@ -2346,7 +2414,7 @@
     "false_accept": false,
     "pass": true
    },
-   "latency_s": 0.003
+   "latency_s": 0.012
   }
  ]
 }

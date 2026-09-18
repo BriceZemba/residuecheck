@@ -1,0 +1,92 @@
+{
+ "image": "eval/g3/log05.jpg",
+ "synthetic": true,
+ "font": "BRADHITC.TTF",
+ "defects": [
+  "smudge"
+ ],
+ "crop": "Agrumes",
+ "crop_code": "0110020",
+ "rows": [
+  {
+   "n": 1,
+   "date": null,
+   "date_as_written": null,
+   "product_as_written": "Cobox",
+   "product": "COBOX",
+   "dose": "500 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [
+    "date"
+   ],
+   "hidden": {
+    "date": "2026-09-01"
+   }
+  },
+  {
+   "n": 2,
+   "date": "2026-09-17",
+   "date_as_written": "17/09/26",
+   "product_as_written": "Cobell'S",
+   "product": "COBELL'S",
+   "dose": "500 g/hl",
+   "target": "Gommose à phytophthora",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 3,
+   "date": "2026-09-24",
+   "date_as_written": "24/09/26",
+   "product_as_written": "DIMOXIM",
+   "product": "DIMOXIM",
+   "dose": "30 g/hl",
+   "target": "Mineuse des feuilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 4,
+   "date": "2026-10-08",
+   "date_as_written": "08/10/26",
+   "product_as_written": null,
+   "product": null,
+   "dose": "25 cc/hl",
+   "target": "Mineuse des feuilles",
+   "crossed_out": false,
+   "unreadable": [
+    "product"
+   ],
+   "hidden": {
+    "product": "ROMECTINE"
+   }
+  },
+  {
+   "n": 5,
+   "date": "2026-10-16",
+   "date_as_written": "16/10/26",
+   "product_as_written": "PASTA CAFFARO",
+   "product": "PASTA CAFFARO",
+   "dose": "0,5 l/hl",
+   "target": "Gommose à phytophthora",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 6,
+   "date": "2026-10-22",
+   "date_as_written": "22/10/26",
+   "product_as_written": "Majorcide",
+   "product": "MAJORCIDE",
+   "dose": "150 cc/hl",
+   "target": "Acariens",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  }
+ ]
+}

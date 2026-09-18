@@ -1,0 +1,113 @@
+{
+ "trade_name": "VAJRA",
+ "holder": "SOPROCHIBA",
+ "supplier": "UPL LIMITED",
+ "registration_no": "E11-4-010",
+ "valid_until": "24/03/2031",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "50 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "100cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "150 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Taupins",
+   "dose": "250 cc/ha",
+   "Période": "stade cotylédonaire et 15 jours après",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "Traitement des sols",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Pucerons",
+   "dose": "25 cc/hl",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Mouche de l'olive",
+   "dose": "20 cc/hl",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Psylle",
+   "dose": "20 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Teigne",
+   "dose": "20 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "250 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "VAJRA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,55 @@
+{
+ "trade_name": "INFISS",
+ "holder": "PROCHIMAGRO",
+ "supplier": "LAINCO SA",
+ "registration_no": "F12-6-002",
+ "valid_until": "05/05/2030",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Deltaméthrine",
+   "content": "25 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "125 cc/ha",
+   "max_applications": "01",
+   "interval_days": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Pucerons",
+   "dose": "30 cc/hl",
+   "max_applications": "03",
+   "interval_days": "07",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "30 cc/hl",
+   "max_applications": "03",
+   "interval_days": "14",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pucerons",
+   "dose": "30cc/hl",
+   "max_applications": "03",
+   "interval_days": "14",
+   "dar_days": 3
+  }
+ ],
+ "query": "INFISS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

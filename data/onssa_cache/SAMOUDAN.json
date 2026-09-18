@@ -1,0 +1,67 @@
+{
+ "trade_name": "SAMOUDAN",
+ "holder": "CPCM",
+ "supplier": "E-TONG CHEMICAL CO., LTD",
+ "registration_no": "F07-7-027",
+ "valid_until": "10/07/2028",
+ "tox_table": "",
+ "category": "Herbicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Oxyfluorfène",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "3 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "",
+   "Période": "pré-levée",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "3 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "",
+   "Période": "pré-levée",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Oignon",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "1.5 l/ha",
+   "Stade Culture": "après repiquage",
+   "pest_stage": "pré-levée ou post-levée des adventices",
+   "Période": "bon état de végétation",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Oignon",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "1.5 l/ha",
+   "Stade Culture": "après repiquage",
+   "pest_stage": "pré-levée ou post-levée des adventices",
+   "Période": "bon état de végétation",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 60
+  }
+ ],
+ "query": "SAMOUDAN",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,22 @@
+{
+ "trade_name": "TOYOTO 500 SC",
+ "holder": "SAOAS",
+ "supplier": "AAKO B.V",
+ "registration_no": "F11-3-003",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Oxyfluorfène",
+   "content": "500 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "TOYOTO 500 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

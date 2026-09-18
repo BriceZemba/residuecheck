@@ -1,0 +1,39 @@
+{
+ "trade_name": "APPLAUD 25 SC",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "NIHON NOHYAKU CO., LTD",
+ "registration_no": "E04-1-001",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Buprofézine",
+   "content": "250 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles (pou de Californie)",
+   "dose": "150 cc/hl",
+   "pest_stage": "stades mobiles",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "100 cc/hl",
+   "pest_stage": "larves",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "APPLAUD 25 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

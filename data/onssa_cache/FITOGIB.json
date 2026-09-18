@@ -1,0 +1,22 @@
+{
+ "trade_name": "FITOGIB",
+ "holder": "AMAROC",
+ "supplier": "NUFARM SAS",
+ "registration_no": "H06-1-013",
+ "valid_until": "20/10/2034",
+ "tox_table": "C",
+ "category": "Régulateur de croissance",
+ "formulation": "Tablettes solubles dans l’eau (ST)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "20%"
+  }
+ ],
+ "usages": [],
+ "query": "FITOGIB",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

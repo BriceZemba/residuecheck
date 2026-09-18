@@ -1,0 +1,158 @@
+{
+ "trade_name": "MAVRIK 2F",
+ "holder": "SAOAS",
+ "supplier": "AAKO B.V",
+ "registration_no": "D12-0-001",
+ "valid_until": "03/07/2032",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Emulsion de type aqueux (EW)",
+ "substances": [
+  {
+   "name_fr": "Tau-fluvalinate",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Aleurodes: Aleurothrixus floccosus",
+   "dose": "15 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Aleurodes: Parabemisia myricae",
+   "dose": "20 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "20 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Colza",
+   "pest_fr": "Grosse altise",
+   "dose": "0,2 l/ha",
+   "pest_stage": "",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Colza",
+   "pest_fr": "Pucerons",
+   "dose": "0,2 l/ha",
+   "pest_stage": "",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Acariens",
+   "dose": "20 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche blanche",
+   "dose": "20 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Noctuelles",
+   "dose": "20 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Pucerons",
+   "dose": "20 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Thrips",
+   "dose": "20 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "0,2l/ha",
+   "pest_stage": "",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Thrips",
+   "dose": "60 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 90
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cicadelle",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  }
+ ],
+ "query": "MAVRIK 2F",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

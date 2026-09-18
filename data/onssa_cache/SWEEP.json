@@ -1,0 +1,39 @@
+{
+ "trade_name": "SWEEP",
+ "holder": "AGRIPHARMA",
+ "supplier": "UPL LIMITED",
+ "registration_no": "F04-6-007",
+ "valid_until": "10/07/2028",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "4,5 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "mode": "Désherbage",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées",
+   "dose": "4,5 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "mode": "Désherbage",
+   "dar_days": 28
+  }
+ ],
+ "query": "SWEEP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,223 @@
+{
+ "trade_name": "MOVENTO 100 SC",
+ "holder": "BAYER SA",
+ "supplier": "BAYER AG",
+ "registration_no": "E11-8-057",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Spirotetramat",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "1,8 l/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Chou de Bruxelles",
+   "pest_fr": "Pucerons",
+   "dose": "0,45l/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Mouche blanche",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Pucerons",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "1,5 l/ha",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pucerons",
+   "dose": "75 cc/hl",
+   "Période": "avant  floraison",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche blanche",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Thrips",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Mouche blanche",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "75cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Pucerons",
+   "dose": "0,45 l/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Pucerons",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Pucerons",
+   "dose": "75 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Thrips",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons lanigère",
+   "dose": "1,8l/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pucerons",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cochenille farineuse",
+   "dose": "1,5 l/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  }
+ ],
+ "query": "MOVENTO 100 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

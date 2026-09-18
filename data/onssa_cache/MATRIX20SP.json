@@ -1,0 +1,41 @@
+{
+ "trade_name": "MATRIX 20 SP",
+ "holder": "CAPITAL AGRI-SCIENCE",
+ "supplier": "KRISHI RASAYAN EXPORTS PVT LTD",
+ "registration_no": "F10-7-005",
+ "valid_until": "05/05/2030",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Poudre soluble dans l'eau (SP)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20 g/hl",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 g/hl",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "MATRIX 20 SP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

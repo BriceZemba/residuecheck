@@ -14,7 +14,7 @@ import datetime
 import enum
 from dataclasses import dataclass, field
 
-from residuecheck.eu_data import Snapshot, base_name, parse_date
+from residuecheck.eu_data import DEFAULT_MRL_VALUE, Snapshot, base_name, parse_date
 
 TRANSIT_DAYS_DEFAULT = 10     # harvest -> placed on the EU market; stated as an assumption on every result
 RECENT_CHANGE_DAYS = 365      # an MRL lowered within this window before arrival is flagged
@@ -174,6 +174,13 @@ def _substance_findings(name, app: Application, lot: Lot, crop_name, eu: Snapsho
     residue_ids = eu.residue_ids(sub)
     out = []
     mrls = [m for m in (eu.mrl_on(rid, lot.crop_code, lot.arrival_on) for rid in residue_ids) if m]
+    if not mrls and not residue_ids and eu.default_limit_only(sub):
+        src = [u for u in (sub.get("pest_res_mrl_webpage"),) if u]
+        return [Finding("MRL_DEFAULT", Level.RED,
+                        f"{label} has no specific EU limit, so the default limit of {DEFAULT_MRL_VALUE} mg/kg applies "
+                        f"(Reg. (EC) 396/2005 Art. 18(1)(b)): any detectable residue on {crop_name} fails at the EU border.",
+                        product=app.product, substance=label, sources=src,
+                        data={"mrl": f"{DEFAULT_MRL_VALUE}* (default)", "regulation": "Reg. (EC) 396/2005 Art. 18(1)(b)"})]
     if not mrls:
         return [Finding("NO_MRL_FOR_CROP", Level.CANNOT_VERIFY,
                         f"No EU limit for {label} on {crop_name} in the snapshot.", product=app.product, substance=label,

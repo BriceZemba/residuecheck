@@ -1,0 +1,63 @@
+{
+ "trade_name": "PIROSTAR",
+ "holder": "SOPROCHIBA",
+ "supplier": "PARIJAT INDUSTRIES (INDIA) LTD",
+ "registration_no": "H03-2-037",
+ "valid_until": "02/08/2032",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyriproxyfène",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "35 cc/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "35 cc/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "25 cc/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "PIROSTAR",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

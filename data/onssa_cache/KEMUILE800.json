@@ -1,0 +1,39 @@
+{
+ "trade_name": "KEMUILE 800",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "UPL LIMITED",
+ "registration_no": "H10-2-012",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "HUILE DE PARAFFINE",
+   "content": "800 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "1.5 L/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "1.5 l/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "KEMUILE 800",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

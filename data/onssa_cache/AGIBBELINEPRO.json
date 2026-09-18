@@ -1,0 +1,43 @@
+{
+ "trade_name": "AGIBBELINE PRO",
+ "holder": "SAOAS",
+ "supplier": "FINE AGROCHEMICAL LTD",
+ "registration_no": "H03-1-012",
+ "valid_until": "06/07/2031",
+ "tox_table": "N",
+ "category": "Régulateur de croissance",
+ "formulation": "Tablette (TB)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Action sur le grossissement des fruits",
+   "dose": "1 tb/hl",
+   "Stade Culture": "pleine floraison",
+   "Période": "pleine floraison",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Action sur le processus de la nouaison",
+   "dose": "1 tb/hl",
+   "Stade Culture": "pleine floraison",
+   "Période": "pleine floraison",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  }
+ ],
+ "query": "AGIBBELINE PRO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

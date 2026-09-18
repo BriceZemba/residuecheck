@@ -1,0 +1,39 @@
+{
+ "trade_name": "GLYFOSTAR",
+ "holder": "PHYTO LOUKKOS",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "H10-0-003",
+ "valid_until": "17/10/2035",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones vivaces",
+   "dose": "4 l/ha",
+   "max_applications": "1",
+   "mode": "Pulvérisation",
+   "dar_days": "Na"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "2 l/ha",
+   "max_applications": "1",
+   "mode": "Pulvérisation",
+   "dar_days": "Na"
+  }
+ ],
+ "query": "GLYFOSTAR",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

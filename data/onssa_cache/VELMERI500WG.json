@@ -1,0 +1,32 @@
+{
+ "trade_name": "VELMERI 500 WG",
+ "holder": "SPRAYKEM",
+ "supplier": "JT-Agro Limited",
+ "registration_no": "H01-6-011",
+ "valid_until": "12/03/2036",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Flonicamid",
+   "content": "500 g/kg"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "10 g/hl",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 60
+  }
+ ],
+ "query": "VELMERI 500 WG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

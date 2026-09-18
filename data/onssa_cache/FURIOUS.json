@@ -1,0 +1,37 @@
+{
+ "trade_name": "FURIOUS",
+ "holder": "GDIRAGRI",
+ "supplier": "SIPCAM INAGRA SA",
+ "registration_no": "H05-2-001",
+ "valid_until": "16/10/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension de capsules (CS)",
+ "substances": [
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "20cc/hl",
+   "mode": "Foliaire",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "125cc/ha",
+   "mode": "Foliaire",
+   "dar_days": 3
+  }
+ ],
+ "query": "FURIOUS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

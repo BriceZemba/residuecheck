@@ -1,0 +1,63 @@
+{
+ "trade_name": "FENGIB MAX",
+ "holder": "SIPCAM INAGRA MAROC",
+ "supplier": "SIPCAM INAGRA SA",
+ "registration_no": "H10-1-034",
+ "valid_until": "20/10/2034",
+ "tox_table": "C",
+ "category": "Régulateur de croissance",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "5 g/l"
+  },
+  {
+   "name_fr": "Phenothiol",
+   "content": "10 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Action sur le processus de floraison",
+   "dose": "75 cc/hl",
+   "Stade Culture": "40-100% de chute des pétales",
+   "max_applications": "2",
+   "interval_days": "15 jours",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Agrumes: Maroc late",
+   "pest_fr": "Action sur le grossissement du calibre",
+   "dose": "100 cc/hl",
+   "Stade Culture": "40-100% de chute des pétales",
+   "max_applications": "1",
+   "interval_days": "",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Action sur le grossissement du calibre",
+   "dose": "60 cc/hl",
+   "Stade Culture": "bouton vert",
+   "max_applications": "2",
+   "interval_days": "10 jours",
+   "dar_days": "5 jours"
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Action sur l'homogénéité du calibre",
+   "dose": "60 cc/hl",
+   "Stade Culture": "bouton vert",
+   "max_applications": "2",
+   "interval_days": "10 jours",
+   "dar_days": "5 jours"
+  }
+ ],
+ "query": "FENGIB MAX",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

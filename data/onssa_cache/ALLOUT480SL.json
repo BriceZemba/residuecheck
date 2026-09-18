@@ -1,0 +1,41 @@
+{
+ "trade_name": "ALLOUT 480 SL",
+ "holder": "AMCOTEC",
+ "supplier": "UPL LIMITED",
+ "registration_no": "F08-7-003",
+ "valid_until": "25/09/2029",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "2 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "2 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 28
+  }
+ ],
+ "query": "ALLOUT 480 SL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

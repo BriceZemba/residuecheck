@@ -1,0 +1,131 @@
+{
+ "trade_name": "COBELL'S",
+ "holder": "PHYTO BEHT",
+ "supplier": "SHYAM CHEMICALS PVT LTD",
+ "registration_no": "H07-4-016",
+ "valid_until": "16/10/2035",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - oxychlorure de cuivre",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Gommose à phytophthora",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "4",
+   "interval_days": "30-35",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Bactérioses",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "4",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Moniliose",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "4",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers à noyaux",
+   "pest_fr": "Cloque du pêcher",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "4",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers à pépins",
+   "pest_fr": "Tavelure",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "4",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "2",
+   "interval_days": "30",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Alternariose",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Alternariose",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Bactérioses",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mildiou",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "4",
+   "interval_days": "7-10",
+   "dar_days": 15
+  }
+ ],
+ "query": "COBELL'S",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

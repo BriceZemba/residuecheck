@@ -1,0 +1,31 @@
+{
+ "trade_name": "ALDO GOLD",
+ "holder": "PHYTO BEHT",
+ "supplier": "INDUSTRIAL QUIMICA KEY (IQK)",
+ "registration_no": "H01-3-002",
+ "valid_until": "20/05/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "790 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2L /hl",
+   "max_applications": "2",
+   "interval_days": "7-10",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "ALDO GOLD",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

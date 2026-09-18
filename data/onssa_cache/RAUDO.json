@@ -1,0 +1,22 @@
+{
+ "trade_name": "RAUDO",
+ "holder": "PROCHIMAGRO",
+ "supplier": "UPL LIMITED",
+ "registration_no": "E11-4-017",
+ "valid_until": "23/05/2034",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "RAUDO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,47 @@
+{
+ "trade_name": "HIDRO-CUP WG",
+ "holder": "PHILEA",
+ "supplier": "QUIMETAL INDUSTRIAL SA",
+ "registration_no": "F12-4-006",
+ "valid_until": "21/07/2030",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - hydroxyde de cuivre",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Gommose à phytophthora",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Moniliose",
+   "dose": "500 g/hl",
+   "Période": "",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  }
+ ],
+ "query": "HIDRO-CUP WG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

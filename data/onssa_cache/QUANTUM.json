@@ -1,0 +1,41 @@
+{
+ "trade_name": "QUANTUM",
+ "holder": "GREENWOOD PHYTO INN",
+ "supplier": "DNS UK PVT LTD",
+ "registration_no": "H12-3-001",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Spirotetramat",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "0.75l/ha",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cochenille farineuse",
+   "dose": "625cc/ha",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  }
+ ],
+ "query": "QUANTUM",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,59 @@
+{
+ "trade_name": "ATLAS 5EC",
+ "holder": "PHYTO LOUKKOS",
+ "supplier": "NGC AGROSCIENCES INTL CO., LIMITED",
+ "registration_no": "H05-1-013",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "50 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "100 cc/ha",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "150 cc/ha",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Pucerons",
+   "dose": "25 cc/hl",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "250 cc/ha",
+   "max_applications": "3",
+   "interval_days": "7-10",
+   "mode": "Foliaire",
+   "dar_days": 3
+  }
+ ],
+ "query": "ATLAS 5EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

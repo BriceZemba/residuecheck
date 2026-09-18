@@ -1,0 +1,59 @@
+{
+ "trade_name": "ZEMAPRIDE",
+ "holder": "EZZOUHOUR",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H07-2-008",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé soluble dans l'eau (SG)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse",
+   "dose": "20 g/hl",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "Foliaire",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "20 g/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "10 g/hl",
+   "max_applications": "2",
+   "interval_days": "20",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 g/hl",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "",
+   "dar_days": 3
+  }
+ ],
+ "query": "ZEMAPRIDE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,68 @@
+{
+ "trade_name": "KEMITE",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H03-2-027",
+ "valid_until": "28/12/2032",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Bifenazate",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Rosier",
+   "pest_fr": "Acariens",
+   "dose": "0.4 L/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "0.4 L/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Foliaire",
+   "dar_days": 3
+  }
+ ],
+ "query": "KEMITE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

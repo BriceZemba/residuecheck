@@ -1,0 +1,59 @@
+{
+ "trade_name": "KOBUS 480 SC",
+ "holder": "SAOAS",
+ "supplier": "AAKO B.V",
+ "registration_no": "H07-3-004",
+ "valid_until": "18/01/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Spinosade",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse",
+   "dose": "20cc/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Thrips",
+   "dose": "200 cc/ha",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Thrips",
+   "dose": "50cc/hl",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse",
+   "dose": "25cc/hl",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "",
+   "dar_days": 3
+  }
+ ],
+ "query": "KOBUS 480 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,117 @@
+{
+ "image": "eval/g3/log06.jpg",
+ "synthetic": true,
+ "font": "LHANDW.TTF",
+ "defects": [
+  "tilt",
+  "shadow",
+  "low_contrast",
+  "mixed_dates",
+  "smudge",
+  "crossed_out"
+ ],
+ "crop": "Agrumes",
+ "crop_code": "0110020",
+ "rows": [
+  {
+   "n": 1,
+   "date": "2026-09-07",
+   "date_as_written": "07/09/26",
+   "product_as_written": "Bordo 25 Wg",
+   "product": "BORDO 25 WG",
+   "dose": "400 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 2,
+   "date": "2026-09-23",
+   "date_as_written": "23/09/26",
+   "product_as_written": "KEMITE",
+   "product": "KEMITE",
+   "dose": "100 cc/hl",
+   "target": "Acariens",
+   "crossed_out": true,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 3,
+   "date": "2026-09-23",
+   "date_as_written": "23/09/26",
+   "product_as_written": "CUPROZIN PLUS",
+   "product": "CUPROZIN PLUS",
+   "dose": "500 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 4,
+   "date": "2026-09-28",
+   "date_as_written": "28/09/26",
+   "product_as_written": "FUNGURANPLUS WP",
+   "product": "FUNGURAN PLUS WP",
+   "dose": "500 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 5,
+   "date": "2026-10-05",
+   "date_as_written": "5/10",
+   "product_as_written": "TEPPEKI",
+   "product": "TEPPEKI",
+   "dose": null,
+   "target": "Pucerons",
+   "crossed_out": false,
+   "unreadable": [
+    "dose"
+   ],
+   "hidden": {
+    "dose": "10 g/hl"
+   }
+  },
+  {
+   "n": 6,
+   "date": "2026-10-19",
+   "date_as_written": "19/10/26",
+   "product_as_written": "SMART 440 EW",
+   "product": "SMART 440 EW",
+   "dose": "140 cc/hl",
+   "target": "Cératite",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 7,
+   "date": "2026-10-28",
+   "date_as_written": "28-10-26",
+   "product_as_written": "PROUF",
+   "product": "PROUF",
+   "dose": "35 cc/hl",
+   "target": "Cochenilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 8,
+   "date": "2026-11-11",
+   "date_as_written": "11/11/26",
+   "product_as_written": "IMIDASHOT",
+   "product": "IMIDASHOT",
+   "dose": "14 g/hl",
+   "target": "Mineuse des feuilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  }
+ ]
+}

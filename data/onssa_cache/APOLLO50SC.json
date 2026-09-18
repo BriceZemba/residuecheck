@@ -1,0 +1,104 @@
+{
+ "trade_name": "APOLLO 50 SC",
+ "holder": "SAOAS",
+ "supplier": "AAKO B.V",
+ "registration_no": "B11-9-001",
+ "valid_until": "28/12/2026",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Clofentézine",
+   "content": "500 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs d'hiver, œufs d'été, larves",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Arbres fruitiers à noyaux",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs d'hiver, œufs d'été, larves",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Arbres fruitiers à pépins",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs d'hiver, œufs d'été, larves",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "0,4 l/ha",
+   "pest_stage": "œufs et larves",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs d'hiver, œufs d'été, larves",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pastèque",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs d'hiver, œufs d'été, larves",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs d'hiver, œufs d'été, larves",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 28
+  }
+ ],
+ "query": "APOLLO 50 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

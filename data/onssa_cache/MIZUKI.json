@@ -1,0 +1,39 @@
+{
+ "trade_name": "MIZUKI",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "NICHINO EUROPE Co., Ltd",
+ "registration_no": "H07-2-009",
+ "valid_until": "17/10/2029",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyraflufen-éthyl",
+   "content": "10.6 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones et Graminées annuelles",
+   "dose": "2 l/ha",
+   "pest_stage": "2 à 4 feuilles (jeunes adventices)",
+   "max_applications": "1",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Défanage",
+   "dose": "2 l/ha",
+   "pest_stage": "2 à 4 feuilles (jeunes adventices)",
+   "max_applications": "1",
+   "dar_days": 14
+  }
+ ],
+ "query": "MIZUKI",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

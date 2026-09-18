@@ -1,0 +1,95 @@
+{
+ "trade_name": "ZORO",
+ "holder": "AMAROC",
+ "supplier": "CHEMINOVA",
+ "registration_no": "E11-9-063",
+ "valid_until": "21/06/2027",
+ "tox_table": "A",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Emulsion de type aqueux (EW)",
+ "substances": [
+  {
+   "name_fr": "Abamectine",
+   "content": "18 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "3",
+   "mode": "Parties aériennes",
+   "dar_days": 10
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "3",
+   "mode": "Parties aériennes",
+   "dar_days": 10
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Psylle",
+   "dose": "75 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "3",
+   "mode": "",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "ZORO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

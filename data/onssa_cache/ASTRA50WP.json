@@ -1,0 +1,22 @@
+{
+ "trade_name": "ASTRA 50 WP",
+ "holder": "CAPITAL AGRI-SCIENCE",
+ "supplier": "INDUSTRIAS QUIMICAS DEL VALLES (IQV)",
+ "registration_no": "F08-5-007",
+ "valid_until": "29/03/2027",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - oxychlorure de cuivre",
+   "content": "50%"
+  }
+ ],
+ "usages": [],
+ "query": "ASTRA 50 WP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

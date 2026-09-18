@@ -14,14 +14,13 @@ never a later re-fetch, and never a URL the tools did not return. Every rejectio
 interface can show what was refused and why.
 """
 import difflib
-import json
 import re
 import unicodedata
 from dataclasses import dataclass, field
 from urllib.parse import urlparse
 
 from residuecheck.eu_data import base_name
-from residuecheck.llm import cost_usd
+from residuecheck.agent_loop import run_tool_loop
 from residuecheck.onssa import norm
 
 FUZZY_MIN = 0.75  # SequenceMatcher ratio on normalised names
@@ -31,7 +30,7 @@ OFFICIAL_DOMAINS = {
     "TR": ["bku.tarimorman.gov.tr"],
     "EG": ["apc.gov.eg"],
 }
-MAX_TOOL_TEXT = 3000
+MAX_TOOL_TEXT = 3000  # characters of an extracted page shown to the model
 
 
 def fold(text):
@@ -292,48 +291,12 @@ class Resolver:
         return {"url": url, "text": shown}
 
     def _run_agent(self, system, user, final_tool, country):
-        tools = self._tools(country)
-        handlers = {name: (h or getattr(self, f"_t_{name}")) for name, (_, _, h) in tools.items()}
-        specs = [{"type": "function", "function": {"name": n, "description": d, "parameters": p}} for n, (p, d, _) in tools.items()]
-        specs.append({"type": "function", "function": final_tool})
-        messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+        tools = {name: (schema, desc, handler or getattr(self, f"_t_{name}"))
+                 for name, (schema, desc, handler) in self._tools(country).items()}
         ctx = {"seen": {}, "country": country}
-        trace, cost, calls = [], 0.0, 0
-        for step in range(self.max_steps):
-            reply = self.model.chat(messages, specs)
-            calls += 1
-            cost += cost_usd(getattr(self.model, "model", ""), reply.get("usage", {}))
-            trace.append({"type": "model", "step": step, "text": (reply.get("content") or "")[:300],
-                          "tool_calls": [c["name"] for c in reply["tool_calls"]]})
-            if not reply["tool_calls"]:
-                messages.append({"role": "assistant", "content": reply.get("content") or ""})
-                messages.append({"role": "user", "content": f"Call {final_tool['name']} to finish."})
-                continue
-            messages.append({"role": "assistant", "content": reply.get("content"), "tool_calls": [
-                {"id": c["id"], "type": "function", "function": {"name": c["name"], "arguments": json.dumps(c["arguments"])}}
-                for c in reply["tool_calls"]]})
-            for c in reply["tool_calls"]:
-                if c["name"] == final_tool["name"]:
-                    trace.append({"type": "submit", "args": c["arguments"]})
-                    return {"final": c["arguments"], "seen": ctx["seen"], "trace": trace, "cost": cost, "model_calls": calls,
-                            "stop_reason": ""}
-                handler = handlers.get(c["name"])
-                try:
-                    result = handler(c["arguments"], ctx) if handler else {"error": f"unknown tool {c['name']}"}
-                except Exception as e:  # a failing tool must not crash the check; the model sees the error
-                    result = {"error": str(e)[:200]}
-                trace.append({"type": "tool", "name": c["name"], "args": c["arguments"], "result": _summary(result)})
-                messages.append({"role": "tool", "tool_call_id": c["id"], "content": json.dumps(result, ensure_ascii=False)[:MAX_TOOL_TEXT]})
-        return {"final": None, "seen": ctx["seen"], "trace": trace, "cost": cost, "model_calls": calls,
-                "stop_reason": f"no answer within {self.max_steps} model steps"}
-
-
-def _summary(result):
-    if "results" in result:
-        return {"urls": [r["url"] for r in result["results"]]}
-    if "text" in result:
-        return {"url": result.get("url"), "chars": len(result["text"])}
-    return result
+        run = run_tool_loop(self.model, system, user, tools, final_tool, ctx, self.max_steps)
+        run["seen"] = ctx["seen"]
+        return run
 
 
 def _excerpt(text, needle, width=160):

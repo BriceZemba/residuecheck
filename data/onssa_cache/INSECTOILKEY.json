@@ -1,0 +1,63 @@
+{
+ "trade_name": "INSECTOIL KEY",
+ "holder": "CAPITAL AGRI-SCIENCE",
+ "supplier": "INDUSTRIAL QUIMICA KEY (IQK)",
+ "registration_no": "F01-8-003",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "790 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2 l/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "7-10",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Formes hivernantes des ravageurs",
+   "dose": "2l/hl",
+   "Période": "Traitement d’hiver",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Traitement d'hiver",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "1 l/hl",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1 l/hl",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "INSECTOIL KEY",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

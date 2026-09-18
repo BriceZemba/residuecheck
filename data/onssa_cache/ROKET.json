@@ -1,0 +1,31 @@
+{
+ "trade_name": "ROKET",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H03-2-028",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyriproxyfène",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "35cc/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": 30
+  }
+ ],
+ "query": "ROKET",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

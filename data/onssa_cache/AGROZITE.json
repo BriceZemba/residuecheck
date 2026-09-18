@@ -1,0 +1,55 @@
+{
+ "trade_name": "AGROZITE",
+ "holder": "ACI EQUIPMENTS",
+ "supplier": "QEMETICA AGRICULTURAL SOLUTIONS SPAIN SLU",
+ "registration_no": "H03-2-042",
+ "valid_until": "23/05/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Paraffin oil",
+   "content": "79%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "2 L/hl",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": "non requis"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2 L/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Traitement d'hiver",
+   "dose": "2 l/hl",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1l/hl",
+   "max_applications": "01",
+   "mode": "",
+   "dar_days": "non requis"
+  }
+ ],
+ "query": "AGROZITE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

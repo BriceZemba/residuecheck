@@ -40,8 +40,9 @@ class TokenFactory:
         self.max_tokens = max_tokens
 
     def chat(self, messages, tools):
-        r = self.client.chat.completions.create(model=self.model, messages=messages, tools=tools, tool_choice="auto",
-                                                temperature=self.temperature, max_tokens=self.max_tokens)
+        extra = {"tools": tools, "tool_choice": "auto"} if tools else {}  # vision calls send no tools
+        r = self.client.chat.completions.create(model=self.model, messages=messages, temperature=self.temperature,
+                                                max_tokens=self.max_tokens, **extra)
         msg = r.choices[0].message
         calls = []
         for c in msg.tool_calls or []:
@@ -62,9 +63,11 @@ class Scripted:
     def __init__(self, replies):
         self.replies = list(replies)
         self.seen_messages = []
+        self.seen_tools = []
 
     def chat(self, messages, tools):
         self.seen_messages.append([dict(m) for m in messages])
+        self.seen_tools.append(list(tools))
         if not self.replies:
             return {"content": "I have nothing more to add.", "tool_calls": [], "usage": {}}
         reply = self.replies.pop(0)

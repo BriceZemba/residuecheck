@@ -7,9 +7,9 @@ Sources (DG SANTE open data API v3.0, no key):
 
 Raw downloads go to data/raw/ (git-ignored). The committed snapshot in data/eu_snapshot/<date>/ holds:
   manifest.json          date, source URLs, raw file sha256, row counts, join coverage
-  substances.json.gz     compact active-substance records
+  substances.json.gz     compact active-substance records, incl. linked residue names and ids
   mrls.jsonl.gz          deduplicated MRL versions for the selected crops (all applicability states)
-  residue_names.json.gz  residue id -> {EN, FR} names
+  residue_names.json.gz  residue id -> {EN, FR} names, and "replaces" (id of the residue definition it superseded)
   crops.json             selected EU product codes and names
   products.json.gz       full product classification: code -> parent code, EN/FR names, synonyms
 
@@ -22,6 +22,7 @@ import hashlib
 import io
 import json
 import pathlib
+import re
 import sys
 import time
 
@@ -118,9 +119,15 @@ def main():
             rec = json.loads(line)
             linked = (rec.get("pesticide_residue_linked") or "").strip()
             entry = by_id.setdefault(rec["substance_id"], {k: rec.get(k) for k in SUBSTANCE_FIELDS if k != "pesticide_residue_linked"}
-                                     | {"pesticide_residues_linked": []})
+                                     | {"pesticide_residues_linked": [], "pesticide_residue_ids": []})
             if linked and linked not in entry["pesticide_residues_linked"]:
                 entry["pesticide_residues_linked"].append(linked)
+            # The MRL web link carries the linked residue ids (pest_res_id_list=...): a sturdier join than names,
+            # which change when the EU redefines a residue.
+            ids = re.search(r"pest_res_id_list=([\d,]+)", rec.get("pest_res_mrl_webpage") or "")
+            for rid in (int(x) for x in ids.group(1).split(",") if x) if ids else ():
+                if rid not in entry["pesticide_residue_ids"]:
+                    entry["pesticide_residue_ids"].append(rid)
     substances = list(by_id.values())
 
     crop_set, crops, seen, mrls, total_rows = set(CROPS), {}, set(), [], 0
@@ -145,7 +152,11 @@ def main():
     names = {}
     for lg in ("EN", "FR"):
         for rec in paged(s, "pesticide-residues", {"pesticide_residue_lg": lg}):
-            names.setdefault(str(rec["pesticide_residue_id"]), {})[lg] = rec["pesticide_residue_name"]
+            entry = names.setdefault(str(rec["pesticide_residue_id"]), {})
+            entry[lg] = rec["pesticide_residue_name"]
+            # Version lineage: a redefined residue points back to the id it replaced.
+            if rec.get("original_pesticide_residue_id"):
+                entry["replaces"] = int(rec["original_pesticide_residue_id"])
 
     # Product classification (Annex I of Reg. 396/2005) with parents, so a group registration can cover a crop.
     products_by_id = {}
@@ -196,6 +207,13 @@ def main():
         "missing_crop_codes": missing_crops,
         "substance_to_residue_join": {"substances_with_linked_residue": len(linked), "joined_to_mrl_names": len(joined)},
     }
+    (out / "manifest.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+    # Coverage of the full join (ids + redefinitions + names), measured through the same code the app uses.
+    from residuecheck.eu_data import Snapshot
+
+    snap = Snapshot(a.date)
+    manifest["substance_to_residue_join"]["linked_with_rows_for_selected_crops"] = sum(
+        bool(snap.residue_ids(x)) for x in snap.substances)
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
     print(json.dumps(manifest, indent=1))
 

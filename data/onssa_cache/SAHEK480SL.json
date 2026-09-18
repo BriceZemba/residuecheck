@@ -1,0 +1,22 @@
+{
+ "trade_name": "SAHEK 480SL",
+ "holder": "NEWPROTECT",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "H02-0-013",
+ "valid_until": "07/10/2031",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "SAHEK 480SL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

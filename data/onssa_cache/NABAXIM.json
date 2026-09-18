@@ -1,0 +1,31 @@
+{
+ "trade_name": "NABAXIM",
+ "holder": "UNITED CROPSCIENCE SARL AU",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "H10-5-017",
+ "valid_until": "07/07/2036",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Poudre soluble dans l'eau (SP)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "30 g/hl",
+   "max_applications": "2",
+   "interval_days": "30",
+   "dar_days": 30
+  }
+ ],
+ "query": "NABAXIM",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

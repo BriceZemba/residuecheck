@@ -1,0 +1,65 @@
+{
+ "trade_name": "ARDOR 21,4 SC",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "F05-8-004",
+ "valid_until": "19/06/2028",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Imidaclopride",
+   "content": "21,4%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Thrips",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Thrips",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "ARDOR 21,4 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

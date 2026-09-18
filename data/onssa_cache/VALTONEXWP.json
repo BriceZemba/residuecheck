@@ -1,0 +1,32 @@
+{
+ "trade_name": "VALTONEX WP",
+ "holder": "BODOR",
+ "supplier": "INDUSTRIAS QUIMICAS DEL VALLES (IQV)",
+ "registration_no": "F07-9-020",
+ "valid_until": "05/05/2030",
+ "tox_table": "C",
+ "category": "Fongicide-Bactéricide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - oxychlorure de cuivre",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pourriture brune",
+   "dose": "500 g/hl",
+   "max_applications": "4",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  }
+ ],
+ "query": "VALTONEX WP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

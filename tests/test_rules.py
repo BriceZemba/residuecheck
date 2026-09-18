@@ -113,3 +113,17 @@ def test_rasff_signal_is_amber(eu):
 def test_unsupported_crop(eu):
     r = evaluate(Lot("9999999", "2026-10-01", [actara("2026-08-15")]), eu)
     assert r.verdict == Level.CANNOT_VERIFY and r.codes() == ["CROP_NOT_SUPPORTED"]
+
+
+def test_substance_with_only_the_default_limit_is_red(eu):
+    # Tetramethrin: the EU database links it to the 0.01 mg/kg default of Art. 18(1)(b), no residue of its own.
+    r = evaluate(Lot(ORANGES, "2026-10-01", [Application("X", "2026-08-01", ["Tetramethrin"], True, 7)]), eu)
+    assert r.verdict == Level.RED and "MRL_DEFAULT" in r.codes()
+    f = next(f for f in r.findings if f.code == "MRL_DEFAULT")
+    assert "0.01 mg/kg" in f.message and "18(1)(b)" in f.message
+
+
+def test_listed_residue_without_a_value_stays_cannot_verify(eu):
+    # Phenthoate is in Annex III but has no value for oranges in the database: not guessed.
+    r = evaluate(Lot(ORANGES, "2026-10-01", [Application("X", "2026-08-01", ["Phenthoate"], True, 7)]), eu)
+    assert r.verdict == Level.CANNOT_VERIFY and "NO_MRL_FOR_CROP" in r.codes()

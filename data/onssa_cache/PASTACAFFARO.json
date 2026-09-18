@@ -1,0 +1,144 @@
+{
+ "trade_name": "PASTA CAFFARO",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "GOWAN CROP PROTECTION LIMITED",
+ "registration_no": "D12-7-001",
+ "valid_until": "27/12/2027",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - oxychlorure de cuivre",
+   "content": "25% cuivre métal"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Gommose à phytophthora",
+   "dose": "0,5 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "20-30",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Arbres fruitiers à pépins",
+   "pest_fr": "Tavelure",
+   "dose": "0,3 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "6-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Arbres fruitiers à pépins",
+   "pest_fr": "Tavelure",
+   "dose": "0,7 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "6-10",
+   "mode": "Traitement d'hiver",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "0,5 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Alternariose",
+   "dose": "0,5 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "0,5 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Alternariose",
+   "dose": "0,5 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Bactérioses",
+   "dose": "0,5 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mildiou",
+   "dose": "0,5 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "0,7 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "après la floraison de la culture",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "0,2 l/hl",
+   "Stade Culture": "préventif",
+   "Période": "avant  floraison",
+   "max_applications": "6",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": 20
+  }
+ ],
+ "query": "PASTA CAFFARO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

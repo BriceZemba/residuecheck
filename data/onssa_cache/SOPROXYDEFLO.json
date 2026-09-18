@@ -1,0 +1,131 @@
+{
+ "trade_name": "SOPROXYDE FLO",
+ "holder": "SOPROCHIBA",
+ "supplier": "NUFARM SAS",
+ "registration_no": "D11-5-002",
+ "valid_until": "29/12/2035",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - hydroxyde de cuivre",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Gommose à phytophthora",
+   "dose": "300 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers à noyaux",
+   "pest_fr": "Dépérissement bactérien",
+   "dose": "130 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers à noyaux",
+   "pest_fr": "Gommose à phytophthora",
+   "dose": "1,3-2/ha",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers à noyaux",
+   "pest_fr": "Moniliose",
+   "dose": "300 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Arbres fruitiers à noyaux",
+   "pest_fr": "Tavelure",
+   "dose": "300 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "450 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Alternariose",
+   "dose": "500 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "500 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Alternariose",
+   "dose": "300 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Bactérioses",
+   "dose": "300 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mildiou",
+   "dose": "300 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "500 cc/hl",
+   "Stade Culture": "préventif ou dès l'apparition des premières attaques",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  }
+ ],
+ "query": "SOPROXYDE FLO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

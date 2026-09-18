@@ -1,0 +1,33 @@
+{
+ "trade_name": "KEMALEX",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "ORSANI INC.",
+ "registration_no": "F03-2-037",
+ "valid_until": "01/04/2036",
+ "tox_table": "N",
+ "category": "Régulateur de croissance",
+ "formulation": "Tablette (TB)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Action sur le processus de la nouaison",
+   "dose": "1 tb/hl",
+   "Stade Culture": "début floraison",
+   "Période": "20-30% fleurs sont ouvertes",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "KEMALEX",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

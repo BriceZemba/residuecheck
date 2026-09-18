@@ -1,0 +1,56 @@
+{
+ "trade_name": "AGROIL",
+ "holder": "UNIVERS HORTICOLE",
+ "supplier": "LUQSA (LERIDA UNION QUIMICA SA)",
+ "registration_no": "E11-8-002",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale blanche",
+   "content": "78%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles (pou de Californie)",
+   "dose": "1,5 l/hl",
+   "pest_stage": "stades hivernants",
+   "Période": "Traitement d’hiver",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Traitement d'hiver",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles (pou de Californie)",
+   "dose": "1,5 l/hl",
+   "pest_stage": "stades mobiles",
+   "Période": "Traitement d’été",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Traitement d'été",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "2 l/hl",
+   "pest_stage": "stades mobiles",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "AGROIL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

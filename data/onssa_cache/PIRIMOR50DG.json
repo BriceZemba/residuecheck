@@ -1,0 +1,223 @@
+{
+ "trade_name": "PIRIMOR 50 DG",
+ "holder": "SYNGENTA MAROC",
+ "supplier": "SYNGENTA CROP PROTECTION AG",
+ "registration_no": "A02-6-003",
+ "valid_until": "17/10/2033",
+ "tox_table": "A",
+ "category": "Insecticide",
+ "formulation": "Granulé Dispersible (DG)",
+ "substances": [
+  {
+   "name_fr": "Pyrimicarbe",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Abricotier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Artichaut",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Aubergine",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Pucerons",
+   "dose": "500 g/ha",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Céréales d'automne",
+   "pest_fr": "Pucerons",
+   "dose": "500 g/ha",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 35
+  },
+  {
+   "crop_fr": "Concombre",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Cotonnier",
+   "pest_fr": "Pucerons",
+   "dose": "50 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Pucerons",
+   "dose": "50 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Pucerons",
+   "dose": "50 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Plantes florales",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Plantes ornementales",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Prunier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Rosier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "PIRIMOR 50 DG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

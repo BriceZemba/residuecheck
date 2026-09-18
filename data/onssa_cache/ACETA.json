@@ -1,0 +1,53 @@
+{
+ "trade_name": "ACETA",
+ "holder": "SOPROCHIBA",
+ "supplier": "KRISHI RASAYAN EXPORTS PVT LTD",
+ "registration_no": "F03-5-007",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Poudre soluble dans l'eau (SP)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20 g/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 g/hl",
+   "Période": "Floraison-début nouaison",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 g/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "ACETA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

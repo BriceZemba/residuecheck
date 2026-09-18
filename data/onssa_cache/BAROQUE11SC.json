@@ -1,0 +1,44 @@
+{
+ "trade_name": "BAROQUE 11SC",
+ "holder": "AGRIMATCO",
+ "supplier": "SUMITOMO CHEMICALS AGRO EUROPE SAS",
+ "registration_no": "H07-1-010",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Etoxazole",
+   "content": "110 gr/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "max_applications": "1",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "max_applications": "1",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "max_applications": "1",
+   "dar_days": 42
+  }
+ ],
+ "query": "BAROQUE 11SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

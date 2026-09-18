@@ -1,0 +1,67 @@
+{
+ "trade_name": "ALIETTE FLASH",
+ "holder": "BAYER SA",
+ "supplier": "BAYER AG",
+ "registration_no": "E05-6-013",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Fosétyl-Aluminium",
+   "content": "800 g/kg"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Gommose à phytophthora",
+   "dose": "250 g/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Feu bactérien",
+   "dose": "375 g/hl",
+   "Stade Culture": "stade floraison",
+   "Période": "stade floraison primaire",
+   "max_applications": "3",
+   "interval_days": "2",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "250 g/hl",
+   "Stade Culture": "préventif",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Feu bactérien",
+   "dose": "375 g/hl",
+   "Stade Culture": "stade floraison",
+   "Période": "stade floraison primaire",
+   "max_applications": "3",
+   "interval_days": "2",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "ALIETTE FLASH",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

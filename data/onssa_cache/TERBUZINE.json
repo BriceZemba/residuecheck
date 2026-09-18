@@ -1,0 +1,59 @@
+{
+ "trade_name": "TERBUZINE",
+ "holder": "ALMASSIRAGRI",
+ "supplier": "SIPCAM INAGRA",
+ "registration_no": "F06-1-054",
+ "valid_until": "29/03/2027",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Terbuthylazine",
+   "content": "500 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "2 l/ha",
+   "pest_stage": "pré-levée ou post-levée des adventices",
+   "max_applications": "1-2",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées",
+   "dose": "2 l/ha",
+   "pest_stage": "pré-levée ou post-levée des adventices",
+   "max_applications": "1-2",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "2 l/ha",
+   "pest_stage": "pré-levée ou post-levée des adventices",
+   "max_applications": "1-2",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "2 l/ha",
+   "pest_stage": "pré-levée ou post-levée des adventices",
+   "max_applications": "1-2",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  }
+ ],
+ "query": "TERBUZINE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

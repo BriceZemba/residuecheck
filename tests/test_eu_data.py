@@ -66,3 +66,33 @@ def test_unresolved_names_are_not_guessed(eu, name):
 def test_draft_regulations_are_kept_apart(eu):
     drafts = [m for versions in eu._planned.values() for m in versions]
     assert drafts and all(m.applies_from is None and m.regulation.startswith("PLAN/") for m in drafts)
+
+
+@pytest.mark.parametrize("name, expected", [
+    ("Fosetyl", [3430]),                           # fosetyl-Al residue 317 redefined -> phosphonic acid 3430
+    ("Emamectin", [3010]),                         # emamectin benzoate B1a 2037 -> emamectin B1a and salts 3010
+    ("Aluminium silicate (aka kaolin)", [402]),    # residue name carries (+)(++) footnote markers
+    ("Thiamethoxam", [388]),
+    ("Copper compounds", [262, 4050]),
+    ("Cadusafos", [2275]),                         # substance 'Cadusafos (aka ebufos)', residue 'Cadusafos'
+])
+def test_residue_join_uses_ids_redefinitions_and_names(eu, name, expected):
+    assert eu.residue_ids(eu.substance(name)) == expected
+
+
+def test_residue_join_coverage_did_not_regress(eu):
+    linked = sum(bool(eu.residue_ids(s)) for s in eu.substances)
+    assert linked >= 757  # 709 name-only join, 754 with ids + redefinitions, 757 with base-name join (cadusafos)
+    assert eu.manifest["substance_to_residue_join"]["linked_with_rows_for_selected_crops"] == linked
+
+
+def test_fosetyl_on_oranges_now_has_a_limit(eu):
+    (rid,) = eu.residue_ids(eu.substance("Fosetyl"))
+    m = eu.mrl_on(rid, "0110020", "2026-09-13")
+    assert (m.value, m.regulation) == (100.0, "Regulation (EU) 2026/876")
+
+
+def test_default_limit_marker(eu):
+    assert eu.default_limit_only(eu.substance("Tetramethrin"))
+    assert eu.residue_ids(eu.substance("Tetramethrin")) == []
+    assert not eu.default_limit_only(eu.substance("Thiamethoxam"))

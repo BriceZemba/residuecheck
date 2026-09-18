@@ -1,0 +1,34 @@
+{
+ "trade_name": "MOSPILAN 20 SL",
+ "holder": "CALIMAROC",
+ "supplier": "UPL Limited (Arysta Lifescience S.A.S)",
+ "registration_no": "D03-9-005",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20 cc/hl",
+   "pest_stage": "œufs, larves et adultes",
+   "Période": "Après fin floraison –début nouaison",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  }
+ ],
+ "query": "MOSPILAN 20 SL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

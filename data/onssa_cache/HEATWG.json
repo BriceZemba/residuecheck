@@ -1,0 +1,41 @@
+{
+ "trade_name": "HEAT WG",
+ "holder": "BASF MAROC",
+ "supplier": "BASF AG",
+ "registration_no": "F11-0-019",
+ "valid_until": "22/12/2031",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Saflufénacil",
+   "content": "70%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "70 g/ha",
+   "Période": "post-émergence des adventices",
+   "max_applications": "3",
+   "mode": "Désherbage",
+   "dar_days": 42
+  },
+  {
+   "crop_fr": "Arbres fruitiers à pépins",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "70 g/ha",
+   "Période": "post-émergence des adventices",
+   "max_applications": "3",
+   "mode": "Désherbage",
+   "dar_days": 42
+  }
+ ],
+ "query": "HEAT WG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,22 @@
+{
+ "about": "Fixed demo lots. Spray records are invented; the data they are checked against is real. 'today' is fixed so a recorded agent run replays exactly (safer options depend on it). scripts/record_demo.py records these with the live agents.",
+ "scenarios": [
+  {"id": "orange-lot", "title": "Orange lot, one blocking spray",
+   "blurb": "An applied ACTARA spray fails the EU limit; a misspelled name; a spray too close to harvest.",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-10-01", "today": "2026-09-17", "applications": [
+    {"product": "ACTARA 25 WG", "applied_on": "2026-08-15"},
+    {"product": "AKTARA 25 WG", "applied_on": "2026-08-20"},
+    {"product": "ADMIRAL 10 EC", "applied_on": "2026-09-10"}]}},
+  {"id": "handwritten-names", "title": "Names as growers write them",
+   "blurb": "Product names with the substance instead of the formulation, or no formulation at all.",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-11-20", "today": "2026-09-17", "applications": [
+    {"product": "Aktara thiametoxam", "applied_on": "2026-08-28"},
+    {"product": "movento", "applied_on": "2026-09-05"},
+    {"product": "Karate zeon", "applied_on": "2026-09-12"},
+    {"product": "Movento 150", "applied_on": "2026-09-14"}]}},
+  {"id": "planned-spray", "title": "Planned spray, find a safer product",
+   "blurb": "A spray planned for October would block a December harvest; which registered products would not?",
+   "request": {"crop_code": "0110020", "harvest_on": "2026-12-15", "today": "2026-09-17", "applications": [
+    {"product": "ACTARA 25 WG", "applied_on": "2026-10-01"}]}}
+ ]
+}

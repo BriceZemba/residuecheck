@@ -1,0 +1,37 @@
+{
+ "trade_name": "FLYCAP MASS",
+ "holder": "SAOAS",
+ "supplier": "GREEN UNIVERSE AGRICULTURE",
+ "registration_no": "F05-4-031",
+ "valid_until": "01/04/2028",
+ "tox_table": "C",
+ "category": "Attractif",
+ "formulation": "Produit diffuseur de vapeur (VP)",
+ "substances": [
+  {
+   "name_fr": "1,5-Diaminopentane",
+   "content": "0,19%"
+  },
+  {
+   "name_fr": "Ammonium acétate",
+   "content": "43,49%"
+  },
+  {
+   "name_fr": "Trimetilamine Hydrochloride",
+   "content": "4,1%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "40 pièges/ha",
+   "dar_days": "-"
+  }
+ ],
+ "query": "FLYCAP MASS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,39 @@
+{
+ "trade_name": "LANDMASTER SUPREME",
+ "holder": "AMAROC",
+ "supplier": "Albaugh Europe",
+ "registration_no": "H07-2-007",
+ "valid_until": "18/01/2034",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "2 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "2 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "dar_days": 28
+  }
+ ],
+ "query": "LANDMASTER SUPREME",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

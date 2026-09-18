@@ -5,6 +5,8 @@ Usage:
   python eval/run.py --suite g2 --config rules-only --split heldout
   python eval/run.py --suite g2s --config rules-fuzzy            # substance names
   python eval/run.py --suite g2b --config full                   # Türkiye / Egypt trade names
+  python eval/run.py --suite g3 --config full                    # spray-log photos (needs a vision model)
+  python eval/run.py --suite g4 --config rules-only              # back-test on real RASFF notifications
   python eval/run.py --summary                                   # rebuild eval/results/README.md from all runs
 
 Writes eval/results/<suite>_<config>_<split>.json (every answer and score) and .md (metrics, failures).
@@ -12,11 +14,14 @@ Held-out runs are appended to eval/results/heldout_runs.log, so how often the he
 """
 import argparse
 import datetime
+import difflib
 import json
 import pathlib
+import re
 import subprocess
 import sys
 import time
+import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -25,7 +30,7 @@ from residuecheck.onssa import norm  # noqa: E402
 from systems import SYSTEMS, MissingKey  # noqa: E402
 
 RESULTS = ROOT / "eval" / "results"
-SUITES = ("g1", "g2", "g2b", "g2s")
+SUITES = ("g1", "g2", "g2b", "g2s", "g3", "g4", "g6")
 FILES = {(s, "dev"): f"gold/{s}_dev.jsonl" for s in SUITES} | {(s, "heldout"): f"heldout/{s}_heldout.jsonl" for s in SUITES}
 
 
@@ -104,6 +109,197 @@ def metrics_g2b(rows):
             "abstained_on_real": sum(r["score"].get("abstained", False) for r in rows),
             "fake_accepted": sum(r["score"].get("false_accept", False) for r in rows),
             "by_stratum": {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in sorted({r["stratum"] for r in rows})}}
+
+
+def score_g6(case, a):
+    t = case["truth"]
+    safe, latest = set(t["safe_products"]), t["latest_spray"]
+
+    def unsafe(option):
+        name, when = option.get("product"), option.get("spray_on")
+        if name not in safe:
+            return True
+        return bool(when) and when > latest[name]
+
+    proposed = list(a.get("proposed") or [])
+    shown_unsafe = [o["product"] for o in a["shown"] if unsafe(o)]
+    proposed_unsafe = [o.get("product") for o in proposed if unsafe(o)]
+    found = any(not unsafe(o) for o in a["shown"])
+    ok = not shown_unsafe and (found if t["has_safe_option"] else not a["shown"])
+    s = {"pass": ok, "shown_unsafe": len(shown_unsafe), "proposed": len(proposed),
+         "proposed_unsafe": len(proposed_unsafe), "rejected": a.get("rejected", 0)}
+    if t["has_safe_option"]:
+        s["coverage_ok"] = found
+    return s
+
+
+def metrics_g6(rows):
+    proposed = sum(r["score"]["proposed"] for r in rows)
+    unsafe = sum(r["score"]["proposed_unsafe"] for r in rows)
+    return {"pass": rate(rows, "pass"), "coverage": rate(rows, "coverage_ok"),
+            "shown_unsafe": sum(r["score"]["shown_unsafe"] for r in rows),
+            "unsafe_proposal_rate": {"n": proposed, "hits": unsafe, "rate": round(unsafe / proposed, 3) if proposed else None},
+            "rejected_by_verifier": sum(r["score"]["rejected"] for r in rows),
+            "by_stratum": {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in sorted({r["stratum"] for r in rows})}}
+
+
+G3_FIELDS = ("date", "product", "dose", "target")
+
+
+def _g3_norm(field, value):
+    if value is None:
+        return None
+    v = unicodedata.normalize("NFKD", str(value)).encode("ascii", "ignore").decode().lower()
+    if field in ("product", "dose"):
+        v = re.sub(r"[\s\-_.]", "", v.replace(",", "."))
+    return re.sub(r"\s+", " ", v).strip()
+
+
+def _g3_field_ok(field, truth_row, value):
+    got = _g3_norm(field, value)
+    if got is None:
+        return False
+    if field == "product":
+        return got in {_g3_norm(field, truth_row["product_as_written"]), _g3_norm(field, truth_row["product"])}
+    if field == "target":
+        return difflib.SequenceMatcher(None, got, _g3_norm(field, truth_row[field])).ratio() >= 0.9
+    return got == _g3_norm(field, truth_row[field])
+
+
+def _g3_similarity(t, p):
+    score = weight = 0.0
+    for field, w in (("product", 0.45), ("date", 0.3), ("dose", 0.15), ("target", 0.1)):
+        tv = t["product_as_written"] if field == "product" else t[field]
+        if tv is None or p.get(field) is None:
+            continue
+        weight += w
+        score += w * difflib.SequenceMatcher(None, _g3_norm(field, tv), _g3_norm(field, p[field])).ratio()
+    return score / weight if weight else 0.0
+
+
+def score_g3(case, a):
+    """Rows found, fields right, unreadable cells left empty, crossed-out lines not used, nothing invented."""
+    truth, parsed = case["truth"]["rows"], a.get("rows") or []
+    resolved = a.get("resolved")
+    # Best-first matching over all pairs, so a crossed-out line cannot take the parse of its own correction.
+    pairs = sorted(((_g3_similarity(t, p), -i, -j) for i, t in enumerate(truth) for j, p in enumerate(parsed)), reverse=True)
+    match, used = {}, set()
+    for sim, i, j in pairs:
+        if sim >= 0.5 and -i not in match and -j not in used:
+            match[-i] = -j
+            used.add(-j)
+    free = set(range(len(parsed))) - used
+    s = {"rows_expected": 0, "rows_found": 0, "extra_rows": 0, "crossed_used": 0, "fields_checked": 0,
+         "fields_ok": 0, "unreadable_expected": 0, "unreadable_empty": 0, "unreadable_flagged": 0,
+         "guessed_unreadable": 0, "false_unreadable_flags": 0, "resolved_checked": 0, "resolved_ok": 0,
+         "resolved_wrong": 0, "field_errors": []}
+    for i, t in enumerate(truth):
+        best = match.get(i)
+        if t["crossed_out"]:
+            if best is not None:
+                if not parsed[best].get("crossed_out"):
+                    s["crossed_used"] += 1
+                    s["field_errors"].append(f"row {t['n']}: crossed-out line used")
+            continue
+        s["rows_expected"] += 1
+        if best is None:
+            s["field_errors"].append(f"row {t['n']}: not found")
+            continue
+        p = parsed[best]
+        s["rows_found"] += 1
+        flagged = set(p.get("unreadable") or [])
+        for field in G3_FIELDS:
+            if field in t["unreadable"]:
+                s["unreadable_expected"] += 1
+                if p.get(field) is None:
+                    s["unreadable_empty"] += 1
+                    s["unreadable_flagged"] += field in flagged
+                else:
+                    s["guessed_unreadable"] += 1
+                    s["field_errors"].append(f"row {t['n']}: guessed unreadable {field} as {p.get(field)!r}")
+                continue
+            s["false_unreadable_flags"] += field in flagged
+            s["fields_checked"] += 1
+            if _g3_field_ok(field, t, p.get(field)):
+                s["fields_ok"] += 1
+            else:
+                s["field_errors"].append(f"row {t['n']}: {field} {p.get(field)!r}, expected {t[field]!r}")
+        if resolved is not None and t["product"] is not None:
+            got = resolved[best]
+            s["resolved_checked"] += 1
+            s["resolved_ok"] += got == t["product"]
+            s["resolved_wrong"] += got is not None and got != t["product"]
+    s["extra_rows"] = sum(1 for j in free if not parsed[j].get("crossed_out"))
+    s["pass"] = (s["rows_found"] == s["rows_expected"] and not s["extra_rows"] and not s["crossed_used"]
+                 and not s["guessed_unreadable"] and s["fields_ok"] >= 0.9 * s["fields_checked"])
+    return s
+
+
+def metrics_g3(rows):
+    def total(key):
+        return sum(r["score"][key] for r in rows)
+
+    def ratio(hits, n):
+        return {"n": n, "hits": hits, "rate": round(hits / n, 3) if n else None}
+
+    return {"pass": rate(rows, "pass"),
+            "row_recall": ratio(total("rows_found"), total("rows_expected")),
+            "field_accuracy": ratio(total("fields_ok"), total("fields_checked")),
+            "unreadable_left_empty": ratio(total("unreadable_empty"), total("unreadable_expected")),
+            "unreadable_flagged": ratio(total("unreadable_flagged"), total("unreadable_expected")),
+            "guessed_unreadable": total("guessed_unreadable"),
+            "false_unreadable_flags": total("false_unreadable_flags"),
+            "extra_rows": total("extra_rows"), "crossed_used": total("crossed_used"),
+            "product_resolved": ratio(total("resolved_ok"), total("resolved_checked")),
+            "product_resolved_wrong": total("resolved_wrong"),
+            "by_stratum": {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in sorted({r["stratum"] for r in rows})}}
+
+
+BLOCKING = ("RED",)
+PREVENTABLE_STATUS = ("at_loq", "not_listed")
+
+
+def score_g4(case, a):
+    """Preventable lots must be RED; lots whose limit history is unknown must not be GREEN; dose-dependent lots are
+    reported, not failed (a log check cannot see dose). Every RASFF-unauthorised substance should be RED."""
+    t, stratum, verdict = case["truth"], case["stratum"], a["verdict"]
+    subs = t["substances"]
+    s = {"blocked": verdict == "RED", "warned": verdict in ("RED", "AMBER"), "abstained": verdict == "CANNOT_VERIFY",
+         "green": verdict == "GREEN",
+         "unauthorised_n": len(t["unauthorised"]),
+         "unauthorised_red": sum(a["levels"].get(n) == "RED" for n in t["unauthorised"]),
+         "unauthorised_not_green": sum(a["levels"].get(n) not in (None, "GREEN") for n in t["unauthorised"]),
+         "substance_misses": [x["eu_substance"] for x in subs
+                              if x["limit_status"] in PREVENTABLE_STATUS and a["levels"].get(x["eu_substance"]) != "RED"]}
+    if stratum == "preventable":
+        s["pass"] = s["blocked"]
+        s["false_green"] = s["green"]
+    elif stratum == "unknown_history":
+        s["pass"] = not s["green"]
+        s["false_green"] = s["green"]
+    else:
+        s["pass"] = True
+        s["silent_green"] = s["green"]
+    return s
+
+
+def metrics_g4(rows):
+    un = sum(r["score"]["unauthorised_n"] for r in rows)
+    un_red = sum(r["score"]["unauthorised_red"] for r in rows)
+    un_flag = sum(r["score"]["unauthorised_not_green"] for r in rows)
+    strata = sorted({r["stratum"] for r in rows})
+    return {"pass": rate(rows, "pass"),
+            "blocked_all": rate(rows, "blocked"),
+            "warned_all": rate(rows, "warned"),
+            "blocked_preventable": rate(rows, "blocked", lambda r: r["stratum"] == "preventable"),
+            "unauthorised_red": {"n": un, "hits": un_red, "rate": round(un_red / un, 3) if un else None},
+            "unauthorised_not_green": {"n": un, "hits": un_flag, "rate": round(un_flag / un, 3) if un else None},
+            "false_green": sum(r["score"].get("false_green", False) for r in rows),
+            "substance_misses": sum(len(r["score"]["substance_misses"]) for r in rows),
+            "silent_green_dose_dependent": rate(rows, "silent_green"),
+            "abstained": sum(r["score"]["abstained"] for r in rows),
+            "by_stratum": {s: rate(rows, "pass", lambda r, s=s: r["stratum"] == s) for s in strata},
+            "blocked_by_stratum": {s: rate(rows, "blocked", lambda r, s=s: r["stratum"] == s) for s in strata}}
 
 
 def score_g2s(case, a, eu):
@@ -185,7 +381,7 @@ def write_report(run):
              f"Run {run['run_at']}, code {run['code_version']}, {len(run['cases'])} cases, "
              f"{run['seconds']:.1f} s, cost ${run['cost_usd']:.4f}.", "", "| Metric | Value |", "|---|---|"]
     for k, v in m.items():
-        if k == "by_stratum":
+        if k.endswith("by_stratum"):
             continue
         lines.append(f"| {k} | {fmt_rate(v) if isinstance(v, dict) else v} |")
     lines += ["", "| Stratum | Pass |", "|---|---|"] + [f"| {s} | {fmt_rate(v)} |" for s, v in m["by_stratum"].items()]
@@ -198,7 +394,20 @@ def write_report(run):
         bad_flags = ("false_green", "missed_red", "wrong_product", "false_accept", "over_abstain", "abstained", "wrong")
         failed = ", ".join([k for k, v in c["score"].items() if k.endswith("_ok") and v is False] +
                            [k for k, v in c["score"].items() if k in bad_flags and v])
-        if run["suite"] == "g2b":
+        if run["suite"] == "g3":
+            lines.append(f"- `{c['id']}` [{c['stratum']}] {q['image']} ({', '.join(t.get('defects') or []) or 'no defects'}): "
+                         f"{c['score']['rows_found']}/{c['score']['rows_expected']} rows, extra {c['score']['extra_rows']}, "
+                         f"crossed used {c['score']['crossed_used']}; " + "; ".join(c["score"]["field_errors"][:6]))
+        elif run["suite"] == "g4":
+            lines.append(f"- `{c['id']}` [{c['stratum']}] {q['reference']} {q['product_as_notified']!r} from {q['origin']} "
+                         f"({q['notified_on']}): got {a['verdict']}; " + "; ".join(
+                             f"{x['eu_substance']} limit {x['limit_status']}, rules {a['levels'].get(x['eu_substance'])} "
+                             f"{a['codes'].get(x['eu_substance'])}" for x in t["substances"]))
+        elif run["suite"] == "g6":
+            lines.append(f"- `{c['id']}` [{c['stratum']}] {q['failing_product']} on {q['crop']} (harvest {q['harvest_on']}, "
+                         f"spray from {q['not_before']}): {len(t['safe_products'])} safe; shown "
+                         f"{[o['product'] for o in a['shown']]}; {a['trace'].get('reason', '')}")
+        elif run["suite"] == "g2b":
             lines.append(f"- `{c['id']}` [{c['stratum']}] {q['trade_name']!r} ({q['country']}): expected {t['status']} "
                          f"{t.get('trade_name') or ''} {t.get('eu_substances') or ''}, got {a['status']} {a.get('trade_name') or ''} "
                          f"{a.get('eu_substances') or ''}; failed: {failed}")
@@ -224,7 +433,10 @@ def summary():
     for suite, keys in (("g1", ["pass", "verdict_accuracy", "mrl_accuracy", "substance_resolved", "false_green", "over_abstain"]),
                         ("g2", ["pass", "product_identified", "wrong_product", "abstained_on_real", "right_first_suggestion", "registration_accuracy", "dar_accuracy", "fake_accepted"]),
                         ("g2b", ["pass", "product_identified", "substances_exact", "wrong_product", "abstained_on_real", "fake_accepted"]),
-                        ("g2s", ["pass", "confident_wrong", "abstained"])):
+                        ("g2s", ["pass", "confident_wrong", "abstained"]),
+                        ("g3", ["pass", "row_recall", "field_accuracy", "unreadable_left_empty", "guessed_unreadable", "extra_rows", "crossed_used", "product_resolved"]),
+                        ("g4", ["pass", "blocked_all", "warned_all", "blocked_preventable", "unauthorised_red", "unauthorised_not_green", "false_green", "substance_misses", "silent_green_dose_dependent"]),
+                        ("g6", ["pass", "coverage", "shown_unsafe", "unsafe_proposal_rate", "rejected_by_verifier"])):
         rows = [r for r in runs if r["suite"] == suite]
         if not rows:
             continue
@@ -264,13 +476,23 @@ def main():
         answer, scorer, metrics = system.answer_g2, score_g2, metrics_g2
     elif a.suite == "g2b":
         answer, scorer, metrics = system.answer_g2b, score_g2b, metrics_g2b
+    elif a.suite == "g3":
+        answer, scorer, metrics = system.answer_g3, score_g3, metrics_g3
+    elif a.suite == "g4":
+        answer, scorer, metrics = system.answer_g4, score_g4, metrics_g4
+    elif a.suite == "g6":
+        answer, scorer, metrics = system.answer_g6, score_g6, metrics_g6
     else:
         answer, metrics = system.answer_g2s, metrics_g2s
         scorer = lambda case, ans: score_g2s(case, ans, system.eu)  # noqa: E731
     t0, cases = time.time(), []
     for case in load(a.suite, a.split):
         t = time.time()
-        ans = answer(case["question"])
+        try:
+            ans = answer(case["question"])
+        except (NotImplementedError, MissingKey) as e:
+            print(f"skipped: {e}")
+            return 2
         cases.append({**case, "answer": ans, "score": scorer(case, ans), "latency_s": round(time.time() - t, 3)})
     run = {"suite": a.suite, "config": a.config, "split": a.split, "description": system.description,
            "run_at": datetime.datetime.now().isoformat(timespec="seconds"), "code_version": git_version(),

@@ -1,0 +1,20 @@
+{
+ "seed": 20260918,
+ "total": 19,
+ "dev": 13,
+ "heldout": 6,
+ "failing_pool": {
+  "0110020": 19,
+  "0110050": 19
+ },
+ "strata": {
+  "has_option": 16,
+  "no_option": 3
+ },
+ "safe_set_size": {
+  "min": 0,
+  "max": 22
+ },
+ "index": "data/onssa_crops_index.json",
+ "snapshot": "2026-09-13"
+}

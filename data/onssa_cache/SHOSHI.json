@@ -1,0 +1,30 @@
+{
+ "trade_name": "SHOSHI",
+ "holder": "PROMAGRI",
+ "supplier": "LAINCO SA",
+ "registration_no": "F03-4-006",
+ "valid_until": "27/09/2027",
+ "tox_table": "A",
+ "category": "Acaricide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Hexythiazox",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 40
+  }
+ ],
+ "query": "SHOSHI",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

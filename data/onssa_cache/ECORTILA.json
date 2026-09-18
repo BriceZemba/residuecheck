@@ -1,0 +1,55 @@
+{
+ "trade_name": "ECORTILA",
+ "holder": "SOPROCHIBA",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "F11-6-009",
+ "valid_until": "21/11/2026",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Hexythiazox",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "10 g/hl",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 40
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Acariens",
+   "dose": "100 g/ha",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "10 g/hl",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 40
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Acariens",
+   "dose": "50g/ha",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": 40
+  }
+ ],
+ "query": "ECORTILA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

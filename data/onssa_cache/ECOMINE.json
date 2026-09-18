@@ -1,0 +1,32 @@
+{
+ "trade_name": "ECOMINE",
+ "holder": "PROTECO",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H09-3-002",
+ "valid_until": "20/05/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé soluble dans l'eau (SG)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20g/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  }
+ ],
+ "query": "ECOMINE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

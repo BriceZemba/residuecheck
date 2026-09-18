@@ -1,0 +1,59 @@
+{
+ "trade_name": "INSECTICIDE 101 TOP",
+ "holder": "AGRO SPRAY TECHNIC",
+ "supplier": "UPL LIMITED",
+ "registration_no": "H03-4-019",
+ "valid_until": "20/05/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "80%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2l/hl",
+   "max_applications": "2",
+   "interval_days": "7-10",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "2L/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Palmier dattier",
+   "pest_fr": "Acariens",
+   "dose": "1-2L/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": "non requis"
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "1.5 L/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "INSECTICIDE 101 TOP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

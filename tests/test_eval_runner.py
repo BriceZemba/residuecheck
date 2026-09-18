@@ -167,3 +167,77 @@ def test_g2s_no_eu_substance_requires_refusal():
     assert score_g2s(case, {"status": "cannot_verify", "eu_substance": None}, eu)["pass"]
     invented = score_g2s(case, {"status": "resolved", "eu_substance": "Cloquintocet"}, eu)
     assert not invented["pass"] and invented["wrong"]
+
+
+def test_g6_set_is_consistent():
+    from residuecheck.alternatives import Alternatives, _load_record
+    from residuecheck.eu_data import Snapshot
+
+    eu = Snapshot("2026-09-13")
+    alt = Alternatives(eu)
+    cases = load("g6", "all")
+    assert len(cases) == 19 and sum(c["split"] == "heldout" for c in cases) == 6
+    for c in cases:
+        q, t = c["question"], c["truth"]
+        assert "MRL_AT_LOQ" in t["failing_codes"]
+        assert q["failing_product"] not in t["safe_products"]
+        assert set(t["latest_spray"]) == set(t["safe_products"])
+        assert all(d >= q["not_before"] for d in t["latest_spray"].values())
+        failing = {eu.substance(s["name_fr"])["substance_name"] if eu.substance(s["name_fr"]) else s["name_fr"]
+                   for s in _load_record(q["failing_product"])["substances"]}
+        for name in t["safe_products"][:5]:
+            subs = {eu.substance(s["name_fr"])["substance_name"] for s in _load_record(name)["substances"]}
+            assert not subs & failing
+        assert alt.safe_set(q["failing_product"], q["crop_code"], q["harvest_on"], q["not_before"]) == t["safe_products"]
+
+
+def test_g6_scoring():
+    from run import score_g6
+
+    case = {"truth": {"safe_products": ["CORAGEN", "OIKOS"], "latest_spray": {"CORAGEN": "2026-12-08", "OIKOS": "2026-12-12"},
+                      "has_safe_option": True}}
+    good = score_g6(case, {"shown": [{"product": "CORAGEN", "spray_on": "2026-12-01"}], "proposed": [
+        {"product": "CORAGEN"}, {"product": "ACTARA 25 WG"}], "rejected": 1})
+    assert good["pass"] and good["proposed_unsafe"] == 1 and good["shown_unsafe"] == 0
+    late = score_g6(case, {"shown": [{"product": "CORAGEN", "spray_on": "2026-12-10"}], "proposed": [], "rejected": 0})
+    assert not late["pass"] and late["shown_unsafe"] == 1
+    empty = {"truth": {"safe_products": [], "latest_spray": {}, "has_safe_option": False}}
+    assert score_g6(empty, {"shown": [], "proposed": [], "rejected": 0})["pass"]
+    assert not score_g6(empty, {"shown": [{"product": "X", "spray_on": None}], "proposed": [], "rejected": 0})["pass"]
+
+
+def test_g4_set_is_consistent():
+    cases = load("g4", "all")
+    manifest = json.loads((ROOT / "eval" / "gold" / "g4_manifest.json").read_text(encoding="utf-8"))
+    assert len(cases) == manifest["total"] == 564
+    assert sum(c["split"] == "heldout" for c in cases) == manifest["heldout"] == 169
+    assert len({c["question"]["reference"] for c in cases}) == len(cases)
+    labels = json.loads((ROOT / "eval" / "labels" / "g4_labels.json").read_text(encoding="utf-8"))
+    for c in cases:
+        q, t = c["question"], c["truth"]
+        assert q["substances"] == [s["eu_substance"] for s in t["substances"]]
+        assert set(t["unauthorised"]) <= set(q["substances"])
+        expected = labels["by_reference"].get(q["reference"]) or labels["by_name"][q["product_as_notified"]]
+        assert q["crop_code"] == expected
+        statuses = {s["limit_status"] for s in t["substances"]}
+        assert (c["stratum"] == "preventable") == bool(statuses & {"at_loq", "not_listed"})
+
+
+def test_g4_scoring():
+    from run import score_g4
+
+    sub = lambda name, status, unauth=False: {"eu_substance": name, "limit_status": status, "rasff_unauthorised": unauth}  # noqa: E731
+    case = {"stratum": "preventable", "truth": {"substances": [sub("A", "at_loq", True), sub("B", "above_loq")], "unauthorised": ["A"]}}
+    good = score_g4(case, {"verdict": "RED", "levels": {"A": "RED", "B": "GREEN"}})
+    assert good["pass"] and good["unauthorised_red"] == 1 and not good["substance_misses"]
+    green = score_g4(case, {"verdict": "GREEN", "levels": {"A": "GREEN", "B": "GREEN"}})
+    assert not green["pass"] and green["false_green"] and green["substance_misses"] == ["A"]
+    # Blocked for the wrong substance: the lot passes, the missed substance is still counted.
+    other = score_g4(case, {"verdict": "RED", "levels": {"A": "AMBER", "B": "RED"}})
+    assert other["pass"] and other["substance_misses"] == ["A"] and other["unauthorised_not_green"] == 1
+    dose = {"stratum": "dose_dependent", "truth": {"substances": [sub("B", "above_loq")], "unauthorised": []}}
+    s = score_g4(dose, {"verdict": "GREEN", "levels": {"B": "GREEN"}})
+    assert s["pass"] and s["silent_green"]
+    unknown = {"stratum": "unknown_history", "truth": {"substances": [sub("C", "history_not_in_snapshot")], "unauthorised": []}}
+    assert score_g4(unknown, {"verdict": "CANNOT_VERIFY", "levels": {"C": "CANNOT_VERIFY"}})["pass"]
+    assert not score_g4(unknown, {"verdict": "GREEN", "levels": {"C": "GREEN"}})["pass"]

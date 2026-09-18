@@ -1,0 +1,39 @@
+{
+ "trade_name": "ALLERTE 10%EC",
+ "holder": "AMAROC",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "H07-1-024",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyriproxyfène",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "35cc/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "25cc/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": 3
+  }
+ ],
+ "query": "ALLERTE 10%EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

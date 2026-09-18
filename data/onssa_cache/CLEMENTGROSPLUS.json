@@ -1,0 +1,22 @@
+{
+ "trade_name": "CLEMENTGROS PLUS",
+ "holder": "AMAROC",
+ "supplier": "NUFARM SAS",
+ "registration_no": "F11-9-009",
+ "valid_until": "02/11/2030",
+ "tox_table": "C",
+ "category": "Régulateur de croissance",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Dichlorprop-P",
+   "content": "25 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "CLEMENTGROS PLUS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

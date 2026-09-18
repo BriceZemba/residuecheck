@@ -1,0 +1,32 @@
+{
+ "trade_name": "BLASTOR 18EC",
+ "holder": "PHYTO LOUKKOS",
+ "supplier": "NGC AGROSCIENCES INTL CO., LIMITED",
+ "registration_no": "H01-6-015",
+ "valid_until": "12/03/2036",
+ "tox_table": "A",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Abamectine",
+   "content": "18 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "25cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  }
+ ],
+ "query": "BLASTOR 18EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

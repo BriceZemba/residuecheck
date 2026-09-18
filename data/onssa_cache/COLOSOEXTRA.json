@@ -1,0 +1,41 @@
+{
+ "trade_name": "COLOSO EXTRA",
+ "holder": "SYNGENTA MAROC",
+ "supplier": "SYNGENTA CROP PROTECTION AG",
+ "registration_no": "F11-2-067",
+ "valid_until": "03/07/2032",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -acide",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices annuelles",
+   "dose": "3 l/ha",
+   "pest_stage": "adventices en état poussant",
+   "Période": "bon état de végétation",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices vivaces",
+   "dose": "6 l/ha",
+   "pest_stage": "adventices en état poussant",
+   "Période": "bon état de végétation",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  }
+ ],
+ "query": "COLOSO EXTRA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

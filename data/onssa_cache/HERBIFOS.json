@@ -1,0 +1,22 @@
+{
+ "trade_name": "HERBIFOS",
+ "holder": "PROTECTAGRI",
+ "supplier": "SHANDONG BINNONG TECHNLOGY CO., LTD",
+ "registration_no": "F10-8-005",
+ "valid_until": "23/12/2031",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "HERBIFOS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,32 @@
+{
+ "trade_name": "OKINAWA",
+ "holder": "CPCM",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "H08-1-027",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Spirotetramat",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "0.75 L/ha",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  }
+ ],
+ "query": "OKINAWA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

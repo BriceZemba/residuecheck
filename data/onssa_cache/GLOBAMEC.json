@@ -1,0 +1,83 @@
+{
+ "trade_name": "GLOBAMEC",
+ "holder": "SOPROCHIBA",
+ "supplier": "GLOBACHEM NV",
+ "registration_no": "F09-4-006",
+ "valid_until": "21/06/2027",
+ "tox_table": "A",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Abamectine",
+   "content": "18 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "25 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pastèque",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "GLOBAMEC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

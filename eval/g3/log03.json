@@ -1,0 +1,86 @@
+{
+ "image": "eval/g3/log03.jpg",
+ "synthetic": true,
+ "font": "segoesc.ttf",
+ "defects": [
+  "cursive",
+  "blur",
+  "jpeg"
+ ],
+ "crop": "Agrumes",
+ "crop_code": "0110020",
+ "rows": [
+  {
+   "n": 1,
+   "date": "2026-09-01",
+   "date_as_written": "01/09/26",
+   "product_as_written": "Soproxyde Flo",
+   "product": "SOPROXYDE FLO",
+   "dose": "300 cc/hl",
+   "target": "Gommose à phytophthora",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 2,
+   "date": "2026-09-14",
+   "date_as_written": "14/09/26",
+   "product_as_written": "VAJRA",
+   "product": "VAJRA",
+   "dose": "100cc/ha",
+   "target": "Cératite",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 3,
+   "date": "2026-09-30",
+   "date_as_written": "30/09/26",
+   "product_as_written": "Ovipron Top",
+   "product": "OVIPRON TOP",
+   "dose": "2 l/hl",
+   "target": "Cochenilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 4,
+   "date": "2026-10-14",
+   "date_as_written": "14/10/26",
+   "product_as_written": "Titonic",
+   "product": "TITONIC",
+   "dose": "30 g/hl",
+   "target": "Mineuse des feuilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 5,
+   "date": "2026-10-23",
+   "date_as_written": "23/10/26",
+   "product_as_written": "Cemital",
+   "product": "CEMITAL",
+   "dose": "100 cc/ha",
+   "target": "Cératite",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 6,
+   "date": "2026-10-29",
+   "date_as_written": "29/10/26",
+   "product_as_written": "APOCALYPSE",
+   "product": "APOCALYPSE",
+   "dose": "250 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  }
+ ]
+}

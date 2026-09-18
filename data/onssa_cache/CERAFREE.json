@@ -1,0 +1,34 @@
+{
+ "trade_name": "CERA FREE",
+ "holder": "RUSSELL IPM MAROC",
+ "supplier": "RUSSELL IPM Ltd",
+ "registration_no": "F04-6-004",
+ "valid_until": "23/06/2031",
+ "tox_table": "C",
+ "category": "Attractif",
+ "formulation": "Produit diffuseur de vapeur (VP)",
+ "substances": [
+  {
+   "name_fr": "Ammonium acétate",
+   "content": "20%"
+  },
+  {
+   "name_fr": "Trimetilamine Hydrochloride",
+   "content": "40%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "50 pièges/ha",
+   "mode": "Parties aériennes (piégeage de masse)",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "CERA FREE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

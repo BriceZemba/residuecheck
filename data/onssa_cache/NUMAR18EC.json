@@ -1,0 +1,55 @@
+{
+ "trade_name": "NUMAR 1,8 EC",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "NUFARM SAS",
+ "registration_no": "F01-7-003",
+ "valid_until": "27/02/2027",
+ "tox_table": "A",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Abamectine",
+   "content": "18 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves et adultes",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "larves et adultes",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "larves et adultes",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves et adultes",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "NUMAR 1,8 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

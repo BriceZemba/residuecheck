@@ -1,0 +1,113 @@
+{
+ "trade_name": "TEPPEKI",
+ "holder": "AMAROC",
+ "supplier": "ISHIHARA SANGYO KAISHA",
+ "registration_no": "E11-9-066",
+ "valid_until": "23/12/2031",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Flonicamid",
+   "content": "500 g/kg"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "10 g/hl",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 60
+  },
+  {
+   "crop_fr": "Concombre",
+   "pest_fr": "Pucerons",
+   "dose": "100 g/ha",
+   "max_applications": "3",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Pucerons",
+   "dose": "100 g/ha",
+   "max_applications": "3",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "10 g/hl",
+   "max_applications": "3",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Pucerons",
+   "dose": "14 g/hl",
+   "max_applications": "2",
+   "interval_days": "21",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pastèque",
+   "pest_fr": "Pucerons",
+   "dose": "10 g/hl",
+   "max_applications": "3",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Puceron vert",
+   "dose": "14 g/hl",
+   "max_applications": "2",
+   "interval_days": "21",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Puceron cendré",
+   "dose": "14 g/hl",
+   "max_applications": "2",
+   "interval_days": "21",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Puceron vert",
+   "dose": "14 g/hl",
+   "max_applications": "2",
+   "interval_days": "21",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "160 g/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "TEPPEKI",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,51 @@
+{
+ "trade_name": "EXPERT 5 EC",
+ "holder": "CAPITAL AGRI-SCIENCE",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "F11-2-065",
+ "valid_until": "16/10/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "50 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "100 cc/ha + hydrolysat de protéines (1 rangée/4)",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "150 cc/ha",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Mouche de l'olive",
+   "dose": "20 cc/hl",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Teigne",
+   "dose": "20 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  }
+ ],
+ "query": "EXPERT 5 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,32 @@
+{
+ "trade_name": "BLOUZ",
+ "holder": "CPCM",
+ "supplier": "CPCM",
+ "registration_no": "B06-6-001",
+ "valid_until": "18/01/2034",
+ "tox_table": "N",
+ "category": "Attractif",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Hydrolysat de protéines",
+   "content": "30%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "1 à 1,5 l/ha",
+   "max_applications": "3",
+   "interval_days": "7-15",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "BLOUZ",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

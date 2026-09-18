@@ -1,0 +1,59 @@
+{
+ "trade_name": "ZAYTUP",
+ "holder": "PROMAGRI",
+ "supplier": "UPL LIMITED",
+ "registration_no": "H12-1-013",
+ "valid_until": "21/01/2032",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "770 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "1,5-2 l/hl",
+   "pest_stage": "stades mobiles",
+   "max_applications": "",
+   "mode": "Traitement d'hiver et d'été",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Cochenilles",
+   "dose": "1-1,5 l/hl",
+   "pest_stage": "stades mobiles",
+   "max_applications": "",
+   "mode": "Traitement d'hiver et d'été",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "1l/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1l/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "mode": "",
+   "dar_days": null
+  }
+ ],
+ "query": "ZAYTUP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

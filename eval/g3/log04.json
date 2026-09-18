@@ -1,0 +1,108 @@
+{
+ "image": "eval/g3/log04.jpg",
+ "synthetic": true,
+ "font": "Inkfree.ttf",
+ "defects": [
+  "crossed_out"
+ ],
+ "crop": "Agrumes",
+ "crop_code": "0110020",
+ "rows": [
+  {
+   "n": 1,
+   "date": "2026-09-06",
+   "date_as_written": "06/09/26",
+   "product_as_written": "MEGAPRID",
+   "product": "MEGAPRID",
+   "dose": "35cc/hl",
+   "target": "Cochenilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 2,
+   "date": "2026-09-21",
+   "date_as_written": "21/09/26",
+   "product_as_written": "Eco-Blue 50",
+   "product": "ECO-BLUE 50",
+   "dose": "0,5 kg/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 3,
+   "date": "2026-10-01",
+   "date_as_written": "01/10/26",
+   "product_as_written": "Alfil",
+   "product": "ALFIL",
+   "dose": "250 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": true,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 4,
+   "date": "2026-10-01",
+   "date_as_written": "01/10/26",
+   "product_as_written": "OXYMAR 50 WP",
+   "product": "OXYMAR 50 WP",
+   "dose": "500 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 5,
+   "date": "2026-10-08",
+   "date_as_written": "08/10/26",
+   "product_as_written": "IMIVOR",
+   "product": "IMIVOR",
+   "dose": "50 cc/hl",
+   "target": "Pucerons",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 6,
+   "date": "2026-10-24",
+   "date_as_written": "24/10/26",
+   "product_as_written": "FIRESTAR",
+   "product": "FIRESTAR",
+   "dose": "250 cc/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 7,
+   "date": "2026-11-08",
+   "date_as_written": "08/11/26",
+   "product_as_written": "MOSPILAN 20 SP",
+   "product": "MOSPILAN 20 SP",
+   "dose": "20 g/hl",
+   "target": "Mineuse des feuilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 8,
+   "date": "2026-11-13",
+   "date_as_written": "13/11/26",
+   "product_as_written": "SHARFEN",
+   "product": "SHARFEN",
+   "dose": "40 cc/hl",
+   "target": "Acariens",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  }
+ ]
+}

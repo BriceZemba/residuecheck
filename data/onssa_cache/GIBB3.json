@@ -1,0 +1,39 @@
+{
+ "trade_name": "GIBB3",
+ "holder": "SOPROCHIBA",
+ "supplier": "GLOBACHEM",
+ "registration_no": "E04-6-012",
+ "valid_until": "05/10/2026",
+ "tox_table": "N",
+ "category": "Régulateur de croissance",
+ "formulation": "Tablettes solubles dans l’eau (ST)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Action sur le grossissement des fruits",
+   "dose": "1 tb/hl",
+   "Stade Culture": "pleine floraison",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Action sur le processus de la nouaison",
+   "dose": "1 tb/hl",
+   "Stade Culture": "pleine floraison",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  }
+ ],
+ "query": "GIBB3",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

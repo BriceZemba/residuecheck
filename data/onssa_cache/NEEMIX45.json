@@ -1,0 +1,140 @@
+{
+ "trade_name": "NEEMIX 4,5",
+ "holder": "AGRO SPRAY TECHNIC",
+ "supplier": "CERTIS USA, LLC",
+ "registration_no": "D01-7-003",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Azadirachtine",
+   "content": "45 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "70 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "70 cc/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Noctuelles",
+   "dose": "70 cc/hl",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Pucerons",
+   "dose": "70 cc/hl",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche blanche",
+   "dose": "40 cc/hl",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Noctuelles",
+   "dose": "50 cc/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "70 cc/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Pucerons",
+   "dose": "70 cc/hl",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Thrips",
+   "dose": "100 cc/hl",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "40 cc/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse (Tuta absoluta)",
+   "dose": "40 cc/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "40 cc/hl",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "NEEMIX 4,5",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,45 @@
+{
+ "trade_name": "BRIGHT SC",
+ "holder": "PHYTO BEHT",
+ "supplier": "Joint Stock Company",
+ "registration_no": "F11-8-011",
+ "valid_until": "21/07/2030",
+ "tox_table": "",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Imidaclopride",
+   "content": "150 g/l"
+  },
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "50 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse",
+   "dose": "30 cc/hl",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Maïs",
+   "pest_fr": "Sésamie",
+   "dose": "200 cc/ha",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Ver de la grappe",
+   "dose": "20 cc/hl",
+   "dar_days": 7
+  }
+ ],
+ "query": "BRIGHT SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

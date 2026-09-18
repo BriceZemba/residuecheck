@@ -1,0 +1,114 @@
+{
+ "trade_name": "CONFIDOR 200 OD",
+ "holder": "BAYER SA",
+ "supplier": "BAYER AG",
+ "registration_no": "E12-7-004",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Substance huileuse (OD)",
+ "substances": [
+  {
+   "name_fr": "Imidaclopride",
+   "content": "200 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche blanche",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "0,5 l/ha",
+   "mode": "Traitement du sol (goutte à goutte)",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse (Tuta absoluta)",
+   "dose": "0,75 l/ha",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "50 cc/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "0,75 l/ha",
+   "mode": "Traitement du sol (goutte à goutte)",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pucerons",
+   "dose": "50 cc l/hl",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "CONFIDOR 200 OD",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,31 @@
+{
+ "trade_name": "CORASIL SUPER",
+ "holder": "SIPP",
+ "supplier": "NUFARM SAS",
+ "registration_no": "F04-4-014",
+ "valid_until": "10/07/2028",
+ "tox_table": "C",
+ "category": "Régulateur de croissance",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Dichlorprop-P",
+   "content": "25 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Amélioration du calibre des fruits",
+   "dose": "100 cc/hl",
+   "Période": "début grossissement des fruits (15-18 mm)",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "CORASIL SUPER",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

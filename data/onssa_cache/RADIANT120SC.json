@@ -1,0 +1,232 @@
+{
+ "trade_name": "RADIANT 120 SC",
+ "holder": "PROMAGRI",
+ "supplier": "Corteva Agriscience international Sàrl",
+ "registration_no": "E12-9-037",
+ "valid_until": "21/10/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Spinetoram",
+   "content": "120 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Thrips",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Concombre",
+   "pest_fr": "Thrips",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "0,5l/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Thrips",
+   "dose": "0,5 l/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "0,6 l/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "noctuelles : framboisier",
+   "dose": "0,4 l/ha",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Thrips",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Noctuelles",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Mûrier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "0,6 l/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "0,6 l/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Thrips",
+   "dose": "50 cc/hl",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 10
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Thrips",
+   "dose": "50 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 10
+  },
+  {
+   "crop_fr": "Plantes aromatiques - excepté la menthe -",
+   "pest_fr": "Noctuelles",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Plantes aromatiques - excepté la menthe -",
+   "pest_fr": "Thrips",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Thrips",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse (Tuta absoluta)",
+   "dose": "25 cc/hl",
+   "pest_stage": "larves",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cicadelle",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Thrips",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Ver de la grappe",
+   "dose": "40 cc/hl",
+   "pest_stage": "",
+   "Période": "début d'infestation",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  }
+ ],
+ "query": "RADIANT 120 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

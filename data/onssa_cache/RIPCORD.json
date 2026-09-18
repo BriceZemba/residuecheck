@@ -1,0 +1,39 @@
+{
+ "trade_name": "RIPCORD",
+ "holder": "SHARDA MAROC",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H12-4-016",
+ "valid_until": "11/02/2035",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Fenazaquin",
+   "content": "200 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "75cc/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "dar_days": null
+  }
+ ],
+ "query": "RIPCORD",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

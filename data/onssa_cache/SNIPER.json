@@ -1,0 +1,58 @@
+{
+ "trade_name": "SNIPER",
+ "holder": "CPCM",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H02-0-002",
+ "valid_until": "23/06/2031",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Pyrimicarbe",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "75g/hl",
+   "max_applications": "1",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Pucerons",
+   "dose": "75  g/hl",
+   "max_applications": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "75g/hl",
+   "max_applications": "1",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pucerons",
+   "dose": "75 g/hl",
+   "max_applications": "1",
+   "dar_days": 3
+  }
+ ],
+ "query": "SNIPER",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

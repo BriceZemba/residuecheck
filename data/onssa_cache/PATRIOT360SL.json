@@ -1,0 +1,22 @@
+{
+ "trade_name": "PATRIOT 360 SL",
+ "holder": "CAPITAL AGRI-SCIENCE",
+ "supplier": "BARCLAY CHEMICALS MANUFACTURING LTD",
+ "registration_no": "F10-5-008",
+ "valid_until": "28/12/2026",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [],
+ "query": "PATRIOT 360 SL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

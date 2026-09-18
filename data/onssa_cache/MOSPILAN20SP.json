@@ -1,0 +1,77 @@
+{
+ "trade_name": "MOSPILAN 20 SP",
+ "holder": "CALIMAROC",
+ "supplier": "UPL Limited (Arysta Lifescience S.A.S)",
+ "registration_no": "D03-9-004",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Poudre soluble dans l'eau (SP)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20 g/hl",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 g/hl",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "20 g/hl",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "10 g/hl",
+   "max_applications": "2",
+   "interval_days": "20",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse",
+   "dose": "30 g/hl",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 g/hl",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "MOSPILAN 20 SP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

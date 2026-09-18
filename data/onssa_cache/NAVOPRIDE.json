@@ -1,0 +1,31 @@
+{
+ "trade_name": "NAVOPRIDE",
+ "holder": "UNITED CROPSCIENCE SARL AU",
+ "supplier": "Jiangsu United Agrochemical co., Ltd",
+ "registration_no": "H12-4-028",
+ "valid_until": "11/02/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Pyriproxyfène",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "35cc/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": 30
+  }
+ ],
+ "query": "NAVOPRIDE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

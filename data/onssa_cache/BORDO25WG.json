@@ -1,0 +1,77 @@
+{
+ "trade_name": "BORDO 25 WG",
+ "holder": "PHILEA",
+ "supplier": "QUIMETAL INDUSTRIAL SA",
+ "registration_no": "F11-1-036",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - sulfate tétracuivrique tricalcique",
+   "content": "Cuivre (25 %)-sulfate tétracuivrique trica(86.5%)"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pourriture brune",
+   "dose": "400 g/hl",
+   "Stade Culture": "",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "300 g/hl",
+   "Stade Culture": "",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Cloque du pêcher",
+   "dose": "600 g/hl",
+   "Stade Culture": "",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Moniliose",
+   "dose": "750 g/hl",
+   "Stade Culture": "traitement d'hiver",
+   "Période": "Traitement d’hiver",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "4 kg/ha",
+   "Stade Culture": "",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "500 g/hl",
+   "Stade Culture": "",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  }
+ ],
+ "query": "BORDO 25 WG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,203 @@
+{
+ "trade_name": "OVIPRON TOP",
+ "holder": "CPCM",
+ "supplier": "UPL LIMITED",
+ "registration_no": "H11-3-006",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "800 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Avocatier",
+   "pest_fr": "Acariens",
+   "dose": "2-3 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Avocatier",
+   "pest_fr": "Cochenilles",
+   "dose": "2-3 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Caroubier",
+   "pest_fr": "Acariens",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Caroubier",
+   "pest_fr": "Cochenilles",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Cognassier",
+   "pest_fr": "Cochenilles",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "2 l/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Acariens",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Grenadier",
+   "pest_fr": "Acariens",
+   "dose": "2-3 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Grenadier",
+   "pest_fr": "Cochenilles",
+   "dose": "2-3 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Kaki",
+   "pest_fr": "Cochenilles",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Mûrier (mûre de Ronce)",
+   "pest_fr": "Acariens",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Acariens",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Cochenilles",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Palmier dattier",
+   "pest_fr": "Acariens",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Palmier dattier",
+   "pest_fr": "Cochenilles",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Pistachier",
+   "pest_fr": "Cochenilles",
+   "dose": "1-2 l/hl",
+   "max_applications": "2-4",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Thrips",
+   "dose": "1l/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Traitement d'hiver",
+   "dose": "2.5l/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1 L/hl",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "OVIPRON TOP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

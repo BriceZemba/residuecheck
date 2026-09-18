@@ -1,0 +1,63 @@
+{
+ "trade_name": "ACARITOUCH",
+ "holder": "SOCAPRAG",
+ "supplier": "OAT Agrio Co., Ltd.",
+ "registration_no": "E01-4-001",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Propylène glycol monolaurate",
+   "content": "70%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Aubergine",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  }
+ ],
+ "query": "ACARITOUCH",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

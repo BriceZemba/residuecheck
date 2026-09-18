@@ -1,0 +1,73 @@
+{
+ "trade_name": "SPIDERMITE",
+ "holder": "SHARDA MAROC",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "F12-9-019",
+ "valid_until": "23/07/2031",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Bifenazate",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs, larves & adultes",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "œufs, larves & adultes",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Foliaire",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Rosier",
+   "pest_fr": "Acariens",
+   "dose": "0,4 l/ha",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "-",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "40 cc/hl",
+   "pest_stage": "œufs, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "SPIDERMITE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

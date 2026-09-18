@@ -1,0 +1,32 @@
+{
+ "trade_name": "DIABLO",
+ "holder": "PHILEA",
+ "supplier": "INDUSTRIAS AFRASA, SA",
+ "registration_no": "E11-7-038",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Hexythiazox",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs et larves",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "40 jrs"
+  }
+ ],
+ "query": "DIABLO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

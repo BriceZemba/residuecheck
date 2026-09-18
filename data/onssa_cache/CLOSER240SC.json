@@ -1,0 +1,183 @@
+{
+ "trade_name": "CLOSER  240 SC",
+ "holder": "PROMAGRI",
+ "supplier": "Corteva Agriscience international Sàrl",
+ "registration_no": "F04-3-001",
+ "valid_until": "23/12/2029",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Sulfoxaflor",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "20cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "125 cc/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Avocatier",
+   "pest_fr": "Cicadelle",
+   "dose": "0,4 l/ha",
+   "Période": "Après fin floraison –début nouaison",
+   "max_applications": "3",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Concombre (sous serre)",
+   "pest_fr": "Mouche blanche",
+   "dose": "250 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Concombre (sous serre)",
+   "pest_fr": "Pucerons",
+   "dose": "125 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "",
+   "interval_days": "3",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette (sous serre)",
+   "pest_fr": "Mouche blanche",
+   "dose": "250 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette (sous serre)",
+   "pest_fr": "Pucerons",
+   "dose": "125 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pucerons",
+   "dose": "125 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert (sous serre)",
+   "pest_fr": "Mouche blanche",
+   "dose": "250 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Melon (sous serre)",
+   "pest_fr": "Mouche blanche",
+   "dose": "250 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Pucerons",
+   "dose": "125 cc/ha",
+   "Période": "début d'infestation",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Poivron (sous serre)",
+   "pest_fr": "Mouche blanche",
+   "dose": "250 cc/ha",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron (sous serre)",
+   "pest_fr": "Pucerons",
+   "dose": "125 cc/ha",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate (sous serre)",
+   "pest_fr": "Mouche blanche",
+   "dose": "250 cc/ha",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate (sous serre)",
+   "pest_fr": "Pucerons",
+   "dose": "125 cc/ha",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cochenilles",
+   "dose": "400 cc/ha",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  }
+ ],
+ "query": "CLOSER  240 SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

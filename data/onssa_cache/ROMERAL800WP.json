@@ -1,0 +1,32 @@
+{
+ "trade_name": "ROMERAL 800 WP",
+ "holder": "CAPITAL AGRI-SCIENCE",
+ "supplier": "QEMETICA AGRICULTURAL SOLUTIONS SPAIN SLU",
+ "registration_no": "F02-9-016",
+ "valid_until": "23/12/2031",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Fosétyl-Aluminium",
+   "content": "80%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pourriture brune",
+   "dose": "250 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  }
+ ],
+ "query": "ROMERAL 800 WP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

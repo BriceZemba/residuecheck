@@ -1,0 +1,111 @@
+{
+ "trade_name": "STARCOB 50WP",
+ "holder": "SDIPA",
+ "supplier": "SHYAM CHEMICALS PVT LTD",
+ "registration_no": "H10-1-038",
+ "valid_until": "23/05/2034",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Cuivre - oxychlorure de cuivre",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pourriture brune",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Cloque du pêcher",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Moniliose",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Tavelure",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Oeil de paon",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Alternariose",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Pomme de terre",
+   "pest_fr": "Mildiou",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Alternariose",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Bactérioses",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mildiou",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Mildiou",
+   "dose": "500 g/hl",
+   "Période": "conditions favorables à l'apparition de la maladie",
+   "mode": "Parties aériennes",
+   "dar_days": "15 j"
+  }
+ ],
+ "query": "STARCOB 50WP",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

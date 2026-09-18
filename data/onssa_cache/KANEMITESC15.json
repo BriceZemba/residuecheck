@@ -1,0 +1,144 @@
+{
+ "trade_name": "KANEMITE SC 15%",
+ "holder": "SIPP",
+ "supplier": "AGRO KANESHO CO,. LTD",
+ "registration_no": "E04-4-002",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Acequinocyl",
+   "content": "15%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Aubergine",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Acariens",
+   "dose": "1,2 l/ha",
+   "pest_stage": "",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "2",
+   "interval_days": "10-14",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "1,2 l/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "1,2 l/ha",
+   "pest_stage": "",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Acariens",
+   "dose": "150 cc/hl",
+   "pest_stage": "œufs, larves et adultes",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Pastèque",
+   "pest_fr": "Acariens",
+   "dose": "1,2 l/ha",
+   "pest_stage": "",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "2",
+   "interval_days": "10-14",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Acariens",
+   "dose": "1 l/ha",
+   "pest_stage": "",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "2",
+   "interval_days": "10-14",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "150 cc/hl",
+   "pest_stage": "œufs, larves et adultes",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Acariens",
+   "dose": "120 cc/hl",
+   "pest_stage": "",
+   "Période": "dés l’apparition des premières formes mobiles",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 14
+  }
+ ],
+ "query": "KANEMITE SC 15%",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

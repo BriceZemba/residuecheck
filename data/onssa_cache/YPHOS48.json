@@ -1,0 +1,31 @@
+{
+ "trade_name": "YPHOS 48",
+ "holder": "AGRICHIMIE",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "F08-8-002",
+ "valid_until": "05/05/2030",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "480g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones et Graminées annuelles",
+   "dose": "2l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "dar_days": "28 jours"
+  }
+ ],
+ "query": "YPHOS 48",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

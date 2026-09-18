@@ -1,0 +1,31 @@
+{
+ "trade_name": "KEYFOL WG",
+ "holder": "PHYTO BEHT",
+ "supplier": "INDUSTRIAL QUIMICA KEY (IQK)",
+ "registration_no": "F04-9-010",
+ "valid_until": "01/04/2036",
+ "tox_table": "C",
+ "category": "Fongicide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Fosétyl-Aluminium",
+   "content": "80%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Gommose à phytophthora",
+   "dose": "250 g/hl",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  }
+ ],
+ "query": "KEYFOL WG",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

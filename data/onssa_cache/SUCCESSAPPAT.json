@@ -1,0 +1,41 @@
+{
+ "trade_name": "SUCCESS APPAT",
+ "holder": "PROMAGRI",
+ "supplier": "Corteva Agriscience international Sàrl",
+ "registration_no": "E07-2-007",
+ "valid_until": "03/07/2032",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Appât prêt à l'emploi (RB)",
+ "substances": [
+  {
+   "name_fr": "Spinosade",
+   "content": "0,24 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "1 l/ha",
+   "pest_stage": "larves et adultes",
+   "max_applications": "",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Mouche de l'olive",
+   "dose": "1 l/ha",
+   "pest_stage": "",
+   "max_applications": "4",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  }
+ ],
+ "query": "SUCCESS APPAT",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

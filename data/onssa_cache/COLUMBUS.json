@@ -1,0 +1,33 @@
+{
+ "trade_name": "COLUMBUS",
+ "holder": "GREENWOOD PHYTO INN",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H05-3-010",
+ "valid_until": "20/05/2035",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé soluble dans l'eau (SG)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20 g/hl",
+   "Période": "pendant la période active",
+   "max_applications": "2",
+   "interval_days": "30",
+   "mode": "Parties aériennes",
+   "dar_days": 30
+  }
+ ],
+ "query": "COLUMBUS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

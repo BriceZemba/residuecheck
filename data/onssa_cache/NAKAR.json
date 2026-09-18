@@ -1,0 +1,41 @@
+{
+ "trade_name": "NAKAR",
+ "holder": "AGRO SPRAY TECHNIC",
+ "supplier": "SEIPASA",
+ "registration_no": "F12-3-001",
+ "valid_until": "07/05/2029",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Sels de potassium d'acide gras (C7-C18)",
+   "content": "50%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles (pou de Californie)",
+   "dose": "300 cc/hl",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "300 cc/hl",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "NAKAR",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

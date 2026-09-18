@@ -1,0 +1,87 @@
+{
+ "trade_name": "NISSORUN",
+ "holder": "UNIVERS HORTICOLE",
+ "supplier": "NISSO CHEMICAL EUROPE GMBH",
+ "registration_no": "B01-7-009",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Hexythiazox",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs et larves",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Arbres fruitiers",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs et larves",
+   "mode": "Parties aériennes",
+   "dar_days": 40
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Acariens",
+   "dose": "0,5 kg/ha",
+   "pest_stage": "œufs et larves",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "0,5 kg/ha",
+   "pest_stage": "œufs et larves",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Acariens",
+   "dose": "0,5 kg/ha",
+   "pest_stage": "œufs et larves",
+   "mode": "Parties aériennes",
+   "dar_days": 15
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs et larves",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs et larves",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs et larves",
+   "mode": "Parties aériennes",
+   "dar_days": 40
+  }
+ ],
+ "query": "NISSORUN",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

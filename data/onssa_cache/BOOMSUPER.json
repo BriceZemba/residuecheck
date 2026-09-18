@@ -1,0 +1,73 @@
+{
+ "trade_name": "BOOM SUPER",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "DVA AGRO",
+ "registration_no": "F01-3-001",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "3 l/ha",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Désherbage",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones vivaces",
+   "dose": "6 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "3 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Désherbage",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées vivaces",
+   "dose": "6 l/ha",
+   "pest_stage": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": null
+  },
+  {
+   "crop_fr": "Fève",
+   "pest_fr": "Orobanche",
+   "dose": "167 cc/ha",
+   "pest_stage": "",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "",
+   "dar_days": null
+  }
+ ],
+ "query": "BOOM SUPER",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

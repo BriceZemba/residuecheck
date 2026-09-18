@@ -1,0 +1,32 @@
+{
+ "trade_name": "CORASIL ULTRA",
+ "holder": "ALFACHIMIE",
+ "supplier": "NUFARM SAS",
+ "registration_no": "F06-5-004",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Herbicide-Régulateur de croissance",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Dichlorprop-P",
+   "content": "25 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Amélioration du calibre des fruits",
+   "dose": "100 cc/hl",
+   "Période": "début grossissement des fruits",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "CORASIL ULTRA",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

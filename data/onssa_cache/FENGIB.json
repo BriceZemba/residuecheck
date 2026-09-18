@@ -1,0 +1,71 @@
+{
+ "trade_name": "FENGIB",
+ "holder": "ALFACHIMIE",
+ "supplier": "SIPCAM INAGRA",
+ "registration_no": "B10-8-008",
+ "valid_until": "23/05/2034",
+ "tox_table": "C",
+ "category": "Régulateur de croissance",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Acide gibbérellique",
+   "content": "0,5%"
+  },
+  {
+   "name_fr": "Phenothiol",
+   "content": "1%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Action sur le processus de floraison",
+   "dose": "75 cc/hl",
+   "Stade Culture": "45% de chute des pétales",
+   "Période": "chute des pétales",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes: Maroc late",
+   "pest_fr": "Action sur le grossissement du calibre",
+   "dose": "100 cc/hl",
+   "Stade Culture": "40-100% de chute des pétales",
+   "Période": "chute des dernières pétales",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Action sur le grossissement du calibre",
+   "dose": "60 cc/hl",
+   "Stade Culture": "bouton vert",
+   "Période": "stade bouton vert",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 5
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Action sur l'homogénéité du calibre",
+   "dose": "60 cc/hl",
+   "Stade Culture": "bouton vert",
+   "Période": "stade bouton vert",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 5
+  }
+ ],
+ "query": "FENGIB",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

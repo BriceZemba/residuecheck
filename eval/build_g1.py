@@ -45,6 +45,7 @@ INVENTED_NAMES = ["Fluvaprotin", "Tetraconazamid", "Pyrozanil", "Chlorbenfurone"
 OUT_DEV = ROOT / "eval" / "gold" / "g1_dev.jsonl"
 OUT_HELDOUT = ROOT / "eval" / "heldout" / "g1_heldout.jsonl"
 OUT_MANIFEST = ROOT / "eval" / "gold" / "g1_manifest.json"
+POOL_FILE = ROOT / "eval" / "gold" / "g1_pool_substances.json"
 
 
 def clean_product_name(name):
@@ -76,14 +77,35 @@ def relevant_substance_ids(eu):
     return ids
 
 
+def frozen_join(eu):
+    """Substance -> residue id for substances with a single linked residue, and how many substances share each
+    residue. Frozen to a file on first build: later improvements to the substance-to-residue join (e.g. the
+    base-name join of 2026-09-16) must not reshuffle the dev/held-out split or the question wording."""
+    if POOL_FILE.exists():
+        data = json.loads(POOL_FILE.read_text(encoding="utf-8"))
+        return ({int(k): v for k, v in data["single_residue"].items()},
+                {int(k): v for k, v in data["residue_owners"].items()})
+    single, owners = {}, {}
+    for sub in eu.substances:
+        rids = eu.residue_ids(sub)
+        if len(rids) == 1:
+            single[sub["substance_id"]] = rids[0]
+        for rid in rids:
+            owners[rid] = owners.get(rid, 0) + 1
+    POOL_FILE.write_text(json.dumps({"frozen": "2026-09-16", "single_residue": {str(k): single[k] for k in sorted(single)},
+                                     "residue_owners": {str(k): owners[k] for k in sorted(owners)}}, indent=0) + "\n",
+                         encoding="utf-8", newline="\n")
+    return single, owners
+
+
 def candidates(eu):
     """Every (substance, residue, crop) with a single linked residue, grouped by stratum."""
     pools = {k: [] for k in TARGETS if k != "unknown"}
+    single, _ = frozen_join(eu)
     for sub in eu.substances:
-        rids = eu.residue_ids(sub)
-        if len(rids) != 1:
+        rid = single.get(sub["substance_id"])
+        if rid is None:
             continue
-        rid = rids[0]
         for crop in sorted(eu.crops):
             versions = eu.mrl_versions(rid, crop)
             if not versions:
@@ -187,10 +209,7 @@ def main():
     rng = random.Random(SEED)
     relevant = relevant_substance_ids(eu)
     pools = candidates(eu)
-    residue_owners = {}
-    for sub in eu.substances:
-        for rid in eu.residue_ids(sub):
-            residue_owners[rid] = residue_owners.get(rid, 0) + 1
+    _, residue_owners = frozen_join(eu)
     per_substance, cases = {}, []
     for stratum, n in TARGETS.items():
         if stratum == "unknown":

@@ -1,0 +1,31 @@
+{
+ "trade_name": "MOTOMOR",
+ "holder": "AGRIPHARMA",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H11-2-017",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Granulé soluble dans l'eau (SG)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse",
+   "dose": "20 g/hl",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": 30
+  }
+ ],
+ "query": "MOTOMOR",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

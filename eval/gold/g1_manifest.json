@@ -7,7 +7,7 @@
  "heldout": 37,
  "strata": {
   "changed": {
-   "available": 450,
+   "available": 452,
    "target": 40,
    "dev": 28,
    "heldout": 12
@@ -19,19 +19,19 @@
    "heldout": 3
   },
   "loq_stable": {
-   "available": 11518,
+   "available": 11421,
    "target": 25,
    "dev": 17,
    "heldout": 8
   },
   "numeric_stable": {
-   "available": 1509,
+   "available": 1478,
    "target": 30,
    "dev": 21,
    "heldout": 9
   },
   "no_mrl_required": {
-   "available": 5184,
+   "available": 6112,
    "target": 5,
    "dev": 3,
    "heldout": 2
@@ -44,13 +44,13 @@
   }
  },
  "verdicts": {
-  "RED": 64,
-  "GREEN": 20,
-  "AMBER": 26,
+  "RED": 67,
+  "GREEN": 25,
+  "AMBER": 18,
   "CANNOT_VERIFY": 10
  },
  "relevant_substance_cases": 67,
- "distinct_substances": 74,
- "distinct_crops": 32,
+ "distinct_substances": 69,
+ "distinct_crops": 31,
  "verdict_source": "residuecheck.rules v0 on a label-compliant application (registered, DAR met), arrival on the question date"
 }

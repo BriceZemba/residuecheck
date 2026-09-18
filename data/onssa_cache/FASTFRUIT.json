@@ -1,0 +1,31 @@
+{
+ "trade_name": "FAST FRUIT",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "CHEMINOVA AGRO S.A",
+ "registration_no": "F07-7-028",
+ "valid_until": "19/05/2035",
+ "tox_table": "C",
+ "category": "Régulateur de croissance",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "2,4-D",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Fixation des fruits",
+   "dose": "150 cc/ha",
+   "Stade Culture": "Début coloration des fruits",
+   "max_applications": "1",
+   "dar_days": 30
+  }
+ ],
+ "query": "FAST FRUIT",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

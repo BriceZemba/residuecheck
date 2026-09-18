@@ -1,0 +1,63 @@
+{
+ "trade_name": "MIMIC 2F",
+ "holder": "UNIVERS HORTICOLE",
+ "supplier": "NISSO CHEMICAL EUROPE GMBH",
+ "registration_no": "F10-3-006",
+ "valid_until": "23/06/2031",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Tebufenozide",
+   "content": "240 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Noctuelles",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "10 à 14 j",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Carpocapse",
+   "dose": "60 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "10 à 14j",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse (Tuta absoluta)",
+   "dose": "75 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "MIMIC 2F",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

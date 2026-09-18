@@ -1,0 +1,63 @@
+{
+ "trade_name": "LASER PLUS",
+ "holder": "PHILEA",
+ "supplier": "INDUSTRIAS AFRASA, S.A",
+ "registration_no": "F03-0-005",
+ "valid_until": "23/12/2029",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate -sel d'isopropylamine",
+   "content": "200 g/l"
+  },
+  {
+   "name_fr": "Oxyfluorfène",
+   "content": "30 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "6 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées",
+   "dose": "6 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Adventices Dicotylédones",
+   "dose": "6 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Adventices Graminées",
+   "dose": "6 l/ha",
+   "Période": "bon état de végétation des adventices",
+   "max_applications": "1",
+   "mode": "Désherbage",
+   "dar_days": 21
+  }
+ ],
+ "query": "LASER PLUS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

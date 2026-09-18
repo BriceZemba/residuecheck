@@ -1,0 +1,47 @@
+{
+ "trade_name": "DECIMUS",
+ "holder": "CPCM",
+ "supplier": "NANJING AGROCHEMICAL CO.; LTD",
+ "registration_no": "H10-2-001",
+ "valid_until": "23/05/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Poudre soluble dans l'eau (SP)",
+ "substances": [
+  {
+   "name_fr": "Acétamipride",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "20 g/hl",
+   "max_applications": "02",
+   "interval_days": "30",
+   "dar_days": 30
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "10 g/hl",
+   "max_applications": "02",
+   "interval_days": "20",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "30 g/hl",
+   "max_applications": "02",
+   "interval_days": "",
+   "dar_days": 14
+  }
+ ],
+ "query": "DECIMUS",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

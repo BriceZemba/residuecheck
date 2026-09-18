@@ -1,0 +1,43 @@
+{
+ "trade_name": "CERATIPACK",
+ "holder": "COMPTOIR AGRICOLE DU SOUSS",
+ "supplier": "SEDQ HEALTHY CROPS, S.L.",
+ "registration_no": "F09-6-003",
+ "valid_until": "07/10/2031",
+ "tox_table": "C",
+ "category": "Attractif",
+ "formulation": "Produit diffuseur de vapeur (VP)",
+ "substances": [
+  {
+   "name_fr": "1,5-Diaminopentane",
+   "content": "0,03 g/diffuseur"
+  },
+  {
+   "name_fr": "Ammonium acétate",
+   "content": "7,8 g/diffuseur"
+  },
+  {
+   "name_fr": "Deltaméthrine",
+   "content": "0,015 g/diffuseur"
+  },
+  {
+   "name_fr": "Trimetilamine Hydrochloride",
+   "content": "0,5 g/diffuseur"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "50-80 pièges/ha",
+   "Période": "40 à 50 jours avant la récolte",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "CERATIPACK",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

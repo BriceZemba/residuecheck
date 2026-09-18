@@ -1,0 +1,63 @@
+{
+ "trade_name": "POLYSECT",
+ "holder": "SIPP",
+ "supplier": "TotalEnergies Fluides",
+ "registration_no": "H05-5-016",
+ "valid_until": "23/09/2035",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "97%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2 l/hl",
+   "pest_stage": "œufs d'hiver",
+   "mode": "Traitement d'hiver et d'été",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Arbres forestiers",
+   "pest_fr": "Adjuvant -insecticides",
+   "dose": "1 l/ha",
+   "pest_stage": "",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "1,5 l/hl",
+   "pest_stage": "stades hivernants",
+   "mode": "Parties aériennes",
+   "dar_days": "NR"
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "0,75 l/hl",
+   "pest_stage": "",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "0,75 l/hl",
+   "pest_stage": "",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  }
+ ],
+ "query": "POLYSECT",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

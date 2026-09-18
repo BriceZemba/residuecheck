@@ -2,7 +2,7 @@
 
 EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web
 
-Run 2026-09-14T20:04:35, code 2516f7f-dirty, 42 cases, 0.2 s, cost $0.0000.
+Run 2026-09-16T22:32:18, code 7d51520-dirty, 42 cases, 0.3 s, cost $0.0000.
 
 | Metric | Value |
 |---|---|
@@ -14,6 +14,7 @@ Run 2026-09-14T20:04:35, code 2516f7f-dirty, 42 cases, 0.2 s, cost $0.0000.
 | registration_accuracy | 28/28 (100%) |
 | dar_accuracy | 28/28 (100%) |
 | fake_accepted | 0 |
+| right_first_suggestion | 7/7 (100%) |
 
 | Stratum | Pass |
 |---|---|

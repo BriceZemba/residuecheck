@@ -1,0 +1,143 @@
+{
+ "trade_name": "MILBEKNOCK 1% EC",
+ "holder": "AGRIMATCO",
+ "supplier": "MITSUI CHEMICALS CROP & LIFE SOLUTIONS, INC",
+ "registration_no": "E12-7-009",
+ "valid_until": "27/09/2027",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Milbémectine",
+   "content": "1%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "75 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "50 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Avocatier",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Acariens",
+   "dose": "75 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pastèque",
+   "pest_fr": "Acariens",
+   "dose": "100 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Acariens",
+   "dose": "75 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Acariens",
+   "dose": "75 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "75 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "75 cc/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "MILBEKNOCK 1% EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

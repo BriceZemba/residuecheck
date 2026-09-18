@@ -1,0 +1,123 @@
+{
+ "trade_name": "OVIPHYT",
+ "holder": "AMAROC",
+ "supplier": "COMPTOIR COMMERCIAL DES LUBRIFIANTS",
+ "registration_no": "E01-3-002",
+ "valid_until": "17/10/2033",
+ "tox_table": "C",
+ "category": "Insecticide-Acaricide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile de vaseline",
+   "content": "817 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "2 l/hl",
+   "pest_stage": "formes de conservation des acariens",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Traitement d'hiver",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cochenilles",
+   "dose": "2 l/hl",
+   "pest_stage": "formes de conservation des cochenilles",
+   "max_applications": "2",
+   "interval_days": "14",
+   "mode": "Traitement d'hiver",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Cognassier",
+   "pest_fr": "Cochenilles (pou de San José)",
+   "dose": "2 l/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Mouche blanche",
+   "dose": "1l/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Figuier de barbarie",
+   "pest_fr": "Cochenilles à carmin",
+   "dose": "2 l/hl",
+   "pest_stage": "formes de conservation des cochenilles",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Palmier dattier",
+   "pest_fr": "Cochenille Blanche",
+   "dose": "2 l/hl",
+   "pest_stage": "formes de conservation des cochenilles",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Traitement d'hiver",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "1 l/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "2 l/hl",
+   "pest_stage": "formes de conservation des acariens",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Traitement d'hiver",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Cochenilles",
+   "dose": "2 l/hl",
+   "pest_stage": "formes de conservation des cochenilles",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Traitement d'hiver",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "1 l/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "OVIPHYT",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

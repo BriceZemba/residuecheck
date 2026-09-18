@@ -1,0 +1,56 @@
+{
+ "trade_name": "CLINIC PRO",
+ "holder": "AMAROC",
+ "supplier": "NUFARM SAS",
+ "registration_no": "F09-8-013",
+ "valid_until": "21/07/2030",
+ "tox_table": "C",
+ "category": "Herbicide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Glyphosate",
+   "content": "360 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Dicotylédones annuelles",
+   "dose": "3 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": "28 jours"
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Adventices Graminées annuelles",
+   "dose": "3 l/ha",
+   "Stade Culture": "",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": "28 jours"
+  },
+  {
+   "crop_fr": "Fève",
+   "pest_fr": "Orobanche",
+   "dose": "167 cc/ha",
+   "Stade Culture": "début floraison",
+   "pest_stage": "Début de germination de l'orobanche",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "Désherbage",
+   "dar_days": "NR"
+  }
+ ],
+ "query": "CLINIC PRO",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

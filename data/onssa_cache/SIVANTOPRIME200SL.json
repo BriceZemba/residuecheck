@@ -1,0 +1,122 @@
+{
+ "trade_name": "SIVANTO PRIME 200 SL",
+ "holder": "BAYER SA",
+ "supplier": "BAYER AG",
+ "registration_no": "F05-7-001",
+ "valid_until": "23/05/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré soluble (SL)",
+ "substances": [
+  {
+   "name_fr": "Flupyradifurone",
+   "content": "200 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Pucerons",
+   "dose": "0.75 l/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pucerons",
+   "dose": "0.625 l/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Foliaire",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Mouche blanche",
+   "dose": "0,5-0,75 l/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Pucerons",
+   "dose": "0,5-0,75 l/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Pucerons",
+   "dose": "0,3 l/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Mouche de l'olive",
+   "dose": "0,75 l/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Mouche blanche",
+   "dose": "0,56 l/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "0,7l/ha",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouches blanches",
+   "dose": "0,5l/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Pucerons",
+   "dose": "0,56 l/ha",
+   "max_applications": "2",
+   "interval_days": "10",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cicadelle",
+   "dose": "0,25 l/ha",
+   "max_applications": "1",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  }
+ ],
+ "query": "SIVANTO PRIME 200 SL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

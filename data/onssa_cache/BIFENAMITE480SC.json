@@ -1,0 +1,103 @@
+{
+ "trade_name": "BIFENAMITE 480SC",
+ "holder": "AMAROC",
+ "supplier": "Albaugh Europe",
+ "registration_no": "H07-1-019",
+ "valid_until": "20/01/2035",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Suspension concentrée (SC)",
+ "substances": [
+  {
+   "name_fr": "Bifenazate",
+   "content": "480 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Acariens",
+   "dose": "25 cc/hl",
+   "pest_stage": "",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "50 cc/hl",
+   "pest_stage": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 28
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "20 cc/hl",
+   "pest_stage": "œufs , larves et adultes",
+   "max_applications": "2",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "BIFENAMITE 480SC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

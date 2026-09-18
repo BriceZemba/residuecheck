@@ -1,0 +1,373 @@
+{
+ "trade_name": "EXIREL TM",
+ "holder": "AMAROC",
+ "supplier": "FMC IP Technology LLC Vernier Branch",
+ "registration_no": "F06-2-012",
+ "valid_until": "21/06/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Suspension-émulsion (SE)",
+ "substances": [
+  {
+   "name_fr": "Cyantraniliprole",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "100 cc/ha + Hydrolysat de protéine",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Mineuse des feuilles",
+   "dose": "40 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Thrips",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Chou de Bruxelles",
+   "pest_fr": "Noctuelles",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Cognassier",
+   "pest_fr": "Carpocapse",
+   "dose": "40 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Cognassier",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Concombre",
+   "pest_fr": "Mouche blanche",
+   "dose": "60 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Concombre",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Mouche blanche",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "75 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Thrips",
+   "dose": "75 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "90 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 1
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche blanche",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Mouche mineuse",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Thrips",
+   "dose": "75 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Mûrier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "90 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Cécidomyie",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Drosophila suzukii",
+   "dose": "75 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Oignon de printemps",
+   "pest_fr": "Thrips",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Mouche de l'olive",
+   "dose": "75 cc/ha + Hydrolysat de protéine",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Teigne",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Carpocapse",
+   "dose": "40 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Carpocapse",
+   "dose": "40 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mineuse (Tuta absoluta)",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "60 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cicadelle",
+   "dose": "75 cc/hl",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "-",
+   "mode": "Parties aériennes",
+   "dar_days": 10
+  }
+ ],
+ "query": "EXIREL TM",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

@@ -1,0 +1,41 @@
+{
+ "trade_name": "MAGNET MED",
+ "holder": "UNIVERS HORTICOLE",
+ "supplier": "SUTERRA EUROPE BIOCONTROL SL",
+ "registration_no": "F04-4-001",
+ "valid_until": "25/09/2028",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Produit diffuseur de vapeur (VP)",
+ "substances": [
+  {
+   "name_fr": "1,4-Diaminobutane",
+   "content": "0,1%"
+  },
+  {
+   "name_fr": "Ammonium acétate",
+   "content": "14,81%"
+  },
+  {
+   "name_fr": "Deltaméthrine",
+   "content": "0,03%"
+  },
+  {
+   "name_fr": "Trimetilamine Hydrochloride",
+   "content": "6,28%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "50 pièges/ha",
+   "dar_days": "-"
+  }
+ ],
+ "query": "MAGNET MED",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

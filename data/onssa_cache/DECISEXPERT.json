@@ -1,0 +1,193 @@
+{
+ "trade_name": "DECIS EXPERT",
+ "holder": "BAYER SA",
+ "supplier": "BAYER AG",
+ "registration_no": "E01-3-001",
+ "valid_until": "03/07/2032",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Deltaméthrine",
+   "content": "100 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Abricotier",
+   "pest_fr": "Pucerons",
+   "dose": "7,5 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "50 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "75 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Caprier",
+   "pest_fr": "Punaise du câprier",
+   "dose": "0,125 l/ha",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Noctuelles",
+   "dose": "10 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Pucerons",
+   "dose": "10 cc/hl",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Épinard",
+   "pest_fr": "Noctuelles",
+   "dose": "75 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Noctuelles",
+   "dose": "100 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Laitue",
+   "pest_fr": "Noctuelles",
+   "dose": "75 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Melon",
+   "pest_fr": "Pucerons",
+   "dose": "10 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Menthe",
+   "pest_fr": "Pucerons",
+   "dose": "0,125 l/ha",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "7",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Nectarinier",
+   "pest_fr": "Pucerons",
+   "dose": "7,5 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Teigne",
+   "dose": "12,5 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pêcher",
+   "pest_fr": "Pucerons",
+   "dose": "7,5 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Carpocapse",
+   "dose": "7,5 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Mouche blanche",
+   "dose": "10 cc/hl",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "100 cc/ha",
+   "Période": "",
+   "max_applications": "",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "DECIS EXPERT",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

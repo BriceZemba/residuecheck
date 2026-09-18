@@ -1,0 +1,113 @@
+{
+ "trade_name": "MASAMITE",
+ "holder": "MARBAR-CHIMIE",
+ "supplier": "CERTIS BELCHIM N.V",
+ "registration_no": "D01-7-002",
+ "valid_until": "27/12/2027",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Poudre mouillable (WP)",
+ "substances": [
+  {
+   "name_fr": "Tébufenpyrad",
+   "content": "20%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Acariens",
+   "dose": "25 g/hl",
+   "pest_stage": "",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "larves et adultes",
+   "Période": "",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Fraisier",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "larves et adultes",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Framboisier",
+   "pest_fr": "Acariens",
+   "dose": "375 g/ha",
+   "pest_stage": "",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Myrtillier",
+   "pest_fr": "Acariens",
+   "dose": "500 g/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Poirier",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Poivron",
+   "pest_fr": "Acariens",
+   "dose": "50g/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "",
+   "mode": "",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Acariens",
+   "dose": "50 g/hl",
+   "pest_stage": "œufs d'été, larves et adultes",
+   "Période": "dès l'apparition des premiers foyers",
+   "max_applications": "1",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "MASAMITE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

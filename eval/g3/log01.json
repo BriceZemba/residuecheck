@@ -1,0 +1,82 @@
+{
+ "image": "eval/g3/log01.jpg",
+ "synthetic": true,
+ "font": "Inkfree.ttf",
+ "defects": [],
+ "crop": "Agrumes",
+ "crop_code": "0110020",
+ "rows": [
+  {
+   "n": 1,
+   "date": "2026-09-06",
+   "date_as_written": "06/09/26",
+   "product_as_written": "OVIPRON TOP",
+   "product": "OVIPRON TOP",
+   "dose": "2 l/hl",
+   "target": "Cochenilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 2,
+   "date": "2026-09-16",
+   "date_as_written": "16/09/26",
+   "product_as_written": "AQUAFIN",
+   "product": "AQUAFIN",
+   "dose": "200 cc/hl",
+   "target": "Cératite",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 3,
+   "date": "2026-09-29",
+   "date_as_written": "29/09/26",
+   "product_as_written": "Sergomil L-60",
+   "product": "SERGOMIL L-60",
+   "dose": "300 cc/hl",
+   "target": "Gommose à phytophthora",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 4,
+   "date": "2026-10-05",
+   "date_as_written": "05/10/26",
+   "product_as_written": "FIRESTAR",
+   "product": "FIRESTAR",
+   "dose": "250 cc/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 5,
+   "date": "2026-10-18",
+   "date_as_written": "18/10/26",
+   "product_as_written": "Blastor 18Ec",
+   "product": "BLASTOR 18EC",
+   "dose": "25cc/hl",
+   "target": "Mineuse des feuilles",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  },
+  {
+   "n": 6,
+   "date": "2026-10-28",
+   "date_as_written": "28/10/26",
+   "product_as_written": "ROMERAL 800 WP",
+   "product": "ROMERAL 800 WP",
+   "dose": "250 g/hl",
+   "target": "Pourriture brune",
+   "crossed_out": false,
+   "unreadable": [],
+   "hidden": {}
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "trade_name": "MAXIM GOLD",
+ "holder": "SAOAS",
+ "supplier": "UPL LIMITED",
+ "registration_no": "F06-1-051",
+ "valid_until": "22/12/2031",
+ "tox_table": "C",
+ "category": "Régulateur de croissance",
+ "formulation": "Tablette (TB)",
+ "substances": [
+  {
+   "name_fr": "Triclopyr",
+   "content": "10%"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes: Clémentinier",
+   "pest_fr": "Amélioration du calibre des fruits",
+   "dose": "1,5 pastilles/hl",
+   "Stade Culture": "85% des fruits ont un diamétre>20 mm",
+   "Période": "grossissement des fruits",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  }
+ ],
+ "query": "MAXIM GOLD",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

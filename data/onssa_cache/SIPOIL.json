@@ -1,0 +1,50 @@
+{
+ "trade_name": "SIP-OIL",
+ "holder": "SIPCAM INAGRA MAROC",
+ "supplier": "SIPCAM INAGRA SA",
+ "registration_no": "H05-1-015",
+ "valid_until": "21/10/2034",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Huile minérale paraffinique",
+   "content": "830 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Formes hivernantes des ravageurs",
+   "dose": "1.5 L/hl",
+   "Période": "Traitement d’hiver",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Formes hivernantes des ravageurs",
+   "dose": "1.5 L/hl",
+   "Période": "",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Formes hivernantes des ravageurs",
+   "dose": "1.5 l/hl",
+   "Période": "",
+   "max_applications": "1",
+   "mode": "Foliaire",
+   "dar_days": "Non requis"
+  }
+ ],
+ "query": "SIP-OIL",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

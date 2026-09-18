@@ -3,9 +3,9 @@
  "config": "rules-only",
  "split": "dev",
  "description": "EU snapshot + ONSSA cache + crop map + rules engine; exact-name lookups only; no model, no web",
- "run_at": "2026-09-16T21:30:03",
- "code_version": "7c2bf8c-dirty",
- "seconds": 0.1259784698486328,
+ "run_at": "2026-09-16T22:32:20",
+ "code_version": "7d51520-dirty",
+ "seconds": 0.34618282318115234,
  "cost_usd": 0,
  "metrics": {
   "pass": {

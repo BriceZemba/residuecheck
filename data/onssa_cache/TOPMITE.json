@@ -1,0 +1,22 @@
+{
+ "trade_name": "TOPMITE",
+ "holder": "OMAGRIM",
+ "supplier": "SHARDA CROPCHEM LIMITED",
+ "registration_no": "H04-1-011",
+ "valid_until": "29/07/2031",
+ "tox_table": "C",
+ "category": "Acaricide",
+ "formulation": "Granulé à disperser dans l'eau (WG)",
+ "substances": [
+  {
+   "name_fr": "Hexythiazox",
+   "content": "50%"
+  }
+ ],
+ "usages": [],
+ "query": "TOPMITE",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

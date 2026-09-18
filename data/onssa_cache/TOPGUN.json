@@ -1,0 +1,65 @@
+{
+ "trade_name": "TOP GUN",
+ "holder": "ARZAK SEEDS TRADE",
+ "supplier": "RALLIS INDIA LTD",
+ "registration_no": "F01-7-004",
+ "valid_until": "27/02/2027",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "50 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "100 cc/ha + hydrolysat de protéines (1rangée/ 4)",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "150 cc/ha",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Cléone mendiant",
+   "dose": "250 cc/ha",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Prodenia",
+   "dose": "250 cc/ha",
+   "mode": "",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Taupins",
+   "dose": "250x2 cc/ha espacées de 15 j",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles défoliatrices",
+   "dose": "250 cc/ha",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  }
+ ],
+ "query": "TOP GUN",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}

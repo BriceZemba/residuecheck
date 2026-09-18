@@ -1,0 +1,265 @@
+{
+ "trade_name": "KARATE 5 EC",
+ "holder": "SYNGENTA MAROC",
+ "supplier": "SYNGENTA CROP PROTECTION AG",
+ "registration_no": "B02-9-003",
+ "valid_until": "28/12/2032",
+ "tox_table": "C",
+ "category": "Insecticide",
+ "formulation": "Concentré émulsionnable (EC)",
+ "substances": [
+  {
+   "name_fr": "Lambda cyhalothrine",
+   "content": "50 g/l"
+  }
+ ],
+ "usages": [
+  {
+   "crop_fr": "Abricotier",
+   "pest_fr": "Cératite",
+   "dose": "25 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Agrumes",
+   "pest_fr": "Cératite",
+   "dose": "100 cc/ha + hydrolysat de protéines (1 rangée/4)",
+   "pest_stage": "adultes",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Asperge",
+   "pest_fr": "Pucerons",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 21
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Casside",
+   "dose": "150 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Cléone mendiant",
+   "dose": "250 cc/ha",
+   "pest_stage": "adultes",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Prodenia",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Betterave à sucre",
+   "pest_fr": "Taupins",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "stade cotylédonaire et 15 jours après",
+   "max_applications": "2",
+   "interval_days": "15",
+   "mode": "Pulvérisation en ligne",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Chicorée",
+   "pest_fr": "Pucerons",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Cotonnier",
+   "pest_fr": "Lépidoptères",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": "-"
+  },
+  {
+   "crop_fr": "Courgette",
+   "pest_fr": "Noctuelles",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Épinard",
+   "pest_fr": "Pucerons",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Haricot vert",
+   "pest_fr": "Pucerons",
+   "dose": "25 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Laitue",
+   "pest_fr": "Pucerons",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Maïs",
+   "pest_fr": "Sésamie",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 45
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Mouche de l'olive",
+   "dose": "20 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Psylle",
+   "dose": "20 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Olivier",
+   "pest_fr": "Teigne",
+   "dose": "20 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "2",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  },
+  {
+   "crop_fr": "Plantes aromatiques - excepté la menthe -",
+   "pest_fr": "Pucerons",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "1",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Carpocapse",
+   "dose": "25 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Pommier",
+   "pest_fr": "Pucerons",
+   "dose": "15 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "4",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 14
+  },
+  {
+   "crop_fr": "Tomate",
+   "pest_fr": "Noctuelles",
+   "dose": "250 cc/ha",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 3
+  },
+  {
+   "crop_fr": "Vigne",
+   "pest_fr": "Cicadelle",
+   "dose": "25 cc/hl",
+   "pest_stage": "",
+   "Période": "",
+   "max_applications": "3",
+   "interval_days": "",
+   "mode": "Parties aériennes",
+   "dar_days": 7
+  }
+ ],
+ "query": "KARATE 5 EC",
+ "status": "found",
+ "source": "https://eservice.onssa.gov.ma/IndPesticide.aspx",
+ "index_updated": "11/09/2026 12:24:00",
+ "retrieved": "2026-09-16"
+}
